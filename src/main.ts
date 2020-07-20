@@ -34,9 +34,9 @@ async function package_deps() {
     "linter-eslint",
   ];
   if (deps.some((p) => !atom.packages.isPackageLoaded(p))) {
-    await import("atom-package-deps").then((atom_package_deps) => {
+    await import("atom-package-deps").then(({install}) => {
       // install if not installed
-      atom_package_deps.install("atom-ide", false);
+      install("atom-ide", false);
       // enable if disabled
       deps
         .filter((p) => !atom.packages.isPackageLoaded(p))
