@@ -26,6 +26,8 @@ jobs:
       - name: Install APM dependencies
         run: |
           apm install
+      - name: Atom Package dependencies
+        run: node ./script/install-package-deps.js
       - name: Run tests 👩🏾‍💻
         run: npm run test
 
