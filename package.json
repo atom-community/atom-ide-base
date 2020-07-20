@@ -4,7 +4,11 @@
   "version": "0.1.0",
   "author": "atom-ide-community",
   "description": "  ",
-  "keywords": ["atom", "ide", "atom-ide-community"],
+  "keywords": [
+    "atom",
+    "ide",
+    "atom-ide-community"
+  ],
   "repository": "https://github.com/atom-ide-community/atom-ide",
   "license": "MIT",
   "scripts": {
@@ -53,5 +57,14 @@
   },
   "providedServices": {},
   "consumedServices": {},
-  "package-deps": []
+  "package-deps": [
+    "atom-ide-datatip",
+    "atom-ide-signature-help",
+    "atom-ide-hyperclick",
+    "atom-ide-definitions",
+    "atom-ide-outline",
+    "linter",
+    "linter-ui-default",
+    "intentions"
+  ]
 }

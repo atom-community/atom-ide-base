@@ -7,7 +7,17 @@ describe("Benchmark", () => {
     atom.packages.triggerActivationHook("core:loaded-shell-environment");
 
     // For benchmark, activate the deps manually before loading the actual package:
-    const deps = [];
+    const deps = [
+        "atom-ide-datatip",
+        "atom-ide-signature-help",
+        "atom-ide-hyperclick",
+        "atom-ide-definitions",
+        "atom-ide-outline",
+        "linter",
+        "intentions",
+        "atom-typescript",
+        "linter-eslint",
+      ];
     deps.forEach(async (p) => await atom.packages.activatePackage(p));
 
     // Activate the package

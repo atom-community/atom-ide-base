@@ -21,7 +21,17 @@ export function activate(state: any) {
 async function package_deps() {
   // Add entries from package-deps here manually
   // (to prevent loading atom-package-deps and package.json when the deps are already loaded)
-  const deps: string[] = [];
+  const deps = [
+      "atom-ide-datatip",
+      "atom-ide-signature-help",
+      "atom-ide-hyperclick",
+      "atom-ide-definitions",
+      "atom-ide-outline",
+      "linter",
+      "intentions",
+      "atom-typescript",
+      "linter-eslint",
+    ];
   if (deps.some((p) => !atom.packages.isPackageLoaded(p))) {
     await import("atom-package-deps").then((atom_package_deps) => {
       // install if not installed
