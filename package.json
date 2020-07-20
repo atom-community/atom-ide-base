@@ -57,6 +57,7 @@
   "providedServices": {},
   "consumedServices": {},
   "package-deps": [
+    "atom-ide-markdown-service",
     "atom-ide-datatip",
     "atom-ide-signature-help",
     "atom-ide-hyperclick",
