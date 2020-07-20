@@ -19,6 +19,7 @@ This package is an all-in-one package that installs all the packages the provide
 - `linter`
 - `linter-ui-default`
 - `intentions`
+- `atom-ide-markdown-service`
 
 It also provides the TypeScript types for atom-ide packages.
 
