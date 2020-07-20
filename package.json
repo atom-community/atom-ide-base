@@ -21,7 +21,8 @@
     "build": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_ENV=production rollup -c ",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u -x coffeescript",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "postinstall": "node ./script/install-package-deps.js"
   },
   "atomTestRunner": "./spec/runner",
   "activationHooks": [
