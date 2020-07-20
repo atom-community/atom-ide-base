@@ -31,12 +31,11 @@
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
-    "etch": "^0.14.0",
     "atom-package-deps": "^6.0.0"
   },
   "devDependencies": {
     "@types/atom": "1.40.4",
-    "@types/node": "^14.0.23",
+    "@types/node": "^14.0.24",
     "typescript": "^3.9.7",
     "tslib": "^2.0.0",
     "coffeescript": "^1.12.7",
