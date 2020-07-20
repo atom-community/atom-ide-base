@@ -1,10 +1,6 @@
 # atom-ide
 
-This is a template for atom-ide-community packages using TypeScript.
-
-It is recommended to use the TypeScript template, but there is a JavaScript version too [here](https://github.com/atom-ide-community/atom-ide-js).
-
-Use `Ctrl+Shift+F` and replace `atom-ide` with `atom-ide-packagename`. Then put your name in the license section and author section.
+Atom IDE packages for Atom
 
 ![Build Status (Github Actions)](https://github.com/atom-ide-community/atom-ide/workflows/CI/badge.svg)
 [![Dependency Status](https://david-dm.org/atom-ide-community/atom-ide.svg)](https://david-dm.org/atom-ide-community/atom-ide)
@@ -13,13 +9,21 @@ Use `Ctrl+Shift+F` and replace `atom-ide` with `atom-ide-packagename`. Then put 
 
 ## Features
 
--
+This package is an all-in-one package that installs all the packages the provide Atom IDE features:
+ - `atom-ide-datatip`
+ - `atom-ide-signature-help`
+ - `atom-ide-hyperclick`
+ - `atom-ide-definitions`
+ - `atom-ide-outline`
+ - `linter`
+ - `linter-ui-default`
+ - `intentions`
+
+It also provides the TypeScript types for atom-ide packages.
 
 ## Usage
-
-## Roadmap
+Just install and enjoy.
 
 ## Contributing
-
 - Let me know if you encounter any bugs.
 - Feature requests are always welcome.
