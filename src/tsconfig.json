@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    //// Linting Options - Uncomment options to get more features (usually more restrictive)
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    //// Compilation options
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    // "preserveConstEnums": true,
+    "inlineSourceMap": false,
+    "inlineSources": true,
+    "preserveSymlinks": true,
+    "removeComments": true,
+    //
+    "jsx": "react",
+    "jsxFactory": "etch.dom",
+    //
+    "lib": ["ES2018", "dom"],
+    "target": "ES2018",
+    //
+    "allowJs": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    // "noLib": false,
+    "importHelpers": false,
+    // if true you should add tslib to deps
+    // "skipLibCheck": false,
+    "outDir": "../dist"
+  },
+  "compileOnSave": false
+}

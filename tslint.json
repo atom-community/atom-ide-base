@@ -1,0 +1,17 @@
+// Monitor https://github.com/palantir/tslint/issues/4534 for tslint deprecation
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "jsRules": {},
+  "rules": {
+    "array-type": false,
+    "only-arrow-functions": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "interface-name": false,
+    "variable-name": false,
+    "max-classes-per-file": false
+  },
+  "rulesDirectory": []
+}
