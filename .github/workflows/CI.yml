@@ -40,9 +40,7 @@ jobs:
           fetch-depth: 0
       - name: Commit lint ✨
         uses: wagoid/commitlint-github-action@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
+      - uses: UziTech/action-setup-atom@v1
       - name: Install NPM dependencies
         run: |
           npm ci  # uses locked module. use `npm install` for non-locked
@@ -59,7 +57,7 @@ jobs:
       - uses: UziTech/action-setup-atom@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: "12.x"
       - name: NPM install
         run: npm ci
       - name: Build and Commit
