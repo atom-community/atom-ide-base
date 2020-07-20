@@ -8,15 +8,15 @@ describe("Benchmark", () => {
 
     // For benchmark, activate the deps manually before loading the actual package:
     const deps = [
+      "atom-ide-markdown-service",
       "atom-ide-datatip",
       "atom-ide-signature-help",
       "atom-ide-hyperclick",
       "atom-ide-definitions",
       "atom-ide-outline",
       "linter",
-      "intentions",
-      "atom-typescript",
-      "linter-eslint",
+      "linter-ui-default",
+      "intentions"
     ];
     deps.forEach(async (p) => await atom.packages.activatePackage(p));
 

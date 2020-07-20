@@ -29,9 +29,8 @@ async function package_deps() {
     "atom-ide-definitions",
     "atom-ide-outline",
     "linter",
-    "intentions",
-    "atom-typescript",
-    "linter-eslint",
+    "linter-ui-default",
+    "intentions"
   ];
   if (deps.some((p) => !atom.packages.isPackageLoaded(p))) {
     await import("atom-package-deps").then(({install}) => {
