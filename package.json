@@ -1,11 +1,11 @@
 {
-  "name": "atom-ide-template",
+  "name": "atom-ide",
   "main": "dist/main.js",
   "version": "0.1.0",
-  "author": "<Your Name>",
+  "author": "atom-ide-community",
   "description": "  ",
-  "keywords": [],
-  "repository": "https://github.com/atom-ide-community/atom-ide-template",
+  "keywords": ["atom", "ide", "atom-ide-community"],
+  "repository": "https://github.com/atom-ide-community/atom-ide",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write .",

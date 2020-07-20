@@ -9,10 +9,10 @@ describe("tests", () => {
     atom.packages.triggerActivationHook("core:loaded-shell-environment");
 
     // Activate the package
-    await atom.packages.activatePackage("atom-ide-template");
+    await atom.packages.activatePackage("atom-ide");
   });
 
   it("Activation", async function () {
-    expect(atom.packages.isPackageLoaded("atom-ide-template")).toBeTruthy();
+    expect(atom.packages.isPackageLoaded("atom-ide")).toBeTruthy();
   });
 });

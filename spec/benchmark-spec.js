@@ -12,9 +12,9 @@ describe("Benchmark", () => {
 
     // Activate the package
     measure("Activation Time", async function activationBenchmark() {
-      await atom.packages.activatePackage("atom-ide-template");
+      await atom.packages.activatePackage("atom-ide");
     });
 
-    expect(atom.packages.isPackageLoaded("atom-ide-template")).toBeTruthy();
+    expect(atom.packages.isPackageLoaded("atom-ide")).toBeTruthy();
   });
 });
