@@ -17,8 +17,9 @@
     "test": "atom --test spec",
     "clean": "shx rm -rf dist",
     "tsc": "tsc -p src/tsconfig.json || echo done",
-    "dev": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_ENV=production rollup -c -w",
-    "build": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_ENV=production rollup -c ",
+    "types": "shx cp src/*.d.ts dist",
+    "dev": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_ENV=production rollup -c -w && npm run types",
+    "build": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_ENV=production rollup -c && npm run types",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u -x coffeescript",
     "prepare": "npm run build"
