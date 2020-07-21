@@ -1,7 +1,7 @@
 // atom-ide
-// https://github.com/atom-ide-community/atom-ide
+// https://github.com/atom-ide-community/atom-ide-base
 
-declare module "atom-ide" {
+declare module "atom-ide-base" {
   /// <reference path="./src/busy-signal.d.ts" />
   /// <reference path="./src/code-actions.d.ts" />
   /// <reference path="./src/code-highlight.d.ts" />
