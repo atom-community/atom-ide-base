@@ -3,7 +3,7 @@
   "main": "dist/main.js",
   "version": "1.0.0",
   "author": "atom-ide-community",
-  "description": "  ",
+  "description": "Atom IDE packages for Atom",
   "keywords": [
     "atom",
     "ide",
