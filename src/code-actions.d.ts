@@ -1,7 +1,6 @@
 import * as Atom from "atom";
-import { Message } from "../linter";
+import { Message } from "atom/linter";
 
-declare module "atom-ide-base" {
   export interface CodeAction {
     apply(): Promise<void>;
     getTitle(): Promise<string>;
@@ -30,4 +29,3 @@ declare module "atom-ide-base" {
       editor: Atom.TextEditor
     ) => Promise<CodeAction[]>;
   }
-}

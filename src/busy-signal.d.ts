@@ -1,4 +1,4 @@
-declare module "atom-ide-base" {
+// declare module "atom-ide-base" {
   export interface BusySignalOptions {
     // Can say that a busy signal will only appear when a given file is open.
     // Default = `null`, meaning the busy signal applies to all files.
@@ -42,4 +42,4 @@ declare module "atom-ide-base" {
     // Dispose of the signal when done to make it go away.
     dispose(): void;
   }
-}
+// }

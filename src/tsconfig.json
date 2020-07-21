@@ -15,6 +15,7 @@
     "experimentalDecorators": true,
     "incremental": true,
     // "preserveConstEnums": true,
+    "sourceMap": true,
     "inlineSourceMap": false,
     "inlineSources": true,
     "preserveSymlinks": true,

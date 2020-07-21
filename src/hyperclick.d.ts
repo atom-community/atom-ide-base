@@ -1,6 +1,5 @@
 import * as Atom from "atom";
 
-declare module "atom-ide-base" {
   export interface HyperclickProvider {
     // Use this to provide a suggestion for single-word matches.
     // Optionally set `wordRegExp` to adjust word-matching.
@@ -38,4 +37,3 @@ declare module "atom-ide-base" {
       | (() => void)
       | Array<{ rightLabel?: string; title: string; callback: () => void }>;
   }
-}

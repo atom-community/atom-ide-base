@@ -1,6 +1,5 @@
 import { DisposableLike, Point, TextEditor } from "atom";
 
-declare module "atom-ide-base" {
   export type SignatureHelpRegistry = (
     provider: SignatureHelpProvider
   ) => DisposableLike;
@@ -33,4 +32,3 @@ declare module "atom-ide-base" {
     label: string;
     documentation?: string;
   }
-}

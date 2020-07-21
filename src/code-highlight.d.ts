@@ -1,6 +1,5 @@
 import * as Atom from "atom";
 
-declare module "atom-ide-base" {
   export interface CodeHighlightProvider {
     priority: number;
     grammarScopes: ReadonlyArray<string>;
@@ -9,4 +8,3 @@ declare module "atom-ide-base" {
       bufferPosition: Atom.Point
     ): Promise<Atom.Range[] | undefined | null>;
   }
-}

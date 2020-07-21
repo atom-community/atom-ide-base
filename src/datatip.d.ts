@@ -1,6 +1,5 @@
 import * as Atom from "atom";
 
-declare module "atom-ide-base" {
   export interface DatatipService {
     addProvider(provider: DatatipProvider): Atom.DisposableLike;
     addModifierProvider(provider: ModifierDatatipProvider): Atom.DisposableLike;
@@ -70,4 +69,3 @@ declare module "atom-ide-base" {
       };
 
   export type ModifierKey = "metaKey" | "shiftKey" | "altKey" | "ctrlKey";
-}
