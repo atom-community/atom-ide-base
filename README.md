@@ -9,7 +9,7 @@ Atom IDE packages for Atom
 
 ## Features
 
-This package is an all-in-one package that installs all the packages the provide Atom IDE features:
+This package is an all-in-one package that installs all the packages that provide Atom IDE features:
 
 - `atom-ide-datatip`
 - `atom-ide-signature-help`
