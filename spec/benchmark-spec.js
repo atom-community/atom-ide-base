@@ -16,7 +16,7 @@ describe("Benchmark", () => {
       "atom-ide-outline",
       "linter",
       "linter-ui-default",
-      "intentions"
+      "intentions",
     ];
     deps.forEach(async (p) => await atom.packages.activatePackage(p));
 

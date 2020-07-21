@@ -30,10 +30,10 @@ async function package_deps() {
     "atom-ide-outline",
     "linter",
     "linter-ui-default",
-    "intentions"
+    "intentions",
   ];
   if (deps.some((p) => !atom.packages.isPackageLoaded(p))) {
-    await import("atom-package-deps").then(({install}) => {
+    await import("atom-package-deps").then(({ install }) => {
       // install if not installed
       install("atom-ide-base", false);
       // enable if disabled

@@ -28,17 +28,20 @@ It also provides the TypeScript types for atom-ide packages.
 Just install and enjoy.
 
 ## Using Types
+
 Install the packages as an npm package:
+
 ```
 npm install --save-dev atom-ide-base
 ```
 
 Then import the types like the following:
+
 ```ts
-import {BusySignalServie} from "atom-ide-base"
+import { BusySignalServie } from "atom-ide-base";
 ```
 
-See the "*.d.ts" files to become familiar with the API.
+See the "\*.d.ts" files to become familiar with the API.
 
 ## Contributing
 

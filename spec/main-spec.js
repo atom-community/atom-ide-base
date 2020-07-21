@@ -1,5 +1,4 @@
 describe("tests", () => {
-
   const deps = [
     "atom-ide-markdown-service",
     "atom-ide-datatip",
@@ -9,7 +8,7 @@ describe("tests", () => {
     "atom-ide-outline",
     "linter",
     "linter-ui-default",
-    "intentions"
+    "intentions",
   ];
 
   beforeEach(async () => {
@@ -23,25 +22,21 @@ describe("tests", () => {
 
     // Activate the package
     await atom.packages.activatePackage("atom-ide-base");
-
-
   });
 
   it("Installation", async function () {
     expect(atom.packages.isPackageLoaded("atom-ide-base")).toBeTruthy();
-    const allDeps = atom.packages.getAvailablePackageNames()
-    deps.forEach(dep => {
-      expect(allDeps.includes(dep)).toBeTruthy()
+    const allDeps = atom.packages.getAvailablePackageNames();
+    deps.forEach((dep) => {
+      expect(allDeps.includes(dep)).toBeTruthy();
     });
-
   });
 
   it("Activation", async function () {
     expect(atom.packages.isPackageLoaded("atom-ide-base")).toBeTruthy();
-    deps.forEach(async dep => {
+    deps.forEach(async (dep) => {
       await atom.packages.activatePackage(dep);
-      expect(atom.packages.isPackageLoaded(dep)).toBeTruthy()
+      expect(atom.packages.isPackageLoaded(dep)).toBeTruthy();
     });
-
   });
 });
