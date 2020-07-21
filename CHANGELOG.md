@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/atom-ide-community/atom-ide-base/compare/v1.1.0...v1.1.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* format ([250e850](https://github.com/atom-ide-community/atom-ide-base/commit/250e85025e7ed05f67b0508fd5b8cf295124240e))
+
 # [1.1.0](https://github.com/atom-ide-community/atom-ide-base/compare/v1.0.0...v1.1.0) (2020-07-21)
 
 ### Bug Fixes

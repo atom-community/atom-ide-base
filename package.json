@@ -1,7 +1,7 @@
 {
   "name": "atom-ide-base",
   "main": "dist/main.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "atom-ide-community",
   "description": "Atom IDE packages for Atom",
   "keywords": [
