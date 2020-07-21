@@ -1,6 +1,6 @@
 import * as Atom from "atom";
 
-declare module "atom-ide" {
+declare module "atom-ide-base" {
   export interface HyperclickProvider {
     // Use this to provide a suggestion for single-word matches.
     // Optionally set `wordRegExp` to adjust word-matching.

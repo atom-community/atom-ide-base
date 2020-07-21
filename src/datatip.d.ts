@@ -1,6 +1,6 @@
 import * as Atom from "atom";
 
-declare module "atom-ide" {
+declare module "atom-ide-base" {
   export interface DatatipService {
     addProvider(provider: DatatipProvider): Atom.DisposableLike;
     addModifierProvider(provider: ModifierDatatipProvider): Atom.DisposableLike;

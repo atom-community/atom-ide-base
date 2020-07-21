@@ -1,5 +1,5 @@
 describe("tests", () => {
-  
+
   const deps = [
     "atom-ide-markdown-service",
     "atom-ide-datatip",
@@ -22,13 +22,13 @@ describe("tests", () => {
     atom.packages.triggerActivationHook("core:loaded-shell-environment");
 
     // Activate the package
-    await atom.packages.activatePackage("atom-ide");
+    await atom.packages.activatePackage("atom-ide-base");
 
 
   });
 
   it("Installation", async function () {
-    expect(atom.packages.isPackageLoaded("atom-ide")).toBeTruthy();
+    expect(atom.packages.isPackageLoaded("atom-ide-base")).toBeTruthy();
     const allDeps = atom.packages.getAvailablePackageNames()
     deps.forEach(dep => {
       expect(allDeps.includes(dep)).toBeTruthy()
@@ -37,7 +37,7 @@ describe("tests", () => {
   });
 
   it("Activation", async function () {
-    expect(atom.packages.isPackageLoaded("atom-ide")).toBeTruthy();
+    expect(atom.packages.isPackageLoaded("atom-ide-base")).toBeTruthy();
     deps.forEach(async dep => {
       await atom.packages.activatePackage(dep);
       expect(atom.packages.isPackageLoaded(dep)).toBeTruthy()

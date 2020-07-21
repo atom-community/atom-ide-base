@@ -1,6 +1,6 @@
 import * as Atom from "atom";
 
-declare module "atom-ide" {
+declare module "atom-ide-base" {
   export interface FindReferencesProvider {
     // Return true if your provider supports finding references for the provided Atom.TextEditor.
     isEditorSupported(editor: Atom.TextEditor): Promise<boolean>;

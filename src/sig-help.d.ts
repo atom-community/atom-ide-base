@@ -1,6 +1,6 @@
 import { DisposableLike, Point, TextEditor } from "atom";
 
-declare module "atom-ide" {
+declare module "atom-ide-base" {
   export type SignatureHelpRegistry = (
     provider: SignatureHelpProvider
   ) => DisposableLike;

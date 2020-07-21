@@ -1,6 +1,6 @@
 import * as Atom from "atom";
 
-declare module "atom-ide" {
+declare module "atom-ide-base" {
   export interface CodeHighlightProvider {
     priority: number;
     grammarScopes: ReadonlyArray<string>;

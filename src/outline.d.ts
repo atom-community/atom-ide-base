@@ -1,6 +1,6 @@
 import * as Atom from "atom";
 
-declare module "atom-ide" {
+declare module "atom-ide-base" {
   export interface OutlineProvider {
     name: string;
     // If there are multiple providers for a given grammar, the one with the highest priority will be
@@ -19,7 +19,7 @@ declare module "atom-ide" {
     plainText?: string;
     tokenizedText?: TokenizedText;
 
-    // If user has atom-ide-outline-view.nameOnly then representativeName is used instead.
+    // If user has atom-ide-base-outline-view.nameOnly then representativeName is used instead.
     representativeName?: string;
 
     startPosition: Atom.Point;

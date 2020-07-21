@@ -1,7 +1,7 @@
 {
-  "name": "atom-ide",
+  "name": "atom-ide-base",
   "main": "dist/main.js",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "author": "atom-ide-community",
   "description": "  ",
   "keywords": [
@@ -9,7 +9,7 @@
     "ide",
     "atom-ide-community"
   ],
-  "repository": "https://github.com/atom-ide-community/atom-ide",
+  "repository": "https://github.com/atom-ide-community/atom-ide-base",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write .",
