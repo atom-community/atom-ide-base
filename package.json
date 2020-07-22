@@ -45,7 +45,7 @@
     "atom-jasmine3-test-runner": "^5.0.0",
     "prettier": "^2.0.5",
     "eslint": "7.5.0",
-    "eslint-config-atomic": "^1.2.2",
+    "eslint-config-atomic": "^1.2.3",
     "tslint": "6.1.2",
     "tslint-config-prettier": "1.18.0",
     "rollup": "2.22.1",
