@@ -64,20 +64,19 @@ jobs:
         run: npm ci
       - name: Build and Commit
         run: npm run build-commit
-      - name: APM Release 🎉
-        uses: cycjimmy/semantic-release-action@v2
-        with:
-          extends: |
-            @semantic-release/apm-config
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ATOM_ACCESS_TOKEN: ${{ secrets.ATOM_ACCESS_TOKEN  }}
       - name: NPM Release 🎉
         uses: cycjimmy/semantic-release-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+      # - name: APM Release 🎉
+      #   uses: cycjimmy/semantic-release-action@v2
+      #   with:
+      #     extends: |
+      #       @semantic-release/apm-config
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     ATOM_ACCESS_TOKEN: ${{ secrets.ATOM_ACCESS_TOKEN  }}
   Skip:
     if: contains(github.event.head_commit.message, '[skip ci]')
     runs-on: ubuntu-latest
