@@ -65,7 +65,6 @@
     "atom-ide-definitions",
     "atom-ide-outline",
     "linter",
-    "linter-ui-default",
-    "intentions"
+    "linter-ui-default"
   ]
 }

@@ -8,7 +8,6 @@ describe("tests", () => {
     "atom-ide-outline",
     "linter",
     "linter-ui-default",
-    "intentions",
   ];
 
   beforeEach(async () => {
