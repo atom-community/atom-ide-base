@@ -45,7 +45,7 @@ jobs:
       - uses: UziTech/action-setup-atom@v1
       - name: Install NPM dependencies
         run: |
-          npm ci  # uses locked module. use `npm install` for non-locked
+          npm install
       - name: Lint ✨
         run: npm run lint
 
@@ -61,7 +61,7 @@ jobs:
         with:
           node-version: "12.x"
       - name: NPM install
-        run: npm ci
+        run: npm install
       - name: Build and Commit
         run: npm run build-commit
       - name: NPM Release 🎉
