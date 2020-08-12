@@ -38,7 +38,7 @@ npm install --save-dev atom-ide-base
 Then import the types like the following:
 
 ```ts
-import { BusySignalServie } from "atom-ide-base";
+import { BusySignalServie } from "atom-ide-base"
 ```
 
 See the "\*.d.ts" files to become familiar with the API.
