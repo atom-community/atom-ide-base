@@ -1,6 +1,6 @@
 import { createPlugins } from "rollup-plugin-atomic";
 
-const plugins = createPlugins(["ts", "js"], false); // babel is false
+const plugins = createPlugins(["ts", "js"]);
 
 export default [
   {
