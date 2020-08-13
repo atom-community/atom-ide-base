@@ -1,20 +1,20 @@
-import * as Atom from "atom";
-import { Message } from "atom/linter";
+import * as Atom from "atom"
+import { Message } from "atom/linter"
 
 export interface CodeAction {
-  apply(): Promise<void>;
-  getTitle(): Promise<string>;
-  dispose(): void;
+  apply(): Promise<void>
+  getTitle(): Promise<string>
+  dispose(): void
 }
 
 export interface CodeActionProvider {
-  grammarScopes?: ReadonlyArray<string>;
-  priority: number;
+  grammarScopes?: ReadonlyArray<string>
+  priority: number
   getCodeActions(
     editor: Atom.TextEditor,
     range: Atom.Range,
     diagnostics: Message[]
-  ): Promise<CodeAction[] | null | undefined>;
+  ): Promise<CodeAction[] | null | undefined>
 }
 
 /**
@@ -24,8 +24,5 @@ export interface CodeActionProvider {
  * extended to provide a stream of CodeActions based on the cursor position.
  */
 export interface CodeActionFetcher {
-  getCodeActionForDiagnostic: (
-    diagnostic: Message,
-    editor: Atom.TextEditor
-  ) => Promise<CodeAction[]>;
+  getCodeActionForDiagnostic: (diagnostic: Message, editor: Atom.TextEditor) => Promise<CodeAction[]>
 }

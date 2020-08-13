@@ -1,34 +1,34 @@
-import * as Atom from "atom";
+import * as Atom from "atom"
 
 export interface OutlineProvider {
-  name: string;
+  name: string
   // If there are multiple providers for a given grammar, the one with the highest priority will be
   // used.
-  priority: number;
-  grammarScopes: ReadonlyArray<string>;
-  updateOnEdit?: boolean;
-  getOutline(editor: Atom.TextEditor): Promise<Outline | null | undefined>;
+  priority: number
+  grammarScopes: ReadonlyArray<string>
+  updateOnEdit?: boolean
+  getOutline(editor: Atom.TextEditor): Promise<Outline | null | undefined>
 }
 
 export interface OutlineTree {
-  icon?: string; // from Atom.Octicon (that type's not allowed over rpc so we use string)
-  kind?: OutlineTreeKind; // kind you can pass to the UI for theming
+  icon?: string // from Atom.Octicon (that type's not allowed over rpc so we use string)
+  kind?: OutlineTreeKind // kind you can pass to the UI for theming
 
   // Must be one or the other. If both are present, tokenizedText is preferred.
-  plainText?: string;
-  tokenizedText?: TokenizedText;
+  plainText?: string
+  tokenizedText?: TokenizedText
 
   // If user has atom-ide-base-outline-view.nameOnly then representativeName is used instead.
-  representativeName?: string;
+  representativeName?: string
 
-  startPosition: Atom.Point;
-  endPosition?: Atom.Point;
-  landingPosition?: Atom.Point;
-  children: OutlineTree[];
+  startPosition: Atom.Point
+  endPosition?: Atom.Point
+  landingPosition?: Atom.Point
+  children: OutlineTree[]
 }
 
 export interface Outline {
-  outlineTrees: OutlineTree[];
+  outlineTrees: OutlineTree[]
 }
 
 // Kind of outline tree - matches the names from the Language Server Protocol v2.
@@ -50,7 +50,7 @@ export type OutlineTreeKind =
   | "string"
   | "number"
   | "boolean"
-  | "array";
+  | "array"
 
 export type TokenKind =
   | "keyword"
@@ -61,11 +61,11 @@ export type TokenKind =
   | "string"
   | "whitespace"
   | "plain"
-  | "type";
+  | "type"
 
 export interface TextToken {
-  kind: TokenKind;
-  value: string;
+  kind: TokenKind
+  value: string
 }
 
-export type TokenizedText = TextToken[];
+export type TokenizedText = TextToken[]

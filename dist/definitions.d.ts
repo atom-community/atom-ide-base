@@ -1,21 +1,21 @@
-import * as Atom from "atom";
+import * as Atom from "atom"
 
 export interface Definition {
   // Path of the file in which the definition is located.
-  path: string;
+  path: string
   // First character of the definition's identifier.
   // e.g. "F" in `class Foo {}`
-  position: Atom.Point;
+  position: Atom.Point
   // Optional: the range of the entire definition.
   // e.g. "c" to "}" in `class Foo {}`
-  range?: Atom.Range;
+  range?: Atom.Range
   // Optional: `name` and `projectRoot` can be provided to display a more human-readable title
   // inside of Hyperclick when there are multiple definitions.
-  name?: string;
+  name?: string
   // If provided, `projectRoot` will be used to display a relativized version of `path`.
-  projectRoot?: string;
+  projectRoot?: string
   // `language` may be used by consumers to identify the source of definitions.
-  language: string;
+  language: string
 }
 
 // Definition queries supply a point.
@@ -23,23 +23,20 @@ export interface Definition {
 // Typically queryRange spans the containing identifier around the query point.
 // (If a null queryRange is returned, the range of the word containing the point is used.)
 export interface DefinitionQueryResult {
-  queryRange: ReadonlyArray<Atom.Range> | null | undefined;
-  definitions: ReadonlyArray<Definition>; // Must be non-empty.
+  queryRange: ReadonlyArray<Atom.Range> | null | undefined
+  definitions: ReadonlyArray<Definition> // Must be non-empty.
 }
 
 // Provides definitions for a set of language grammars.
 export interface DefinitionProvider {
   // If there are multiple providers for a given grammar,
   // the one with the highest priority will be used.
-  priority: number;
-  grammarScopes: ReadonlyArray<string>;
-  wordRegExp: RegExp | null | undefined;
+  priority: number
+  grammarScopes: ReadonlyArray<string>
+  wordRegExp: RegExp | null | undefined
   // Obtains the definition in an editor at the given point.
   // This should return null if no definition is available.
-  getDefinition: (
-    editor: Atom.TextEditor,
-    position: Atom.Point
-  ) => Promise<DefinitionQueryResult | null | undefined>;
+  getDefinition: (editor: Atom.TextEditor, position: Atom.Point) => Promise<DefinitionQueryResult | null | undefined>
 }
 
 export interface DefinitionPreviewProvider {
@@ -47,11 +44,11 @@ export interface DefinitionPreviewProvider {
     definition: Definition
   ): Promise<
     | {
-        mime: string;
-        contents: string;
-        encoding: string;
+        mime: string
+        contents: string
+        encoding: string
       }
     | null
     | undefined
-  >;
+  >
 }
