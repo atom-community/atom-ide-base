@@ -17,8 +17,6 @@ devDependencies:
   rollup-plugin-atomic: 1.2.0_ba743cbf3d3e1179b7b442cdd4e00c05
   shx: 0.3.2
   tslib: 2.0.1
-  tslint: 6.1.3_typescript@3.9.7
-  tslint-config-prettier: 1.18.0
   typescript: 3.9.7
 lockfileVersion: 5.1
 packages:
@@ -995,12 +993,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-XUmXeNsdIj5Izr8FFmsjYxu9SVVaonlmD3THg8Of87A5i/SsFLsY6VGscnfVtlcUl5pHpx691MXKq7B9qkUC+g==
-  /builtin-modules/1.1.1:
-    dev: true
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-Jw8HbFpywC9bZaR9+Uxf46J4iS8=
   /builtin-modules/2.0.0:
     dev: true
     engines:
@@ -1566,12 +1558,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-f3Qt4Gb8dIvI24IFad3c5Jvw1FY=
-  /diff/4.0.2:
-    dev: true
-    engines:
-      node: '>=0.3.1'
-    resolution:
-      integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
   /doctrine/1.5.0:
     dependencies:
       esutils: 2.0.3
@@ -5239,46 +5225,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
-  /tslint-config-prettier/1.18.0:
-    dev: true
-    engines:
-      node: '>=4.0.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-xPw9PgNPLG3iKRxmK7DWr+Ea/SzrvfHtjFt5LBl61gk2UBG/DB9kCXRjv+xyIU1rUtnayLeMUVJBcMX8Z17nDg==
-  /tslint/6.1.3_typescript@3.9.7:
-    dependencies:
-      '@babel/code-frame': 7.10.4
-      builtin-modules: 1.1.1
-      chalk: 2.4.2
-      commander: 2.20.3
-      diff: 4.0.2
-      glob: 7.1.6
-      js-yaml: 3.14.0
-      minimatch: 3.0.4
-      mkdirp: 0.5.5
-      resolve: 1.17.0
-      semver: 5.7.1
-      tslib: 1.13.0
-      tsutils: 2.29.0_typescript@3.9.7
-      typescript: 3.9.7
-    dev: true
-    engines:
-      node: '>=4.8.0'
-    hasBin: true
-    peerDependencies:
-      typescript: '>=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev || >= 4.0.0-dev'
-    resolution:
-      integrity: sha512-IbR4nkT96EQOvKE2PW/djGz8iGNeJ4rF2mBfiYaR/nvUWYKJhLwimoJKgjIFEIDibBtOevj7BqCRL4oHeWWUCg==
-  /tsutils/2.29.0_typescript@3.9.7:
-    dependencies:
-      tslib: 1.13.0
-      typescript: 3.9.7
-    dev: true
-    peerDependencies:
-      typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
-    resolution:
-      integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
   /tsutils/3.17.1_typescript@3.9.7:
     dependencies:
       tslib: 1.13.0
@@ -5579,6 +5525,4 @@ specifiers:
   rollup-plugin-atomic: ^1.2.0
   shx: 0.3.2
   tslib: ^2.0.1
-  tslint: 6.1.3
-  tslint-config-prettier: 1.18.0
   typescript: ^3.9.7
