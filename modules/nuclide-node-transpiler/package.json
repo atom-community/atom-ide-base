@@ -12,7 +12,7 @@
     "test": "../../node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {
-    "glob": "7.1.1",
+    "glob": "7.1.6",
     "mkdirp": "0.5.1",
     "uuid": "3.0.1"
   },
