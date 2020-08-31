@@ -14,7 +14,7 @@
   "dependencies": {
     "glob": "7.1.1",
     "mkdirp": "0.5.1",
-    "uuid": "3.0.1"
+    "uuid": "3.4.0"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.48",
