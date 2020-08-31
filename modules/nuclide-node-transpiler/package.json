@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "glob": "7.1.1",
-    "mkdirp": "0.5.1",
+    "mkdirp": "0.5.5",
     "uuid": "3.0.1"
   },
   "devDependencies": {
