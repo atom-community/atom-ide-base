@@ -1,6 +1,7 @@
 {
   "name": "atom-ide-base",
   "main": "dist/main.js",
+  "types": "./types/main.d.ts",
   "version": "1.1.1",
   "author": "atom-ide-community",
   "description": "Atom IDE packages for Atom",
@@ -17,9 +18,8 @@
     "test": "atom --test spec",
     "clean": "shx rm -rf dist",
     "tsc": "tsc -p src/tsconfig.json || echo done",
-    "types": "shx cp src/*.d.ts dist",
-    "dev": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_KEEP_MODULES=true rollup -c -w && npm run types",
-    "build": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c && npm run types",
+    "dev": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_KEEP_MODULES=true rollup -c -w",
+    "build": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u -x coffeescript",
     "prepare": "npm run build"
