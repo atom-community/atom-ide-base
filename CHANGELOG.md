@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/atom-ide-community/atom-ide-base/compare/v1.2.1...v1.3.0) (2020-09-26)
+
+
+### Features
+
+* add types entry to package.json ([73e62b8](https://github.com/atom-ide-community/atom-ide-base/commit/73e62b800d230e5f1732566c78a41b606f011d4b))
+* move types to types folder ([3705c75](https://github.com/atom-ide-community/atom-ide-base/commit/3705c75c3816a36abd08aada4adfc70c16e2098f))
+
 ## [1.1.1](https://github.com/atom-ide-community/atom-ide-base/compare/v1.1.0...v1.1.1) (2020-07-21)
 
 ### Bug Fixes
