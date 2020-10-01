@@ -10,6 +10,12 @@
     "ide",
     "atom-ide-community"
   ],
+  "files": [
+    "dist",
+    "types",
+    "src",
+    "CHANGELOG.md"
+  ],
   "repository": "https://github.com/atom-ide-community/atom-ide-base",
   "license": "MIT",
   "scripts": {
