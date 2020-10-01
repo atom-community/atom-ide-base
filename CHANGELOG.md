@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/atom-ide-community/atom-ide-base/compare/v1.3.0...v1.4.0) (2020-10-01)
+
+
+### Features
+
+* remove legacy nuclde modules to decrease the space ([e0beb4f](https://github.com/atom-ide-community/atom-ide-base/commit/e0beb4f842a08f49caf7542a71a1f3e30a5217bb))
+
 # [1.3.0](https://github.com/atom-ide-community/atom-ide-base/compare/v1.2.1...v1.3.0) (2020-09-26)
 
 
