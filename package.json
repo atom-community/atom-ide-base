@@ -2,7 +2,7 @@
   "name": "atom-ide-base",
   "main": "dist/main.js",
   "types": "./types/main.d.ts",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": "atom-ide-community",
   "description": "Atom IDE packages for Atom",
   "keywords": [

@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/atom-ide-community/atom-ide-base/compare/v1.4.0...v1.4.1) (2020-10-01)
+
+
+### Bug Fixes
+
+* add files entry ([be2f3aa](https://github.com/atom-ide-community/atom-ide-base/commit/be2f3aab65048b04b7ede83d7beefd4a777d6bc0))
+
 # [1.4.0](https://github.com/atom-ide-community/atom-ide-base/compare/v1.3.0...v1.4.0) (2020-10-01)
 
 
