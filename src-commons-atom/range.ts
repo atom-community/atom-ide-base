@@ -144,6 +144,7 @@ export function wordAtPositionFromBuffer(
       data.stop();
     }
   });
+  // @ts-ignore (it is assigned above)
   if (matchData) {
     return {
       wordMatch: matchData.match,
