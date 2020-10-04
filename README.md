@@ -41,7 +41,21 @@ Then import the types like the following:
 import { BusySignalServie } from "atom-ide-base"
 ```
 
-See the "types/*.d.ts" files to become familiar with the API.
+See the "types/\*.d.ts" files to become familiar with the API.
+
+## Using the common files for IDE packages
+
+Install the packages as a dependency:
+
+```
+npm install --save atom-ide-base
+```
+
+Then import the files you need:
+
+```ts
+import { ProviderRegistry } from "atom-ide-base/commons-atom/ProviderRegistry"
+```
 
 ## Contributing
 
