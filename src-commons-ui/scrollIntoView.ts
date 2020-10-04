@@ -30,40 +30,38 @@
  */
 
 export function scrollIntoView(el: Element, alignToTop?: boolean): void {
-  const scrollTops = getScrollTops(el);
-  el.scrollIntoView(alignToTop);
-  restoreOverflowHiddenScrollTops(scrollTops);
+  const scrollTops = getScrollTops(el)
+  el.scrollIntoView(alignToTop)
+  restoreOverflowHiddenScrollTops(scrollTops)
 }
 
 export function scrollIntoViewIfNeeded(el: Element, center?: boolean): void {
-  const scrollTops = getScrollTops(el);
-  el?.scrollIntoViewIfNeeded(center) ?? el.scrollIntoView(center);
-  restoreOverflowHiddenScrollTops(scrollTops);
+  const scrollTops = getScrollTops(el)
+  el?.scrollIntoViewIfNeeded(center) ?? el.scrollIntoView(center)
+  restoreOverflowHiddenScrollTops(scrollTops)
 }
 
 function getScrollTops(el_: Element): Map<Element, number> {
-  let el: Element | null = el_;
-  const scrollTops = new Map();
+  let el: Element | null = el_
+  const scrollTops = new Map()
   while (el != null) {
-    scrollTops.set(el, el.scrollTop);
-    el = el.parentElement;
+    scrollTops.set(el, el.scrollTop)
+    el = el.parentElement
   }
-  return scrollTops;
+  return scrollTops
 }
 
-function restoreOverflowHiddenScrollTops(
-  scrollTops: Map<Element, number>,
-): void {
+function restoreOverflowHiddenScrollTops(scrollTops: Map<Element, number>): void {
   scrollTops.forEach((scrollTop, el) => {
     if (el.scrollTop !== scrollTop && isOverflowHidden(el)) {
-      el.scrollTop = scrollTop;
+      el.scrollTop = scrollTop
     }
-  });
+  })
 }
 
 function isOverflowHidden(el: HTMLElement | SVGElement | Element): boolean {
   //@ts-ignore
-  const overflowStyle = el?.style.overflow;
-  const overflow = overflowStyle ?? getComputedStyle(el).overflow;
-  return overflow === 'hidden';
+  const overflowStyle = el?.style.overflow
+  const overflow = overflowStyle ?? getComputedStyle(el).overflow
+  return overflow === "hidden"
 }
