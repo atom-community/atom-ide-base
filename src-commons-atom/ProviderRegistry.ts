@@ -1,13 +1,13 @@
 import { Disposable, TextEditor } from "atom"
 
-export interface Provider {
+export interface ProviderCommon {
   // Providers with higher priorities will be preferred over lower ones.
   priority: number
   // Omitting grammarScopes implies that the provider applies to all grammars.
-  grammarScopes?: Array<string>
+  grammarScopes?: Array<string>,
 }
 
-export class ProviderRegistry {
+export class ProviderRegistry<Provider extends ProviderCommon> {
   private providers: Array<Provider>
 
   constructor() {
@@ -15,7 +15,7 @@ export class ProviderRegistry {
   }
 
   addProvider(provider: Provider): Disposable {
-    const index = this.providers.findIndex((p: Provider) => provider.priority > p.priority)
+    const index = this.providers.findIndex((p) => provider.priority > p.priority)
     if (index === -1) {
       this.providers.push(provider)
     } else {
