@@ -40,7 +40,7 @@
     "build": "npm run build.package && npm run build.commons-atom && npm run build.commons-ui",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u -x coffeescript",
-    "prepare": "npm run build"
+    "prepare": "npm run build && shx rm -r **/tsconfig.tsbuildinfo"
   },
   "atomTestRunner": "./spec/runner",
   "activationHooks": [
