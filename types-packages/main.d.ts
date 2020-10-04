@@ -16,6 +16,7 @@ import { CodeActionProvider } from "./code-actions"
 import { CodeHighlightProvider } from "./code-highlight"
 import { AnyDatatipProvider } from "./datatip"
 import { DefinitionProvider } from "./definitions"
+import { FindReferencesProvider } from "./find-references"
 import { HyperclickProvider } from "./hyperclick"
 import { OutlineProvider } from "./outline"
 import { SignatureHelpProvider } from "./sig-help"
@@ -34,6 +35,7 @@ export type Provider =
   | CodeHighlightProvider
   | AnyDatatipProvider
   | DefinitionProvider
+  | FindReferencesProvider
   | HyperclickProvider
   | OutlineProvider
   | SignatureHelpProvider

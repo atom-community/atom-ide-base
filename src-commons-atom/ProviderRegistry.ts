@@ -1,7 +1,7 @@
 import { Disposable, TextEditor } from "atom"
-import { Provider as ProviderTypes } from "../types-packages/main.d"
+import { Provider as ProviderTypes, BusySignalProvider, FindReferencesProvider } from "../types-packages/main.d"
 
-export class ProviderRegistry<Provider extends ProviderTypes> {
+export class ProviderRegistry<Provider extends Exclude<ProviderTypes, BusySignalProvider | FindReferencesProvider>> {
   private providers: Array<Provider>
 
   constructor() {
