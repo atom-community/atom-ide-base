@@ -1,13 +1,7 @@
 import { Disposable, TextEditor } from "atom"
+import { Provider as ProviderTypes } from "../types-packages/main.d"
 
-export interface ProviderCommon {
-  // Providers with higher priorities will be preferred over lower ones.
-  priority: number
-  // Omitting grammarScopes implies that the provider applies to all grammars.
-  grammarScopes?: Array<string>,
-}
-
-export class ProviderRegistry<Provider extends ProviderCommon> {
+export class ProviderRegistry<Provider extends ProviderTypes> {
   private providers: Array<Provider>
 
   constructor() {
