@@ -43,7 +43,7 @@ export function scrollIntoViewIfNeeded(el: Element, center?: boolean): void {
 }
 
 function getScrollTops(el_: Element): Map<Element, number> {
-  let el = el_;
+  let el: Element | null = el_;
   const scrollTops = new Map();
   while (el != null) {
     scrollTops.set(el, el.scrollTop);
