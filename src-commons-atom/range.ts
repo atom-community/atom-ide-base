@@ -1,4 +1,4 @@
-import {TextEditor, TextBuffer, Range, Point} from 'atom';
+import {TextEditor, TextEditorComponent, TextBuffer, Range, Point} from 'atom';
 import invariant from 'assert';
 
 /**
@@ -20,7 +20,8 @@ export function wordAtPosition(
     // Cursor.wordRegExp, except that function gets the regex associated
     // with the editor's current cursor while we want the regex associated with
     // the specific position. So we re-implement it ourselves...
-    const nonWordChars = editor.getNonWordCharacters(position);
+    // @ts-ignore: https://github.com/atom/atom/blob/aa3c34bedb361e09a5068dce9620b460a20ca3fb/src/text-editor.js#L5032
+    const nonWordChars: string = editor.getNonWordCharacters(position);
     const escaped = nonWordChars.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
     // We copied this escaping regex from Cursor.wordRegexp, rather than
     // using the library function 'escapeStringRegExp'. That's because the
@@ -93,7 +94,8 @@ export function getWordFromMouseEvent(
   // the MouseEvent. Using its target element content would work in
   // some cases but wouldn't work if there was additional content
   // in the same element, such as in a comment.
-  const component = editor.getElement().component;
+  // @ts-ignore: https://github.com/atom/atom/blob/aa3c34bedb361e09a5068dce9620b460a20ca3fb/src/text-editor.js#L5075
+  const component: TextEditorComponent = editor.getElement().component;
   invariant(component);
   // This solution doesn't feel ideal but it is the way hyperclick does it.
   const point = component.screenPositionForMouseEvent(event);
