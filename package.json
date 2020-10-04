@@ -1,8 +1,19 @@
 {
   "name": "atom-ide-base",
+  "version": "1.4.1",
   "main": "package/main.js",
   "types": "./types-packages/main.d.ts",
-  "version": "1.4.1",
+  "files": [
+    "commons-atom",
+    "commons",
+    "commons-ui",
+    "src-commons-atom",
+    "src-commons",
+    "src-commons-ui",
+    "src-package",
+    "types-packages",
+    "tsconfig.json"
+  ],
   "author": "atom-ide-community",
   "description": "Atom IDE packages for Atom",
   "keywords": [
