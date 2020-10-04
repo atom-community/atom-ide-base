@@ -62,9 +62,9 @@ function restoreOverflowHiddenScrollTops(
   });
 }
 
-function isOverflowHidden(el: Element): boolean {
-  // $FlowFixMe(>=0.68.0) Flow suppress (T27187857)
-  const overflowStyle = el.style == null ? null : (el.style: any).overflow;
-  const overflow = overflowStyle || getComputedStyle(el).overflow;
+function isOverflowHidden(el: HTMLElement | SVGElement | Element): boolean {
+  //@ts-ignore
+  const overflowStyle = el?.style.overflow;
+  const overflow = overflowStyle ?? getComputedStyle(el).overflow;
   return overflow === 'hidden';
 }
