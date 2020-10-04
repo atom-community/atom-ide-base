@@ -10,4 +10,5 @@ package-lock.json
 *.tsbuildinfo
 
 # Build directories
-dist
+package
+commons-atom
