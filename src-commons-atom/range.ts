@@ -1,4 +1,4 @@
-import {Range} from 'atom';
+import {TextEditor, TextBuffer, Range, Point} from 'atom';
 import invariant from 'assert';
 
 /**
@@ -8,21 +8,21 @@ import invariant from 'assert';
  * (I know that's a weird default but it follows Atom's convention...)
  */
 export function wordAtPosition(
-  editor: atom$TextEditor,
-  position: atom$PointObject,
+  editor: TextEditor,
+  position: Point,
   wordRegex?: RegExp | {includeNonWordCharacters: boolean},
-): ?{wordMatch: Array<string>, range: atom$Range} {
+): {wordMatch: Array<string>, range: Range} | null {
   let wordRegex_;
   if (wordRegex instanceof RegExp) {
     wordRegex_ = wordRegex;
   } else {
     // What is the word regex associated with the position? We'd like to use
-    // atom$Cursor.wordRegExp, except that function gets the regex associated
+    // Cursor.wordRegExp, except that function gets the regex associated
     // with the editor's current cursor while we want the regex associated with
     // the specific position. So we re-implement it ourselves...
     const nonWordChars = editor.getNonWordCharacters(position);
     const escaped = nonWordChars.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
-    // We copied this escaping regex from atom$Cursor.wordRegexp, rather than
+    // We copied this escaping regex from Cursor.wordRegexp, rather than
     // using the library function 'escapeStringRegExp'. That's because the
     // library function doesn't escape the hyphen character and so is
     // unsuitable for use inside a range.
@@ -44,13 +44,13 @@ export function wordAtPosition(
  * @param rangeToTrim  the range to trim
  * @param stopRegex    stop trimming when the first match is found for this regex,
  *   defaults to first non-whitespace character
- * @return atom$Range  the trimmed range
+ * @return Range  the trimmed range
  */
 export function trimRange(
-  editor: atom$TextEditor,
-  rangeToTrim: atom$Range,
+  editor: TextEditor,
+  rangeToTrim: Range,
   stopRegex: RegExp = /\S/,
-): atom$Range {
+): Range {
   const buffer = editor.getBuffer();
   let {start, end} = rangeToTrim;
   buffer.scanInRange(stopRegex, rangeToTrim, ({range, stop}) => {
@@ -65,9 +65,9 @@ export function trimRange(
 }
 
 function getSingleWordAtPosition(
-  editor: atom$TextEditor,
-  position: atom$Point,
-): ?string {
+  editor: TextEditor,
+  position: Point,
+): string | null {
   const match = wordAtPosition(editor, position);
   // We should only receive a single identifier from a single point.
   if (match == null || match.wordMatch.length !== 1) {
@@ -86,9 +86,9 @@ function getSingleWordAtPosition(
  * @param event   the MouseEvent containing the screen position of the click
  */
 export function getWordFromMouseEvent(
-  editor: atom$TextEditor,
+  editor: TextEditor,
   event: MouseEvent,
-): ?string {
+): string | null {
   // We can't immediately get the identifier right-clicked on from
   // the MouseEvent. Using its target element content would work in
   // some cases but wouldn't work if there was additional content
@@ -108,7 +108,7 @@ export function getWordFromMouseEvent(
  * @param editor  the editor containing the 'active' word when the keybinding is
  *   triggered
  */
-export function getWordFromCursorOrSelection(editor: atom$TextEditor): ?string {
+export function getWordFromCursorOrSelection(editor: TextEditor): string | null {
   const selection = editor.getSelectedText();
   if (selection && selection.length > 0) {
     return selection;
@@ -121,13 +121,13 @@ export function getWordFromCursorOrSelection(editor: atom$TextEditor): ?string {
 
 
 export function wordAtPositionFromBuffer(
-  buffer: atom$TextBuffer | simpleTextBuffer$TextBuffer,
-  position: atom$PointObject,
+  buffer: TextBuffer,
+  position: Point,
   wordRegex: RegExp,
-): ?{wordMatch: Array<string>, range: atom$Range} {
+): {wordMatch: Array<string>, range: Range} | null {
   const {row, column} = position;
   const rowRange = buffer.rangeForRow(row);
-  let matchData;
+  let matchData: {match: Array<string>, range: Range} | null;
   // Extract the expression from the row text.
   buffer.scanInRange(wordRegex, rowRange, data => {
     const {range} = data;
@@ -156,18 +156,18 @@ export function wordAtPositionFromBuffer(
 // regex should end with a '$'.
 // Useful for autocomplete.
 export function matchRegexEndingAt(
-  buffer: atom$TextBuffer | simpleTextBuffer$TextBuffer,
-  endPosition: atom$PointObject,
+  buffer: TextBuffer,
+  endPosition: Point,
   regex: RegExp,
-): ?string {
+): string | null {
   const line = buffer.getTextInRange([[endPosition.row, 0], endPosition]);
   const match = regex.exec(line);
   return match == null ? null : match[0];
 }
 
 export function isPositionInRange(
-  position: atom$Point,
-  range: atom$Range | Array<atom$Range>,
+  position: Point,
+  range: Range | Array<Range>,
 ): boolean {
   return Array.isArray(range)
     ? range.some(r => r.containsPoint(position))
