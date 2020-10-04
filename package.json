@@ -1,7 +1,7 @@
 {
   "name": "atom-ide-base",
   "main": "package/main.js",
-  "types": "./types/main.d.ts",
+  "types": "./types-packages/main.d.ts",
   "version": "1.4.1",
   "author": "atom-ide-community",
   "description": "Atom IDE packages for Atom",
