@@ -15,6 +15,7 @@ export interface BusySignalOptions {
   revealTooltip?: boolean
 }
 
+// atom-ide-busy-signal service
 export interface BusySignalService {
   // Activates the busy signal with the given title and returns the promise
   // from the provided callback.
@@ -35,5 +36,18 @@ export interface BusyMessage {
   // You can set/update the title.
   setTitle(title: string): void
   // Dispose of the signal when done to make it go away.
+  dispose(): void
+}
+
+// busy-signal service
+export interface BusySignalRegistry {
+  create(): BusySignalProvider
+}
+
+// busy-signal service
+export interface BusySignalProvider {
+  add(message: string): void
+  remove(message: string): void
+  clear(): void
   dispose(): void
 }
