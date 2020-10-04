@@ -41,7 +41,7 @@ Then import the types like the following:
 import { BusySignalServie } from "atom-ide-base"
 ```
 
-See the "types/*.d.ts" files to become familiar with the API.
+See the "types/\*.d.ts" files to become familiar with the API.
 
 ## Using the common files for IDE packages
 

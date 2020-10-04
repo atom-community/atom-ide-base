@@ -1,6 +1,6 @@
 {
-    "extends": "../tsconfig.json",
-    "compilerOptions": {
-        "outDir": "../commons-atom"
-    }
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../commons-atom"
+  }
 }

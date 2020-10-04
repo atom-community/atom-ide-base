@@ -2,7 +2,7 @@ import { createPlugins } from "rollup-plugin-atomic"
 
 const plugins = createPlugins([
   ["ts", { tsconfig: "./src-package/tsconfig.json", noEmitOnError: false, module: "ESNext" }],
-  "js"
+  "js",
 ])
 
 export default [
