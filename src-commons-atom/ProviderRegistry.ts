@@ -33,6 +33,11 @@ export class ProviderRegistry {
     }
   }
 
+  getProviderForEditorQuick(editor: TextEditor): Provider | undefined {
+    const grammar = editor.getGrammar().scopeName
+    return this.findProviderQuick(grammar)
+  }
+
   // TODO deprecate since there can be N providers.
   getProviderForEditor(editor: TextEditor): Provider | null {
     const grammar = editor.getGrammar().scopeName
@@ -43,6 +48,12 @@ export class ProviderRegistry {
   getAllProvidersForEditor(editor: TextEditor): Iterable<Provider> {
     const grammar = editor.getGrammar().scopeName
     return this.findAllProviders(grammar)
+  }
+
+  findProviderQuick(grammar: string): Provider | undefined {
+    return this.providers.find((provider) => {
+      provider.grammarScopes?.includes(grammar)
+    })
   }
 
   findProvider(grammar: string): Provider | null {
