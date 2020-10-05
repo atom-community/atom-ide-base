@@ -14,16 +14,24 @@ export class HTMLView {
    * creates the HTML view component and hands over the HTML to embedd
    * @param {string} html the HTML string to embedd into the HTML view component
    */
-  constructor({ html }: { html: string }) {
+  constructor({
+    html,
+    containerClassName,
+    contentClassName,
+  }: {
+    html: string
+    containerClassName: string
+    contentClassName: string
+  }) {
     this.rootElement = document.createElement("div")
-    this.rootElement.className = "datatip-marked-container"
+    this.rootElement.className = containerClassName
     this.rootElement.addEventListener("wheel", this.onMouseWheel, {
       passive: true,
     })
     if (html) {
       const innerHTML = DOMPurify.sanitize(html)
       this.rootElement.innerHTML = `
-        <div className='datatip-marked'>${innerHTML}</div>`
+        <div className='${contentClassName}'>${innerHTML}</div>`
     }
   }
 

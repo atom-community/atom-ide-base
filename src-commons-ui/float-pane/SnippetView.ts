@@ -14,13 +14,21 @@ export class SnippetView {
    * creates a snippet view component handing in the snippet
    * @param {string} snippet the code snippet to be embedded
    */
-  constructor({ snippet }: { snippet: string }) {
+  constructor({
+    snippet,
+    containerClassName,
+    contentClassName,
+  }: {
+    snippet: string
+    containerClassName: string
+    contentClassName: string
+  }) {
     this.rootElement = document.createElement("div")
-    this.rootElement.classList.add("datatip-container")
+    this.rootElement.classList.add(containerClassName)
     if (snippet) {
       const innerHTML = DOMPurify.sanitize(snippet)
       this.rootElement.innerHTML = `
-        <div className='datatip-snippet'>${innerHTML}</div>`
+        <div className='${contentClassName}'>${innerHTML}</div>`
     }
   }
 

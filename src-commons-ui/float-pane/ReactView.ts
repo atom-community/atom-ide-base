@@ -13,12 +13,24 @@ export class ReactView {
   rootElement: HTMLElement
   children?: ReactElement
   childrenStatic?: string
+  containerClassName: string
+  contentClassName: string
 
   /**
    * creates a React view component handing over the React code to be rendered
    * @param component the React component to be rendered
    */
-  constructor({ component }: { component: () => ReactElement }) {
+  constructor({
+    component,
+    containerClassName,
+    contentClassName,
+  }: {
+    component: () => ReactElement
+    containerClassName: string
+    contentClassName: string
+  }) {
+    this.containerClassName = containerClassName
+    this.contentClassName = contentClassName
     if (component) {
       this.children = component()
     }
@@ -28,11 +40,11 @@ export class ReactView {
 
   render() {
     this.rootElement = document.createElement("span")
-    this.rootElement.classList.add("datatip-container")
+    this.rootElement.classList.add(this.containerClassName)
     if (this.children) {
       this.childrenStatic = DOMPurify.sanitize(renderToStaticMarkup(this.children))
       this.rootElement.innerHTML = `
-          <div className="datatip-content">${this.childrenStatic}</div>
+          <div className="${this.contentClassName}">${this.childrenStatic}</div>
       `
     }
     return this.rootElement
