@@ -10,6 +10,7 @@ export * from "./find-references"
 export * from "./hyperclick"
 export * from "./outline"
 export * from "./sig-help"
+export * from "./markdown-service"
 
 import { BusySignalProvider } from "./busy-signal.d"
 import { CodeActionProvider } from "./code-actions"
