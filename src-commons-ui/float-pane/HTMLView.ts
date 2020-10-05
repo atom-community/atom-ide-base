@@ -2,6 +2,7 @@
  * a reference to the DOMpurify function to make safe HTML strings
  */
 import DOMPurify from "dompurify"
+import { MarkdownService } from "../../types-packages/main"
 
 /**
  * an etch component that can host already prepared HTML text
@@ -50,3 +51,21 @@ export class HTMLView {
   }
 }
 
+/**
+ * convert the markdown documentation to HTML
+ * @param markdownTexts the documentation text in markdown format to be converted
+ * @param grammarName  the default grammar used for embedded code samples
+ * @param renderer markdown service to be used for rendering
+ * @return a promise object to track the asynchronous operation
+ */
+export async function getDocumentationHtml(
+  markdownTexts: Array<String>,
+  grammarName: string,
+  renderer: MarkdownService
+): Promise<string | null> {
+  if (markdownTexts !== undefined && markdownTexts.length > 0) {
+    const markdownText = markdownTexts.join("\r\n")
+    return renderer.render(markdownText, grammarName)
+  }
+  return null
+}
