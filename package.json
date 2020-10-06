@@ -1,6 +1,6 @@
 {
   "name": "atom-ide-base",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "main": "package/main.js",
   "types": "./types-packages/main.d.ts",
   "files": [
