@@ -37,28 +37,32 @@ export interface ModifierDatatipProvider {
 
 export type AnyDatatipProvider = DatatipProvider | ModifierDatatipProvider
 
-export type Datatip =
-  | {
-      markedStrings: MarkedString[]
-      range: Atom.Range
-      pinnable?: boolean
-    }
-  | {
-      component: () => JSX.Element // React component
-      range: Atom.Range
-      pinnable?: boolean
-    }
-
 // Borrowed from the LSP API.
-export type MarkedString =
-  | {
-      type: "markdown"
-      value: string
-    }
-  | {
-      type: "snippet"
-      grammar: Atom.Grammar
-      value: string
-    }
+export interface MarkdownMarkedString {
+  type: "markdown"
+  value: string
+}
+
+export interface SnippetMarkedString {
+  type: "snippet"
+  grammar: Atom.Grammar
+  value: string
+}
+
+export type MarkedString = MarkdownMarkedString | SnippetMarkedString
+
+export interface MarkedStringDatatip {
+  markedStrings: MarkedString[]
+  range: Atom.Range
+  pinnable?: boolean
+}
+
+export interface ReactComponentDatatip {
+  component: () => JSX.Element // React component
+  range: Atom.Range
+  pinnable?: boolean
+}
+
+export type Datatip = MarkedStringDatatip | ReactComponentDatatip
 
 export type ModifierKey = "metaKey" | "shiftKey" | "altKey" | "ctrlKey"
