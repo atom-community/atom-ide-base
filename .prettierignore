@@ -4,6 +4,7 @@ package-lock.json
 pnpm-lock.yaml
 coverage
 build
-dist
-src-package
-modules
+
+commons-atom
+commons
+commons-ui
