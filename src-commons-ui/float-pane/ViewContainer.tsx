@@ -1,32 +1,49 @@
-/** @jsx etch.dom */
-
-import etch from "etch"
-import { HTMLView } from "./HTMLView"
-import { SnippetView } from "./SnippetView"
+import { HTMLView, getDocumentationHtml } from "./HTMLView"
+import { SnippetView, getSnippetHtml } from "./SnippetView"
 import { ReactView } from "./ReactView"
 import type { ReactElement } from "react"
+import * as React from "react"
+import ReactDOM from "react-dom"
+import { MarkdownService } from "../../types-packages/main"
+import type { Datatip } from "../../types-packages/main.d"
+
+export const DATATIP_ACTIONS = Object.freeze({
+  PIN: "PIN",
+  CLOSE: "CLOSE",
+})
+
+const IconsForAction = {
+  [DATATIP_ACTIONS.PIN]: "pin",
+  [DATATIP_ACTIONS.CLOSE]: "x",
+}
 
 /**
  * an etch component for a decoration pane
  */
-export class ViewContainer {
+export class ViewContainer extends React.Component {
   props: {
     component?: { element: () => ReactElement; containerClassName: string; contentClassName: string }
     html?: { element: string; containerClassName: string; contentClassName: string }
     snippet?: { element: string; containerClassName: string; contentClassName: string }
+    action: string
+    actionTitle: string
+    className?: string
+    datatip: Datatip
+    onActionClick: Function
+    onMouseDown: Function
+    onClickCapture: Function
   }
   children: Array<JSX.Element>
+  rootElement: HTMLElement
+  classNames
 
-  /**
-   * creates a data tip view component
-   * @param props  the props of this data tip view
-   * @param children potential child nodes of this data tip view
-   */
-  constructor(props: any, children?: Array<JSX.Element>) {
-    this.props = props
-    this.children = children || []
+  constructor(props, children = []) {
+    super(props)
+    this.children = children
     this.updateChildren()
-    etch.initialize(this)
+    this.rootElement = document.createElement('div')
+    const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
+    this.classNames = `${String(props.className)} datatip-element ${glowClass}`
   }
 
   /**
@@ -34,29 +51,14 @@ export class ViewContainer {
    * @return the data tip view element
    */
   render(): JSX.Element {
-    const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
-    const classes = `datatip-element ${glowClass}`
-    return <div className={classes}>{this.children}</div>
-  }
-
-  /**
-   * updates the internal state of the data tip view
-   */
-  update(props: any, children?: Array<JSX.Element>) {
-    // perform custom update logic here...
-    // then call `etch.update`, which is async and returns a promise
-    this.props = props
-    this.children = children || []
-    this.updateChildren()
-    return etch.update(this)
-  }
-
-  /**
-   * clean up the data tip view
-   * @return a promise object to keep track of the asynchronous operation
-   */
-  async destroy(): Promise<void> {
-    await etch.destroy(this)
+    this.actionButton = this.ActionClick(this.props.action, this.props.actionTitle)
+    return ReactDOM.render(
+      <div className={this.classNames} {...this.props.onMouseDown} {...this.props.onClickCapture}>
+        {this.children}
+        {this.actionButton}
+      </div>,
+      this.rootElement
+    )
   }
 
   /**
@@ -83,4 +85,25 @@ export class ViewContainer {
       )
     }
   }
+
+  get element() {
+    return this.render()
+  }
+
+  async destroy(): Promise<void> {
+    return
+  }
+
+  ActionClick(action, actionTitle) {
+    let actionButton = null
+    if (action != null && IconsForAction[action] != null) {
+      const actionIcon = IconsForAction[action]
+      actionButton = (
+        <div className={`datatip-pin-button icon-${actionIcon}`} onClick={(event: SyntheticEvent<>) => {
+          this.props.onActionClick()}} title={actionTitle} />
+      )
+    }
+    return actionButton
+  }
+
 }
