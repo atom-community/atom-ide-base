@@ -94,10 +94,6 @@ export class ViewContainer extends React.Component<Props, State> {
     }
   }
 
-  async destroy() {
-    return
-  }
-
   ActionClick(action, actionTitle) {
     let actionButton = null
     if (action != null && IconsForAction[action] != null) {
@@ -110,6 +106,9 @@ export class ViewContainer extends React.Component<Props, State> {
     return actionButton
   }
 
+  async destroy() {
+    return // this.componentWillUnmount()
+  }
 }
 
 // /**
