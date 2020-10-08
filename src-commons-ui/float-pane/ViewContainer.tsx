@@ -36,9 +36,12 @@ interface State {}
  * an etch component for a decoration pane
  */
 export class ViewContainer extends React.Component<Props, State> {
+  actionButton?: JSX.Element
+  classNames: string
   children: Array<JSX.Element>
+
   rootElement: HTMLElement
-  classNames
+
   constructor(props: Props) {
     super(props)
     this.children = []
@@ -94,8 +97,8 @@ export class ViewContainer extends React.Component<Props, State> {
     }
   }
 
-  ActionClick(action, actionTitle) {
-    let actionButton = null
+  ActionClick(action: string, actionTitle: string) {
+    let actionButton = undefined
     if (action != null && IconsForAction[action] != null) {
       const actionIcon = IconsForAction[action]
       actionButton = (
