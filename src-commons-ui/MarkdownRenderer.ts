@@ -7,7 +7,7 @@ let render: MarkdownService["render"] | undefined = undefined
 export async function getMarkdownRenderer() {
   if (!render) {
     //@ts-ignore
-    render = ((await import("atom-ide-markdown-service/lib/renderer")) as MarkdownService).render
+    render = ((await import("atom-ide-markdown-service/modules/renderer")) as MarkdownService).render
   }
   return render
 }
