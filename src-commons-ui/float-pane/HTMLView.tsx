@@ -45,19 +45,33 @@ export class HTMLView extends React.Component<Props, State> {
  * @return a promise object to track the asynchronous operation
  */
 export async function getDocumentationHtml(
-  markdownTexts: Array<String>,
+  markdownTexts: Array<string> | string,
   grammarName: string,
   renderer?: MarkdownService
 ): Promise<string | null> {
-  if (markdownTexts !== undefined && markdownTexts.length > 0) {
-    const markdownText = markdownTexts.join("\r\n")
-    if (renderer) {
-      return renderer.render(markdownText, grammarName)
-    } else {
-      // Use built-in markdown renderer when the markdown service is not available
-      const render = await getMarkdownRenderer()
-      return render(markdownText, grammarName)
-    }
+  if (markdownTexts === undefined) {
+    return null
   }
-  return null
+
+  let markdownText = ""
+  // if Array
+  if (Array.isArray(markdownText)) {
+    if (markdownText.length === 0) {
+      return null
+    }
+    markdownText = (markdownTexts as Array<string>).join("\r\n")
+  }
+  // if string
+  else {
+    //@ts-ignore
+    markdownText = markdownTexts
+  }
+
+  if (renderer) {
+    return renderer.render(markdownText, grammarName)
+  } else {
+    // Use built-in markdown renderer when the markdown service is not available
+    const render = await getMarkdownRenderer()
+    return render(markdownText, grammarName)
+  }
 }
