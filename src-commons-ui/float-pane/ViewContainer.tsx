@@ -17,29 +17,31 @@ const IconsForAction = {
   [DATATIP_ACTIONS.CLOSE]: "x",
 }
 
+interface Props {
+  component?: { element: () => ReactElement; containerClassName: string; contentClassName: string }
+  html?: { element: string; containerClassName: string; contentClassName: string }
+  snippet?: { element: string; containerClassName: string; contentClassName: string }
+  action: string
+  actionTitle: string
+  className?: string
+  datatip: Datatip
+  onActionClick: Function
+  onMouseDown: Function
+  onClickCapture: Function
+}
+
+interface State {}
+
 /**
  * an etch component for a decoration pane
  */
-export class ViewContainer extends React.Component {
-  props: {
-    component?: { element: () => ReactElement; containerClassName: string; contentClassName: string }
-    html?: { element: string; containerClassName: string; contentClassName: string }
-    snippet?: { element: string; containerClassName: string; contentClassName: string }
-    action: string
-    actionTitle: string
-    className?: string
-    datatip: Datatip
-    onActionClick: Function
-    onMouseDown: Function
-    onClickCapture: Function
-  }
+export class ViewContainer extends React.Component<Props, State> {
   children: Array<JSX.Element>
   rootElement: HTMLElement
   classNames
-
-  constructor(props, children = []) {
+  constructor(props: Props) {
     super(props)
-    this.children = children
+    this.children = []
     this.updateChildren()
     this.rootElement = document.createElement('div')
     const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
