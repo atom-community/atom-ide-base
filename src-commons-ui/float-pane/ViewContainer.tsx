@@ -1,10 +1,9 @@
-import { HTMLView, getDocumentationHtml } from "./HTMLView"
-import { SnippetView, getSnippetHtml } from "./SnippetView"
+import { HTMLView } from "./HTMLView"
+import { SnippetView } from "./SnippetView"
 import { ReactView } from "./ReactView"
 import type { ReactElement } from "react"
 import * as React from "react"
 import ReactDOM from "react-dom"
-import { MarkdownService } from "../../types-packages/main"
 import type { Datatip } from "../../types-packages/main.d"
 
 export const DATATIP_ACTIONS = Object.freeze({
@@ -101,7 +100,7 @@ export class ViewContainer extends React.Component<Props, State> {
       actionButton = (
         <div
           className={`datatip-pin-button icon-${actionIcon}`}
-          onClick={(event: SyntheticEvent<>) => {
+          onClick={(event) => {
             this.props.onActionClick()
           }}
           title={actionTitle}
@@ -115,37 +114,3 @@ export class ViewContainer extends React.Component<Props, State> {
     return // this.componentWillUnmount()
   }
 }
-
-// /**
-//  * get content of the given datatip as HTML
-//  * @param datatip object to be rendered
-//  * @param editor the Atom Text editor instance to host the data tip view
-//  * @param renderer markdown service to be used for rendering
-//  * @return a promise object to the reendered content
-//  */
-// async function getContent(datatip: Datatip, editor: TextEditor, renderer: MarkdownService) {
-//   let component: ReactElement | null = null
-//   let html: string = ""
-//   let snippet: string = ""
-//   if ("component" in datatip) {
-//     return <datatip.component />
-//   } else if (datatip.markedStrings.length > 0) {
-//     const grammar = editor.getGrammar().scopeName.toLowerCase()
-//     snippet =
-//       (await getSnippetHtml(
-//         datatip.markedStrings.filter((t) => t.type === "snippet").map((t) => t.value),
-//         grammar,
-//         renderer
-//       )) ?? ""
-//     html =
-//       (await getDocumentationHtml(
-//         datatip.markedStrings.filter((t) => t.type === "markdown").map((t) => t.value),
-//         grammar,
-//         renderer
-//       )) ?? ""
-//     const htmlOrSnippet = snippet + html
-//     return <div>{htmlOrSnippet}</div>
-//   } else {
-//     return null
-//   }
-// }
