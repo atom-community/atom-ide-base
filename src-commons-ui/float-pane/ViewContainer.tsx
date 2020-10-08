@@ -1,62 +1,71 @@
-/** @jsx etch.dom */
-
-import etch from "etch"
 import { HTMLView } from "./HTMLView"
 import { SnippetView } from "./SnippetView"
 import { ReactView } from "./ReactView"
 import type { ReactElement } from "react"
+import * as React from "react"
+import ReactDOM from "react-dom"
+import type { Datatip } from "../../types-packages/main.d"
+
+export const DATATIP_ACTIONS = Object.freeze({
+  PIN: "PIN",
+  CLOSE: "CLOSE",
+})
+
+const IconsForAction = {
+  [DATATIP_ACTIONS.PIN]: "pin",
+  [DATATIP_ACTIONS.CLOSE]: "x",
+}
+
+interface Props {
+  component?: { element: () => ReactElement; containerClassName: string; contentClassName: string }
+  html?: { element: string; containerClassName: string; contentClassName: string }
+  snippet?: { element: string; containerClassName: string; contentClassName: string }
+  action: string
+  actionTitle: string
+  className?: string
+  datatip: Datatip
+  onActionClick: Function
+  onMouseDown: Function
+  onClickCapture: Function
+}
+
+interface State {}
 
 /**
  * an etch component for a decoration pane
  */
-export class ViewContainer {
-  props: {
-    component?: { element: () => ReactElement; containerClassName: string; contentClassName: string }
-    html?: { element: string; containerClassName: string; contentClassName: string }
-    snippet?: { element: string; containerClassName: string; contentClassName: string }
-  }
+export class ViewContainer extends React.Component<Props, State> {
+  actionButton?: JSX.Element
+  classNames: string
   children: Array<JSX.Element>
 
-  /**
-   * creates a data tip view component
-   * @param props  the props of this data tip view
-   * @param children potential child nodes of this data tip view
-   */
-  constructor(props: any, children?: Array<JSX.Element>) {
-    this.props = props
-    this.children = children || []
+  rootElement: HTMLElement
+
+  constructor(props: Props) {
+    super(props)
+    this.children = []
     this.updateChildren()
-    etch.initialize(this)
+    this.rootElement = document.createElement("div")
+    const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
+    this.classNames = `${String(props.className)} datatip-element ${glowClass}`
   }
 
   /**
    * renders the data tip view component
    * @return the data tip view element
    */
-  render(): JSX.Element {
-    const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
-    const classes = `datatip-element ${glowClass}`
-    return <div className={classes}>{this.children}</div>
+  render() {
+    this.actionButton = this.ActionClick(this.props.action, this.props.actionTitle)
+    return (
+      <div className={this.classNames} {...this.props.onMouseDown} {...this.props.onClickCapture}>
+        {this.children}
+        {this.actionButton}
+      </div>
+    )
   }
 
-  /**
-   * updates the internal state of the data tip view
-   */
-  update(props: any, children?: Array<JSX.Element>) {
-    // perform custom update logic here...
-    // then call `etch.update`, which is async and returns a promise
-    this.props = props
-    this.children = children || []
-    this.updateChildren()
-    return etch.update(this)
-  }
-
-  /**
-   * clean up the data tip view
-   * @return a promise object to keep track of the asynchronous operation
-   */
-  async destroy(): Promise<void> {
-    await etch.destroy(this)
+  get element() {
+    return ReactDOM.render(this.render(), this.rootElement)
   }
 
   /**
@@ -82,5 +91,26 @@ export class ViewContainer {
         <HTMLView html={element} containerClassName={containerClassName} contentClassName={contentClassName} />
       )
     }
+  }
+
+  ActionClick(action: string, actionTitle: string) {
+    let actionButton = undefined
+    if (action != null && IconsForAction[action] != null) {
+      const actionIcon = IconsForAction[action]
+      actionButton = (
+        <div
+          className={`datatip-pin-button icon-${actionIcon}`}
+          onClick={(event) => {
+            this.props.onActionClick()
+          }}
+          title={actionTitle}
+        />
+      )
+    }
+    return actionButton
+  }
+
+  async destroy() {
+    return // this.componentWillUnmount()
   }
 }
