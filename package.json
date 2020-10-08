@@ -50,6 +50,7 @@
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
+    "atom-ide-markdown-service": "^1.3.4",
     "atom-package-deps": "^6.0.0",
     "dompurify": "^2.1.1",
     "etch": "^0.14.1",
