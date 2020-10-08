@@ -46,7 +46,7 @@ export class ViewContainer extends React.Component<Props, State> {
     super(props)
     this.children = []
     this.updateChildren()
-    this.rootElement = document.createElement('div')
+    this.rootElement = document.createElement("div")
     const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
     this.classNames = `${String(props.className)} datatip-element ${glowClass}`
   }
@@ -59,17 +59,14 @@ export class ViewContainer extends React.Component<Props, State> {
     this.actionButton = this.ActionClick(this.props.action, this.props.actionTitle)
     return (
       <div className={this.classNames} {...this.props.onMouseDown} {...this.props.onClickCapture}>
-          {this.children}
-          {this.actionButton}
+        {this.children}
+        {this.actionButton}
       </div>
     )
   }
 
   get element() {
-    return ReactDOM.render(
-      this.render(),
-      this.rootElement
-    )
+    return ReactDOM.render(this.render(), this.rootElement)
   }
 
   /**
@@ -102,8 +99,13 @@ export class ViewContainer extends React.Component<Props, State> {
     if (action != null && IconsForAction[action] != null) {
       const actionIcon = IconsForAction[action]
       actionButton = (
-        <div className={`datatip-pin-button icon-${actionIcon}`} onClick={(event: SyntheticEvent<>) => {
-          this.props.onActionClick()}} title={actionTitle} />
+        <div
+          className={`datatip-pin-button icon-${actionIcon}`}
+          onClick={(event: SyntheticEvent<>) => {
+            this.props.onActionClick()
+          }}
+          title={actionTitle}
+        />
       )
     }
     return actionButton
