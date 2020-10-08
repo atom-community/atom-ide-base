@@ -19,6 +19,7 @@ devDependencies:
   build-commit: 0.1.1
   coffeescript: 1.12.7
   cross-env: 7.0.2
+  csstype: 3.0.3
   eslint: 7.9.0
   eslint-config-atomic: 1.5.0_eslint@7.9.0
   jasmine: 3.6.1
@@ -5696,6 +5697,7 @@ specifiers:
   classnames: ^2.2.6
   coffeescript: ^1.12.7
   cross-env: 7.0.2
+  csstype: ^3.0.3
   dompurify: ^2.1.1
   eslint: 7.9.0
   eslint-config-atomic: ^1.5.0
