@@ -3,6 +3,7 @@
  */
 import DOMPurify from "dompurify"
 import { MarkdownService } from "../../types-packages/main"
+import { getMarkdownRenderer } from "../MarkdownRenderer"
 
 /**
  * an etch component that hosts a code snippet incl. syntax highlighting
@@ -51,7 +52,7 @@ export class SnippetView {
 export async function getSnippetHtml(
   snippets: Array<String>,
   grammarName: string,
-  renderer: MarkdownService
+  renderer?: MarkdownService
 ): Promise<string | null> {
   if (snippets !== undefined && snippets.length > 0) {
     const regExpLSPPrefix = /^\((method|property|parameter|alias)\)\W/
@@ -64,7 +65,13 @@ export async function getSnippetHtml(
       preElem.appendChild(codeElem)
       divElem.appendChild(preElem)
     })
-    return renderer.render(divElem.outerHTML, grammarName)
+    if (renderer) {
+      return renderer.render(divElem.outerHTML, grammarName)
+    } else {
+      // Use built-in markdown renderer when the markdown service is not available
+      const render = await getMarkdownRenderer()
+      return render(divElem.outerHTML, grammarName)
+    }
   }
   return null
 }

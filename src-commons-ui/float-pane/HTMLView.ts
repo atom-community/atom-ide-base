@@ -3,6 +3,7 @@
  */
 import DOMPurify from "dompurify"
 import { MarkdownService } from "../../types-packages/main"
+import { getMarkdownRenderer } from "../MarkdownRenderer"
 
 /**
  * an etch component that can host already prepared HTML text
@@ -69,11 +70,17 @@ export class HTMLView {
 export async function getDocumentationHtml(
   markdownTexts: Array<String>,
   grammarName: string,
-  renderer: MarkdownService
+  renderer?: MarkdownService
 ): Promise<string | null> {
   if (markdownTexts !== undefined && markdownTexts.length > 0) {
     const markdownText = markdownTexts.join("\r\n")
-    return renderer.render(markdownText, grammarName)
+    if (renderer) {
+      return renderer.render(markdownText, grammarName)
+    } else {
+      // Use built-in markdown renderer when the markdown service is not available
+      const render = await getMarkdownRenderer()
+      return render(markdownText, grammarName)
+    }
   }
   return null
 }
