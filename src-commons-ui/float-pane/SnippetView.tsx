@@ -27,7 +27,7 @@ export class SnippetView extends React.Component<Props, State> {
         <div
           className={this.props.contentClassName}
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(this.state.snippet),
+            __html: this.state.snippet,
           }}
         />
       </div>
@@ -80,9 +80,9 @@ export async function getSnippetHtml(
     })
 
     if (renderer) {
-      return renderer.render(divElem.outerHTML, grammarName)
+      return DOMPurify.sanitize(await renderer.render(divElem.outerHTML, grammarName))
     } else {
-      // Use built-in markdown renderer when the markdown service is not available
+      // Use built-in markdown renderer (it already does sanitization)
       const render = await getMarkdownRenderer()
       return render(divElem.outerHTML, grammarName)
     }

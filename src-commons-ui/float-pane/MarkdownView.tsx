@@ -5,11 +5,12 @@ import { getMarkdownRenderer } from "../MarkdownRenderer"
 
 export interface Props {
   markdown: Array<string> | string
-  html?: Array<string> | string // already renderered markdown
   grammarName?: string
   renderer?: MarkdownService
   containerClassName: string
   contentClassName: string
+  // already rendered markdown
+  html?: Array<string> | string
 }
 
 interface State {
@@ -28,7 +29,7 @@ export class MarkdownView extends React.Component<Props, State> {
         <div
           className={this.props.contentClassName}
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(this.state.markdown),
+            __html: this.state.markdown,
           }}
         />
       </div>
@@ -83,9 +84,9 @@ export async function renderMarkdown(
     markdownText = markdownTexts
   }
   if (renderer) {
-    return await renderer.render(markdownText, grammarName)
+    return DOMPurify.sanitize(await renderer.render(markdownText, grammarName))
   } else {
-    // Use built-in markdown renderer when the markdown service is not available
+    // Use built-in markdown renderer (it already does sanitization)
     const render = await getMarkdownRenderer()
     return await render(markdownText, grammarName)
   }
