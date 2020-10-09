@@ -1,10 +1,9 @@
-import { HTMLView } from "./HTMLView"
-import { SnippetView } from "./SnippetView"
-import { ReactView } from "./ReactView"
+import { MarkdownView, Props as MarkdownViewProps } from "./MarkdownView"
+import { SnippetView, Props as SnippetViewProps } from "./SnippetView"
+import { ReactView, Props as ReactViewProps } from "./ReactView"
 import type { ReactElement } from "react"
 import * as React from "react"
 import ReactDOM from "react-dom"
-import type { Datatip } from "../../types-packages/main.d"
 
 export const DATATIP_ACTIONS = Object.freeze({
   PIN: "PIN",
@@ -17,16 +16,15 @@ const IconsForAction = {
 }
 
 interface Props {
-  component?: { element: () => ReactElement; containerClassName: string; contentClassName: string }
-  html?: { element: string; containerClassName: string; contentClassName: string }
-  snippet?: { element: string; containerClassName: string; contentClassName: string }
-  action: string
-  actionTitle: string
+  component?: ReactViewProps
+  markdown?: MarkdownViewProps
+  snippet?: SnippetViewProps
+  action?: string
+  actionTitle?: string
   className?: string
-  datatip: Datatip
-  onActionClick: Function
-  onMouseDown: Function
-  onClickCapture: Function
+  onActionClick?: Function
+  onMouseDown?: Function
+  onClickCapture?: Function
 }
 
 interface State {}
@@ -36,19 +34,8 @@ interface State {}
  */
 export class ViewContainer extends React.Component<Props, State> {
   actionButton?: JSX.Element
-  classNames: string
-  children: Array<JSX.Element>
-
-  rootElement: HTMLElement
-
-  constructor(props: Props) {
-    super(props)
-    this.children = []
-    this.updateChildren()
-    this.rootElement = document.createElement("div")
-    const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
-    this.classNames = `${String(props.className)} datatip-element ${glowClass}`
-  }
+  children: Array<JSX.Element> = []
+  rootElement: HTMLElement = document.createElement("div")
 
   /**
    * renders the data tip view component
@@ -56,8 +43,9 @@ export class ViewContainer extends React.Component<Props, State> {
    */
   render() {
     this.actionButton = this.ActionClick(this.props.action, this.props.actionTitle)
+    this.updateChildren()
     return (
-      <div className={this.classNames} {...this.props.onMouseDown} {...this.props.onClickCapture}>
+      <div className={`${String(this.props.className)} datatip-element`} {...this.props.onMouseDown} {...this.props.onClickCapture}>
         {this.children}
         {this.actionButton}
       </div>
@@ -74,22 +62,13 @@ export class ViewContainer extends React.Component<Props, State> {
    */
   updateChildren() {
     if (this.props.component) {
-      const { element, containerClassName, contentClassName } = this.props.component
-      this.children.push(
-        <ReactView component={element} containerClassName={containerClassName} contentClassName={contentClassName} />
-      )
+      this.children.push(<ReactView {...this.props.component} />)
     }
     if (this.props.snippet) {
-      const { element, containerClassName, contentClassName } = this.props.snippet
-      this.children.push(
-        <SnippetView snippet={element} containerClassName={containerClassName} contentClassName={contentClassName} />
-      )
+      this.children.push(<SnippetView {...this.props.snippet} />)
     }
-    if (this.props.html) {
-      const { element, containerClassName, contentClassName } = this.props.html
-      this.children.push(
-        <HTMLView html={element} containerClassName={containerClassName} contentClassName={contentClassName} />
-      )
+    if (this.props.markdown) {
+      this.children.push(<MarkdownView {...this.props.markdown} />)
     }
   }
 
