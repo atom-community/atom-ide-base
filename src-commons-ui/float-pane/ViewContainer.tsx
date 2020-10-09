@@ -4,7 +4,6 @@ import { ReactView, Props as ReactViewProps } from "./ReactView"
 import type { ReactElement } from "react"
 import * as React from "react"
 import ReactDOM from "react-dom"
-import type { Datatip } from "../../types-packages/main.d"
 
 export const DATATIP_ACTIONS = Object.freeze({
   PIN: "PIN",
@@ -23,7 +22,6 @@ interface Props {
   action?: string
   actionTitle?: string
   className?: string
-  datatip?: Datatip
   onActionClick?: Function
   onMouseDown?: Function
   onClickCapture?: Function
