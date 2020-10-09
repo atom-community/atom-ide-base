@@ -47,7 +47,7 @@ export class PinnedDatatip {
   _boundDispose: Function
   _boundHandleMouseDown: Function
   _boundHandleCapturedClick: Function
-  _mouseUpTimeout: ?number
+  _mouseUpTimeout: ?NodeJS.Timeout
   _hostElement: HTMLElement
   _marker: ?Marker
   _rangeDecoration: ?Decoration
