@@ -33,7 +33,7 @@ function documentMouseUp$(): Observable<MouseEvent> {
   return _mouseUp$
 }
 
-export type PinnedDatatipParams = {
+export interface PinnedDatatipParams {
   onDispose: (pinnedDatatip: PinnedDatatip) => void,
   hideDataTips: () => void,
   // Defaults to 'end-of-line'.
