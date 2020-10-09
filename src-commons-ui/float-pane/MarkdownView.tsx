@@ -6,7 +6,7 @@ import { getMarkdownRenderer } from "../MarkdownRenderer"
 export interface Props {
   markdown: Array<string> | string
   html?: Array<string> | string // already renderered markdown
-  grammarName: string
+  grammarName?: string
   renderer?: MarkdownService
   containerClassName: string
   contentClassName: string
@@ -62,7 +62,7 @@ export class MarkdownView extends React.Component<Props, State> {
  */
 export async function renderMarkdown(
   markdownTexts: Array<string> | string,
-  grammarName: string,
+  grammarName: string = atom.workspace.getActiveTextEditor()?.getGrammar().scopeName?.toLowerCase() || "",
   renderer?: MarkdownService
 ): Promise<string | null> {
   if (markdownTexts === undefined) {

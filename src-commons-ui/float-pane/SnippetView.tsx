@@ -5,7 +5,7 @@ import { getMarkdownRenderer } from "../MarkdownRenderer"
 
 export interface Props {
   snippet: Array<string> | string
-  grammarName: string
+  grammarName?: string
   renderer?: MarkdownService
   containerClassName: string
   contentClassName: string
@@ -52,7 +52,7 @@ const regExpLSPPrefix = /^\((method|property|parameter|alias)\)\W/
  */
 export async function getSnippetHtml(
   snippets: Array<string> | string,
-  grammarName: string,
+  grammarName: string = atom.workspace.getActiveTextEditor()?.getGrammar().scopeName?.toLowerCase() || "",
   renderer?: MarkdownService
 ): Promise<string | null> {
   if (snippets === undefined) {
