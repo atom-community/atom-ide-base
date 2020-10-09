@@ -1,4 +1,4 @@
-import { Marker, Decoration, TextEditor } from "atom"
+import { Marker, Decoration, TextEditor, Disposable, CompositeDisposable } from "atom"
 import type {Subscription} from "rxjs"
 
 type Position = {
@@ -11,7 +11,6 @@ import ReactDOM from "react-dom"
 import { Observable } from "rxjs"
 import invariant from "assert"
 import classnames from "classnames"
-import Disposable from "atom"
 
 import { ViewContainer, DATATIP_ACTIONS } from "./ViewContainer"
 import isScrollable from "./isScrollable"
@@ -54,7 +53,7 @@ export class PinnedDatatip {
   _marker: ?Marker
   _rangeDecoration: ?Decoration
   _mouseSubscription: ?Subscription
-  _subscriptions: Disposable
+  _subscriptions: CompositeDisposable
   _datatip: Datatip
   _editor: TextEditor
   _dragOrigin: ?Position
@@ -68,7 +67,7 @@ export class PinnedDatatip {
   _showRangeHighlight: boolean
 
   constructor(datatip: Datatip, editor: TextEditor, params: PinnedDatatipParams) {
-    this._subscriptions = new Disposable()
+    this._subscriptions = new CompositeDisposable()
     this._subscriptions.add(new Disposable(() => params.onDispose(this)))
     this._datatip = datatip
     this._editor = editor
