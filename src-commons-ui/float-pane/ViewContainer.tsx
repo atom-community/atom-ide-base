@@ -1,4 +1,4 @@
-import { HTMLView, Props as HTMLViewProps } from "./HTMLView"
+import { MarkdownView, Props as MarkdownViewProps } from "./MarkdownView"
 import { SnippetView, Props as SnippetViewProps } from "./SnippetView"
 import { ReactView, Props as ReactViewProps } from "./ReactView"
 import type { ReactElement } from "react"
@@ -18,9 +18,9 @@ const IconsForAction = {
 
 interface Props {
   component?: ReactViewProps
-  html?: HTMLViewProps
   action: string
   actionTitle: string
+  markdown?: MarkdownViewProps
   snippet?: SnippetViewProps
   className?: string
   datatip: Datatip
@@ -79,8 +79,8 @@ export class ViewContainer extends React.Component<Props, State> {
     if (this.props.snippet) {
       this.children.push(<SnippetView {...this.props.snippet} />)
     }
-    if (this.props.html) {
-      this.children.push(<HTMLView {...this.props.html} />)
+    if (this.props.markdown) {
+      this.children.push(<MarkdownView {...this.props.markdown} />)
     }
   }
 

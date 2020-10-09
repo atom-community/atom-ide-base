@@ -4,8 +4,8 @@ import { MarkdownService } from "../../types-packages/main"
 import { getMarkdownRenderer } from "../MarkdownRenderer"
 
 export interface Props {
-  html: string
-  htmlReady?: string
+  markdown: string
+  html?: string // already renderered markdown
   grammarName: string
   renderer?: MarkdownService
   containerClassName: string
@@ -13,14 +13,14 @@ export interface Props {
 }
 
 interface State {
-  html: string
+  markdown: string
 }
 
 /**
- * A react component that can host already prepared HTML text (embeds HTML)
+ * A react component that can hosts markdown texts
  */
-export class HTMLView extends React.Component<Props, State> {
-  state: State = { html: "" }
+export class MarkdownView extends React.Component<Props, State> {
+  state: State = { markdown: "" }
 
   render() {
     return (
@@ -28,7 +28,7 @@ export class HTMLView extends React.Component<Props, State> {
         <div
           className={this.props.contentClassName}
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(this.state.html),
+            __html: DOMPurify.sanitize(this.state.markdown),
           }}
         />
       </div>
@@ -44,23 +44,23 @@ export class HTMLView extends React.Component<Props, State> {
   }
 
   /**
-    Calls `getDocumentationHtml` to convert Markdown to HTML
+    Calls `getDocumentationHtml` to convert Markdown to markdown
   */
   async componentDidMount() {
     this.setState({
-      html: (await getDocumentationHtml(this.props.html, this.props.grammarName, this.props.renderer)) ?? "",
+      markdown: (await renderMarkdown(this.props.markdown, this.props.grammarName, this.props.renderer)) ?? "",
     })
   }
 }
 
 /**
- * convert the markdown documentation to HTML
+ * convert the markdown documentation to markdown
  * @param markdownTexts the documentation text in markdown format to be converted
  * @param grammarName  the default grammar used for embedded code samples
  * @param renderer markdown service to be used for rendering
  * @return a promise object to track the asynchronous operation
  */
-export async function getDocumentationHtml(
+export async function renderMarkdown(
   markdownTexts: Array<string> | string,
   grammarName: string,
   renderer?: MarkdownService
