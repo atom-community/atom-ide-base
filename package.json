@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "atom-package-deps": "^6.0.0",
-    "atom-ide-markdown-service": "^1.4.1",
+    "atom-ide-markdown-service": "^1.5.0",
     "dompurify": "^2.1.1",
     "etch": "^0.14.1",
     "react": "^16.13.1",
