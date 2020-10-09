@@ -1,10 +1,10 @@
-import { Marker, Decoration, TextEditor, Disposable, CompositeDisposable } from "atom"
+import { Marker, Decoration, TextEditor, Disposable, DisposableLike, CompositeDisposable } from "atom"
+import { Observable, fromEvent } from "rxjs"
 import type {Subscription} from "rxjs"
 import { PinnedDatatipPosition } from "../../types-packages/main"
 
 import * as React from "react"
 import ReactDOM from "react-dom"
-import { Observable } from "rxjs"
 import invariant from "assert"
 import classnames from "classnames"
 
@@ -13,18 +13,18 @@ import isScrollable from "./isScrollable"
 
 const LINE_END_MARGIN = 20
 
-let _mouseMove$
+let _mouseMove$: Observable<MouseEvent>
 function documentMouseMove$(): Observable<MouseEvent> {
   if (_mouseMove$ == null) {
-    _mouseMove$ = Observable.fromEvent(document, "mousemove")
+    _mouseMove$ = fromEvent<MouseEvent>(document, "mousemove")
   }
   return _mouseMove$
 }
 
-let _mouseUp$
+let _mouseUp$: Observable<MouseEvent>
 function documentMouseUp$(): Observable<MouseEvent> {
   if (_mouseUp$ == null) {
-    _mouseUp$ = Observable.fromEvent(document, "mouseup")
+    _mouseUp$ = fromEvent<MouseEvent>(document, "mouseup")
   }
   return _mouseUp$
 }
@@ -48,7 +48,7 @@ export class PinnedDatatip {
   _boundHandleMouseEnter: Function
   _boundHandleMouseLeave: Function
   _boundHandleCapturedClick: Function
-  _mouseUpTimeout: ?TimeoutID
+  _mouseUpTimeout: ?number
   _hostElement: HTMLElement
   _marker: ?Marker
   _rangeDecoration: ?Decoration
@@ -83,16 +83,20 @@ export class PinnedDatatip {
     this._checkedScrollable = false
     this._isScrollable = false
 
+    const _wheelSubscription = fromEvent(this._hostElement, "wheel").subscribe((e) => {
+      if (!this._checkedScrollable) {
+        this._isScrollable = isScrollable(this._hostElement, e)
+        this._checkedScrollable = true
+      }
+      if (this._isScrollable) {
+        e.stopPropagation()
+      }
+    })
+    // convert to Atom API (rename unsubscribe to dispose)
+    const _wheelDisposable = {..._wheelSubscription, dispose: _wheelSubscription.unsubscribe}
+
     this._subscriptions.add(
-      Observable.fromEvent(this._hostElement, "wheel").subscribe((e) => {
-        if (!this._checkedScrollable) {
-          this._isScrollable = isScrollable(this._hostElement, e)
-          this._checkedScrollable = true
-        }
-        if (this._isScrollable) {
-          e.stopPropagation()
-        }
-      })
+      _wheelDisposable
     )
     this._hostElement.addEventListener("mouseenter", this._boundHandleMouseEnter)
     this._hostElement.addEventListener("mouseleave", this._boundHandleMouseLeave)
