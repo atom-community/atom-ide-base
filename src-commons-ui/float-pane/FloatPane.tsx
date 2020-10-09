@@ -203,7 +203,7 @@ export class PinnedDatatip {
         _hostElement.style.left = _offset.x + "px"
         break
       default:
-        ;(_position: empty)
+        // ;(_position: empty)
         throw new Error(`Unexpected PinnedDatatip position: ${this._position}`)
     }
   }
