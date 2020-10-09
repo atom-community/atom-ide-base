@@ -3,7 +3,7 @@ import "../../types-packages/atom"
 import { Observable, fromEvent } from "rxjs"
 import type {Subscription} from "rxjs"
 import { disposableFromSubscription } from "../../src-commons-atom/disposable"
-import { PinnedDatatipPosition } from "../../types-packages/main"
+import { PinnedDatatipPosition, Datatip } from "../../types-packages/main"
 
 import * as React from "react"
 import ReactDOM from "react-dom"
@@ -248,7 +248,7 @@ export class PinnedDatatip {
         action={DATATIP_ACTIONS.CLOSE}
         actionTitle="Close this datatip"
         className={classnames(_isDragging ? "datatip-dragging" : "", "datatip-pinned")}
-        datatip={_datatip}
+        {..._datatip}
         onActionClick={this._boundDispose}
         onMouseDown={this._boundHandleMouseDown}
         onClickCapture={this._boundHandleCapturedClick}
