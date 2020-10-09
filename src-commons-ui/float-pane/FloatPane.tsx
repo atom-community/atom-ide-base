@@ -46,8 +46,6 @@ export interface PinnedDatatipParams {
 export class PinnedDatatip {
   _boundDispose: Function
   _boundHandleMouseDown: Function
-  _boundHandleMouseEnter: Function
-  _boundHandleMouseLeave: Function
   _boundHandleCapturedClick: Function
   _mouseUpTimeout: ?number
   _hostElement: HTMLElement
@@ -78,8 +76,6 @@ export class PinnedDatatip {
     this._hostElement.className = "datatip-element"
     this._boundDispose = this.dispose.bind(this)
     this._boundHandleMouseDown = this.handleMouseDown.bind(this)
-    this._boundHandleMouseEnter = this.handleMouseEnter.bind(this)
-    this._boundHandleMouseLeave = this.handleMouseLeave.bind(this)
     this._boundHandleCapturedClick = this.handleCapturedClick.bind(this)
     this._checkedScrollable = false
     this._isScrollable = false
@@ -97,12 +93,12 @@ export class PinnedDatatip {
     this._subscriptions.add(
       disposableFromSubscription(_wheelSubscription)
     )
-    this._hostElement.addEventListener("mouseenter", this._boundHandleMouseEnter)
-    this._hostElement.addEventListener("mouseleave", this._boundHandleMouseLeave)
+    this._hostElement.addEventListener("mouseenter", (e) => this.handleMouseEnter(e))
+    this._hostElement.addEventListener("mouseleave", (e) => this.handleMouseLeave(e))
     this._subscriptions.add(
       new Disposable(() => {
-        this._hostElement.removeEventListener("mouseenter", this._boundHandleMouseEnter)
-        this._hostElement.removeEventListener("mouseleave", this._boundHandleMouseLeave)
+        this._hostElement.removeEventListener("mouseenter", (e) => this.handleMouseEnter(e))
+        this._hostElement.removeEventListener("mouseleave", (e) => this.handleMouseLeave(e))
       })
     )
     this._mouseUpTimeout = null
@@ -116,6 +112,8 @@ export class PinnedDatatip {
     this.render()
   }
 
+  // Mouse event hanlders:
+  
   handleMouseEnter(event: MouseEvent): void {
     this._isHovering = true
     this._hideDataTips()
