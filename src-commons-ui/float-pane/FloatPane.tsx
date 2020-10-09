@@ -1,4 +1,4 @@
-import { Marker, Decoration, TextEditor, Disposable, DisposableLike, CompositeDisposable } from "atom"
+import { DisplayMarker, Decoration, TextEditor, Disposable, DisposableLike, CompositeDisposable } from "atom"
 import { Observable, fromEvent } from "rxjs"
 import type {Subscription} from "rxjs"
 import { disposableFromSubscription } from "../../src-commons-atom/disposable"
@@ -49,7 +49,7 @@ export class PinnedDatatip {
   _boundHandleCapturedClick: Function
   _mouseUpTimeout: ?NodeJS.Timeout
   _hostElement: HTMLElement
-  _marker: ?Marker
+  _marker: ?DisplayMarker
   _rangeDecoration: ?Decoration
   _mouseSubscription: ?Subscription
   _subscriptions: CompositeDisposable
@@ -216,7 +216,7 @@ export class PinnedDatatip {
     }
 
     if (this._marker == null) {
-      const marker: Marker = _editor.markBufferRange(_datatip.range, {
+      const marker: DisplayMarker = _editor.markBufferRange(_datatip.range, {
         invalidate: "never",
       })
       this._marker = marker
