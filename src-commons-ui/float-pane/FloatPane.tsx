@@ -1,4 +1,4 @@
-import type { Datatip, PinnedDatatipPosition } from "./types"
+import { Marker, Decoration, TextEditor } from "atom"
 
 type Position = {
   x: number,
@@ -50,8 +50,8 @@ export class PinnedDatatip {
   _boundHandleCapturedClick: Function
   _mouseUpTimeout: ?TimeoutID
   _hostElement: HTMLElement
-  _marker: ?atom$Marker
-  _rangeDecoration: ?atom$Decoration
+  _marker: ?Marker
+  _rangeDecoration: ?Decoration
   _mouseSubscription: ?rxjs$ISubscription
   _subscriptions: Disposable
   _datatip: Datatip
@@ -217,7 +217,7 @@ export class PinnedDatatip {
     }
 
     if (this._marker == null) {
-      const marker: atom$Marker = _editor.markBufferRange(_datatip.range, {
+      const marker: Marker = _editor.markBufferRange(_datatip.range, {
         invalidate: "never",
       })
       this._marker = marker
