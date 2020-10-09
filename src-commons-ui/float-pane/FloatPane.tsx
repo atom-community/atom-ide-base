@@ -1,10 +1,6 @@
 import { Marker, Decoration, TextEditor, Disposable, CompositeDisposable } from "atom"
 import type {Subscription} from "rxjs"
-
-type Position = {
-  x: number,
-  y: number,
-}
+import { PinnedDatatipPosition } from "../../types-packages/main"
 
 import * as React from "react"
 import ReactDOM from "react-dom"
@@ -33,6 +29,10 @@ function documentMouseUp$(): Observable<MouseEvent> {
   return _mouseUp$
 }
 
+interface Position {
+  x: number,
+  y: number,
+}
 export interface PinnedDatatipParams {
   onDispose: (pinnedDatatip: PinnedDatatip) => void,
   hideDataTips: () => void,
