@@ -18,15 +18,15 @@ const IconsForAction = {
 
 interface Props {
   component?: ReactViewProps
-  action: string
-  actionTitle: string
   markdown?: MarkdownViewProps
   snippet?: SnippetViewProps
+  action?: string
+  actionTitle?: string
   className?: string
-  datatip: Datatip
-  onActionClick: Function
-  onMouseDown: Function
-  onClickCapture: Function
+  datatip?: Datatip
+  onActionClick?: Function
+  onMouseDown?: Function
+  onClickCapture?: Function
 }
 
 interface State {}
