@@ -34,7 +34,6 @@ interface State {}
  */
 export class ViewContainer extends React.Component<Props, State> {
   actionButton?: JSX.Element
-  classNames: string
   children: Array<JSX.Element>
 
   rootElement: HTMLElement
@@ -44,8 +43,6 @@ export class ViewContainer extends React.Component<Props, State> {
     this.children = []
     this.updateChildren()
     this.rootElement = document.createElement("div")
-    const glowClass = atom.config.get("atom-ide-datatip.glowOnHover") ? "datatip-glow" : ""
-    this.classNames = `${String(props.className)} datatip-element ${glowClass}`
   }
 
   /**
@@ -55,7 +52,7 @@ export class ViewContainer extends React.Component<Props, State> {
   render() {
     this.actionButton = this.ActionClick(this.props.action, this.props.actionTitle)
     return (
-      <div className={this.classNames} {...this.props.onMouseDown} {...this.props.onClickCapture}>
+      <div className={`${String(this.props.className)} datatip-element`} {...this.props.onMouseDown} {...this.props.onClickCapture}>
         {this.children}
         {this.actionButton}
       </div>
