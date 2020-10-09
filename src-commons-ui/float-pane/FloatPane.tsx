@@ -1,4 +1,5 @@
 import { Marker, Decoration, TextEditor } from "atom"
+import type {Subscription} from "rxjs"
 
 type Position = {
   x: number,
@@ -52,7 +53,7 @@ export class PinnedDatatip {
   _hostElement: HTMLElement
   _marker: ?Marker
   _rangeDecoration: ?Decoration
-  _mouseSubscription: ?rxjs$ISubscription
+  _mouseSubscription: ?Subscription
   _subscriptions: Disposable
   _datatip: Datatip
   _editor: TextEditor
