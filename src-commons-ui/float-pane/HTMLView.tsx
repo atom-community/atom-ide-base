@@ -3,25 +3,32 @@ import DOMPurify from "dompurify"
 import { MarkdownService } from "../../types-packages/main"
 import { getMarkdownRenderer } from "../MarkdownRenderer"
 
-interface Props {
+export interface Props {
   html: string
+  htmlReady?: string
+  grammarName: string
+  renderer?: MarkdownService
   containerClassName: string
   contentClassName: string
 }
 
-interface State {}
+interface State {
+  html: string
+}
 
 /**
  * A react component that can host already prepared HTML text (embeds HTML)
  */
 export class HTMLView extends React.Component<Props, State> {
+  state: State = { html: "" }
+
   render() {
     return (
       <div className={this.props.containerClassName} onWheel={(e) => this.onMouseWheel(e)}>
         <div
           className={this.props.contentClassName}
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(this.props.html),
+            __html: DOMPurify.sanitize(this.state.html),
           }}
         />
       </div>
@@ -34,6 +41,15 @@ export class HTMLView extends React.Component<Props, State> {
    */
   onMouseWheel(evt: React.WheelEvent) {
     evt.stopPropagation()
+  }
+
+  /**
+    Calls `getDocumentationHtml` to convert Markdown to HTML
+  */
+  async componentDidMount() {
+    this.setState({
+      html: (await getDocumentationHtml(this.props.html, this.props.grammarName, this.props.renderer)) ?? "",
+    })
   }
 }
 
@@ -55,8 +71,8 @@ export async function getDocumentationHtml(
 
   let markdownText = ""
   // if Array
-  if (Array.isArray(markdownText)) {
-    if (markdownText.length === 0) {
+  if (Array.isArray(markdownTexts)) {
+    if (markdownTexts.length === 0) {
       return null
     }
     markdownText = (markdownTexts as Array<string>).join("\r\n")
@@ -66,12 +82,11 @@ export async function getDocumentationHtml(
     //@ts-ignore
     markdownText = markdownTexts
   }
-
   if (renderer) {
-    return renderer.render(markdownText, grammarName)
+    return await renderer.render(markdownText, grammarName)
   } else {
     // Use built-in markdown renderer when the markdown service is not available
     const render = await getMarkdownRenderer()
-    return render(markdownText, grammarName)
+    return await render(markdownText, grammarName)
   }
 }

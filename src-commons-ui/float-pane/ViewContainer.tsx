@@ -1,4 +1,4 @@
-import { HTMLView } from "./HTMLView"
+import { HTMLView, Props as HTMLViewProps } from "./HTMLView"
 import { SnippetView } from "./SnippetView"
 import { ReactView } from "./ReactView"
 import type { ReactElement } from "react"
@@ -18,7 +18,7 @@ const IconsForAction = {
 
 interface Props {
   component?: { element: () => ReactElement; containerClassName: string; contentClassName: string }
-  html?: { element: string; containerClassName: string; contentClassName: string }
+  html?: HTMLViewProps
   snippet?: { element: string; containerClassName: string; contentClassName: string }
   action: string
   actionTitle: string
@@ -86,10 +86,7 @@ export class ViewContainer extends React.Component<Props, State> {
       )
     }
     if (this.props.html) {
-      const { element, containerClassName, contentClassName } = this.props.html
-      this.children.push(
-        <HTMLView html={element} containerClassName={containerClassName} contentClassName={contentClassName} />
-      )
+      this.children.push(<HTMLView {...this.props.html} />)
     }
   }
 
