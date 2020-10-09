@@ -1,6 +1,7 @@
 import { Marker, Decoration, TextEditor, Disposable, DisposableLike, CompositeDisposable } from "atom"
 import { Observable, fromEvent } from "rxjs"
 import type {Subscription} from "rxjs"
+import { disposableFromSubscription } from "../../src-commons-atom/disposable"
 import { PinnedDatatipPosition } from "../../types-packages/main"
 
 import * as React from "react"
@@ -92,11 +93,9 @@ export class PinnedDatatip {
         e.stopPropagation()
       }
     })
-    // convert to Atom API (rename unsubscribe to dispose)
-    const _wheelDisposable = {..._wheelSubscription, dispose: _wheelSubscription.unsubscribe}
 
     this._subscriptions.add(
-      _wheelDisposable
+      disposableFromSubscription(_wheelSubscription)
     )
     this._hostElement.addEventListener("mouseenter", this._boundHandleMouseEnter)
     this._hostElement.addEventListener("mouseleave", this._boundHandleMouseLeave)
