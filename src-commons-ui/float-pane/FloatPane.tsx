@@ -1,4 +1,5 @@
-import { DisplayMarker, Decoration, TextEditor, Disposable, DisposableLike, CompositeDisposable } from "atom"
+import { DisplayMarker, Decoration, TextEditor, Disposable, DisposableLike, CompositeDisposable, TextEditorElement } from "atom"
+import "../../types-packages/atom"
 import { Observable, fromEvent } from "rxjs"
 import type {Subscription} from "rxjs"
 import { disposableFromSubscription } from "../../src-commons-atom/disposable"
