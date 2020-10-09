@@ -157,8 +157,7 @@ export class PinnedDatatip {
     }
   }
 
-  handleMouseDown(event: Event): void {
-    const evt: MouseEvent = (event: any)
+  handleMouseDown(evt: MouseEvent): void {
     this._dragOrigin = {
       x: evt.clientX - this._offset.x,
       y: evt.clientY - this._offset.y,
