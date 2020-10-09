@@ -49,35 +49,31 @@ export class PinnedDatatip {
   _boundHandleMouseDown: Function
   _boundHandleCapturedClick: Function
   _mouseUpTimeout: NodeJS.Timeout | null = null
-  _hostElement: HTMLElement
+  _hostElement: HTMLElement = document.createElement("div")
   _marker?: DisplayMarker
   _rangeDecoration?: Decoration
   _mouseSubscription: Subscription | null = null
-  _subscriptions: CompositeDisposable
+  _subscriptions: CompositeDisposable = new CompositeDisposable()
   _datatip: Datatip
   _editor: TextEditor
   _dragOrigin: Position | null = null
-  _isDragging: boolean
-  _offset: Position
-  _isHovering: boolean
-  _checkedScrollable: boolean
-  _isScrollable: boolean
+  _isDragging: boolean = false
+  _offset: Position =  { x: 0, y: 0 }
+  _isHovering: boolean = false
+  _checkedScrollable: boolean = false
+  _isScrollable: boolean = false
   _hideDataTips: () => void
   _position: PinnedDatatipPosition
   _showRangeHighlight: boolean
 
   constructor(datatip: Datatip, editor: TextEditor, params: PinnedDatatipParams) {
-    this._subscriptions = new CompositeDisposable()
     this._subscriptions.add(new Disposable(() => params.onDispose(this)))
     this._datatip = datatip
     this._editor = editor
-    this._hostElement = document.createElement("div")
     this._hostElement.className = "datatip-element"
     this._boundDispose = this.dispose.bind(this)
     this._boundHandleMouseDown = this.handleMouseDown.bind(this)
     this._boundHandleCapturedClick = this.handleCapturedClick.bind(this)
-    this._checkedScrollable = false
-    this._isScrollable = false
 
     const _wheelSubscription = fromEvent<WheelEvent>(this._hostElement, "wheel").subscribe((e) => {
       if (!this._checkedScrollable) {
@@ -100,9 +96,6 @@ export class PinnedDatatip {
         this._hostElement.removeEventListener("mouseleave", (e) => this.handleMouseLeave(e))
       })
     )
-    this._offset = { x: 0, y: 0 }
-    this._isDragging = false
-    this._isHovering = false
     this._hideDataTips = params.hideDataTips
     this._position = params.position == null ? "end-of-line" : params.position
     this._showRangeHighlight = params.showRangeHighlight == null ? true : params.showRangeHighlight
