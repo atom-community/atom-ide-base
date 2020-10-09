@@ -35,6 +35,8 @@ declare module "atom" {
     }
 
     isDestroyed(): boolean
+
+    getDefaultCharWidth(): number
   }
 
   interface LanguageMode {
