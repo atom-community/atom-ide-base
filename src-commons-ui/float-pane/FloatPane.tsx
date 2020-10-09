@@ -48,15 +48,15 @@ export class PinnedDatatip {
   _boundDispose: Function
   _boundHandleMouseDown: Function
   _boundHandleCapturedClick: Function
-  _mouseUpTimeout: ?NodeJS.Timeout
+  _mouseUpTimeout: NodeJS.Timeout | null = null
   _hostElement: HTMLElement
-  _marker: ?DisplayMarker
-  _rangeDecoration: ?Decoration
-  _mouseSubscription: ?Subscription
+  _marker?: DisplayMarker
+  _rangeDecoration?: Decoration
+  _mouseSubscription: Subscription | null = null
   _subscriptions: CompositeDisposable
   _datatip: Datatip
   _editor: TextEditor
-  _dragOrigin: ?Position
+  _dragOrigin: Position | null = null
   _isDragging: boolean
   _offset: Position
   _isHovering: boolean
@@ -71,8 +71,6 @@ export class PinnedDatatip {
     this._subscriptions.add(new Disposable(() => params.onDispose(this)))
     this._datatip = datatip
     this._editor = editor
-    this._marker = null
-    this._rangeDecoration = null
     this._hostElement = document.createElement("div")
     this._hostElement.className = "datatip-element"
     this._boundDispose = this.dispose.bind(this)
@@ -102,10 +100,8 @@ export class PinnedDatatip {
         this._hostElement.removeEventListener("mouseleave", (e) => this.handleMouseLeave(e))
       })
     )
-    this._mouseUpTimeout = null
     this._offset = { x: 0, y: 0 }
     this._isDragging = false
-    this._dragOrigin = null
     this._isHovering = false
     this._hideDataTips = params.hideDataTips
     this._position = params.position == null ? "end-of-line" : params.position
