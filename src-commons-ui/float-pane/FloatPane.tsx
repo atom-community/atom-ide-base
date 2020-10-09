@@ -56,8 +56,6 @@ export class PinnedDatatip {
   _subscriptions: Disposable
   _datatip: Datatip
   _editor: TextEditor
-  _hostElement: HTMLElement
-  _boundDispose: Function
   _dragOrigin: ?Position
   _isDragging: boolean
   _offset: Position
