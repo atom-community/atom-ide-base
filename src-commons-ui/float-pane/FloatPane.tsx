@@ -80,7 +80,7 @@ export class PinnedDatatip {
     this._checkedScrollable = false
     this._isScrollable = false
 
-    const _wheelSubscription = fromEvent(this._hostElement, "wheel").subscribe((e) => {
+    const _wheelSubscription = fromEvent<WheelEvent>(this._hostElement, "wheel").subscribe((e) => {
       if (!this._checkedScrollable) {
         this._isScrollable = isScrollable(this._hostElement, e)
         this._checkedScrollable = true
@@ -113,7 +113,7 @@ export class PinnedDatatip {
   }
 
   // Mouse event hanlders:
-  
+
   handleMouseEnter(event: MouseEvent): void {
     this._isHovering = true
     this._hideDataTips()
