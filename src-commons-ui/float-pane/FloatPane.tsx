@@ -127,8 +127,7 @@ export class PinnedDatatip {
     return this._isHovering
   }
 
-  handleGlobalMouseMove(event: Event): void {
-    const evt: MouseEvent = (event: any)
+  handleGlobalMouseMove(evt: MouseEvent): void {
     const { _dragOrigin } = this
     invariant(_dragOrigin)
     this._isDragging = true
