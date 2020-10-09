@@ -4,7 +4,7 @@ import { MarkdownService } from "../../types-packages/main"
 import { getMarkdownRenderer } from "../MarkdownRenderer"
 
 export interface Props {
-  snippet: string
+  snippet: Array<string> | string
   grammarName: string
   renderer?: MarkdownService
   containerClassName: string

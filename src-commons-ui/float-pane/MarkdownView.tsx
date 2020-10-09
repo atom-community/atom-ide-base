@@ -4,8 +4,8 @@ import { MarkdownService } from "../../types-packages/main"
 import { getMarkdownRenderer } from "../MarkdownRenderer"
 
 export interface Props {
-  markdown: string
-  html?: string // already renderered markdown
+  markdown: Array<string> | string
+  html?: Array<string> | string // already renderered markdown
   grammarName: string
   renderer?: MarkdownService
   containerClassName: string
