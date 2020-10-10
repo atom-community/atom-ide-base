@@ -23,7 +23,7 @@ export class SnippetView extends React.Component<Props, State> {
 
   render() {
     return (
-      <div className={this.props.containerClassName}>
+      <div className={this.props.containerClassName} onWheel={(e) => this.onMouseWheel(e)}>
         <div
           className={this.props.contentClassName}
           dangerouslySetInnerHTML={{
@@ -32,6 +32,14 @@ export class SnippetView extends React.Component<Props, State> {
         />
       </div>
     )
+  }
+
+  /**
+   * handles the mouse wheel event to enable scrolling over long text
+   * @param evt the mouse wheel event being triggered
+   */
+  onMouseWheel(evt: React.WheelEvent) {
+    evt.stopPropagation()
   }
 
   async componentDidMount() {
