@@ -49,7 +49,9 @@ export class SnippetView extends React.Component<Props, State> {
   }
 }
 
-const regExpLSPPrefix = /^\((method|property|parameter|alias)\)\W/
+
+const regexPremeable = /^\s*<(\?|!)([a-zA-Z]+)?\s*/i
+const regexLSPPrefix = /^\((method|property|parameter|alias)\)\W/
 
 /**
  * converts a given code snippet into syntax formatted HTML
@@ -81,8 +83,8 @@ export async function getSnippetHtml(
     snippets.forEach((snippet) => {
       const preElem = document.createElement("pre")
       const codeElem = document.createElement("code")
-      snippet = snippet.replace(/^\s*<(\?|!)([a-zA-Z]+)?\s*/i, "") // remove any preamble from the line
-      codeElem.innerText = snippet.replace(regExpLSPPrefix, "")
+      snippet = snippet.replace(regexPremeable, "") // remove any preamble from the line
+      codeElem.innerText = snippet.replace(regexLSPPrefix, "") // remove LSP prefix
       preElem.appendChild(codeElem)
       divElem.appendChild(preElem)
     })
