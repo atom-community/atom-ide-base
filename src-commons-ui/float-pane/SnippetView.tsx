@@ -94,7 +94,7 @@ export async function getSnippetHtml(
     } else {
       // Use built-in markdown renderer (it already does sanitization)
       const render = await getMarkdownRenderer()
-      return render(divElem.outerHTML, grammarName)
+      return await render(divElem.innerHTML, grammarName)
     }
   } else {
     return null
