@@ -41,7 +41,7 @@ export class ViewContainer extends React.Component<Props, State> {
    * renders the data tip view component
    * @return the data tip view element
    */
-  render() {
+  render(): ReactElement {
     this.actionButton = this.ActionClick(this.props.action, this.props.actionTitle)
     this.updateChildren()
     return (
