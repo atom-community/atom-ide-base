@@ -45,7 +45,11 @@ export class ViewContainer extends React.Component<Props, State> {
     this.actionButton = this.ActionClick(this.props.action, this.props.actionTitle)
     this.updateChildren()
     return (
-      <div className={`${String(this.props.className)} datatip-element`} {...this.props.onMouseDown} {...this.props.onClickCapture}>
+      <div
+        className={this.props.className ?? "datatip-element"}
+        {...this.props.onMouseDown}
+        {...this.props.onClickCapture}
+      >
         {this.children}
         {this.actionButton}
       </div>
