@@ -1,4 +1,5 @@
 dependencies:
+  atom-ide-markdown-service: 1.6.0
   atom-package-deps: 6.0.0
   classnames: 2.2.6
   dompurify: 2.1.1
@@ -863,6 +864,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+  /atom-ide-markdown-service/1.6.0:
+    dependencies:
+      dompurify: 2.1.1
+      marked: 1.2.0
+    dev: false
+    engines:
+      atom: '>=1.0.0 <2.0.0'
+    resolution:
+      integrity: sha512-cqMEyMeiiAqH4cQhPEyh6HQ9IvtOTHMwZoVxTHK2zKNWyugWVlCzqjZEjQ2WJqxQDd9v4KBeARDpwLLiKaVR/w==
   /atom-jasmine3-test-runner/5.1.2:
     dependencies:
       etch: 0.14.1
@@ -3561,6 +3571,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
+  /marked/1.2.0:
+    dev: false
+    engines:
+      node: '>= 8.16.2'
+    hasBin: true
+    resolution:
+      integrity: sha512-tiRxakgbNPBr301ihe/785NntvYyhxlqcL3YaC8CaxJQh7kiaEtrN9B/eK2I2943Yjkh5gw25chYFDQhOMCwMA==
   /mdn-data/2.0.6:
     dev: true
     resolution:
@@ -5684,7 +5701,7 @@ specifiers:
   '@types/node': ^14.11.7
   '@types/react': ^16.9.51
   '@types/react-dom': ^16.9.8
-  atom-ide-markdown-service: ^1.5.0
+  atom-ide-markdown-service: ^1.6.0
   atom-jasmine3-test-runner: ^5.1.2
   atom-package-deps: ^6.0.0
   build-commit: 0.1.1
