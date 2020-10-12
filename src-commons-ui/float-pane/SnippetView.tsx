@@ -78,24 +78,21 @@ export async function getSnippetHtml(
     if (snippets.length === 0) {
       return null
     }
-    const divElem = document.createElement("div")
-    snippets.forEach((snippet) => {
-      const preElem = document.createElement("pre")
-      const codeElem = document.createElement("code")
-      snippet = snippet
-        .replace(regexPremeable, "") // remove any preamble from the line
-        .replace(regexLSPPrefix, "") // remove LSP prefix
-      codeElem.innerText = snippet
-      preElem.appendChild(codeElem)
-      divElem.appendChild(preElem)
-    })
+    const markdown = snippets
+      .map((snippet) => {
+        snippet = snippet
+          .replace(regexPremeable, "") // remove any preamble from the line
+          .replace(regexLSPPrefix, "") // remove LSP prefix
+        return `\`\`\`\n${snippet}\n\`\`\``
+      })
+      .join("\n")
 
     if (renderer) {
-      return DOMPurify.sanitize(await renderer.render(divElem.outerHTML, grammarName))
+      return DOMPurify.sanitize(await renderer.render(markdown, grammarName))
     } else {
       // Use built-in markdown renderer (it already does sanitization)
       const render = await getMarkdownRenderer()
-      return await render(divElem.innerHTML, grammarName)
+      return await render(markdown, grammarName)
     }
   } else {
     return null
