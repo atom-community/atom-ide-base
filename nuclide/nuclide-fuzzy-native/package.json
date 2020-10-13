@@ -1,6 +1,6 @@
 {
   "name": "nuclide-fuzzy-native",
-  "main": "./lib/main.js",
+  "main": "./dist/main.js",
   "version": "0.7.3-dev",
   "description": "Wrapper around the OSS npm fuzzy-native package",
   "author": "Nuclide : Search",

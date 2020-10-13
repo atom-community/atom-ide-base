@@ -1,7 +1,7 @@
 {
   "name": "nuclide-watchman-helpers",
   "publisher": "Facebook",
-  "main": "./lib/main.js",
+  "main": "./dist/main.js",
   "version": "0.7.3-dev",
   "description": "Helper methods for interacting with fb-watchman",
   "author": "NEEDS OWNER",
