@@ -20,7 +20,7 @@ import {getWatchmanBinaryPath} from './path';
 import WatchmanSubscription from './WatchmanSubscription';
 import {getLogger} from 'log4js';
 
-const logger = getLogger('nuclide-watchman-helpers');
+const logger = getLogger('@atom-ide-community/nuclide-watchman-helpers');
 const WATCHMAN_SETTLE_TIME_MS = 2500;
 export const DEFAULT_WATCHMAN_RECONNECT_DELAY_MS = 100;
 const MAXIMUM_WATCHMAN_RECONNECT_DELAY_MS = 60 * 1000;

@@ -1,5 +1,5 @@
 {
-  "name": "nuclide-watchman-helpers",
+  "name": "@atom-ide-community/nuclide-watchman-helpers",
   "publisher": "Facebook",
   "main": "./dist/main.js",
   "version": "0.7.3-dev",
@@ -10,7 +10,7 @@
     "packageType": "NodeLibrary",
     "testsCannotBeRunInParallel": true
   },
-  "repository": "https://github.com/facebook/nuclide/tree/master/modules/nuclide-watchman-helpers",
+  "repository": "https://github.com/facebook/nuclide/tree/master/modules/@atom-ide-community/nuclide-watchman-helpers",
   "scripts": {
     "test": "node ../nuclide-jasmine/bin/jasmine-node-transpiled spec"
   },
