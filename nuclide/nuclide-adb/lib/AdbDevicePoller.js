@@ -52,7 +52,7 @@ export function observeAndroidDevices(
       .do(async value => {
         if (value.isError) {
           const {error} = value;
-          const logger = getLogger('nuclide-adb');
+          const logger = getLogger('@atom-ide-community/nuclide-adb');
           let extras = {error};
           try {
             if (
@@ -69,7 +69,7 @@ export function observeAndroidDevices(
             }
           } finally {
             logger.warn(value.error.message);
-            track('nuclide-adb:device-poller:error', extras);
+            track('@atom-ide-community/nuclide-adb:device-poller:error', extras);
           }
         }
       })

@@ -10,12 +10,12 @@
  * @format
  */
 
-import type {AdbDevice} from 'nuclide-adb/lib/types';
+import type {AdbDevice} from '@atom-ide-community/nuclide-adb/lib/types';
 import type {Expected} from '@atom-ide-community/nuclide-commons/expected';
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {MenuItem} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
 
-import {observeAndroidDevices} from 'nuclide-adb';
+import {observeAndroidDevices} from '@atom-ide-community/nuclide-adb';
 import * as React from 'react';
 import {Dropdown} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';

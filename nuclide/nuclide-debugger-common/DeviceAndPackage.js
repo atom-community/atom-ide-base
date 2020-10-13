@@ -10,11 +10,11 @@
  * @format
  */
 
-import type {AdbDevice} from 'nuclide-adb/lib/types';
+import type {AdbDevice} from '@atom-ide-community/nuclide-adb/lib/types';
 import type {Expected} from '@atom-ide-community/nuclide-commons/expected';
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
-import {getAdbServiceByNuclideUri} from 'nuclide-adb';
+import {getAdbServiceByNuclideUri} from '@atom-ide-community/nuclide-adb';
 import {Dropdown} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
 import {LoadingSpinner} from '@atom-ide-community/nuclide-commons-ui/LoadingSpinner';
 import {Expect} from '@atom-ide-community/nuclide-commons/expected';

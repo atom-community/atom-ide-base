@@ -10,14 +10,14 @@
  * @format
  */
 
-import type {AdbDevice, AndroidJavaProcess} from 'nuclide-adb/lib/types';
+import type {AdbDevice, AndroidJavaProcess} from '@atom-ide-community/nuclide-adb/lib/types';
 import type {Column, Row} from '@atom-ide-community/nuclide-commons-ui/Table';
 import type {Expected} from '@atom-ide-community/nuclide-commons/expected';
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {Subscription} from 'rxjs';
 
 import idx from 'idx';
-import {getAdbServiceByNuclideUri} from 'nuclide-adb';
+import {getAdbServiceByNuclideUri} from '@atom-ide-community/nuclide-adb';
 import {AtomInput} from '@atom-ide-community/nuclide-commons-ui/AtomInput';
 import {LoadingSpinner} from '@atom-ide-community/nuclide-commons-ui/LoadingSpinner';
 import {Table} from '@atom-ide-community/nuclide-commons-ui/Table';

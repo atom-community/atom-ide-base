@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {SshTunnelService} from 'nuclide-adb/lib/types';
+import type {SshTunnelService} from '@atom-ide-community/nuclide-adb/lib/types';
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {Subscription} from 'rxjs';
 
@@ -101,8 +101,8 @@ export function startTunnelingAdb(
     const subscription = observable.subscribe({
       next: port => (adbmuxPort = port),
       error: e => {
-        getLogger('nuclide-adb:tunneling').error(e);
-        track('nuclide-adb:tunneling:error', {host: uri, error: e});
+        getLogger('@atom-ide-community/nuclide-adb:tunneling').error(e);
+        track('@atom-ide-community/nuclide-adb:tunneling:error', {host: uri, error: e});
         if (e.name === MISSING_ADB_ERROR) {
           return;
         }

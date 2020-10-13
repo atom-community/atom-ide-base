@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {AndroidJavaProcess} from 'nuclide-adb/lib/types';
+import type {AndroidJavaProcess} from '@atom-ide-community/nuclide-adb/lib/types';
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {
   AutoGenProperty,

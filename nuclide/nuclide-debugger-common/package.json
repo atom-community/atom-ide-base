@@ -15,7 +15,7 @@
     "idx": "1.2.0",
     "immutable": "4.0.0-rc.9",
     "invariant": "2.2.2",
-    "nuclide-adb": "0.7.3-dev",
+    "@atom-ide-community/nuclide-adb": "0.7.3-dev",
     "@atom-ide-community/nuclide-commons": "0.7.3-dev",
     "@atom-ide-community/nuclide-commons-atom": "0.7.3-dev",
     "@atom-ide-community/nuclide-commons-ui": "0.7.3-dev",
