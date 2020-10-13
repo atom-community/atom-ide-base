@@ -5,6 +5,8 @@ pnpm-lock.yaml
 coverage
 build
 
+nuclide
+
 commons-atom
 commons
 commons-ui
