@@ -12,7 +12,7 @@
 
 import {getLogger} from 'log4js';
 
-const logger = getLogger('nuclide-fuzzy-native');
+const logger = getLogger('@atom-ide-community/nuclide-fuzzy-native');
 
 // Use the pre-built, native module if available.
 // If not, use the fallback JS implementation.
