@@ -9,7 +9,7 @@
  * @flow
  * @format
  */
-import type {DebuggerConfigAction} from 'nuclide-debugger-common';
+import type {DebuggerConfigAction} from '@atom-ide-community/nuclide-debugger-common';
 
 import idx from 'idx';
 import fs from 'fs';

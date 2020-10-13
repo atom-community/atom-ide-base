@@ -16,7 +16,7 @@ import type {
 } from 'vscode-debugprotocol';
 import type {Arguments} from './DebuggerAdapterFactory';
 import type {CustomArgumentType} from './VSPOptionsParser';
-import type {VsAdapterType} from 'nuclide-debugger-common';
+import type {VsAdapterType} from '@atom-ide-community/nuclide-debugger-common';
 
 // Describes options for hosting a particular VSP adapter via the cli
 export interface DebugAdapter {

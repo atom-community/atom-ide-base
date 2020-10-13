@@ -19,14 +19,14 @@ import type {
   DebuggerConfigAction,
   VSAdapterExecutableInfo,
   VsAdapterType,
-} from 'nuclide-debugger-common';
+} from '@atom-ide-community/nuclide-debugger-common';
 
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {objectFromMap} from '@atom-ide-community/nuclide-commons/collection';
 import {
   getAdapterExecutable,
   getAdapterPackageRoot,
-} from 'nuclide-debugger-common/debugger-registry';
+} from '@atom-ide-community/nuclide-debugger-common/debugger-registry';
 import VSPOptionsParser from './VSPOptionsParser';
 
 import HHVMDebugAdapter from './adapters/HHVMDebugAdapter';

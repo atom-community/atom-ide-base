@@ -18,7 +18,7 @@ import type {
   BreakpointSetResult,
 } from './DebuggerInterface';
 import * as DebugProtocol from 'vscode-debugprotocol';
-import type {AdapterExitedEvent} from 'nuclide-debugger-common/VsDebugSession';
+import type {AdapterExitedEvent} from '@atom-ide-community/nuclide-debugger-common/VsDebugSession';
 import type {
   SourceBreakpoint,
   FunctionBreakpoint,
@@ -60,7 +60,7 @@ import {
 } from './DebuggerInterface';
 
 import invariant from 'assert';
-import VsDebugSession from 'nuclide-debugger-common/VsDebugSession';
+import VsDebugSession from '@atom-ide-community/nuclide-debugger-common/VsDebugSession';
 
 type SessionState =
   | 'INITIALIZING' // waiting for initialized event from adapter

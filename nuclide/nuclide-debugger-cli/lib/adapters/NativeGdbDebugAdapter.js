@@ -18,12 +18,12 @@ import type {
 import type {Arguments} from '../DebuggerAdapterFactory';
 import type {CustomArgumentType} from '../VSPOptionsParser';
 import type {DebugAdapter} from '../DebugAdapter';
-import type {VsAdapterType} from 'nuclide-debugger-common';
+import type {VsAdapterType} from '@atom-ide-community/nuclide-debugger-common';
 
-import {getAdapterPackageRoot} from 'nuclide-debugger-common/debugger-registry';
+import {getAdapterPackageRoot} from '@atom-ide-community/nuclide-debugger-common/debugger-registry';
 import {runCommand} from '@atom-ide-community/nuclide-commons/process';
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
-import {VsAdapterTypes} from 'nuclide-debugger-common/constants';
+import {VsAdapterTypes} from '@atom-ide-community/nuclide-debugger-common/constants';
 import {Observable} from 'rxjs';
 import VSPOptionsParser from '../VSPOptionsParser';
 

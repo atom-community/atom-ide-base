@@ -19,7 +19,7 @@
     "log4js": "1.1.1",
     "@atom-ide-community/nuclide-analytics": "0.7.3-dev",
     "@atom-ide-community/nuclide-commons": "0.7.3-dev",
-    "nuclide-debugger-common": "0.7.3-dev",
+    "@atom-ide-community/nuclide-debugger-common": "0.7.3-dev",
     "nullthrows": "1.0.0",
     "rxjs-compat": "6.3.3",
     "v8-compile-cache": "1.1.0",
