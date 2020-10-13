@@ -22,9 +22,9 @@ import * as React from 'react';
 
 import idx from 'idx';
 import nullthrows from 'nullthrows';
-import {Checkbox} from 'nuclide-commons-ui/Checkbox';
-import {Dropdown} from 'nuclide-commons-ui/Dropdown';
-import {AtomInput} from 'nuclide-commons-ui/AtomInput';
+import {Checkbox} from '@atom-ide-community/nuclide-commons-ui/Checkbox';
+import {Dropdown} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
+import {AtomInput} from '@atom-ide-community/nuclide-commons-ui/AtomInput';
 import nuclideUri from 'nuclide-commons/nuclideUri';
 import {capitalize, shellParseWithGlobs} from 'nuclide-commons/string';
 import UniversalDisposable from 'nuclide-commons/UniversalDisposable';

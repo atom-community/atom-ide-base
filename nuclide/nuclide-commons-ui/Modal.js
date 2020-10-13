@@ -10,7 +10,7 @@
  * @format
  */
 
-// DEPRECATED, AVOID USING THIS. Use 'showModal' in nuclide-commons-ui instead
+// DEPRECATED, AVOID USING THIS. Use 'showModal' in @atom-ide-community/nuclide-commons-ui instead
 
 import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
 import * as React from 'react';

@@ -16,7 +16,7 @@ import type {Expected} from 'nuclide-commons/expected';
 import type DebuggerLaunchAttachProvider from './DebuggerLaunchAttachProvider';
 import type {Observable, ConnectableObservable} from 'rxjs';
 import type {NuclideUri} from 'nuclide-commons/nuclideUri';
-import type {IconName} from 'nuclide-commons-ui/Icon';
+import type {IconName} from '@atom-ide-community/nuclide-commons-ui/Icon';
 import * as DebugProtocol from 'vscode-debugprotocol';
 import * as React from 'react';
 

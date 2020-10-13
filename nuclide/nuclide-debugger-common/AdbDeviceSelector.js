@@ -13,14 +13,14 @@
 import type {AdbDevice} from 'nuclide-adb/lib/types';
 import type {Expected} from 'nuclide-commons/expected';
 import type {NuclideUri} from 'nuclide-commons/nuclideUri';
-import type {MenuItem} from 'nuclide-commons-ui/Dropdown';
+import type {MenuItem} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
 
 import {observeAndroidDevices} from 'nuclide-adb';
 import * as React from 'react';
-import {Dropdown} from 'nuclide-commons-ui/Dropdown';
+import {Dropdown} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
 import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
 import {Expect} from 'nuclide-commons/expected';
-import {LoadingSpinner} from 'nuclide-commons-ui/LoadingSpinner';
+import {LoadingSpinner} from '@atom-ide-community/nuclide-commons-ui/LoadingSpinner';
 import invariant from 'assert';
 
 const NO_DEVICES_MSG = 'No adb devices attached!';

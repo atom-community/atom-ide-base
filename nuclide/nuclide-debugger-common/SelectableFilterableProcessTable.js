@@ -10,14 +10,14 @@
  * @format
  */
 
-import type {Column} from 'nuclide-commons-ui/Table';
+import type {Column} from '@atom-ide-community/nuclide-commons-ui/Table';
 import type {NuclideUri} from 'nuclide-commons/nuclideUri';
 import type {ProcessInfo} from 'nuclide-commons/process';
 import * as React from 'react';
 
 import {getVSCodeDebuggerAdapterServiceByNuclideUri} from './debug-adapter-service';
-import {AtomInput} from 'nuclide-commons-ui/AtomInput';
-import {Table} from 'nuclide-commons-ui/Table';
+import {AtomInput} from '@atom-ide-community/nuclide-commons-ui/AtomInput';
+import {Table} from '@atom-ide-community/nuclide-commons-ui/Table';
 import nuclideUri from 'nuclide-commons/nuclideUri';
 import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
 import {Observable} from 'rxjs';

@@ -18,7 +18,7 @@
     "nuclide-adb": "0.7.3-dev",
     "nuclide-commons": "0.7.3-dev",
     "nuclide-commons-atom": "0.7.3-dev",
-    "nuclide-commons-ui": "0.7.3-dev",
+    "@atom-ide-community/nuclide-commons-ui": "0.7.3-dev",
     "nullthrows": "1.0.0",
     "react": "16.6.3",
     "rxjs-compat": "6.3.3",

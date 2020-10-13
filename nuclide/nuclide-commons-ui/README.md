@@ -1,15 +1,15 @@
-# nuclide-commons-ui
+# @atom-ide-community/nuclide-commons-ui
 
 A collection of React components for use with Atom in Nuclide and related packages.
 
-To use, first `require('nuclide-commons-ui')` to load the stylesheets and then start importing individual components.
+To use, first `require('@atom-ide-community/nuclide-commons-ui')` to load the stylesheets and then start importing individual components.
 
 ```
 // Load stylesheets in activate()...
-const disposable = require('nuclide-commons-ui');
+const disposable = require('@atom-ide-community/nuclide-commons-ui');
 
 // Grab individual components as you need them!
-const {Button} = require('nuclide-commons-ui/Button');
+const {Button} = require('@atom-ide-community/nuclide-commons-ui/Button');
 const button = <Button ... />;
 
 // Unload stylesheets in deactivate()...
