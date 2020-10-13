@@ -51,7 +51,9 @@
     "build": "npm run build.package && npm run build.commons-atom && npm run build.commons-ui",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u -x coffeescript",
-    "prepare": "npm run build && shx rm -r **/tsconfig.tsbuildinfo"
+    "apm.prepublishOnly": "git checkout apm.publish && git reset --hard master && shx rm -rf nuclide && git commit -m 'clean'",
+    "prepublishOnly": "shx rm -rf **/tsconfig.tsbuildinfo",
+    "prepare": "npm run build"
   },
   "atomTestRunner": "./spec/runner",
   "activationHooks": [
