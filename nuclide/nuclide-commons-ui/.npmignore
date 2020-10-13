@@ -1,1 +1,4 @@
 spec
+__tests__
+__mocks__
+__atom_tests__
