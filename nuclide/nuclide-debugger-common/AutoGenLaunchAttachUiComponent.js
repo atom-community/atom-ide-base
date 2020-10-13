@@ -28,7 +28,7 @@ import {AtomInput} from '@atom-ide-community/nuclide-commons-ui/AtomInput';
 import nuclideUri from 'nuclide-commons/nuclideUri';
 import {capitalize, shellParseWithGlobs} from 'nuclide-commons/string';
 import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
-import {getDebuggerService} from 'nuclide-commons-atom/debugger';
+import {getDebuggerService} from '@atom-ide-community/nuclide-commons-atom/debugger';
 import {
   serializeDebuggerConfig,
   deserializeDebuggerConfig,

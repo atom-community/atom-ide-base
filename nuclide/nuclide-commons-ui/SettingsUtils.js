@@ -10,7 +10,7 @@
  * @format
  */
 
-import featureConfig from 'nuclide-commons-atom/feature-config';
+import featureConfig from '@atom-ide-community/nuclide-commons-atom/feature-config';
 
 export type SettingsPropsDefault = {
   title: string,

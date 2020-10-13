@@ -15,7 +15,7 @@ import type {
   DebuggerSourcePathsService,
 } from 'atom-ide-debugger-java/types';
 
-import {observeProjectPathsAll} from 'nuclide-commons-atom/projects';
+import {observeProjectPathsAll} from '@atom-ide-community/nuclide-commons-atom/projects';
 
 export function observeProjectPathsAllFromSourcePathsService(
   callback: (Array<SuggestedProjectPath>) => void,

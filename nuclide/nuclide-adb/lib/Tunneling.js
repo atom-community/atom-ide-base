@@ -20,7 +20,7 @@ import {getLogger} from 'log4js';
 import {SimpleCache} from 'nuclide-commons/SimpleCache';
 import nuclideUri from 'nuclide-commons/nuclideUri';
 import {Observable, Subject} from 'rxjs';
-import consumeFirstProvider from 'nuclide-commons-atom/consumeFirstProvider';
+import consumeFirstProvider from '@atom-ide-community/nuclide-commons-atom/consumeFirstProvider';
 import {getAdbServiceByNuclideUri} from './utils';
 import {track} from 'nuclide-commons/analytics';
 

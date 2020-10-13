@@ -13,7 +13,7 @@
 import type {NuclideUri} from 'nuclide-commons/nuclideUri';
 
 import {AtomTextEditor} from './AtomTextEditor';
-import {goToLocation} from 'nuclide-commons-atom/go-to-location';
+import {goToLocation} from '@atom-ide-community/nuclide-commons-atom/go-to-location';
 import {LoadingSpinner, LoadingSpinnerSizes} from './LoadingSpinner';
 import nullthrows from 'nullthrows';
 import {pluralize, ZERO_WIDTH_SPACE} from 'nuclide-commons/string';

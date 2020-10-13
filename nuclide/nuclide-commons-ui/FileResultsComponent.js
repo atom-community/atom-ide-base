@@ -16,7 +16,7 @@ import type {FileResults} from 'nuclide-commons/FileResults';
 
 import invariant from 'assert';
 import classnames from 'classnames';
-import getFragmentGrammar from 'nuclide-commons-atom/getFragmentGrammar';
+import getFragmentGrammar from '@atom-ide-community/nuclide-commons-atom/getFragmentGrammar';
 import {HighlightedLines} from './HighlightedCode';
 import HighlightedText from './HighlightedText';
 import * as React from 'react';

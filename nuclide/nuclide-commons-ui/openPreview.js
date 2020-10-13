@@ -12,9 +12,9 @@
 
 import type {NuclideUri} from 'nuclide-commons/nuclideUri';
 
-import type {GoToLocationOptions} from 'nuclide-commons-atom/go-to-location';
-import {goToLocation} from 'nuclide-commons-atom/go-to-location';
-import {isPending} from 'nuclide-commons-atom/pane-item';
+import type {GoToLocationOptions} from '@atom-ide-community/nuclide-commons-atom/go-to-location';
+import {goToLocation} from '@atom-ide-community/nuclide-commons-atom/go-to-location';
+import {isPending} from '@atom-ide-community/nuclide-commons-atom/pane-item';
 import {delayTime} from 'nuclide-commons/promise';
 
 type OpenablePreview = {|

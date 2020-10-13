@@ -12,7 +12,7 @@
 
 import type {SettingsPropsDefault} from './SettingsUtils';
 
-import featureConfig from 'nuclide-commons-atom/feature-config';
+import featureConfig from '@atom-ide-community/nuclide-commons-atom/feature-config';
 import {normalizeIdentifier} from './SettingsUtils';
 import * as React from 'react';
 
