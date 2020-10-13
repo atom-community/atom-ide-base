@@ -26,7 +26,7 @@ import os from 'os';
 import QuitCommand from './QuitCommand';
 import yargs from 'yargs';
 import {setRawAnalyticsService} from '@atom-ide-community/nuclide-commons/analytics';
-import * as rawAnalyticsService from 'nuclide-analytics/lib/track';
+import * as rawAnalyticsService from '@atom-ide-community/nuclide-analytics/lib/track';
 import {Observable} from 'rxjs';
 
 function buildLogger(): log4js$Logger {

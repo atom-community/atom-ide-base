@@ -1,11 +1,11 @@
-# nuclide-analytics package
+# @atom-ide-community/nuclide-analytics package
 
 Provides a standard API that packages can use to send analytics, in a consistent way, to arbitrary providers.
 
 Common usage:
 
 ```js
-import {track} from 'nuclide-analytics';
+import {track} from '@atom-ide-community/nuclide-analytics';
 
 const booleanState = false;
 const numericState = 42;
