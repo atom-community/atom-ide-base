@@ -12,9 +12,9 @@
 
 import invariant from 'assert';
 import {Observable} from 'rxjs';
-import debounce from 'nuclide-commons/debounce';
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import debounce from '@atom-ide-community/nuclide-commons/debounce';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 type EventCallback = (editor: TextEditor) => mixed;
 

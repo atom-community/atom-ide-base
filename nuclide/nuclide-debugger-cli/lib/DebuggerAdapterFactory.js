@@ -21,8 +21,8 @@ import type {
   VsAdapterType,
 } from 'nuclide-debugger-common';
 
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import {objectFromMap} from 'nuclide-commons/collection';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import {objectFromMap} from '@atom-ide-community/nuclide-commons/collection';
 import {
   getAdapterExecutable,
   getAdapterPackageRoot,

@@ -14,7 +14,7 @@
 
 import classnames from 'classnames';
 import {Observable} from 'rxjs';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import {DateRangePicker} from 'tiny-date-picker/dist/date-range-picker';
 

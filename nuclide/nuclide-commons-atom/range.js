@@ -12,7 +12,7 @@
 
 import {Range} from 'atom';
 import invariant from 'assert';
-import {wordAtPositionFromBuffer} from 'nuclide-commons/range';
+import {wordAtPositionFromBuffer} from '@atom-ide-community/nuclide-commons/range';
 
 /**
  * Finds the word at the position. You can either provide a word regex yourself,

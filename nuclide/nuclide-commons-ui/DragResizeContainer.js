@@ -13,7 +13,7 @@
 import * as React from 'react';
 import {Observable, Subject} from 'rxjs';
 import nullthrows from 'nullthrows';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 type Props = {
   children?: React.Node,

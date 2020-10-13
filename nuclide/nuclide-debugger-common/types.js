@@ -11,11 +11,11 @@
  */
 
 import type {SuggestedProjectPath} from 'atom-ide-debugger-java/types';
-import type {TaskEvent, ProcessMessage} from 'nuclide-commons/process';
-import type {Expected} from 'nuclide-commons/expected';
+import type {TaskEvent, ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
+import type {Expected} from '@atom-ide-community/nuclide-commons/expected';
 import type DebuggerLaunchAttachProvider from './DebuggerLaunchAttachProvider';
 import type {Observable, ConnectableObservable} from 'rxjs';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {IconName} from '@atom-ide-community/nuclide-commons-ui/Icon';
 import * as DebugProtocol from 'vscode-debugprotocol';
 import * as React from 'react';

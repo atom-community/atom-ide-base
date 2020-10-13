@@ -13,11 +13,11 @@
 jest.setTimeout(15000);
 
 import fs from 'fs';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import watchman from 'fb-watchman';
-import {nextTick} from 'nuclide-commons/promise';
+import {nextTick} from '@atom-ide-community/nuclide-commons/promise';
 import WatchmanClient from '../lib/WatchmanClient';
-import {generateFixture} from 'nuclide-commons/test-helpers';
+import {generateFixture} from '@atom-ide-community/nuclide-commons/test-helpers';
 import waitsFor from '../../../jest/waits_for';
 import * as Path from '../lib/path';
 import {DEFAULT_WATCHMAN_RECONNECT_DELAY_MS} from '../lib/WatchmanClient';

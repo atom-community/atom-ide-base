@@ -48,7 +48,7 @@ const createDisposable = () => {
   return disposable;
 };
 
-describe('nuclide-commons/observable', () => {
+describe('@atom-ide-community/nuclide-commons/observable', () => {
   describe('splitStream', () => {
     it('splits streams', async () => {
       const input = ['foo\nbar', '\n', '\nba', 'z', '\nblar'];

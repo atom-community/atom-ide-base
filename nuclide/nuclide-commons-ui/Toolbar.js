@@ -12,7 +12,7 @@
 
 import classnames from 'classnames';
 import * as React from 'react';
-import {maybeToString} from 'nuclide-commons/string';
+import {maybeToString} from '@atom-ide-community/nuclide-commons/string';
 
 type Props = {
   children?: mixed,

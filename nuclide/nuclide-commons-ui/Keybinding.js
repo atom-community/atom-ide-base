@@ -11,7 +11,7 @@
  */
 
 import React from 'react';
-import humanizeKeystroke from 'nuclide-commons/humanizeKeystroke';
+import humanizeKeystroke from '@atom-ide-community/nuclide-commons/humanizeKeystroke';
 
 type Props = {|
   keystrokes: string,

@@ -18,7 +18,7 @@ import {
   enforceReadOnlyEditor,
   enforceSoftWrap,
 } from '@atom-ide-community/nuclide-commons-atom/text-editor';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {Observable} from 'rxjs';
 import atomTabIndexForwarder from './atomTabIndexForwarder';
 

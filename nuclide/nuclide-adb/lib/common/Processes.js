@@ -13,7 +13,7 @@
 import type {Adb} from '../Adb';
 import type {Process} from '../types';
 
-import {arrayCompact} from 'nuclide-commons/collection';
+import {arrayCompact} from '@atom-ide-community/nuclide-commons/collection';
 import {Observable} from 'rxjs';
 import os from 'os';
 

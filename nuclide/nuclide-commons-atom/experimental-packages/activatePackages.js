@@ -18,7 +18,7 @@ import type {
 } from './types';
 
 import idx from 'idx';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import path from 'path'; // eslint-disable-line nuclide-internal/prefer-nuclide-uri
 import {AtomPackageRunner, ProcessPackageRunner} from './PackageRunners';
 import MessageRouter from './MessageRouter';

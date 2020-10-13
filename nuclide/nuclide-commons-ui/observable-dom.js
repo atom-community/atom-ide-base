@@ -17,7 +17,7 @@ import invariant from 'assert';
 import os from 'os';
 import {Observable, Subscription} from 'rxjs';
 import shallowEqual from 'shallowequal';
-import {isIterable} from 'nuclide-commons/collection';
+import {isIterable} from '@atom-ide-community/nuclide-commons/collection';
 
 /**
  * Creates an observable sequence from a DOM-style Observer.

@@ -11,7 +11,7 @@
  */
 
 import {Emitter} from 'atom';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 const GRAMMAR_CHANGE_EVENT = 'grammar-change';
 

@@ -11,12 +11,12 @@
  */
 
 import type {SuggestedProjectPath} from 'atom-ide-debugger-java/types';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import idx from 'idx';
 import {Dropdown} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import {observeProjectPathsAllFromSourcePathsService} from './utils';
 

@@ -39,7 +39,7 @@ import FrameCommand from './FrameCommand';
 import SourceFileCache from './SourceFileCache';
 import idx from 'idx';
 import InfoCommand from './InfoCommand';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import OutCommand from './OutCommand';
 import ShowCapsCommand from './ShowCapsCommand';
 import StepCommand from './StepCommand';

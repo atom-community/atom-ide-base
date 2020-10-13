@@ -10,7 +10,7 @@
  * @format
  * @emails oncall+nuclide
  */
-jest.unmock('nuclide-commons/analytics');
+jest.unmock('@atom-ide-community/nuclide-commons/analytics');
 jest.mock('../lib/track', () => {
   return {
     track: jest.fn(() => Promise.resolve(1)),
@@ -22,7 +22,7 @@ import {
   setRawAnalyticsService,
   startTracking,
   trackImmediate,
-} from 'nuclide-commons/analytics';
+} from '@atom-ide-community/nuclide-commons/analytics';
 import service from '../lib/track';
 import invariant from 'assert';
 import {Observable} from 'rxjs';

@@ -14,14 +14,14 @@
 
 import invariant from 'assert';
 import idx from 'idx';
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import nullthrows from 'nullthrows';
 import activateExperimentalPackages from './experimental-packages/activatePackages';
 import nuclideConfig from './nuclide-config';
 import featureConfig from './feature-config';
 import path from 'path'; // eslint-disable-line nuclide-internal/prefer-nuclide-uri
-import {MultiMap, setIntersect, setUnion} from 'nuclide-commons/collection';
+import {MultiMap, setIntersect, setUnion} from '@atom-ide-community/nuclide-commons/collection';
 import {Observable} from 'rxjs';
 
 type FeaturePkg = {

@@ -17,7 +17,7 @@ import invariant from 'assert';
 import {Observable} from 'rxjs';
 import tabbable from 'tabbable';
 import classnames from 'classnames';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 type DefaultProps = {
   contained: boolean,

@@ -19,10 +19,10 @@
  * This file provides methods to do this.
  */
 
-import {fastDebounce} from 'nuclide-commons/observable';
+import {fastDebounce} from '@atom-ide-community/nuclide-commons/observable';
 import {Observable} from 'rxjs';
 
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 import {getCursorPositions, isValidTextEditor} from './text-editor';
 import invariant from 'assert';
 

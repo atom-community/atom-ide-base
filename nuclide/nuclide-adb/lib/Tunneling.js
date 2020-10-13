@@ -11,18 +11,18 @@
  */
 
 import type {SshTunnelService} from 'nuclide-adb/lib/types';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {Subscription} from 'rxjs';
 
 import invariant from 'assert';
 import {shell} from 'electron';
 import {getLogger} from 'log4js';
-import {SimpleCache} from 'nuclide-commons/SimpleCache';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import {SimpleCache} from '@atom-ide-community/nuclide-commons/SimpleCache';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {Observable, Subject} from 'rxjs';
 import consumeFirstProvider from '@atom-ide-community/nuclide-commons-atom/consumeFirstProvider';
 import {getAdbServiceByNuclideUri} from './utils';
-import {track} from 'nuclide-commons/analytics';
+import {track} from '@atom-ide-community/nuclide-commons/analytics';
 
 export type AdbTunnelingOptions = {
   adbUpgradeLink?: string,
@@ -32,7 +32,7 @@ let passesGK = async _ => false;
 try {
   const fbPassesGK =
     // eslint-disable-next-line nuclide-internal/modules-dependencies
-    require('nuclide-commons/passesGK');
+    require('@atom-ide-community/nuclide-commons/passesGK');
   passesGK = fbPassesGK.default;
 } catch (e) {}
 

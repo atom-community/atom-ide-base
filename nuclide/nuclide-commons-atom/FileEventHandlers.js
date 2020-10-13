@@ -14,10 +14,10 @@ import type {Provider} from './ProviderRegistry';
 import type {TextEdit} from './text-edit';
 
 import {Observable} from 'rxjs';
-import {track} from 'nuclide-commons/analytics';
+import {track} from '@atom-ide-community/nuclide-commons/analytics';
 import ProviderRegistry from './ProviderRegistry';
 import {applyTextEditsToBuffer} from './text-edit';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 export type FileEventHandlersConfig = {|
   supportsOnWillSave: boolean,

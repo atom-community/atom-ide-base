@@ -13,8 +13,8 @@ import type {DebuggerConfigAction} from 'nuclide-debugger-common';
 
 import idx from 'idx';
 import fs from 'fs';
-import {mapFromObject} from 'nuclide-commons/collection';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import {mapFromObject} from '@atom-ide-community/nuclide-commons/collection';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 export type AdapterPropertyType =
   | 'string'

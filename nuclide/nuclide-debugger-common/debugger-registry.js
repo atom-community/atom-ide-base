@@ -10,7 +10,7 @@
  * @format
  */
 
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import fs from 'fs';
 
 import type {VSAdapterExecutableInfo, VsAdapterType} from './types';

@@ -17,7 +17,7 @@ import invariant from 'assert';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import {Observable} from 'rxjs';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 import TabbableContainer from './TabbableContainer';
 

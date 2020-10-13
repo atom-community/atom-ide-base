@@ -12,7 +12,7 @@
  */
 import invariant from 'assert';
 import temp from 'temp';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {
   getFileForPath,
   observeProjectPaths,

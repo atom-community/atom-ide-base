@@ -21,7 +21,7 @@ import {
 } from '../debounced';
 import {goToLocationInEditor} from '../go-to-location';
 
-import {sleep} from 'nuclide-commons/promise';
+import {sleep} from '@atom-ide-community/nuclide-commons/promise';
 
 // Shorter than the default so the tests don't run long.
 const DEBOUNCE_INTERVAL = 10;

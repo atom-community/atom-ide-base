@@ -12,8 +12,8 @@
 
 import type {AdbDevice, AndroidJavaProcess} from 'nuclide-adb/lib/types';
 import type {Column, Row} from '@atom-ide-community/nuclide-commons-ui/Table';
-import type {Expected} from 'nuclide-commons/expected';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {Expected} from '@atom-ide-community/nuclide-commons/expected';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {Subscription} from 'rxjs';
 
 import idx from 'idx';
@@ -21,9 +21,9 @@ import {getAdbServiceByNuclideUri} from 'nuclide-adb';
 import {AtomInput} from '@atom-ide-community/nuclide-commons-ui/AtomInput';
 import {LoadingSpinner} from '@atom-ide-community/nuclide-commons-ui/LoadingSpinner';
 import {Table} from '@atom-ide-community/nuclide-commons-ui/Table';
-import {arrayEqual} from 'nuclide-commons/collection';
-import {Expect} from 'nuclide-commons/expected';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import {arrayEqual} from '@atom-ide-community/nuclide-commons/collection';
+import {Expect} from '@atom-ide-community/nuclide-commons/expected';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import {Observable} from 'rxjs';
 import {AdbDeviceSelector} from './AdbDeviceSelector';

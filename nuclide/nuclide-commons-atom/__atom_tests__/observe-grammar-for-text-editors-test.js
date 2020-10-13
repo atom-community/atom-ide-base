@@ -10,9 +10,9 @@
  * @format
  * @emails oncall+nuclide
  */
-import fsPromise from 'nuclide-commons/fsPromise';
+import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
 import nullthrows from 'nullthrows';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import observeGrammarForTextEditors from '../observe-grammar-for-text-editors';
 
 describe('observeGrammarForTextEditors', () => {

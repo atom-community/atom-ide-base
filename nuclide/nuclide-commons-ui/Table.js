@@ -22,8 +22,8 @@ import {
   objectMapValues,
   objectFromPairs,
   arrayEqual,
-} from 'nuclide-commons/collection';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+} from '@atom-ide-community/nuclide-commons/collection';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {ResizeObservable} from './observable-dom';
 import {scrollIntoViewIfNeeded} from './scrollIntoView';
 

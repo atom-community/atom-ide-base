@@ -10,7 +10,7 @@
  * @format
  */
 
-import humanizeKeystroke from 'nuclide-commons/humanizeKeystroke';
+import humanizeKeystroke from '@atom-ide-community/nuclide-commons/humanizeKeystroke';
 
 /**
  * Determine what the applicable shortcut for a given command is within this component's context.

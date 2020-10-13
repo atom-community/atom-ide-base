@@ -13,7 +13,7 @@ import type {ElementOptions, Keypress} from 'blessed';
 import * as DebugProtocol from 'vscode-debugprotocol';
 import {Observable} from 'rxjs';
 // $FlowFixMe - make UniversalDisposable flow strict
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 import blessed from 'blessed';
 

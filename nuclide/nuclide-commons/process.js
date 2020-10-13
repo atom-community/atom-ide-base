@@ -64,7 +64,7 @@ import {observeStream} from './stream';
 import {splitStream, takeWhileInclusive} from './observable';
 import {shellQuote} from './string';
 
-export const LOG_CATEGORY = 'nuclide-commons/process';
+export const LOG_CATEGORY = '@atom-ide-community/nuclide-commons/process';
 
 const NUCLIDE_DO_NOT_LOG = global.NUCLIDE_DO_NOT_LOG;
 

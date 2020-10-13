@@ -11,15 +11,15 @@
  */
 
 import type {Column} from '@atom-ide-community/nuclide-commons-ui/Table';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
-import type {ProcessInfo} from 'nuclide-commons/process';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
+import type {ProcessInfo} from '@atom-ide-community/nuclide-commons/process';
 import * as React from 'react';
 
 import {getVSCodeDebuggerAdapterServiceByNuclideUri} from './debug-adapter-service';
 import {AtomInput} from '@atom-ide-community/nuclide-commons-ui/AtomInput';
 import {Table} from '@atom-ide-community/nuclide-commons-ui/Table';
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {Observable} from 'rxjs';
 
 const PROCESS_UPDATES_INTERVAL_MS = 2000;

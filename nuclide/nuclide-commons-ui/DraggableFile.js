@@ -10,12 +10,12 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import {Observable} from 'rxjs';
-import {track} from 'nuclide-commons/analytics';
+import {track} from '@atom-ide-community/nuclide-commons/analytics';
 
 const MAGIC_DATA_TRANSFER_KEY = 'nuclide-draggable-file';
 

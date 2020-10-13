@@ -18,14 +18,14 @@ import ConfigFile from './ConfigFile';
 import Debugger from './Debugger';
 import DebuggerAdapterFactory from './DebuggerAdapterFactory';
 import fs from 'fs';
-import {getNuclideVersion} from 'nuclide-commons/system-info';
+import {getNuclideVersion} from '@atom-ide-community/nuclide-commons/system-info';
 import HelpCommand from './HelpCommand';
 import log4js from 'log4js';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import os from 'os';
 import QuitCommand from './QuitCommand';
 import yargs from 'yargs';
-import {setRawAnalyticsService} from 'nuclide-commons/analytics';
+import {setRawAnalyticsService} from '@atom-ide-community/nuclide-commons/analytics';
 import * as rawAnalyticsService from 'nuclide-analytics/lib/track';
 import {Observable} from 'rxjs';
 
@@ -85,7 +85,7 @@ function buildLogger(): log4js$Logger {
       },
     ],
     levels: {
-      'nuclide-commons/process': 'FATAL',
+      '@atom-ide-community/nuclide-commons/process': 'FATAL',
       '[all]': 'DEBUG',
     },
   };

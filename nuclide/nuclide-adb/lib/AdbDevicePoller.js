@@ -10,20 +10,20 @@
  * @format
  */
 
-import type {Expected} from 'nuclide-commons/expected';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {Expected} from '@atom-ide-community/nuclide-commons/expected';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {AdbDevice} from './types';
 
 import {getLogger} from 'log4js';
-import {arrayEqual} from 'nuclide-commons/collection';
-import {SimpleCache} from 'nuclide-commons/SimpleCache';
+import {arrayEqual} from '@atom-ide-community/nuclide-commons/collection';
+import {SimpleCache} from '@atom-ide-community/nuclide-commons/SimpleCache';
 import shallowEqual from 'shallowequal';
 import {Observable} from 'rxjs';
-import {Expect, expectedEqual} from 'nuclide-commons/expected';
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import {track} from 'nuclide-commons/analytics';
+import {Expect, expectedEqual} from '@atom-ide-community/nuclide-commons/expected';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import {track} from '@atom-ide-community/nuclide-commons/analytics';
 import {getAdbServiceByNuclideUri} from './utils';
-import passesGK from 'nuclide-commons/passesGK';
+import passesGK from '@atom-ide-community/nuclide-commons/passesGK';
 
 export function observeAndroidDevices(
   host: NuclideUri,

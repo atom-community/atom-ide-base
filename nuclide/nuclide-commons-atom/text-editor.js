@@ -10,13 +10,13 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import invariant from 'assert';
 import {TextEditor} from 'atom';
 import {Observable} from 'rxjs';
 
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 
 /**
  * Returns a text editor that has the given path open, or null if none exists. If there are multiple

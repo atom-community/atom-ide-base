@@ -10,9 +10,9 @@
  * @format
  */
 
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
-import memoizeUntilChanged from 'nuclide-commons/memoizeUntilChanged';
-import {setFilter} from 'nuclide-commons/collection';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
+import memoizeUntilChanged from '@atom-ide-community/nuclide-commons/memoizeUntilChanged';
+import {setFilter} from '@atom-ide-community/nuclide-commons/collection';
 import {Observable, Scheduler, Subject} from 'rxjs';
 import shallowEqual from 'shallowequal';
 

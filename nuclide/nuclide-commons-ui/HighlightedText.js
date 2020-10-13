@@ -12,7 +12,7 @@
 
 import * as React from 'react';
 import invariant from 'assert';
-import {arrayEqual} from 'nuclide-commons/collection';
+import {arrayEqual} from '@atom-ide-community/nuclide-commons/collection';
 
 export type TextRange = [/* start */ number, /* end */ number];
 type Props = {|

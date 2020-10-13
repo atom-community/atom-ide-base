@@ -10,10 +10,10 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import idx from 'idx';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 /**
  * Format a path for display. After the path is humanized, it should no longer be treated like a

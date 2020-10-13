@@ -14,7 +14,7 @@ import type {AtomTextEditor} from './AtomTextEditor';
 import type {MessageType} from './Message';
 import {Message} from './Message';
 
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import invariant from 'assert';

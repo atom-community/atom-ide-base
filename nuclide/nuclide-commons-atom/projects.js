@@ -10,12 +10,12 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import {File, Directory} from 'atom';
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import {diffSets} from 'nuclide-commons/observable';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import {diffSets} from '@atom-ide-community/nuclide-commons/observable';
 import {Observable} from 'rxjs';
 
 export function getValidProjectPaths(): Array<string> {

@@ -12,11 +12,11 @@
 
 /* global performance, requestAnimationFrame */
 
-import type {FileResults} from 'nuclide-commons/FileResults';
+import type {FileResults} from '@atom-ide-community/nuclide-commons/FileResults';
 
 import escapeStringRegexp from 'escape-string-regexp';
 import * as React from 'react';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {AtomInput} from './AtomInput';
 import {Button} from './Button';
 import {ButtonGroup} from './ButtonGroup';

@@ -10,20 +10,20 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {
   LegacyProcessMessage,
   ProcessMessage,
-} from 'nuclide-commons/process';
+} from '@atom-ide-community/nuclide-commons/process';
 import type {AdbDevice, AndroidJavaProcess, Process} from './types';
 
-import fsPromise from 'nuclide-commons/fsPromise';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {ConnectableObservable} from 'rxjs';
 import {Adb} from './Adb';
 import {Processes} from './common/Processes';
-import {runCommand} from 'nuclide-commons/process';
-import {observeProcessRaw} from 'nuclide-commons/process';
+import {runCommand} from '@atom-ide-community/nuclide-commons/process';
+import {observeProcessRaw} from '@atom-ide-community/nuclide-commons/process';
 
 export function getDeviceInfo(
   serial: string,

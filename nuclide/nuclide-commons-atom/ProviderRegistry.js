@@ -10,7 +10,7 @@
  * @format
  */
 
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 
 export type Provider = {
   // Providers with higher priorities will be preferred over lower ones.

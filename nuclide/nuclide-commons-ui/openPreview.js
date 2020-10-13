@@ -10,12 +10,12 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import type {GoToLocationOptions} from '@atom-ide-community/nuclide-commons-atom/go-to-location';
 import {goToLocation} from '@atom-ide-community/nuclide-commons-atom/go-to-location';
 import {isPending} from '@atom-ide-community/nuclide-commons-atom/pane-item';
-import {delayTime} from 'nuclide-commons/promise';
+import {delayTime} from '@atom-ide-community/nuclide-commons/promise';
 
 type OpenablePreview = {|
   cancel: () => void,

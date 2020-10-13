@@ -20,7 +20,7 @@ import type {DebuggerConfigAction} from 'nuclide-debugger-common';
 
 import idx from 'idx';
 import invariant from 'assert';
-import {mapFilter, mapTransform} from 'nuclide-commons/collection';
+import {mapFilter, mapTransform} from '@atom-ide-community/nuclide-commons/collection';
 import VSPOptionsData from './VSPOptionsData';
 import yargs from 'yargs';
 

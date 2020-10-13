@@ -11,13 +11,13 @@
  */
 
 import type {ConnectableObservable} from 'rxjs';
-import type {ProcessMessage} from 'nuclide-commons/process';
+import type {ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
 import type {VSAdapterExecutableInfo, IVsAdapterSpawner} from './types';
 
 import {
   observeProcessRaw,
   getOriginalEnvironment,
-} from 'nuclide-commons/process';
+} from '@atom-ide-community/nuclide-commons/process';
 import {Observable, Subject} from 'rxjs';
 
 export default class VsAdapterSpawner implements IVsAdapterSpawner {

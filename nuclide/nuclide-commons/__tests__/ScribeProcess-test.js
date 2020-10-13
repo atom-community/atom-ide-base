@@ -11,8 +11,8 @@
  * @emails oncall+nuclide
  */
 import fs from 'fs';
-import fsPromise from 'nuclide-commons/fsPromise';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import ScribeProcess, {__test__} from '../ScribeProcess';
 import waitsFor from '../../../jest/waits_for';
 

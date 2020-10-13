@@ -11,7 +11,7 @@
  */
 
 import * as React from 'react';
-import {capitalize} from 'nuclide-commons/string';
+import {capitalize} from '@atom-ide-community/nuclide-commons/string';
 import classnames from 'classnames';
 import {invert} from 'lodash';
 

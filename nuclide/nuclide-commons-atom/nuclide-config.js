@@ -16,10 +16,10 @@ import {remote, ipcRenderer} from 'electron';
 import fs from 'fs';
 import nullthrows from 'nullthrows';
 import CSON from 'season';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import ConfigManager from './ConfigManager';
 
-import type {BrowserWindow, WebContents} from 'nuclide-commons/electron-remote';
+import type {BrowserWindow, WebContents} from '@atom-ide-community/nuclide-commons/electron-remote';
 
 invariant(remote != null && remote.ipcMain != null && ipcRenderer != null);
 

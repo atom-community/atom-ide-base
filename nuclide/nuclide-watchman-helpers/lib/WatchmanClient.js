@@ -10,11 +10,11 @@
  * @format
  */
 
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import watchman from 'fb-watchman';
-import {fastDebounce} from 'nuclide-commons/observable';
-import {serializeAsyncCall, sleep} from 'nuclide-commons/promise';
-import {maybeToString} from 'nuclide-commons/string';
+import {fastDebounce} from '@atom-ide-community/nuclide-commons/observable';
+import {serializeAsyncCall, sleep} from '@atom-ide-community/nuclide-commons/promise';
+import {maybeToString} from '@atom-ide-community/nuclide-commons/string';
 import {Observable, Subject} from 'rxjs';
 import {getWatchmanBinaryPath} from './path';
 import WatchmanSubscription from './WatchmanSubscription';

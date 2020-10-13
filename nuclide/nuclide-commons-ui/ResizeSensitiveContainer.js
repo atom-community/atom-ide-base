@@ -13,7 +13,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import nullthrows from 'nullthrows';
-import {nextAnimationFrame} from 'nuclide-commons/observable';
+import {nextAnimationFrame} from '@atom-ide-community/nuclide-commons/observable';
 import {Subject} from 'rxjs';
 
 type SensorProps = {

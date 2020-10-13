@@ -18,7 +18,7 @@ import type {
 
 import type {Observable} from 'rxjs';
 
-import {expectObservableToStartWith} from 'nuclide-commons/test-helpers';
+import {expectObservableToStartWith} from '@atom-ide-community/nuclide-commons/test-helpers';
 import {Subject} from 'rxjs';
 
 import ActiveEditorRegistry from '../ActiveEditorRegistry';

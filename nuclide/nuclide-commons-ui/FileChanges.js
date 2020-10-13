@@ -10,19 +10,19 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import {AtomTextEditor} from './AtomTextEditor';
 import {goToLocation} from '@atom-ide-community/nuclide-commons-atom/go-to-location';
 import {LoadingSpinner, LoadingSpinnerSizes} from './LoadingSpinner';
 import nullthrows from 'nullthrows';
-import {pluralize, ZERO_WIDTH_SPACE} from 'nuclide-commons/string';
+import {pluralize, ZERO_WIDTH_SPACE} from '@atom-ide-community/nuclide-commons/string';
 import {Range, TextBuffer} from 'atom';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import {renderReactRoot} from './renderReactRoot';
 import {Section} from './Section';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import classnames from 'classnames';
 
 type Props = {

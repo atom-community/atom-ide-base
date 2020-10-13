@@ -11,7 +11,7 @@
  * @emails oncall+nuclide
  */
 import openPreview from '../openPreview';
-import fsPromise from 'nuclide-commons/fsPromise';
+import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
 import invariant from 'assert';
 
 function getActiveTextEditor(): atom$TextEditor {

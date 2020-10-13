@@ -11,7 +11,7 @@
  */
 
 import type {AndroidJavaProcess} from 'nuclide-adb/lib/types';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {
   AutoGenProperty,
   AutoGenLaunchOrAttachConfig,
@@ -25,9 +25,9 @@ import nullthrows from 'nullthrows';
 import {Checkbox} from '@atom-ide-community/nuclide-commons-ui/Checkbox';
 import {Dropdown} from '@atom-ide-community/nuclide-commons-ui/Dropdown';
 import {AtomInput} from '@atom-ide-community/nuclide-commons-ui/AtomInput';
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import {capitalize, shellParseWithGlobs} from 'nuclide-commons/string';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import {capitalize, shellParseWithGlobs} from '@atom-ide-community/nuclide-commons/string';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {getDebuggerService} from '@atom-ide-community/nuclide-commons-atom/debugger';
 import {
   serializeDebuggerConfig,

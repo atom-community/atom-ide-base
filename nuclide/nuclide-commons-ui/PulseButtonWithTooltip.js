@@ -10,7 +10,7 @@
  * @format
  */
 
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import nullthrows from 'nullthrows';
 import PulseButton from './PulseButton';

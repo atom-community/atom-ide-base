@@ -12,7 +12,7 @@
 
 import SettingsControl from './SettingsControl';
 import * as React from 'react';
-import {track} from 'nuclide-commons/analytics';
+import {track} from '@atom-ide-community/nuclide-commons/analytics';
 
 type Props = {|
   keyPath: string,

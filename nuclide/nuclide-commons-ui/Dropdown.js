@@ -21,7 +21,7 @@ import nullthrows from 'nullthrows';
 import {Button, ButtonSizes} from './Button';
 import {Icon} from './Icon';
 
-import remote from 'nuclide-commons/electron-remote';
+import remote from '@atom-ide-community/nuclide-commons/electron-remote';
 
 invariant(remote != null);
 

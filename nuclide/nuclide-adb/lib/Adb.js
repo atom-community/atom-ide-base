@@ -14,14 +14,14 @@ import type {AndroidJavaProcess, SimpleProcess, AdbDevice} from './types';
 import type {
   LegacyProcessMessage,
   ProcessMessage,
-} from 'nuclide-commons/process';
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+} from '@atom-ide-community/nuclide-commons/process';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import invariant from 'assert';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {Observable} from 'rxjs';
 import {parsePsTableOutput} from './common/ps';
-import {runCommand, observeProcess} from 'nuclide-commons/process';
+import {runCommand, observeProcess} from '@atom-ide-community/nuclide-commons/process';
 
 const ADB_TIMEOUT = 5000;
 

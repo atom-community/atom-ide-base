@@ -11,7 +11,7 @@
  */
 
 import invariant from 'assert';
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 import dockForLocation from './dock-for-location';
 
 export function isPending(paneItem: atom$PaneItem) {

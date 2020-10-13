@@ -11,7 +11,7 @@
  */
 
 export {HistogramTracker} from './HistogramTracker';
-export type {TrackingEvent} from 'nuclide-commons/analytics';
+export type {TrackingEvent} from '@atom-ide-community/nuclide-commons/analytics';
 
 export {
   startTracking,
@@ -26,4 +26,4 @@ export {
   isTrackSupported,
   decorateTrackTiming,
   decorateTrackTimingSampled,
-} from 'nuclide-commons/analytics';
+} from '@atom-ide-community/nuclide-commons/analytics';

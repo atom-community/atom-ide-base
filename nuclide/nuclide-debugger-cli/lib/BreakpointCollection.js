@@ -10,7 +10,7 @@
  * @format
  */
 
-import {arrayCompact} from 'nuclide-commons/collection';
+import {arrayCompact} from '@atom-ide-community/nuclide-commons/collection';
 
 import Breakpoint, {BreakpointState} from './Breakpoint';
 import nullthrows from 'nullthrows';

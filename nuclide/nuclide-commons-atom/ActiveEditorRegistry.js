@@ -17,9 +17,9 @@
 
 import {Observable, Subject} from 'rxjs';
 import {observeActiveEditorsDebounced} from './debounced';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
-import {observableFromSubscribeFunction} from 'nuclide-commons/event';
-import {cacheWhileSubscribed} from 'nuclide-commons/observable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
+import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
+import {cacheWhileSubscribed} from '@atom-ide-community/nuclide-commons/observable';
 
 import {getLogger} from 'log4js';
 

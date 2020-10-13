@@ -13,13 +13,13 @@
 /* eslint-env browser */
 
 import invariant from 'assert';
-import getDisplayName from 'nuclide-commons/getDisplayName';
+import getDisplayName from '@atom-ide-community/nuclide-commons/getDisplayName';
 import {remote} from 'electron';
 import {Observable} from 'rxjs';
 import {PerformanceObservable} from './observable-dom';
 
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
-import once from 'nuclide-commons/once';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
+import once from '@atom-ide-community/nuclide-commons/once';
 
 invariant(remote != null);
 

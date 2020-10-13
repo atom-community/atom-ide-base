@@ -10,8 +10,8 @@
  * @format
  * @emails oncall+nuclide
  */
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
-import {sleep} from 'nuclide-commons/promise';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
+import {sleep} from '@atom-ide-community/nuclide-commons/promise';
 
 import {
   TextEventDispatcher,

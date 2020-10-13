@@ -16,14 +16,14 @@ import type {
   MessageProcessor,
   VSAdapterExecutableInfo,
 } from './types';
-import type {ProcessMessage} from 'nuclide-commons/process';
+import type {ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
 
 import VsAdapterSpawner from './VsAdapterSpawner';
 import V8Protocol from './V8Protocol';
 import {Observable, Subject, TimeoutError} from 'rxjs';
 import idx from 'idx';
 import invariant from 'assert';
-import {track, trackTiming} from 'nuclide-commons/analytics';
+import {track, trackTiming} from '@atom-ide-community/nuclide-commons/analytics';
 import uuid from 'uuid';
 
 export interface AdapterExitedEvent extends DebugProtocol.DebugEvent {

@@ -12,7 +12,7 @@
 
 /* globals getSelection, requestAnimationFrame */
 
-import type {FileResults} from 'nuclide-commons/FileResults';
+import type {FileResults} from '@atom-ide-community/nuclide-commons/FileResults';
 
 import invariant from 'assert';
 import classnames from 'classnames';

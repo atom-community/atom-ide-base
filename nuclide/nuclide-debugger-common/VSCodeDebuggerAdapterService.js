@@ -12,14 +12,14 @@
 
 import type {ConnectableObservable} from 'rxjs';
 import type {VSAdapterExecutableInfo, VsAdapterType} from './types';
-import type {ProcessInfo, ProcessMessage} from 'nuclide-commons/process';
+import type {ProcessInfo, ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
 
-import {psTree} from 'nuclide-commons/process';
+import {psTree} from '@atom-ide-community/nuclide-commons/process';
 import VsAdapterSpawner from './VsAdapterSpawner';
 import {getAdapterExecutable} from './debugger-registry';
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import fsPromise from 'nuclide-commons/fsPromise';
-import {getAbsoluteBinaryPathForPid} from 'nuclide-commons/process';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
+import {getAbsoluteBinaryPathForPid} from '@atom-ide-community/nuclide-commons/process';
 
 export class VsRawAdapterSpawnerService extends VsAdapterSpawner {
   spawnAdapter(

@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {SessionInfo} from 'nuclide-commons/analytics';
+import type {SessionInfo} from '@atom-ide-community/nuclide-commons/analytics';
 import {Observable} from 'rxjs';
 
 // This is a stubbed implementation that other packages use to record analytics data & performance.

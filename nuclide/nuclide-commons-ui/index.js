@@ -13,8 +13,8 @@
 // Requiring this module will load all stylesheets in styles/.
 // The exported value can be disposed to remove the stylesheets.
 
-import nuclideUri from 'nuclide-commons/nuclideUri';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import dedent from 'dedent';
 import fs from 'fs';
 import nullthrows from 'nullthrows';

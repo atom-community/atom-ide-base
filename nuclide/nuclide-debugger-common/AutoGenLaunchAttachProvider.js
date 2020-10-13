@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import type {DebuggerConfigAction} from './types';
 import type {LaunchAttachProviderIsEnabled, AutoGenConfig} from './types';
 

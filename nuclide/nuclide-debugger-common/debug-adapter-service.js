@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {NuclideUri} from 'nuclide-commons/nuclideUri';
+import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 import typeof * as VSCodeDebuggerAdapterService from './VSCodeDebuggerAdapterService';
 
 import * as VSCodeDebuggerAdapterServiceLocal from './VSCodeDebuggerAdapterService';

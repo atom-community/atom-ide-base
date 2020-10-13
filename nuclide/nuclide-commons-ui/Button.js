@@ -15,7 +15,7 @@ import type {IconName} from './Icon';
 import classnames from 'classnames';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import {maybeToString} from 'nuclide-commons/string';
+import {maybeToString} from '@atom-ide-community/nuclide-commons/string';
 import {omit} from 'lodash';
 import addTooltip from './addTooltip';
 

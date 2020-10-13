@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {ProcessMessage} from 'nuclide-commons/process';
+import type {ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
 import type {ConnectableObservable} from 'rxjs';
 import type {
   InitializeMessage,
@@ -19,8 +19,8 @@ import type {
   Socket,
 } from './types';
 
-import {fork, getOutputStream} from 'nuclide-commons/process';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import {fork, getOutputStream} from '@atom-ide-community/nuclide-commons/process';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {ReplaySubject} from 'rxjs';
 import MessageRouter from './MessageRouter';
 import activatePackage from './activatePackage';

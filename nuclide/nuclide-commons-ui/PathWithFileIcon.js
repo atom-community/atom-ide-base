@@ -14,7 +14,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import {getLogger} from 'log4js';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {Icon} from './Icon';
 
 function WarningIconWithShadow(): React.Node {

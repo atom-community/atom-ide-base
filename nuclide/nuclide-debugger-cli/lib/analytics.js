@@ -12,7 +12,7 @@
 
 import type {ParsedVSAdapter} from './DebuggerAdapterFactory';
 
-import {trackImmediate} from 'nuclide-commons/analytics';
+import {trackImmediate} from '@atom-ide-community/nuclide-commons/analytics';
 
 export class Analytics {
   _startTime: Date = new Date();

@@ -17,7 +17,7 @@ import {Button, ButtonTypes} from './Button';
 import {ButtonGroup, ButtonGroupSizes} from './ButtonGroup';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import invariant from 'assert';
 import nullthrows from 'nullthrows';
 

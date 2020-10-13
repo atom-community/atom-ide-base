@@ -21,8 +21,8 @@ import type {DebugAdapter} from '../DebugAdapter';
 import type {VsAdapterType} from 'nuclide-debugger-common';
 
 import {getAdapterPackageRoot} from 'nuclide-debugger-common/debugger-registry';
-import {runCommand} from 'nuclide-commons/process';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import {runCommand} from '@atom-ide-community/nuclide-commons/process';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {VsAdapterTypes} from 'nuclide-debugger-common/constants';
 import {Observable} from 'rxjs';
 import VSPOptionsParser from '../VSPOptionsParser';

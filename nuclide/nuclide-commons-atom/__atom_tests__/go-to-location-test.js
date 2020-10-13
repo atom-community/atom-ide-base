@@ -12,7 +12,7 @@
  */
 import {Point} from 'atom';
 
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {goToLocation, observeNavigatingEditors} from '../go-to-location';
 import {attachWorkspace} from '../test-helpers';
 

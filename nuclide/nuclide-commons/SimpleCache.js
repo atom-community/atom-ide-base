@@ -10,7 +10,7 @@
  * @format
  */
 
-// TODO: Merge this class with nuclide-commons/cache.js because they probably do
+// TODO: Merge this class with @atom-ide-community/nuclide-commons/cache.js because they probably do
 //   very similar things
 
 /**

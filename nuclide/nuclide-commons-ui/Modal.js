@@ -12,7 +12,7 @@
 
 // DEPRECATED, AVOID USING THIS. Use 'showModal' in @atom-ide-community/nuclide-commons-ui instead
 
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import {Observable} from 'rxjs';

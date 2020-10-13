@@ -10,7 +10,7 @@
  * @format
  */
 
-import fsPromise from 'nuclide-commons/fsPromise';
+import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
 
 const WATCHMAN_DEFAULT_PATH = '/usr/local/bin/watchman';
 

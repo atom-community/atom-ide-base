@@ -10,7 +10,7 @@
  * @format
  * @emails oncall+nuclide
  */
-import {sleep} from 'nuclide-commons/promise';
+import {sleep} from '@atom-ide-community/nuclide-commons/promise';
 import {AtomInput} from '../AtomInput';
 import * as React from 'react';
 import ReactDOM from 'react-dom';

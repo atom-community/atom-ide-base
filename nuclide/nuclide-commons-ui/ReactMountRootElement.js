@@ -16,8 +16,8 @@ import invariant from 'assert';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import nullthrows from 'nullthrows';
-import getDisplayName from 'nuclide-commons/getDisplayName';
-import trackReactProfilerRender from 'nuclide-commons/trackReactProfilerRender';
+import getDisplayName from '@atom-ide-community/nuclide-commons/getDisplayName';
+import trackReactProfilerRender from '@atom-ide-community/nuclide-commons/trackReactProfilerRender';
 
 // $FlowFixMe Profiler is neither stable nor typed
 const Profiler = React.unstable_Profiler;

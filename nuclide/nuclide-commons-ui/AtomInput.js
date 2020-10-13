@@ -14,10 +14,10 @@ import * as React from 'react';
 import classNames from 'classnames';
 import invariant from 'assert';
 
-import {maybeToString} from 'nuclide-commons/string';
-import {microtask} from 'nuclide-commons/observable';
-import debounce from 'nuclide-commons/debounce';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import {maybeToString} from '@atom-ide-community/nuclide-commons/string';
+import {microtask} from '@atom-ide-community/nuclide-commons/observable';
+import debounce from '@atom-ide-community/nuclide-commons/debounce';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import atomTabIndexForwarder from './atomTabIndexForwarder';
 
 type Props = {

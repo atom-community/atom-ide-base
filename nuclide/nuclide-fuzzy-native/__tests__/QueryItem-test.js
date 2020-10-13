@@ -189,7 +189,7 @@ describe('isLetterImportant', () => {
   });
 });
 
-import {areSetsEqual} from 'nuclide-commons/collection';
+import {areSetsEqual} from '@atom-ide-community/nuclide-commons/collection';
 
 describe('importantCharactersForString', () => {
   it('returns the set of important characters for a given string', () => {

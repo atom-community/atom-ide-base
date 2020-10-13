@@ -12,9 +12,9 @@
 
 import fs from 'fs';
 import os from 'os';
-import nuclideUri from 'nuclide-commons/nuclideUri';
+import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import yargs from 'yargs';
-import {mapFromObject} from 'nuclide-commons/collection';
+import {mapFromObject} from '@atom-ide-community/nuclide-commons/collection';
 
 export type Preset = {
   description: string,

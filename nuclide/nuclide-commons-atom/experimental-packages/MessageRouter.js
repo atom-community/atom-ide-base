@@ -13,7 +13,7 @@
 import type {PipedMessage, ServiceConnection} from './types';
 
 import {getLogger} from 'log4js';
-import {DefaultMap} from 'nuclide-commons/collection';
+import {DefaultMap} from '@atom-ide-community/nuclide-commons/collection';
 import {Observable, Subject} from 'rxjs';
 import * as jsonrpc from 'vscode-jsonrpc';
 import {AbstractMessageReader} from 'vscode-jsonrpc/lib/messageReader';

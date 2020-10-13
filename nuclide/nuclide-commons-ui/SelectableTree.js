@@ -12,8 +12,8 @@
 
 /* eslint-env browser */
 
-import {arrayEqual, arrayFindLastIndex} from 'nuclide-commons/collection';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+import {arrayEqual, arrayFindLastIndex} from '@atom-ide-community/nuclide-commons/collection';
+import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import classnames from 'classnames';
 import invariant from 'assert';
