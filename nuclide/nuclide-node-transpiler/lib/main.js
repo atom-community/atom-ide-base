@@ -16,9 +16,9 @@
 /**
  * To use the require hook, you should follow this pattern:
  *
- *   const {__DEV__} = require('<relative_path>/nuclide-node-transpiler/lib/env');
+ *   const {__DEV__} = require('<relative_path>/@atom-ide-community/nuclide-node-transpiler/lib/env');
  *   if (__DEV__) {
- *     require('nuclide-node-transpiler');
+ *     require('@atom-ide-community/nuclide-node-transpiler');
  *   }
  *
  * It's important that the lib/env path is relative, as that file is the one

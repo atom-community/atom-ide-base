@@ -18,7 +18,7 @@ import {
 } from './system-info';
 import os from 'os';
 import uuid from 'uuid';
-import {__DEV__} from 'nuclide-node-transpiler/lib/env';
+import {__DEV__} from '@atom-ide-community/nuclide-node-transpiler/lib/env';
 
 export type RuntimeInformation = {
   sessionId: string,

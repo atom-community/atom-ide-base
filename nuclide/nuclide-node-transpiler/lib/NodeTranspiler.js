@@ -273,7 +273,7 @@ class NodeTranspiler {
       // so debuggers can find the sourcemaps there.
       this._cacheDir = process.env.NUCLIDE_TRANSPILER_CACHE_DIR;
       if (this._cacheDir == null) {
-        this._cacheDir = path.join(os.tmpdir(), 'nuclide-node-transpiler');
+        this._cacheDir = path.join(os.tmpdir(), '@atom-ide-community/nuclide-node-transpiler');
       }
 
       const digest = this.getConfigDigest();

@@ -14,10 +14,10 @@
 /* eslint nuclide-internal/no-commonjs: 0 */
 
 // eslint-disable-next-line nuclide-internal/modules-dependencies
-const {__DEV__} = require('../../nuclide-node-transpiler/lib/env');
+const {__DEV__} = require('../../@atom-ide-community/nuclide-node-transpiler/lib/env');
 if (__DEV__) {
   // eslint-disable-next-line nuclide-internal/modules-dependencies
-  require('nuclide-node-transpiler');
+  require('@atom-ide-community/nuclide-node-transpiler');
 }
 
 require('./run-package');

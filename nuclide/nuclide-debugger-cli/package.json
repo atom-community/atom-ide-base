@@ -29,7 +29,7 @@
   "devDependencies": {
     "dedent": "0.7.0",
     "invariant": "2.2.2",
-    "nuclide-node-transpiler": "0.7.3-dev",
+    "@atom-ide-community/nuclide-node-transpiler": "0.7.3-dev",
     "simple-text-buffer": "9.2.11"
   },
   "bin": {
