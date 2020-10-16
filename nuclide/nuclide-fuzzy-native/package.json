@@ -1,7 +1,7 @@
 {
   "name": "@atom-ide-community/nuclide-fuzzy-native",
   "main": "./dist/main.js",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Wrapper around the OSS npm fuzzy-native package",
   "author": "Nuclide : Search",
   "license": "BSD-3-Clause",
@@ -14,7 +14,7 @@
   "dependencies": {
     "heap": "0.2.6",
     "log4js": "1.1.1",
-    "@atom-ide-community/nuclide-commons": "0.7.4",
+    "@atom-ide-community/nuclide-commons": "^0.7.5",
     "nuclide-prebuilt-libs": "0.5.2"
   }
 }
