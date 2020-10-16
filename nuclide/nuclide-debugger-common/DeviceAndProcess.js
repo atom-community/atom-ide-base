@@ -62,10 +62,11 @@ export class DeviceAndProcess extends React.Component<Props, State> {
     });
 
     let filterText = '';
-    try {
-      // $FlowFB
-      filterText = require('./fb-isFBProcessName').FB_PROCESS_NAME_REGEX_STRING;
-    } catch (e) {}
+    // the file is not available. This causes confusions for the bundlers and analyzers
+    // try {
+    //   // $FlowFB
+    //   filterText = require('./fb-isFBProcessName').FB_PROCESS_NAME_REGEX_STRING;
+    // } catch (e) {}
 
     this.state = {
       selectedDeviceSerial: null,
