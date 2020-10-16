@@ -139,19 +139,19 @@ export default class Debugger extends EventEmitter
     this._adapter = adapter;
 
     if (this._adapter.type === 'hhvm') {
-      try {
-        /* eslint-disable nuclide-internal/modules-dependencies */
-        // $FlowFB
-        const interngraph = require('fb-interngraph/app');
-        /* eslint-enable */
-
-        invariant(this._dispatcher != null);
-        this._dispatcher.registerCommand(
-          new OptoutCommand(this._console, interngraph.postObject),
-        );
-      } catch (_) {
+      // try {
+      //   /* eslint-disable nuclide-internal/modules-dependencies */
+      //   // $FlowFB
+      //   const interngraph = require('fb-interngraph/app');
+      //   /* eslint-enable */
+      //
+      //   invariant(this._dispatcher != null);
+      //   this._dispatcher.registerCommand(
+      //     new OptoutCommand(this._console, interngraph.postObject),
+      //   );
+      // } catch (_) {
         this._logger.error(`Failed to get interngraph ${_.message}`);
-      }
+      // }
     }
 
     this._replThread = adapter.adapter.replThread;

@@ -19,10 +19,10 @@ import UniversalDisposable from './UniversalDisposable';
  */
 const getGatekeeper = once(() => {
   let Gatekeeper;
-  try {
-    // $FlowFB
-    Gatekeeper = require('../fb-gatekeeper-raw').Gatekeeper; // eslint-disable-line nuclide-internal/modules-dependencies
-  } catch (e) {
+  // try {
+  //   $FlowFB
+  //   Gatekeeper = require('../fb-gatekeeper-raw').Gatekeeper; // eslint-disable-line nuclide-internal/modules-dependencies
+  // } catch (e) {
     Gatekeeper = class {
       isGkEnabled(name: string): ?boolean {
         return null;
@@ -48,7 +48,7 @@ const getGatekeeper = once(() => {
         return [];
       }
     };
-  }
+  // }
   return new Gatekeeper();
 });
 
