@@ -398,7 +398,7 @@ packages:
     resolution:
       integrity: sha1-AwiOnr+edWtpdRYR0qXvWRSCyZU=
 specifiers:
-  '@atom-ide-community/nuclide-commons': 0.7.4
+  '@atom-ide-community/nuclide-commons': ^0.7.5
   escape-string-regexp: 1.0.5
   idb-keyval: 2.3.0
   idx: 1.2.0

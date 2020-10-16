@@ -94,7 +94,7 @@ packages:
     resolution:
       integrity: sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
 specifiers:
-  '@atom-ide-community/nuclide-commons': 0.7.4
+  '@atom-ide-community/nuclide-commons': ^0.7.5
   heap: 0.2.6
   log4js: 1.1.1
   nuclide-prebuilt-libs: 0.5.2

@@ -285,8 +285,8 @@ packages:
     resolution:
       integrity: sha512-SX72rn7Hjr8tqy6OGFjQe8Fs0wnPdT6tqpzBbTWRNHM2p3n1DVsC8YHmYbwoyu7vzTXnCGCw4ShWbmM7nE7ByQ==
 specifiers:
-  '@atom-ide-community/nuclide-commons': 0.7.4
-  '@atom-ide-community/nuclide-commons-atom': 0.7.3-dev
+  '@atom-ide-community/nuclide-commons': ^0.7.5
+  '@atom-ide-community/nuclide-commons-atom': ^0.7.6
   anser: 1.4.6
   classnames: 2.2.5
   dedent: 0.7.0
