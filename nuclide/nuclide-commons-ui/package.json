@@ -22,7 +22,7 @@
     "lodash": "4.17.20",
     "log4js": "1.1.1",
     "moment": "2.21.0",
-    "@atom-ide-community/nuclide-commons": "0.7.3-dev",
+    "@atom-ide-community/nuclide-commons": "0.7.4",
     "@atom-ide-community/nuclide-commons-atom": "0.7.3-dev",
     "nullthrows": "1.0.0",
     "react": "16.6.3",

@@ -1,6 +1,6 @@
 dependencies:
   '@atom-ide-community/nuclide-analytics': 'link:../nuclide-analytics'
-  '@atom-ide-community/nuclide-commons': 0.7.3-dev
+  '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
   '@atom-ide-community/nuclide-debugger-common': 0.7.3-dev
   async-to-generator: 1.1.0
   blessed: 0.1.81
@@ -895,7 +895,7 @@ packages:
       integrity: sha1-AwiOnr+edWtpdRYR0qXvWRSCyZU=
 specifiers:
   '@atom-ide-community/nuclide-analytics': 0.7.3-dev
-  '@atom-ide-community/nuclide-commons': 0.7.3-dev
+  '@atom-ide-community/nuclide-commons': 0.7.4
   '@atom-ide-community/nuclide-debugger-common': 0.7.3-dev
   '@atom-ide-community/nuclide-node-transpiler': 0.7.3-dev
   async-to-generator: 1.1.0
