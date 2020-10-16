@@ -17,7 +17,7 @@ devDependencies:
   '@types/node': 14.11.7
   '@types/react': 16.9.51
   '@types/react-dom': 16.9.8
-  atom-jasmine3-test-runner: 5.1.2
+  atom-jasmine3-test-runner: 5.1.3
   babel-preset-atomic: 2.4.2_fba40c95243e6bffd2b7190154aad003
   build-commit: 0.1.1
   coffeescript: 1.12.7
@@ -1947,28 +1947,28 @@ packages:
       atom: '>=1.0.0 <2.0.0'
     resolution:
       integrity: sha512-cqMEyMeiiAqH4cQhPEyh6HQ9IvtOTHMwZoVxTHK2zKNWyugWVlCzqjZEjQ2WJqxQDd9v4KBeARDpwLLiKaVR/w==
-  /atom-jasmine3-test-runner/5.1.2:
+  /atom-jasmine3-test-runner/5.1.3:
     dependencies:
       etch: 0.14.1
       find-parent-dir: 0.3.0
       fs-plus: 3.1.1
       glob: 7.1.6
       grim: 2.0.3
-      jasmine: 3.6.1
-      jasmine-local-storage: 1.1.1_jasmine@3.6.1
-      jasmine-pass: 1.1.0_jasmine@3.6.1
-      jasmine-should-fail: 1.1.7_jasmine@3.6.1
-      jasmine-unspy: 1.1.0_jasmine@3.6.1
-      jasmine2-atom-matchers: 1.1.7_jasmine@3.6.1
-      jasmine2-focused: 1.1.1_jasmine@3.6.1
-      jasmine2-json: 1.1.1_jasmine@3.6.1
-      jasmine2-tagged: 1.1.1_jasmine@3.6.1
+      jasmine: 3.6.2
+      jasmine-local-storage: 1.1.1_jasmine@3.6.2
+      jasmine-pass: 1.1.0_jasmine@3.6.2
+      jasmine-should-fail: 1.1.7_jasmine@3.6.2
+      jasmine-unspy: 1.1.0_jasmine@3.6.2
+      jasmine2-atom-matchers: 1.1.7_jasmine@3.6.2
+      jasmine2-focused: 1.1.1_jasmine@3.6.2
+      jasmine2-json: 1.1.1_jasmine@3.6.2
+      jasmine2-tagged: 1.1.1_jasmine@3.6.2
       semver: 7.3.2
       temp: 0.9.1
       underscore-plus: 1.7.0
     dev: true
     resolution:
-      integrity: sha512-5KMhyeQr55cC1GD/JGGHHAauA8kkbQdx0eA8nn6fD59qtr/Dlk+2EYvSIKx0mst1KSmaEUnp6KrjgYAHrCFCFQ==
+      integrity: sha512-kAnVBE5e9vjojvQfzMCFt2u+JSjqtsiDtoXOaexSdp8QVhSRph/9bCSGqJRi2Ds7HbKLLlf1ThNwd8dNx9vNqA==
   /atom-package-deps/6.0.0:
     dependencies:
       sb-fs: 4.0.0
@@ -4416,33 +4416,33 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8uQYa7zJN8hq9z+g8z1bqCfdC8eoDAeVnM5sfqs7KHv9/ifoJ500m018fpFc7RDaO6SWCLCXwo/wPSNcdYTgcw==
-  /jasmine-local-storage/1.1.1_jasmine@3.6.1:
+  /jasmine-local-storage/1.1.1_jasmine@3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      jasmine: 3.6.2
     dev: true
     peerDependencies:
       jasmine: '>=2 <4'
     resolution:
       integrity: sha512-GBqtas3l8SBo39NwjbHuzWhQhgHabq/mVVDabGvKLUXRFH8GtPy4jPKRIMDLWC+q7S+q4M6pIY4OHoVuU8hsCQ==
-  /jasmine-pass/1.1.0_jasmine@3.6.1:
+  /jasmine-pass/1.1.0_jasmine@3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      jasmine: 3.6.2
     dev: true
     peerDependencies:
       jasmine: <4
     resolution:
       integrity: sha512-gtsHtIj1zNS/90REIpyDH2HRSW7vFwKMau5A2hcfL/RsSwUiKAS8EdOY1Z67m8giyaUMe7I8O7SzJF2oevCX0A==
-  /jasmine-should-fail/1.1.7_jasmine@3.6.1:
+  /jasmine-should-fail/1.1.7_jasmine@3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      jasmine: 3.6.2
     dev: true
     peerDependencies:
       jasmine: '>=2 <4'
     resolution:
       integrity: sha512-MNtae0/NUAU0OknPcM4cTA04JEXmxMH0+hqZxBjdt4+8LvDqm+oYIQcY70OqpRwVhTTcAyG7HxiPw/4AGlxfgw==
-  /jasmine-unspy/1.1.0_jasmine@3.6.1:
+  /jasmine-unspy/1.1.0_jasmine@3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      jasmine: 3.6.2
     dev: true
     peerDependencies:
       jasmine: '>=2 <4'
@@ -4456,9 +4456,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Jqp8P6ZWkTVFGmJwBK46p+kJNrZCdqkQ4GL+PGuBXZwK1fM4ST9BizkYgIwCFqYYqnTizAy6+XG2Ej5dFrej9Q==
-  /jasmine2-atom-matchers/1.1.7_jasmine@3.6.1:
+  /jasmine/3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      glob: 7.1.6
+      jasmine-core: 3.6.0
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-Uc0o2MRnC8TS1MjDrB8jE1umKEo2mflzGvdg0Ncs+yuLtOJ+uz/Wz8VmGsNGtuASr8+E0LDgPkOpvdoC76m5WQ==
+  /jasmine2-atom-matchers/1.1.7_jasmine@3.6.2:
+    dependencies:
+      jasmine: 3.6.2
       jquery: 3.5.1
       underscore-plus: 1.7.0
     dev: true
@@ -4466,25 +4474,25 @@ packages:
       jasmine: '>=2 <4'
     resolution:
       integrity: sha512-9xJALLB9suLGxSkN063Wf0aJGTwrTgmbjgX+dr4gqBKqh5CWkdyB4pyET8rJkX2UYAQJuw0tKCgbwccNJ0CuHA==
-  /jasmine2-focused/1.1.1_jasmine@3.6.1:
+  /jasmine2-focused/1.1.1_jasmine@3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      jasmine: 3.6.2
     dev: true
     peerDependencies:
       jasmine: '>=2 <4'
     resolution:
       integrity: sha512-2NnQD+Lwqu/0RIVentOiDtdsjhP/4jJooG88rQC3A6lKHxnm2d9Q/wGbQBDZlIA7bDUrQpuHZ6d2A/lACLwfhQ==
-  /jasmine2-json/1.1.1_jasmine@3.6.1:
+  /jasmine2-json/1.1.1_jasmine@3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      jasmine: 3.6.2
     dev: true
     peerDependencies:
       jasmine: '>=2 <4'
     resolution:
       integrity: sha512-D8dFHVDsDZpqgYK4eR3SYkMXypRjK0MpnHzVkO38ByXe7R3QaZDsoRt3Kh4rqI1U4iq9hkxHuKr+gy+OzuL+8g==
-  /jasmine2-tagged/1.1.1_jasmine@3.6.1:
+  /jasmine2-tagged/1.1.1_jasmine@3.6.2:
     dependencies:
-      jasmine: 3.6.1
+      jasmine: 3.6.2
     dev: true
     peerDependencies:
       jasmine: '>=2 <4'
@@ -7163,7 +7171,7 @@ specifiers:
   '@types/react': ^16.9.51
   '@types/react-dom': ^16.9.8
   atom-ide-markdown-service: ^1.6.0
-  atom-jasmine3-test-runner: ^5.1.2
+  atom-jasmine3-test-runner: ^5.1.3
   atom-package-deps: ^6.0.0
   babel-preset-atomic: ^2.4.2
   build-commit: 0.1.1
