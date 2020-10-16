@@ -17,7 +17,7 @@ devDependencies:
   '@types/node': 14.11.7
   '@types/react': 16.9.51
   '@types/react-dom': 16.9.8
-  atom-jasmine3-test-runner: 5.1.3
+  atom-jasmine3-test-runner: 5.1.4
   babel-preset-atomic: 2.4.2_fba40c95243e6bffd2b7190154aad003
   build-commit: 0.1.1
   coffeescript: 1.12.7
@@ -1947,7 +1947,7 @@ packages:
       atom: '>=1.0.0 <2.0.0'
     resolution:
       integrity: sha512-cqMEyMeiiAqH4cQhPEyh6HQ9IvtOTHMwZoVxTHK2zKNWyugWVlCzqjZEjQ2WJqxQDd9v4KBeARDpwLLiKaVR/w==
-  /atom-jasmine3-test-runner/5.1.3:
+  /atom-jasmine3-test-runner/5.1.4:
     dependencies:
       etch: 0.14.1
       find-parent-dir: 0.3.0
@@ -1968,7 +1968,7 @@ packages:
       underscore-plus: 1.7.0
     dev: true
     resolution:
-      integrity: sha512-kAnVBE5e9vjojvQfzMCFt2u+JSjqtsiDtoXOaexSdp8QVhSRph/9bCSGqJRi2Ds7HbKLLlf1ThNwd8dNx9vNqA==
+      integrity: sha512-szqFLX7DFtW0H2RYy+zujoHiLH87yi2JDUulmZI5UcIeIeNmcF604XSdHO9syMtrUjxJyHB91TWxn/g6y8klHw==
   /atom-package-deps/6.0.0:
     dependencies:
       sb-fs: 4.0.0
@@ -7171,7 +7171,7 @@ specifiers:
   '@types/react': ^16.9.51
   '@types/react-dom': ^16.9.8
   atom-ide-markdown-service: ^1.6.0
-  atom-jasmine3-test-runner: ^5.1.3
+  atom-jasmine3-test-runner: ^5.1.4
   atom-package-deps: ^6.0.0
   babel-preset-atomic: ^2.4.2
   build-commit: 0.1.1
