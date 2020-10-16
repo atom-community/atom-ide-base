@@ -14,7 +14,7 @@
   "dependencies": {
     "heap": "0.2.6",
     "log4js": "1.1.1",
-    "@atom-ide-community/nuclide-commons": "^0.7.5",
+    "@atom-ide-community/nuclide-commons": "latest",
     "nuclide-prebuilt-libs": "0.5.2"
   }
 }

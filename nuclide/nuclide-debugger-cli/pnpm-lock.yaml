@@ -311,10 +311,10 @@ packages:
     resolution:
       integrity: sha1-AwiOnr+edWtpdRYR0qXvWRSCyZU=
 specifiers:
-  '@atom-ide-community/nuclide-analytics': ^0.7.5
-  '@atom-ide-community/nuclide-commons': ^0.7.5
-  '@atom-ide-community/nuclide-debugger-common': ^0.7.6
-  '@atom-ide-community/nuclide-node-transpiler': 0.7.3-dev
+  '@atom-ide-community/nuclide-analytics': latest
+  '@atom-ide-community/nuclide-commons': latest
+  '@atom-ide-community/nuclide-debugger-common': latest
+  '@atom-ide-community/nuclide-node-transpiler': latest
   async-to-generator: 1.1.0
   blessed: 0.1.81
   dedent: 0.7.0
