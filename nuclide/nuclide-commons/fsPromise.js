@@ -171,15 +171,12 @@ async function mkdirp(filePath: string): Promise<boolean> {
   if (isExistingDirectory) {
     return false;
   } else {
-    return new Promise((resolve, reject) => {
-      mkdirpLib(filePath, err => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(true);
-        }
-      });
-    });
+    try {
+      await mkdirpLib(filePath);
+      return true;
+    } catch {
+      return false;
+    }
   }
 }
 

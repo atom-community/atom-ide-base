@@ -21,7 +21,7 @@
     "log4js": "1.1.1",
     "lru-cache": "4.0.2",
     "mime-types": "2.1.16",
-    "mkdirp": "0.5.1",
+    "mkdirp": "^1.0.4",
     "mv": "2.1.1",
     "@atom-ide-community/nuclide-node-transpiler": "latest",
     "nullthrows": "1.0.0",
