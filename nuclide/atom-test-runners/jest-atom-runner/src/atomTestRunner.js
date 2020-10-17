@@ -24,7 +24,7 @@ import os from 'os';
 import runTest from 'jest-runner/build/run_test';
 import Runtime from 'jest-runtime';
 import HasteMap from 'jest-haste-map';
-import patchAtomConsole from '../dist-nuclide-commons/patch-atom-console';
+import patchAtomConsole from '../../../dist-nuclide-commons/patch-atom-console';
 
 import {
   parseMessage,
