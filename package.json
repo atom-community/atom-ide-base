@@ -109,6 +109,7 @@
     "jest-runner": "23.5.0",
     "jest-runtime": "23.5.0",
     "@jest-runner/nuclide-e2e": "^0.2",
+    "babel-jest": "^23.5.0",
     "mkdirp": "0.5.1",
     "node-ipc": "9.1.1"
   },

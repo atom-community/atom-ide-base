@@ -16,13 +16,15 @@ const path = require('path');
 const p = inp => path.resolve(__dirname, inp);
 const nuclideDir = '../../../'
 
+process.env.BABEL_KEEP_MODULES = false;
+
 module.exports = {
   displayName: 'atom',
   rootDir: p(nuclideDir),
   roots: [p(nuclideDir)],
   testMatch: ['**/__atom_tests__/**/*.js?(x)'],
   transform: {
-    '\\.js$': p('./transform.js'),
+    "^.+\\.[t|j]sx?$": "babel-jest"
   },
   setupTestFrameworkScriptFile: p('./setupTestFrameworkScriptFile.atom.js'),
   setupFiles: [p('./setup.js')],

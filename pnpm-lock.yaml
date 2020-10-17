@@ -19,6 +19,7 @@ devDependencies:
   '@types/react': 16.9.51
   '@types/react-dom': 16.9.8
   atom-jasmine3-test-runner: 5.1.4
+  babel-jest: 23.6.0
   babel-preset-atomic: 2.4.2_fba40c95243e6bffd2b7190154aad003
   build-commit: 0.1.1
   coffeescript: 1.12.7
@@ -2341,6 +2342,15 @@ packages:
     dev: true
     resolution:
       integrity: sha1-NHHenK7DiOXIUOWX5Yom3fN2ArI=
+  /babel-jest/23.6.0:
+    dependencies:
+      babel-plugin-istanbul: 4.1.6
+      babel-preset-jest: 23.2.0
+    dev: true
+    peerDependencies:
+      babel-core: ^6.0.0 || ^7.0.0-0
+    resolution:
+      integrity: sha512-lqKGG6LYXYu+DQh/slrQ8nxXQkEkhugdXsU6St7GmhVS7Ilc/22ArwqXNJrf0QaOBjZB0360qZMwXqDYQHXaew==
   /babel-jest/23.6.0_babel-core@6.26.3:
     dependencies:
       babel-core: 6.26.3
@@ -9798,6 +9808,7 @@ specifiers:
   atom-ide-markdown-service: ^1.6.0
   atom-jasmine3-test-runner: ^5.1.4
   atom-package-deps: ^6.0.0
+  babel-jest: ^23.5.0
   babel-preset-atomic: ^2.4.2
   build-commit: 0.1.1
   classnames: ^2.2.6
