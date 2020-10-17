@@ -13,21 +13,22 @@
 /* eslint nuclide-internal/no-commonjs: 0 */
 
 const path = require('path');
-const p = nuclidePath => path.resolve(__dirname, '..', nuclidePath);
-const isSandcastle = !!process.env.SANDCASTLE;
+const p = inp => path.resolve(__dirname, inp);
+const nuclideDir = '../../../';
+const isSandcastle = Boolean(process.env.SANDCASTLE);
 
 module.exports = {
   displayName: 'e2e',
   reporters: [
-    ...(isSandcastle ? [p('jest/fb-e2e/diagnostics_reporter.js')] : []),
+    ...(isSandcastle ? [p('./fb-e2e/diagnostics_reporter.js')] : []),
     ...require('./reporters.config'),
   ],
-  rootDir: p(''),
-  roots: [p('')],
+  rootDir: p(nuclideDir),
+  roots: [p(nuclideDir)],
   runner: '@jest-runner/nuclide-e2e',
-  setupFiles: [p('jest/fb-e2e/setup.js')],
+  setupFiles: [p('./fb-e2e/setup.js')],
   setupTestFrameworkScriptFile: p(
-    'jest/fb-e2e/setupTestFrameworkScriptFile.js',
+    './fb-e2e/setupTestFrameworkScriptFile.js',
   ),
   testMatch: ['**/__e2e_tests__/**/*.js?(x)'],
   testPathIgnorePatterns: ['/node_modules/'],

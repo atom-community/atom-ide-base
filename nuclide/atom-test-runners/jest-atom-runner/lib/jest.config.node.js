@@ -13,21 +13,22 @@
 /* eslint nuclide-internal/no-commonjs: 0 */
 
 const path = require('path');
-const p = nuclidePath => path.resolve(__dirname, '..', nuclidePath);
+const p = inp => path.resolve(__dirname, inp);
+const nuclideDir = '../../../'
 
 module.exports = {
   displayName: 'node',
-  rootDir: p(''),
-  roots: [p('')],
+  rootDir: p(nuclideDir),
+  roots: [p(nuclideDir)],
   testMatch: ['**/__tests__/**/*.js?(x)'],
   transform: {
-    '\\.js$': p('jest/transform.js'),
+    '\\.js$': p('./transform.js'),
   },
-  setupTestFrameworkScriptFile: p('jest/setupTestFrameworkScriptFile.node.js'),
-  setupFiles: [p('jest/setup.js')],
+  setupTestFrameworkScriptFile: p('./setupTestFrameworkScriptFile.node.js'),
+  setupFiles: [p('./setup.js')],
   testRunner: require.resolve('jest-circus/runner'),
   moduleNameMapper: {
-    electron: p('jest/__mocks__/emptyObject.js'),
+    electron: p('../__mocks__/emptyObject.js'),
   },
   testPathIgnorePatterns: ['/node_modules/'],
   reporters: require('./reporters.config'),

@@ -13,24 +13,25 @@
 /* eslint nuclide-internal/no-commonjs: 0 */
 
 const path = require('path');
-const p = nuclidePath => path.resolve(__dirname, '..', nuclidePath);
+const p = inp => path.resolve(__dirname, inp);
+const nuclideDir = '../../../'
 
 module.exports = {
   displayName: 'atom',
-  rootDir: p(''),
-  roots: [p('')],
+  rootDir: p(nuclideDir),
+  roots: [p(nuclideDir)],
   testMatch: ['**/__atom_tests__/**/*.js?(x)'],
   transform: {
-    '\\.js$': p('jest/transform.js'),
+    '\\.js$': p('./transform.js'),
   },
-  setupTestFrameworkScriptFile: p('jest/setupTestFrameworkScriptFile.atom.js'),
-  setupFiles: [p('jest/setup.js')],
-  runner: p('./dist/index.js'),
+  setupTestFrameworkScriptFile: p('./setupTestFrameworkScriptFile.atom.js'),
+  setupFiles: [p('./setup.js')],
+  runner: p('../dist/index.js'),
   testRunner: require.resolve('jest-circus/runner'),
   moduleNameMapper: {
-    oniguruma: p('jest/__mocks__/emptyObject.js'),
+    oniguruma: p('../__mocks__/emptyObject.js'),
   },
-  testEnvironment: p('./dist/environment.js'),
+  testEnvironment: p('../dist/environment.js'),
   testPathIgnorePatterns: ['/node_modules/'],
   reporters: require('./reporters.config'),
   forceExit: true,
