@@ -8,7 +8,7 @@ dependencies:
   line-by-line: 0.1.5
   log4js: 1.1.1
   nullthrows: 1.0.0
-  rxjs-compat: 6.3.3
+  rxjs: /rxjs-compat/6.3.3
   v8-compile-cache: 1.1.0
   vscode-debugprotocol: 1.24.0
   yargs: 3.32.0
@@ -323,7 +323,7 @@ specifiers:
   line-by-line: 0.1.5
   log4js: 1.1.1
   nullthrows: 1.0.0
-  rxjs-compat: 6.3.3
+  rxjs: 'npm:rxjs-compat@6.3.3'
   simple-text-buffer: 9.2.11
   v8-compile-cache: 1.1.0
   vscode-debugprotocol: 1.24.0

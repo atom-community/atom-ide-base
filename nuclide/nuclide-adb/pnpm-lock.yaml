@@ -3,7 +3,7 @@ dependencies:
   '@atom-ide-community/nuclide-commons-atom': 'link:../nuclide-commons-atom'
   log4js: 1.1.1
   nullthrows: 1.0.0
-  rxjs-compat: 6.3.3
+  rxjs: /rxjs-compat/6.3.3
   shallowequal: 1.1.0
 lockfileVersion: 5.1
 packages:
@@ -104,5 +104,5 @@ specifiers:
   '@atom-ide-community/nuclide-commons-atom': latest
   log4js: 1.1.1
   nullthrows: 1.0.0
-  rxjs-compat: 6.3.3
+  rxjs: 'npm:rxjs-compat@6.3.3'
   shallowequal: 1.1.0

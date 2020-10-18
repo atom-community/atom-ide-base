@@ -3,7 +3,7 @@ dependencies:
   event-kit: 2.2.0
   fb-watchman: 2.0.0
   log4js: 1.1.1
-  rxjs-compat: 6.3.3
+  rxjs: /rxjs-compat/6.3.3
 lockfileVersion: 5.1
 packages:
   /bser/2.1.1:
@@ -115,4 +115,4 @@ specifiers:
   event-kit: 2.2.0
   fb-watchman: 2.0.0
   log4js: 1.1.1
-  rxjs-compat: 6.3.3
+  rxjs: 'npm:rxjs-compat@6.3.3'

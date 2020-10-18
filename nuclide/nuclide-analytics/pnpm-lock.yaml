@@ -1,7 +1,7 @@
 dependencies:
   '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
   log4js: 1.1.1
-  rxjs-compat: 6.3.3
+  rxjs: /rxjs-compat/6.3.3
 lockfileVersion: 5.1
 packages:
   /core-util-is/1.0.2:
@@ -91,4 +91,4 @@ packages:
 specifiers:
   '@atom-ide-community/nuclide-commons': latest
   log4js: 1.1.1
-  rxjs-compat: 6.3.3
+  rxjs: 'npm:rxjs-compat@6.3.3'
