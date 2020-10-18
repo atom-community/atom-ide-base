@@ -12,6 +12,7 @@ package-lock.json
 # Build directories
 dist
 nuclide/dist-nuclide-*
+dist-nuclide
 package
 commons-atom
 commons-ui
