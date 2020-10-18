@@ -32,7 +32,7 @@ module.exports = {
   moduleNameMapper: {
     electron: p('../__mocks__/emptyObject.js'),
   },
-  testPathIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['/node_modules/', '/nuclide-node-transpiler/'],
   reporters: require('./reporters.config'),
   forceExit: true,
 };
