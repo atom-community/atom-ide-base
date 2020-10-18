@@ -35,7 +35,7 @@ devDependencies:
   jest-mock: 23.2.0
   jest-runner: 23.5.0
   jest-runtime: 23.5.0
-  mkdirp: 0.5.1
+  mkdirp: 1.0.4
   node-ipc: 9.1.1
   npm-check-updates: 9.0.4
   prettier: 2.1.2
@@ -6838,10 +6838,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
-  /minimist/0.0.8:
-    dev: true
-    resolution:
-      integrity: sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
   /minimist/1.2.5:
     dev: true
     resolution:
@@ -6936,14 +6932,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==
-  /mkdirp/0.5.1:
-    dependencies:
-      minimist: 0.0.8
-    deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   /mkdirp/0.5.5:
     dependencies:
       minimist: 1.2.5
@@ -9827,7 +9815,7 @@ specifiers:
   jest-mock: 23.2.0
   jest-runner: 23.5.0
   jest-runtime: 23.5.0
-  mkdirp: 0.5.1
+  mkdirp: 1.0.4
   node-ipc: 9.1.1
   npm-check-updates: 9.0.4
   prettier: ^2.1.2
