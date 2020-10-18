@@ -15,7 +15,6 @@
   "engines": {
     "atom": ">= 1.17.0"
   },
-  "atomTestRunner": "../atom-test-runners/jasmine-runner",
   "consumedServices": {
     "nuclide-rpc-services": {
       "versions": {
