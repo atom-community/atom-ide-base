@@ -9,7 +9,7 @@
  * @format
  */
 
-jest.mock('nuclide-commons/analytics');
+jest.mock('@atom-ide-community/nuclide-commons/analytics');
 jest.mock('log4js');
 
 if (process.env.SANDCASTLE != null) {
