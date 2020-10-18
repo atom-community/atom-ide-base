@@ -26,6 +26,10 @@ module.exports = {
   transform: {
     "^.+\\.[t|j]sx?$": "babel-jest"
   },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  transformIgnorePatterns: [
+    "node_modules/(?!@atom-ide-community/(.*))",
+  ],
   setupTestFrameworkScriptFile: p('./setupTestFrameworkScriptFile.node.js'),
   setupFiles: [p('./setup.js')],
   testRunner: require.resolve('jest-circus/runner'),
