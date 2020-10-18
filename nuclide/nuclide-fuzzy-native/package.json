@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-fuzzy-native",
-  "main": "./dist/main.js",
+  "main": "./lib/main.js",
   "version": "0.7.6",
   "description": "Wrapper around the OSS npm fuzzy-native package",
   "author": "Nuclide : Search",
