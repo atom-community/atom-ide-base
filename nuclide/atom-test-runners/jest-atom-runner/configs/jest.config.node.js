@@ -30,7 +30,7 @@ module.exports = {
   transformIgnorePatterns: [
     "node_modules/(?!@atom-ide-community/(.*))",
   ],
-  setupTestFrameworkScriptFile: p('./setupTestFrameworkScriptFile.node.js'),
+  setupFilesAfterEnv: [p('./setupTestFrameworkScriptFile.node.js')],
   setupFiles: [p('./setup.js')],
   testRunner: require.resolve('jest-circus/runner'),
   moduleNameMapper: {

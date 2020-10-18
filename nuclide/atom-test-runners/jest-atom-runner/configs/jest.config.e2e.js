@@ -27,9 +27,7 @@ module.exports = {
   roots: [p(nuclideDir)],
   runner: '@jest-runner/nuclide-e2e',
   setupFiles: [p('./fb-e2e/setup.js')],
-  setupTestFrameworkScriptFile: p(
-    './fb-e2e/setupTestFrameworkScriptFile.js',
-  ),
+  setupFilesAfterEnv: [p('./fb-e2e/setupTestFrameworkScriptFile.js')],
   testMatch: ['**/__e2e_tests__/**/*.js?(x)'],
   testPathIgnorePatterns: ['/node_modules/'],
   // Make sure the process exits on sandcastle. Locally we don't want that,
