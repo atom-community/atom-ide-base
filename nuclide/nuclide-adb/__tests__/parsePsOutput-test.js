@@ -1,5 +1,4 @@
-"use babel"
-import {parsePsTableOutput} from '../dist/common/ps';
+import {parsePsTableOutput} from '../lib/common/ps';
 
 describe('parsePsOutput', () => {
   it('splits the output by message', () => {
