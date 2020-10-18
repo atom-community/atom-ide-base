@@ -40,11 +40,15 @@ class TestRunner {
 
   constructor(globalConfig: GlobalConfig) {
     this._globalConfig = globalConfig;
-    serverID = serverID || (serverID = makeUniqServerId());
-    ipcServerPromise ||
-      (ipcServerPromise = startServer({
+    if (!serverID) {
+      serverID = makeUniqServerId();
+    }
+    this._serverID = serverID
+    if (!ipcServerPromise) {
+      ipcServerPromise = startServer({
         serverID: this._serverID,
-      }));
+      })
+    }
   }
 
   async runTests(
