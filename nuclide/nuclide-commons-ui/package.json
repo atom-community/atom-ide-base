@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-commons-ui",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Common Nuclide UI components.",
   "author": "Nuclide: Core UI",
   "license": "BSD-3-Clause",

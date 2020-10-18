@@ -69,6 +69,308 @@ importers:
       shx: 0.3.2
       tslib: ^2.0.2
       typescript: ^4.0.3
+  dist-nuclide/nuclide-adb:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      '@atom-ide-community/nuclide-commons-atom': 'link:../../nuclide/nuclide-commons-atom'
+      log4js: 1.1.1
+      nullthrows: 1.0.0
+      rxjs: /rxjs-compat/6.3.3
+      shallowequal: 1.1.0
+    specifiers:
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
+      log4js: 1.1.1
+      nullthrows: 1.0.0
+      rxjs: 'npm:rxjs-compat@6.3.3'
+      shallowequal: 1.1.0
+  dist-nuclide/nuclide-analytics:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      log4js: 1.1.1
+      rxjs: /rxjs-compat/6.3.3
+    specifiers:
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      log4js: 1.1.1
+      rxjs: 'npm:rxjs-compat@6.3.3'
+  dist-nuclide/nuclide-commons:
+    dependencies:
+      '@atom-ide-community/nuclide-node-transpiler': 'link:../../nuclide/nuclide-node-transpiler'
+      domexception: 1.0.1
+      dompurify: 1.0.3
+      event-kit: 2.2.0
+      event-target-shim: 3.0.1
+      fs-plus: 2.9.3
+      glob: 7.1.1
+      idx: 1.2.0
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      mime-types: 2.1.16
+      mkdirp: 1.0.4
+      mv: 2.1.1
+      nullthrows: 1.0.0
+      rimraf: 2.6.2
+      rxjs: /rxjs-compat/6.3.3
+      semver: 5.5.0
+      shell-quote: 1.6.1
+      temp: 0.9.1
+      uuid: 3.0.1
+      vscode-jsonrpc: 3.3.0
+      vscode-uri: 1.0.1
+    devDependencies:
+      dedent: 0.7.0
+      invariant: 2.2.2
+      simple-text-buffer: 9.2.11
+    specifiers:
+      '@atom-ide-community/nuclide-node-transpiler': 'workspace:*'
+      dedent: 0.7.0
+      domexception: 1.0.1
+      dompurify: 1.0.3
+      event-kit: 2.2.0
+      event-target-shim: 3.0.1
+      fs-plus: 2.9.3
+      glob: 7.1.1
+      idx: 1.2.0
+      invariant: 2.2.2
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      mime-types: 2.1.16
+      mkdirp: ^1.0.4
+      mv: 2.1.1
+      nullthrows: 1.0.0
+      rimraf: 2.6.2
+      rxjs: 'npm:rxjs-compat@6.3.3'
+      semver: 5.5.0
+      shell-quote: 1.6.1
+      simple-text-buffer: 9.2.11
+      temp: 0.9.1
+      uuid: 3.0.1
+      vscode-jsonrpc: 3.3.0
+      vscode-uri: 1.0.1
+  dist-nuclide/nuclide-commons-atom:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      escape-string-regexp: 1.0.5
+      idb-keyval: 2.3.0
+      idx: 1.2.0
+      lodash: 4.17.20
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      nullthrows: 1.0.0
+      redux-logger: 3.0.6
+      rxjs: /rxjs-compat/6.3.3
+      season: 6.0.2
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      toml: 2.3.3
+      vscode-jsonrpc: 3.3.0
+    devDependencies:
+      temp: 0.9.1
+    specifiers:
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      escape-string-regexp: 1.0.5
+      idb-keyval: 2.3.0
+      idx: 1.2.0
+      lodash: 4.17.20
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      nullthrows: 1.0.0
+      redux-logger: 3.0.6
+      rxjs: 'npm:rxjs-compat@6.3.3'
+      season: 6.0.2
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      temp: 0.9.1
+      toml: 2.3.3
+      vscode-jsonrpc: 3.3.0
+  dist-nuclide/nuclide-commons-ui:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      '@atom-ide-community/nuclide-commons-atom': 'link:../../nuclide/nuclide-commons-atom'
+      anser: 1.4.6
+      classnames: 2.2.5
+      dedent: 0.7.0
+      diffparser: 1.1.0
+      escape-carriage: 1.2.0
+      escape-html: 1.0.3
+      escape-string-regexp: 1.0.5
+      idx: 1.2.0
+      invariant: 2.2.2
+      lodash: 4.17.20
+      log4js: 1.1.1
+      moment: 2.21.0
+      nullthrows: 1.0.0
+      react: 16.6.3
+      react-dom: 16.6.3_react@16.6.3
+      react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
+      rxjs: /rxjs-compat/6.3.3
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      tabbable: 1.1.0
+      tiny-date-picker: 3.2.6
+    specifiers:
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
+      anser: 1.4.6
+      classnames: 2.2.5
+      dedent: 0.7.0
+      diffparser: 1.1.0
+      escape-carriage: 1.2.0
+      escape-html: 1.0.3
+      escape-string-regexp: 1.0.5
+      idx: 1.2.0
+      invariant: 2.2.2
+      lodash: 4.17.20
+      log4js: 1.1.1
+      moment: 2.21.0
+      nullthrows: 1.0.0
+      react: 16.6.3
+      react-dom: 16.6.3
+      react-virtualized: 9.20.1
+      rxjs: 'npm:rxjs-compat@6.3.3'
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      tabbable: 1.1.0
+      tiny-date-picker: 3.2.6
+  dist-nuclide/nuclide-debugger-cli:
+    dependencies:
+      '@atom-ide-community/nuclide-analytics': 'link:../../nuclide/nuclide-analytics'
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      '@atom-ide-community/nuclide-debugger-common': 'link:../../nuclide/nuclide-debugger-common'
+      async-to-generator: 1.1.0
+      blessed: 0.1.81
+      idx: 1.2.0
+      line-by-line: 0.1.5
+      log4js: 1.1.1
+      nullthrows: 1.0.0
+      rxjs: /rxjs-compat/6.3.3
+      v8-compile-cache: 1.1.0
+      vscode-debugprotocol: 1.24.0
+      yargs: 3.32.0
+    devDependencies:
+      '@atom-ide-community/nuclide-node-transpiler': 'link:../../nuclide/nuclide-node-transpiler'
+      dedent: 0.7.0
+      invariant: 2.2.2
+      simple-text-buffer: 9.2.11
+    specifiers:
+      '@atom-ide-community/nuclide-analytics': 'workspace:*'
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      '@atom-ide-community/nuclide-debugger-common': 'workspace:*'
+      '@atom-ide-community/nuclide-node-transpiler': 'workspace:*'
+      async-to-generator: 1.1.0
+      blessed: 0.1.81
+      dedent: 0.7.0
+      idx: 1.2.0
+      invariant: 2.2.2
+      line-by-line: 0.1.5
+      log4js: 1.1.1
+      nullthrows: 1.0.0
+      rxjs: 'npm:rxjs-compat@6.3.3'
+      simple-text-buffer: 9.2.11
+      v8-compile-cache: 1.1.0
+      vscode-debugprotocol: 1.24.0
+      yargs: 3.32.0
+  dist-nuclide/nuclide-debugger-common:
+    dependencies:
+      '@atom-ide-community/nuclide-adb': 'link:../../nuclide/nuclide-adb'
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      '@atom-ide-community/nuclide-commons-atom': 'link:../../nuclide/nuclide-commons-atom'
+      '@atom-ide-community/nuclide-commons-ui': 'link:../../nuclide/nuclide-commons-ui'
+      idx: 1.2.0
+      immutable: 4.0.0-rc.9
+      invariant: 2.2.2
+      nullthrows: 1.0.0
+      react: 16.6.3
+      rxjs: /rxjs-compat/6.3.3
+      uuid: 3.0.1
+      vscode-debugprotocol: 1.24.0
+    specifiers:
+      '@atom-ide-community/nuclide-adb': 'workspace:*'
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
+      '@atom-ide-community/nuclide-commons-ui': 'workspace:*'
+      idx: 1.2.0
+      immutable: 4.0.0-rc.9
+      invariant: 2.2.2
+      nullthrows: 1.0.0
+      react: 16.6.3
+      rxjs: 'npm:rxjs-compat@6.3.3'
+      uuid: 3.0.1
+      vscode-debugprotocol: 1.24.0
+  dist-nuclide/nuclide-fuzzy-native:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      heap: 0.2.6
+      log4js: 1.1.1
+      nuclide-prebuilt-libs: 0.5.2
+    specifiers:
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      heap: 0.2.6
+      log4js: 1.1.1
+      nuclide-prebuilt-libs: 0.5.2
+  dist-nuclide/nuclide-node-transpiler:
+    dependencies:
+      glob: 7.1.1
+      mkdirp: 1.0.4
+      uuid: 3.0.1
+    devDependencies:
+      '@babel/core': 7.0.0-beta.48
+      '@babel/plugin-proposal-nullish-coalescing-operator': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      '@babel/plugin-proposal-object-rest-spread': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      '@babel/plugin-proposal-optional-chaining': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      '@babel/plugin-transform-flow-strip-types': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      '@babel/plugin-transform-modules-commonjs': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      '@babel/plugin-transform-react-display-name': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      '@babel/plugin-transform-react-jsx': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      '@babel/plugin-transform-strict-mode': 7.0.0-beta.48_@babel+core@7.0.0-beta.48
+      babel-plugin-idx: 2.0.0
+      babel-plugin-istanbul: 4.1.6
+      babel-plugin-lodash: 3.3.4
+      babel-plugin-module-resolver: 3.1.1
+      babel-plugin-relay: 1.4.1
+      babel-plugin-transform-class-properties: 6.24.1
+      dedent: 0.7.0
+      is-builtin-module: 1.0.0
+      jasmine-node: 1.14.5
+      progress: 2.0.0
+      yargs: 3.32.0
+    specifiers:
+      '@babel/core': 7.0.0-beta.48
+      '@babel/plugin-proposal-nullish-coalescing-operator': 7.0.0-beta.48
+      '@babel/plugin-proposal-object-rest-spread': 7.0.0-beta.48
+      '@babel/plugin-proposal-optional-chaining': 7.0.0-beta.48
+      '@babel/plugin-transform-flow-strip-types': 7.0.0-beta.48
+      '@babel/plugin-transform-modules-commonjs': 7.0.0-beta.48
+      '@babel/plugin-transform-react-display-name': 7.0.0-beta.48
+      '@babel/plugin-transform-react-jsx': 7.0.0-beta.48
+      '@babel/plugin-transform-strict-mode': 7.0.0-beta.48
+      babel-plugin-idx: 2.0.0
+      babel-plugin-istanbul: 4.1.6
+      babel-plugin-lodash: 3.3.4
+      babel-plugin-module-resolver: 3.1.1
+      babel-plugin-relay: 1.4.1
+      babel-plugin-transform-class-properties: 6.24.1
+      dedent: 0.7.0
+      glob: 7.1.1
+      is-builtin-module: 1.0.0
+      jasmine-node: 1.14.5
+      mkdirp: ^1.0.4
+      progress: 2.0.0
+      uuid: 3.0.1
+      yargs: 3.32.0
+  dist-nuclide/nuclide-watchman-helpers:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
+      event-kit: 2.2.0
+      fb-watchman: 2.0.0
+      log4js: 1.1.1
+      rxjs: /rxjs-compat/6.3.3
+    specifiers:
+      '@atom-ide-community/nuclide-commons': 'workspace:*'
+      event-kit: 2.2.0
+      fb-watchman: 2.0.0
+      log4js: 1.1.1
+      rxjs: 'npm:rxjs-compat@6.3.3'
   nuclide/nuclide-adb:
     dependencies:
       '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
@@ -4494,7 +4796,7 @@ packages:
   /fileset/0.1.8:
     dependencies:
       glob: 3.2.11
-      minimatch: 0.2.14
+      minimatch: 0.3.0
     dev: true
     resolution:
       integrity: sha1-UGuRqTluqn4y+0KoQHfHoMc2t0E=
