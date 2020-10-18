@@ -28,7 +28,7 @@
     "@atom-ide-community/nuclide-commons": "latest",
     "@atom-ide-community/nuclide-commons-atom": "latest",
     "nullthrows": "1.0.0",
-    "rxjs-compat": "6.3.3",
+    "rxjs": "npm:rxjs-compat@6.3.3",
     "shallowequal": "1.1.0"
   }
 }

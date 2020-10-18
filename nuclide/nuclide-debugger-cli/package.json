@@ -21,7 +21,7 @@
     "@atom-ide-community/nuclide-commons": "latest",
     "@atom-ide-community/nuclide-debugger-common": "latest",
     "nullthrows": "1.0.0",
-    "rxjs-compat": "6.3.3",
+    "rxjs": "npm:rxjs-compat@6.3.3",
     "v8-compile-cache": "1.1.0",
     "vscode-debugprotocol": "1.24.0",
     "yargs": "3.32.0"
