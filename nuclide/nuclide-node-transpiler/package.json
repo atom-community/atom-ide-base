@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-node-transpiler",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Transpiles JavaScript files",
   "author": "NEEDS OWNER",
   "main": "./lib/main.js",
@@ -8,6 +8,7 @@
   "homepage": "https://nuclide.io/",
   "repository": "https://github.com/facebook/nuclide/tree/master/modules/@atom-ide-community/nuclide-node-transpiler",
   "scripts": {
+    "pub": "npm version patch && pnpm install",
     "test": "../../node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {

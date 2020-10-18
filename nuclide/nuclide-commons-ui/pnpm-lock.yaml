@@ -17,7 +17,7 @@ dependencies:
   react: 16.6.3
   react-dom: 16.6.3_react@16.6.3
   react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
-  rxjs-compat: 6.3.3
+  rxjs: /rxjs-compat/6.3.3
   semver: 5.5.0
   shallowequal: 1.1.0
   tabbable: 1.1.0
@@ -303,7 +303,7 @@ specifiers:
   react: 16.6.3
   react-dom: 16.6.3
   react-virtualized: 9.20.1
-  rxjs-compat: 6.3.3
+  rxjs: 'npm:rxjs-compat@6.3.3'
   semver: 5.5.0
   shallowequal: 1.1.0
   tabbable: 1.1.0

@@ -1,6 +1,6 @@
 {
   "name": "atom-ide-base",
-  "version": "2.1.1",
+  "version": "2.1.3",
   "main": "package/main.js",
   "types": "./types-packages/main.d.ts",
   "files": [
@@ -38,11 +38,11 @@
     "dev.package": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_KEEP_MODULES=true rollup -c -w",
     "build.package": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c",
     "build": "npm run build.package && npm run build.commons-atom && npm run build.commons-ui",
+    "prepare.base": "pnpm build",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u -x coffeescript",
     "apm.prepublishOnly": "git checkout apm.publish && git reset --hard master && shx rm -rf nuclide && git commit -m 'clean'",
     "prepublishOnly": "shx rm -rf **/tsconfig.tsbuildinfo",
-    "prepare": "npm run build",
     "build.nuclide-adb": "cross-env BABEL_KEEP_MODULES=false babel nuclide/nuclide-adb --out-dir dist-nuclide/nuclide-adb --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
     "build.nuclide-analytics": "cross-env BABEL_KEEP_MODULES=false babel nuclide/nuclide-analytics --out-dir dist-nuclide/nuclide-analytics --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
     "build.nuclide-commons": "cross-env BABEL_KEEP_MODULES=false babel nuclide/nuclide-commons --out-dir dist-nuclide/nuclide-commons --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
@@ -56,7 +56,10 @@
     "clean.nuclide": "shx rm -rf dist-nuclide",
     "build.nuclide": "shx rm -rf nuclide/**/node_modules && cross-env BABEL_KEEP_MODULES=false babel nuclide --out-dir dist-nuclide --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
     "install.nuclide": "cd nuclide && pnpm install -r",
-    "install.dist-nuclide": "cd dist-nuclide && pnpm install -r",
+    "install.dist-nuclide": "pnpm install -r --filter ./dist-nuclide",
+    "prepare.nuclide": "pnpm clean.nuclide && pnpm build.nuclide && pnpm install.dist-nuclide",
+    "prepublish.nuclide": "pnpm clean.nuclide && pnpm pub -r && pnpm prepare.nuclide",
+    "publish.nuclide": "pnpm publish --filter ./dist-nuclide",
     "test.nuclide.atom": "jest dist-nuclide --config=dist-nuclide/atom-test-runners/jest-atom-runner/configs/jest.config.atom.js --detectOpenHandles",
     "test.nuclide.node": "jest dist-nuclide --config=dist-nuclide/atom-test-runners/jest-atom-runner/configs/jest.config.node.js --detectOpenHandles"
   },

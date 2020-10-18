@@ -1,13 +1,13 @@
 {
   "name": "@atom-ide-community/nuclide-commons",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Common Nuclide node modules.",
   "author": "NEEDS OWNER",
   "license": "BSD-3-Clause",
   "homepage": "https://nuclide.io/",
   "repository": "https://github.com/facebook/nuclide/tree/master/modules/nuclide-commons",
   "scripts": {
-
+    "pub": "npm version patch && pnpm install",
     "test": "true"
   },
   "dependencies": {
@@ -23,10 +23,10 @@
     "mime-types": "2.1.16",
     "mkdirp": "^1.0.4",
     "mv": "2.1.1",
-    "@atom-ide-community/nuclide-node-transpiler": "latest",
+    "@atom-ide-community/nuclide-node-transpiler": "workspace:*",
     "nullthrows": "1.0.0",
     "rimraf": "2.6.2",
-    "rxjs-compat": "6.3.3",
+    "rxjs": "npm:rxjs-compat@6.3.3",
     "semver": "5.5.0",
     "shell-quote": "1.6.1",
     "temp": "0.9.1",

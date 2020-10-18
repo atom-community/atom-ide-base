@@ -7,6 +7,7 @@
   "author": "NEEDS OWNER",
   "license": "BSD-3-Clause",
   "nuclide": {
+    "pub": "npm version patch && pnpm install",
     "packageType": "NodeLibrary",
     "testsCannotBeRunInParallel": true
   },
@@ -18,7 +19,7 @@
     "event-kit": "2.2.0",
     "fb-watchman": "2.0.0",
     "log4js": "1.1.1",
-    "rxjs-compat": "6.3.3",
-    "@atom-ide-community/nuclide-commons": "latest"
+    "rxjs": "npm:rxjs-compat@6.3.3",
+    "@atom-ide-community/nuclide-commons": "workspace:*"
   }
 }
