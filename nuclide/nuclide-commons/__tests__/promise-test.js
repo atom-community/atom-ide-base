@@ -28,7 +28,7 @@ import {
 } from '../promise';
 import invariant from 'assert';
 import {expectAsyncFailure} from '../test-helpers';
-import waitsFor from '../../../jest/waits_for';
+import waitsFor from '../../atom-test-runners/jest-atom-runner/configs/waits_for';
 
 jest.useFakeTimers();
 

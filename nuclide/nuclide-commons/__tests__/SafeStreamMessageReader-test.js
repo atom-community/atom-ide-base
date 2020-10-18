@@ -12,7 +12,7 @@
  */
 import Stream from 'stream';
 import SafeStreamMessageReader from '../SafeStreamMessageReader';
-import waitsFor from '../../../jest/waits_for';
+import waitsFor from '../../atom-test-runners/jest-atom-runner/configs/waits_for';
 
 describe('SafeStreamMessageReader', () => {
   it('reads valid messages', async () => {

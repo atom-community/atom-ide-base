@@ -17,7 +17,7 @@
 const child_process = require('child_process');
 const vm = require('vm');
 // eslint-disable-next-line nuclide-internal/modules-dependencies
-const waitsFor = require('../../../jest/waits_for').default;
+const waitsFor = require('../../atom-test-runners/jest-atom-runner/configs/waits_for').default;
 const path = require('path');
 const NODE_BIN = path.resolve(
   __dirname,
