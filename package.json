@@ -58,7 +58,8 @@
     "install.nuclide": "cd nuclide && pnpm install -r",
     "install.dist-nuclide": "pnpm install -r --filter ./dist-nuclide",
     "prepare.nuclide": "pnpm clean.nuclide && pnpm build.nuclide && pnpm install.dist-nuclide",
-    "publish.nuclide": "pnpm clean.nuclide && pnpm pub -r && pnpm prepare.nuclide"
+    "prepublish.nuclide": "pnpm clean.nuclide && pnpm pub -r && pnpm prepare.nuclide",
+    "publish.nuclide": "pnpm publish --filter ./dist-nuclide"
   },
   "atomTestRunner": "./spec/runner",
   "activationHooks": [
