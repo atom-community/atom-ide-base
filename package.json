@@ -57,7 +57,7 @@
     "build.nuclide": "shx rm -rf nuclide/**/node_modules && cross-env BABEL_KEEP_MODULES=false babel nuclide --out-dir dist-nuclide --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
     "install.nuclide": "cd nuclide && pnpm install -r",
     "install.dist-nuclide": "cd dist-nuclide && pnpm install -r",
-    "test.nuclide": "jest dist-nuclide --config=dist-nuclide/jest.config.js"
+    "test.nuclide": "jest dist-nuclide --config=dist-nuclide/jest.config.js --forceExit --detectOpenHandles --maxWorkers=10"
   },
   "atomTestRunner": "./spec/runner",
   "activationHooks": [
