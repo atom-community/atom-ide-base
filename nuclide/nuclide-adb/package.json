@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "log4js": "1.1.1",
-    "@atom-ide-community/nuclide-commons": "^0.7.5",
-    "@atom-ide-community/nuclide-commons-atom": "^0.7.6",
+    "@atom-ide-community/nuclide-commons": "latest",
+    "@atom-ide-community/nuclide-commons-atom": "latest",
     "nullthrows": "1.0.0",
     "rxjs-compat": "6.3.3",
     "shallowequal": "1.1.0"

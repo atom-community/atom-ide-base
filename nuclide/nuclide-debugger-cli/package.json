@@ -17,9 +17,9 @@
     "idx": "1.2.0",
     "line-by-line": "0.1.5",
     "log4js": "1.1.1",
-    "@atom-ide-community/nuclide-analytics": "^0.7.5",
-    "@atom-ide-community/nuclide-commons": "^0.7.5",
-    "@atom-ide-community/nuclide-debugger-common": "^0.7.6",
+    "@atom-ide-community/nuclide-analytics": "latest",
+    "@atom-ide-community/nuclide-commons": "latest",
+    "@atom-ide-community/nuclide-debugger-common": "latest",
     "nullthrows": "1.0.0",
     "rxjs-compat": "6.3.3",
     "v8-compile-cache": "1.1.0",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "dedent": "0.7.0",
     "invariant": "2.2.2",
-    "@atom-ide-community/nuclide-node-transpiler": "0.7.3-dev",
+    "@atom-ide-community/nuclide-node-transpiler": "latest",
     "simple-text-buffer": "9.2.11"
   },
   "bin": {

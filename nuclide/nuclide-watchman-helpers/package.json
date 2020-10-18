@@ -19,6 +19,6 @@
     "fb-watchman": "2.0.0",
     "log4js": "1.1.1",
     "rxjs-compat": "6.3.3",
-    "@atom-ide-community/nuclide-commons": "0.7.3-dev"
+    "@atom-ide-community/nuclide-commons": "latest"
   }
 }

@@ -92,10 +92,10 @@ packages:
     resolution:
       integrity: sha1-28EOjX2VsQJyehmvPw/O9+JSsI4=
 specifiers:
-  '@atom-ide-community/nuclide-adb': ^0.7.4
-  '@atom-ide-community/nuclide-commons': ^0.7.5
-  '@atom-ide-community/nuclide-commons-atom': ^0.7.6
-  '@atom-ide-community/nuclide-commons-ui': ^0.7.6
+  '@atom-ide-community/nuclide-adb': latest
+  '@atom-ide-community/nuclide-commons': latest
+  '@atom-ide-community/nuclide-commons-atom': latest
+  '@atom-ide-community/nuclide-commons-ui': latest
   idx: 1.2.0
   immutable: 4.0.0-rc.9
   invariant: 2.2.2
