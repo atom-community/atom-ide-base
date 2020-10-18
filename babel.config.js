@@ -1,4 +1,11 @@
-let presets = ["babel-preset-atomic"]
+let presets = [
+  [
+    "babel-preset-atomic",
+    {
+      addModuleExports: false,
+    },
+  ],
+];
 
 let plugins = []
 
