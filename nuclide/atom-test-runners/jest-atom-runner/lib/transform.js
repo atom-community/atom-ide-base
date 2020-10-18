@@ -12,7 +12,7 @@
 
 /* eslint nuclide-internal/no-commonjs: 0 */
 
-const NodeTranspiler = require('../../../dist-nuclide-node-transpiler/lib/NodeTranspiler');
+const NodeTranspiler = require('../../../nuclide-node-transpiler/lib/NodeTranspiler');
 const transpiler = new NodeTranspiler();
 const crypto = require('crypto');
 const fs = require('fs');
