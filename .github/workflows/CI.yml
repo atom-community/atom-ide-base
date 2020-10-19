@@ -6,7 +6,6 @@ on:
 jobs:
   Package-Test:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    name: ${{ matrix.os }} - Atom ${{ matrix.atom_channel }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -47,7 +46,6 @@ jobs:
 
   Nuclide-Test:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    name: ${{ matrix.os }} - Atom ${{ matrix.atom_channel }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
