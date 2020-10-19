@@ -23,6 +23,7 @@ domPurify.addHook('beforeSanitizeElements', (node: ?Node) => {
   if (node && node.nodeName === 'P') {
     node.textContent = '\n' + node.textContent;
   }
+  return node;
 });
 
 /**

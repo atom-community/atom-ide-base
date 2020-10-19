@@ -120,7 +120,7 @@ importers:
       '@atom-ide-community/nuclide-node-transpiler': 'link:../../nuclide/nuclide-node-transpiler'
       cr: 0.1.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
@@ -143,19 +143,21 @@ importers:
     devDependencies:
       dedent: 0.7.0
       invariant: 2.2.2
+      jest-retries: 1.0.1
       simple-text-buffer: 9.2.11
     specifiers:
       '@atom-ide-community/nuclide-node-transpiler': 'workspace:*'
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
       glob: 7.1.1
       idx: 1.2.0
       invariant: 2.2.2
+      jest-retries: 1.0.1
       log4js: 1.1.1
       lru-cache: 4.0.2
       mime-types: 2.1.16
@@ -424,7 +426,7 @@ importers:
       '@atom-ide-community/nuclide-node-transpiler': 'link:../nuclide-node-transpiler'
       cr: 0.1.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
@@ -447,19 +449,21 @@ importers:
     devDependencies:
       dedent: 0.7.0
       invariant: 2.2.2
+      jest-retries: 1.0.1
       simple-text-buffer: 9.2.11
     specifiers:
       '@atom-ide-community/nuclide-node-transpiler': 'workspace:*'
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
       glob: 7.1.1
       idx: 1.2.0
       invariant: 2.2.2
+      jest-retries: 1.0.1
       log4js: 1.1.1
       lru-cache: 4.0.2
       mime-types: 2.1.16
@@ -4946,10 +4950,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-LeWaCCLVAn+r/28DLCsloqir5zg=
-  /dompurify/1.0.3:
-    dev: false
-    resolution:
-      integrity: sha512-7dks9EA59zmQ9UBH7QJmGCHNxGJ7chzB5RJObT+h/TGBDtp4pTgunOeT0NidTA5MAq22muWrW3XfqtpvIsoSmw==
   /dompurify/2.1.1:
     dev: false
     resolution:
@@ -7535,6 +7535,10 @@ packages:
       jest-resolve: '*'
     resolution:
       integrity: sha512-XsPxojXGRA0CoDD7Vis59ucz2p3cQFU5C+19tz3tLEAlhYKkK77IL0cjYjikY9wXnOaBeEdm1rOgSJjbZWpcZg==
+  /jest-retries/1.0.1:
+    dev: true
+    resolution:
+      integrity: sha512-tR9tCXs9+Vqw/2toQEOg+CpzOwUqReppcZH2550EnuEhw4F8TR+NbICPUJexegjN9xnuF4ABSGPgzCgAFZI0Ng==
   /jest-runner/26.5.3:
     dependencies:
       '@jest/console': 26.5.2

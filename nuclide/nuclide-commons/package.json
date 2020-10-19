@@ -11,9 +11,10 @@
     "test": "true"
   },
   "dependencies": {
+    "@atom-ide-community/nuclide-node-transpiler": "workspace:*",
     "cr": "0.1.0",
     "domexception": "1.0.1",
-    "dompurify": "1.0.3",
+    "dompurify": "2.1.1",
     "event-kit": "2.2.0",
     "event-target-shim": "3.0.1",
     "fs-plus": "2.9.3",
@@ -24,7 +25,6 @@
     "mime-types": "2.1.16",
     "mkdirp": "^1.0.4",
     "mv": "2.1.1",
-    "@atom-ide-community/nuclide-node-transpiler": "workspace:*",
     "nullthrows": "1.0.0",
     "rimraf": "2.6.2",
     "rxjs": "npm:rxjs-compat@6.3.3",
@@ -38,6 +38,7 @@
   "devDependencies": {
     "dedent": "0.7.0",
     "invariant": "2.2.2",
-    "simple-text-buffer": "9.2.11"
+    "simple-text-buffer": "9.2.11",
+    "jest-retries": "1.0.1"
   }
 }
