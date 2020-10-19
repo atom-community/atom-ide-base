@@ -214,7 +214,7 @@ importers:
       '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
       '@atom-ide-community/nuclide-commons-atom': 'link:../../nuclide/nuclide-commons-atom'
       anser: 1.4.6
-      classnames: 2.2.5
+      classnames: 2.2.6
       dedent: 0.7.0
       diffparser: 1.1.0
       escape-carriage: 1.2.0
@@ -224,7 +224,7 @@ importers:
       invariant: 2.2.2
       lodash: 4.17.20
       log4js: 1.1.1
-      moment: 2.21.0
+      moment: 2.29.1
       nullthrows: 1.1.1
       react: 16.6.3
       react-dom: 16.6.3_react@16.6.3
@@ -238,7 +238,7 @@ importers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       anser: 1.4.6
-      classnames: 2.2.5
+      classnames: 2.2.6
       dedent: 0.7.0
       diffparser: 1.1.0
       escape-carriage: 1.2.0
@@ -248,7 +248,7 @@ importers:
       invariant: 2.2.2
       lodash: 4.17.20
       log4js: 1.1.1
-      moment: 2.21.0
+      moment: 2.29.1
       nullthrows: 1.1.1
       react: 16.6.3
       react-dom: 16.6.3
@@ -266,7 +266,7 @@ importers:
       async-to-generator: 1.1.0
       blessed: 0.1.81
       idx: 1.2.0
-      line-by-line: 0.1.5
+      line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
       rxjs: /rxjs-compat/6.3.3
@@ -288,7 +288,7 @@ importers:
       dedent: 0.7.0
       idx: 1.2.0
       invariant: 2.2.2
-      line-by-line: 0.1.5
+      line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
@@ -388,13 +388,13 @@ importers:
     dependencies:
       '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
       event-kit: 2.2.0
-      fb-watchman: 2.0.0
+      fb-watchman: 2.0.1
       log4js: 1.1.1
       rxjs: /rxjs-compat/6.3.3
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       event-kit: 2.2.0
-      fb-watchman: 2.0.0
+      fb-watchman: 2.0.1
       log4js: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
   nuclide/nuclide-adb:
@@ -572,7 +572,7 @@ importers:
       async-to-generator: 1.1.0
       blessed: 0.1.81
       idx: 1.2.0
-      line-by-line: 0.1.5
+      line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
       rxjs: /rxjs-compat/6.3.3
@@ -594,7 +594,7 @@ importers:
       dedent: 0.7.0
       idx: 1.2.0
       invariant: 2.2.2
-      line-by-line: 0.1.5
+      line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
@@ -4315,10 +4315,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg==
-  /classnames/2.2.5:
-    dev: false
-    resolution:
-      integrity: sha1-+zgB1FNGdknvNgPH1hoCvRKb3m0=
   /classnames/2.2.6:
     dev: false
     resolution:
@@ -5695,6 +5691,7 @@ packages:
   /fb-watchman/2.0.0:
     dependencies:
       bser: 2.1.1
+    dev: true
     resolution:
       integrity: sha1-VOmr99+i8mzZsWNsWIwa/AXeXVg=
   /fb-watchman/2.0.1:
@@ -6102,17 +6099,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-DwiGD2oVUSey+t1PnOJLGqtuTSI=
-  /glob/7.1.1:
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 3.0.4
-      once: 1.4.0
-      path-is-absolute: 1.0.1
-    dev: false
-    resolution:
-      integrity: sha1-gFIR3wT6rxxjo2ADBs31reULLsg=
   /glob/7.1.6:
     dependencies:
       fs.realpath: 1.0.0
@@ -8108,12 +8094,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9esX8rTQAHqarx6qeZqmGQKBNZR5OIbl/Ayr0qQDy3oXja2iFVQQI81R6GZ2a02bSNZ9p3YOGX1O6HHCb1X7kA==
-  /line-by-line/0.1.5:
+  /line-by-line/0.1.6:
     dev: false
     engines:
-      node: '>=0.8.0'
+      node: '>=4.0.0'
     resolution:
-      integrity: sha1-GcRbWfCoBjLDC1xDpkf+Faq5BcI=
+      integrity: sha512-MmwVPfOyp0lWnEZ3fBA8Ah4pMFvxO6WgWovqZNu7Y4J0TNnGcsV4S1LzECHbdgqk1hoHc2mFP1Axc37YUqwafg==
   /lines-and-columns/1.1.6:
     dev: true
     resolution:
@@ -8568,10 +8554,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
-  /moment/2.21.0:
-    dev: false
-    resolution:
-      integrity: sha512-TCZ36BjURTeFTM/CwRcViQlfkMvL1/vFISuNLO5GkcVm1+QHfbSiNqZuWeMFjj1/3+uAjXswgRk30j1kkLYJBQ==
   /moment/2.29.1:
     dev: false
     resolution:
@@ -8854,10 +8836,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-mujjc+t22ul4hEO/k+12UXxonhUzH2pmLxx6BqkLM+B6ow5EymFfxh3NCfHsERZH/8zjmlLqd7Z/p0tHSkWtBQ==
-  /nullthrows/1.0.0:
-    dev: false
-    resolution:
-      integrity: sha1-NHFeU7nevgdQp3Iz/UlKWDWi2Zk=
   /nullthrows/1.1.1:
     dev: false
     resolution:
