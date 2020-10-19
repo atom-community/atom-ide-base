@@ -326,12 +326,12 @@ importers:
       '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
       heap: 0.2.6
       log4js: 1.1.1
-      nuclide-prebuilt-libs: 0.5.2
+      nuclide-prebuilt-libs: 0.6.3
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       heap: 0.2.6
       log4js: 1.1.1
-      nuclide-prebuilt-libs: 0.5.2
+      nuclide-prebuilt-libs: 0.6.3
   dist-nuclide/nuclide-node-transpiler:
     dependencies:
       glob: 7.1.1
@@ -630,12 +630,12 @@ importers:
       '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
       heap: 0.2.6
       log4js: 1.1.1
-      nuclide-prebuilt-libs: 0.5.2
+      nuclide-prebuilt-libs: 0.6.3
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       heap: 0.2.6
       log4js: 1.1.1
-      nuclide-prebuilt-libs: 0.5.2
+      nuclide-prebuilt-libs: 0.6.3
   nuclide/nuclide-node-transpiler:
     dependencies:
       glob: 7.1.1
@@ -8848,10 +8848,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-2uUqazuKlTaSI/dC8AzicUck7+IrEaOnN/e0jd3Xtt1KcGpwx30v50mL7oPyr/h9bL3E4aZccVwpwP+5W9Vjkg==
-  /nuclide-prebuilt-libs/0.5.2:
+  /nuclide-prebuilt-libs/0.6.3:
     dev: false
     resolution:
-      integrity: sha512-RbQXeEXtb1VqVJ2RdqqOqdvaGrrB+cnT0VpNgXXNUs0RHrOtFAK8MCNC9Bul5+cm/8VoOrHmZGwViSj/n7uEKg==
+      integrity: sha512-mujjc+t22ul4hEO/k+12UXxonhUzH2pmLxx6BqkLM+B6ow5EymFfxh3NCfHsERZH/8zjmlLqd7Z/p0tHSkWtBQ==
   /nullthrows/1.0.0:
     dev: false
     resolution:
