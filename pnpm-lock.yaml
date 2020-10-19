@@ -448,7 +448,7 @@ importers:
       vscode-uri: 1.0.1
     devDependencies:
       dedent: 0.7.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       jest-retries: 1.0.1
       simple-text-buffer: 9.2.11
     specifiers:
@@ -462,7 +462,7 @@ importers:
       fs-plus: 3.1.1
       glob: 7.1.6
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       jest-retries: 1.0.1
       log4js: 1.1.1
       lru-cache: 4.0.2
@@ -527,7 +527,7 @@ importers:
       escape-html: 1.0.3
       escape-string-regexp: 1.0.5
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.29.1
@@ -551,7 +551,7 @@ importers:
       escape-html: 1.0.3
       escape-string-regexp: 1.0.5
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.29.1
@@ -582,7 +582,7 @@ importers:
     devDependencies:
       '@atom-ide-community/nuclide-node-transpiler': 'link:../nuclide-node-transpiler'
       dedent: 0.7.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       simple-text-buffer: 9.2.11
     specifiers:
       '@atom-ide-community/nuclide-analytics': 'workspace:*'
@@ -593,7 +593,7 @@ importers:
       blessed: 0.1.81
       dedent: 0.7.0
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
@@ -610,7 +610,7 @@ importers:
       '@atom-ide-community/nuclide-commons-ui': 'link:../nuclide-commons-ui'
       idx: 1.2.0
       immutable: 4.0.0-rc.9
-      invariant: 2.2.2
+      invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
       rxjs: /rxjs-compat/6.3.3
@@ -623,7 +623,7 @@ importers:
       '@atom-ide-community/nuclide-commons-ui': 'workspace:*'
       idx: 1.2.0
       immutable: 4.0.0-rc.9
-      invariant: 2.2.2
+      invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
       rxjs: 'npm:rxjs-compat@6.3.3'
@@ -6478,7 +6478,6 @@ packages:
   /invariant/2.2.4:
     dependencies:
       loose-envify: 1.4.0
-    dev: true
     resolution:
       integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
   /invert-kv/1.0.0:

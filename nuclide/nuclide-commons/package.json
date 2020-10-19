@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "dedent": "0.7.0",
-    "invariant": "2.2.2",
+    "invariant": "2.2.4",
     "simple-text-buffer": "9.2.11",
     "jest-retries": "1.0.1"
   }
