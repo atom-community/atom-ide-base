@@ -56,7 +56,7 @@
     "copy.ignored": "shx cp nuclide/nuclide-commons/__mocks__/fixtures/symbol-definition-preview-sample.js dist-nuclide/nuclide-commons/__mocks__/fixtures/symbol-definition-preview-sample.js",
     "clean.nuclide": "shx rm -rf dist-nuclide",
     "build.nuclide": "shx rm -rf nuclide/**/node_modules && cross-env BABEL_KEEP_MODULES=false babel nuclide --out-dir dist-nuclide --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start && npm run copy.ignored",
-    "install.nuclide": "cd nuclide && pnpm install -r",
+    "install.nuclide": "pnpm install -r --filter ./nuclide",
     "install.dist-nuclide": "pnpm install -r --filter ./dist-nuclide",
     "prepare.nuclide": "pnpm clean.nuclide && pnpm build.nuclide && pnpm install.dist-nuclide && pnpm install.nuclide",
     "prepublish.nuclide": "pnpm clean.nuclide && pnpm pub -r && pnpm prepare.nuclide && git commit -m 'publish' -- .",
