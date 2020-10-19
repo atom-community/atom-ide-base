@@ -76,7 +76,7 @@ jobs:
         run: apm -v
 
       - name: Setup PNPM
-        uses: pnpm/action-setup@v1.2.0
+        uses: pnpm/action-setup@v1.2.1
         with:
           version: latest
       - run: |
