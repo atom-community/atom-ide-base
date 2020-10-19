@@ -402,14 +402,14 @@ importers:
       '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
       '@atom-ide-community/nuclide-commons-atom': 'link:../nuclide-commons-atom'
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: /rxjs-compat/6.3.3
       shallowequal: 1.1.0
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
       shallowequal: 1.1.0
   nuclide/nuclide-analytics:
@@ -437,7 +437,7 @@ importers:
       mime-types: 2.1.16
       mkdirp: 1.0.4
       mv: 2.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rimraf: 2.6.2
       rxjs: /rxjs-compat/6.3.3
       semver: 5.5.0
@@ -469,7 +469,7 @@ importers:
       mime-types: 2.1.16
       mkdirp: ^1.0.4
       mv: 2.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rimraf: 2.6.2
       rxjs: 'npm:rxjs-compat@6.3.3'
       semver: 5.5.0
@@ -488,7 +488,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       lru-cache: 4.0.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       redux-logger: 3.0.6
       rxjs: /rxjs-compat/6.3.3
       season: 6.0.2
@@ -506,7 +506,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       lru-cache: 4.0.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       redux-logger: 3.0.6
       rxjs: 'npm:rxjs-compat@6.3.3'
       season: 6.0.2
@@ -531,7 +531,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.21.0
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       react-dom: 16.6.3_react@16.6.3
       react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
@@ -555,7 +555,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.21.0
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       react-dom: 16.6.3
       react-virtualized: 9.20.1
@@ -574,7 +574,7 @@ importers:
       idx: 1.2.0
       line-by-line: 0.1.5
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: /rxjs-compat/6.3.3
       v8-compile-cache: 1.1.0
       vscode-debugprotocol: 1.24.0
@@ -596,7 +596,7 @@ importers:
       invariant: 2.2.2
       line-by-line: 0.1.5
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
       simple-text-buffer: 9.2.11
       v8-compile-cache: 1.1.0
@@ -611,7 +611,7 @@ importers:
       idx: 1.2.0
       immutable: 4.0.0-rc.9
       invariant: 2.2.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       rxjs: /rxjs-compat/6.3.3
       uuid: 3.0.1
@@ -624,7 +624,7 @@ importers:
       idx: 1.2.0
       immutable: 4.0.0-rc.9
       invariant: 2.2.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       rxjs: 'npm:rxjs-compat@6.3.3'
       uuid: 3.0.1

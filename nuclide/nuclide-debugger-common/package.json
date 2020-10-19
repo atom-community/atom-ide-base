@@ -19,7 +19,7 @@
     "@atom-ide-community/nuclide-commons": "workspace:*",
     "@atom-ide-community/nuclide-commons-atom": "workspace:*",
     "@atom-ide-community/nuclide-commons-ui": "workspace:*",
-    "nullthrows": "1.0.0",
+    "nullthrows": "1.1.1",
     "react": "16.6.3",
     "rxjs": "npm:rxjs-compat@6.3.3",
     "uuid": "3.0.1",

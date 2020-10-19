@@ -18,7 +18,7 @@
     "log4js": "1.1.1",
     "lru-cache": "4.0.2",
     "@atom-ide-community/nuclide-commons": "workspace:*",
-    "nullthrows": "1.0.0",
+    "nullthrows": "1.1.1",
     "redux-logger": "3.0.6",
     "rxjs": "npm:rxjs-compat@6.3.3",
     "season": "6.0.2",
