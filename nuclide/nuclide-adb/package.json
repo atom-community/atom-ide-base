@@ -27,7 +27,7 @@
     "log4js": "1.1.1",
     "@atom-ide-community/nuclide-commons": "workspace:*",
     "@atom-ide-community/nuclide-commons-atom": "workspace:*",
-    "nullthrows": "1.0.0",
+    "nullthrows": "1.1.1",
     "rxjs": "npm:rxjs-compat@6.3.3",
     "shallowequal": "1.1.0"
   }
