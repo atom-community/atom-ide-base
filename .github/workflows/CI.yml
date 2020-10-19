@@ -27,7 +27,7 @@ jobs:
             ~/.atom/packages
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
+          key: apm-${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
 
       - uses: UziTech/action-setup-atom@v1
         with:
@@ -63,12 +63,11 @@ jobs:
         uses: actions/cache@v2
         env:
           cache-name: |
-            node_modules
             ~/.atom/packages
             ~/.pnpm-store
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
+          key: pnpm-${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
 
       - uses: UziTech/action-setup-atom@v1
         with:
