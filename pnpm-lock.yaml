@@ -430,7 +430,7 @@ importers:
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 3.1.1
-      glob: 7.1.1
+      glob: 7.1.6
       idx: 1.2.0
       log4js: 1.1.1
       lru-cache: 4.0.2
@@ -460,7 +460,7 @@ importers:
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 3.1.1
-      glob: 7.1.1
+      glob: 7.1.6
       idx: 1.2.0
       invariant: 2.2.2
       jest-retries: 1.0.1
@@ -642,7 +642,7 @@ importers:
       nuclide-prebuilt-libs: 0.6.3
   nuclide/nuclide-node-transpiler:
     dependencies:
-      glob: 7.1.1
+      glob: 7.1.6
       mkdirp: 1.0.4
       uuid: 3.0.1
     devDependencies:
@@ -683,7 +683,7 @@ importers:
       babel-plugin-relay: 1.4.1
       babel-plugin-transform-class-properties: 6.24.1
       dedent: 0.7.0
-      glob: 7.1.1
+      glob: 7.1.6
       is-builtin-module: 1.0.0
       jasmine-node: 1.14.5
       mkdirp: ^1.0.4
