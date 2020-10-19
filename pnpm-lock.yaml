@@ -120,7 +120,7 @@ importers:
       '@atom-ide-community/nuclide-node-transpiler': 'link:../../nuclide/nuclide-node-transpiler'
       cr: 0.1.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
@@ -149,7 +149,7 @@ importers:
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
@@ -424,7 +424,7 @@ importers:
       '@atom-ide-community/nuclide-node-transpiler': 'link:../nuclide-node-transpiler'
       cr: 0.1.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
@@ -453,7 +453,7 @@ importers:
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
-      dompurify: 1.0.3
+      dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 2.9.3
@@ -4946,10 +4946,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-LeWaCCLVAn+r/28DLCsloqir5zg=
-  /dompurify/1.0.3:
-    dev: false
-    resolution:
-      integrity: sha512-7dks9EA59zmQ9UBH7QJmGCHNxGJ7chzB5RJObT+h/TGBDtp4pTgunOeT0NidTA5MAq22muWrW3XfqtpvIsoSmw==
   /dompurify/2.1.1:
     dev: false
     resolution:
