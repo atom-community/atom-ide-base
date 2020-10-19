@@ -520,7 +520,7 @@ importers:
       '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
       '@atom-ide-community/nuclide-commons-atom': 'link:../nuclide-commons-atom'
       anser: 1.4.6
-      classnames: 2.2.5
+      classnames: 2.2.6
       dedent: 0.7.0
       diffparser: 1.1.0
       escape-carriage: 1.2.0
@@ -544,7 +544,7 @@ importers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       anser: 1.4.6
-      classnames: 2.2.5
+      classnames: 2.2.6
       dedent: 0.7.0
       diffparser: 1.1.0
       escape-carriage: 1.2.0
