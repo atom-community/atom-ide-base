@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "dedent": "0.7.0",
-    "invariant": "2.2.4",
+    "invariant": "npm:@react-dnd/invariant@^2.0.0",
     "@atom-ide-community/nuclide-node-transpiler": "workspace:*",
     "simple-text-buffer": "9.2.11"
   },
