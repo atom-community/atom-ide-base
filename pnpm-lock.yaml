@@ -694,13 +694,13 @@ importers:
     dependencies:
       '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
       event-kit: 2.2.0
-      fb-watchman: 2.0.0
+      fb-watchman: 2.0.1
       log4js: 1.1.1
       rxjs: /rxjs-compat/6.3.3
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       event-kit: 2.2.0
-      fb-watchman: 2.0.0
+      fb-watchman: 2.0.1
       log4js: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
 lockfileVersion: 5.1
@@ -5697,6 +5697,12 @@ packages:
       bser: 2.1.1
     resolution:
       integrity: sha1-VOmr99+i8mzZsWNsWIwa/AXeXVg=
+  /fb-watchman/2.0.1:
+    dependencies:
+      bser: 2.1.1
+    dev: false
+    resolution:
+      integrity: sha512-DkPJKQeY6kKwmuMretBhr7G6Vodr7bFwDYTXIkfG1gjvNpaxBTQV3PbXg6bR1c1UP4jPOX0jHUbbHANL9vRjVg==
   /figgy-pudding/3.5.2:
     dev: true
     resolution:
