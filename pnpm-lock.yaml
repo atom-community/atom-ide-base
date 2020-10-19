@@ -539,7 +539,7 @@ importers:
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
-      tiny-date-picker: 3.2.6
+      tiny-date-picker: 3.2.8
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
@@ -563,7 +563,7 @@ importers:
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
-      tiny-date-picker: 3.2.6
+      tiny-date-picker: 3.2.8
   nuclide/nuclide-debugger-cli:
     dependencies:
       '@atom-ide-community/nuclide-analytics': 'link:../nuclide-analytics'
@@ -11061,6 +11061,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-SX72rn7Hjr8tqy6OGFjQe8Fs0wnPdT6tqpzBbTWRNHM2p3n1DVsC8YHmYbwoyu7vzTXnCGCw4ShWbmM7nE7ByQ==
+  /tiny-date-picker/3.2.8:
+    dev: false
+    resolution:
+      integrity: sha512-XrZ2ujRDZLom3DtquzjtEh+kBLbivErqfbqbNG8sVA7ZCUxerIiorxfM87akQNbBnKttBaiXAZwZi46e2mFX7Q==
   /tmpl/1.0.4:
     dev: true
     resolution:
