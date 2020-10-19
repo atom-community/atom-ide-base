@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "idx": "1.2.0",
-    "immutable": "4.0.0-rc.9",
+    "immutable": "4.0.0-rc.12",
     "invariant": "2.2.4",
     "@atom-ide-community/nuclide-adb": "workspace:*",
     "@atom-ide-community/nuclide-commons": "workspace:*",

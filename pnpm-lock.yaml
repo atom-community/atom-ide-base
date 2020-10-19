@@ -609,7 +609,7 @@ importers:
       '@atom-ide-community/nuclide-commons-atom': 'link:../nuclide-commons-atom'
       '@atom-ide-community/nuclide-commons-ui': 'link:../nuclide-commons-ui'
       idx: 1.2.0
-      immutable: 4.0.0-rc.9
+      immutable: 4.0.0-rc.12
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
@@ -622,7 +622,7 @@ importers:
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       '@atom-ide-community/nuclide-commons-ui': 'workspace:*'
       idx: 1.2.0
-      immutable: 4.0.0-rc.9
+      immutable: 4.0.0-rc.12
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
@@ -6396,6 +6396,10 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
+  /immutable/4.0.0-rc.12:
+    dev: false
+    resolution:
+      integrity: sha512-0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==
   /immutable/4.0.0-rc.9:
     dev: false
     resolution:
