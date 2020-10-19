@@ -664,7 +664,7 @@ importers:
       dedent: 0.7.0
       is-builtin-module: 1.0.0
       jasmine-node: 1.14.5
-      progress: 2.0.0
+      progress: 2.0.3
       yargs: 3.32.0
     specifiers:
       '@babel/core': 7.0.0-beta.48
@@ -687,7 +687,7 @@ importers:
       is-builtin-module: 1.0.0
       jasmine-node: 1.14.5
       mkdirp: ^1.0.4
-      progress: 2.0.0
+      progress: 2.0.3
       uuid: 3.0.1
       yargs: 3.32.0
   nuclide/nuclide-watchman-helpers:
