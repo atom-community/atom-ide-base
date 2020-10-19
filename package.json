@@ -38,7 +38,7 @@
     "dev.package": "npm run clean && cross-env NODE_ENV=development cross-env BABEL_KEEP_MODULES=true rollup -c -w",
     "build.package": "npm run clean && cross-env NODE_ENV=production cross-env BABEL_KEEP_MODULES=true rollup -c",
     "build": "npm run build.package && npm run build.commons-atom && npm run build.commons-ui",
-    "prepare.base": "pnpm build",
+    "prepare.base": "npm run build",
     "build-commit": "build-commit -o dist",
     "bump": "ncu -u -x coffeescript",
     "apm.prepublishOnly": "git checkout apm.publish && git reset --hard master && shx rm -rf nuclide && git commit -m 'clean'",
