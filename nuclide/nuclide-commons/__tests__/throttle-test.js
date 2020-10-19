@@ -13,6 +13,8 @@
 import {throttle} from '../observable.js';
 import {Subject, Observable} from 'rxjs';
 import {sleep} from '../promise';
+import retry from 'jest-retries';
+
 
 describe('throttle', () => {
   it('handles basic test', () => {
@@ -60,7 +62,7 @@ describe('throttle', () => {
     expect(values).toEqual([1, 4]);
   });
 
-  it('handles numeric delay', async () => {
+  retry('handles numeric delay', 5, async () => {
     const source = new Subject();
     const delay = 100;
     const throttled = source.pipe(throttle(delay));
