@@ -83,7 +83,14 @@ jobs:
           pnpm install
           pnpm prepare.nuclide
 
-      - name: Run tests 👩🏾‍💻
+      - name: Run Linux/Mac tests 👩🏾‍💻
+        if: "!startsWith(matrix.os,'windows')"
+        run: |
+          pnpm test.nuclide.node
+          # pnpm test.nuclide.atom
+
+      - name: Run Windows tests 👩🏾‍💻
+        if: startsWith(matrix.os,'windows')
         continue-on-error: true
         run: |
           pnpm test.nuclide.node
