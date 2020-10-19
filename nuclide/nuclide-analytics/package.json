@@ -5,7 +5,7 @@
   "description": "Provides a standard API for packages to send analytics to arbitrary providers.",
   "author": "NEEDS OWNER",
   "license": "BSD-3-Clause",
-  "repository": "https://github.com/facebook/nuclide/tree/master/modules/@atom-ide-community/nuclide-analytics",
+  "repository": "https://github.com/atom-ide-community/atom-ide-base/tree/master/nuclide/nuclide-analytics",
   "nuclide": {
     "packageType": "NodeLibrary"
   },

@@ -11,7 +11,7 @@
     "packageType": "NodeLibrary",
     "testsCannotBeRunInParallel": true
   },
-  "repository": "https://github.com/facebook/nuclide/tree/master/modules/@atom-ide-community/nuclide-watchman-helpers",
+  "repository": "https://github.com/atom-ide-community/atom-ide-base/tree/master/nuclide/nuclide-watchman-helpers",
   "scripts": {
     "test": "node ../nuclide-jasmine/bin/jasmine-node-transpiled spec"
   },
