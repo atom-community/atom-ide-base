@@ -13,7 +13,6 @@
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
-import featureConfig from './feature-config';
 import invariant from 'assert';
 
 export function getLabelFromPath(path: string): string {
@@ -73,6 +72,14 @@ export function getRemotePathsForProjectRepo(repo: string): Array<string> {
   return getPathsForProjectRepoFromLocation(repo, 'remotePaths');
 }
 
+let featureConfig; // lazy loaded since it uses atom global and should only run inside Atom
+function getFeatureConfig() {
+  if (!featureConfig) {
+    featureConfig = require('./featureConfig');
+  }
+  return featureConfig;
+}
+
 function getPathsForProjectRepoFromLocation(
   repo: string,
   featureConfigLocation: string,
@@ -80,7 +87,7 @@ function getPathsForProjectRepoFromLocation(
   if (repo == null) {
     return [];
   }
-  const localPaths = featureConfig.get(
+  const localPaths = getFeatureConfig().get(
     `fb-atomprojects.${featureConfigLocation}`,
   );
 
@@ -108,7 +115,7 @@ export function setLocalPathsForProjectRepo(
     repo: string,
   }>,
 ): void {
-  featureConfig.set('fb-atomprojects.localPaths', paths);
+  getFeatureConfig().set('fb-atomprojects.localPaths', paths);
 }
 
 /**
@@ -122,5 +129,5 @@ export function setRemotePathsForProjectRepo(
     repo: string,
   }>,
 ): void {
-  featureConfig.set('fb-atomprojects.remotePaths', paths);
+  getFeatureConfig().set('fb-atomprojects.remotePaths', paths);
 }

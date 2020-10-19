@@ -28,7 +28,7 @@ import {
 } from '../promise';
 import invariant from 'assert';
 import {expectAsyncFailure} from '../test-helpers';
-import waitsFor from '../../../jest/waits_for';
+import waitsFor from '../../atom-test-runners/jest-atom-runner/configs/waits_for';
 
 jest.useFakeTimers();
 
@@ -177,7 +177,7 @@ describe('promises::serializeAsyncCall()', () => {
   it('Returns the same result when called after scheduled', async () => {
     jest.useRealTimers();
     let i = 0;
-    const asyncFunSpy = jasmine.createSpy('async');
+    const asyncFunSpy = jest.fn();
     const oneAsyncCallAtATime = serializeAsyncCall(() => {
       i++;
       const resultPromise = waitPromise(10, i);
@@ -382,14 +382,14 @@ describe('promises::asyncSome()', () => {
 
 describe('promises::lastly', () => {
   it('executes after a resolved promise', async () => {
-    const spy = jasmine.createSpy('spy');
+    const spy = jest.fn();
     const result = await lastly(Promise.resolve(1), spy);
     expect(result).toBe(1);
     expect(spy).toHaveBeenCalled();
   });
 
   it('executes after a rejected promise', async () => {
-    const spy = jasmine.createSpy('spy');
+    const spy = jest.fn();
     await expectAsyncFailure(lastly(Promise.reject(2), spy), err => {
       expect(err).toBe(2);
     });
@@ -397,7 +397,7 @@ describe('promises::lastly', () => {
   });
 
   it('works for async functions', async () => {
-    const spy = jasmine.createSpy('spy');
+    const spy = jest.fn();
     const result = await lastly(Promise.resolve(1), async () => {
       spy();
     });

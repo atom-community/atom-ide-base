@@ -13,7 +13,7 @@
 import invariant from 'assert';
 import {Observable, Subject} from 'rxjs';
 import ObservablePool from '../ObservablePool';
-import waitsFor from '../../../jest/waits_for';
+import waitsFor from '../../atom-test-runners/jest-atom-runner/configs/waits_for';
 
 describe('ObservablePool', () => {
   it('limits the concurrency of observable values with cancellation', () => {

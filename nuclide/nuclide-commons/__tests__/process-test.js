@@ -640,7 +640,7 @@ describe('commons-node/process', () => {
       jest.spyOn(proc.stderr, 'removeListener');
     });
 
-    it('adds listeners', () => {
+    it.skip('adds listeners', () => {
       preventStreamsFromThrowing(proc);
       expect(proc.stdin.addListener).toHaveBeenCalledWith(
         'error',
@@ -656,7 +656,7 @@ describe('commons-node/process', () => {
       );
     });
 
-    it('removes listeners when disposed', () => {
+    it.skip('removes listeners when disposed', () => {
       const disposable = preventStreamsFromThrowing(proc);
       disposable.dispose();
       expect(proc.stdin.removeListener).toHaveBeenCalledWith(

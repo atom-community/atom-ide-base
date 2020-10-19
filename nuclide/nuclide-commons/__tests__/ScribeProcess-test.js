@@ -11,10 +11,10 @@
  * @emails oncall+nuclide
  */
 import fs from 'fs';
-import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
-import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
+import fsPromise from '../fsPromise';
+import nuclideUri from '../nuclideUri';
 import ScribeProcess, {__test__} from '../ScribeProcess';
-import waitsFor from '../../../jest/waits_for';
+import waitsFor from '../../atom-test-runners/jest-atom-runner/configs/waits_for';
 
 // scripe process does not pass the ENV vars properly and scribe_cat_mock
 // fails on os.environ['SCRIBE_MOCK_PATH']

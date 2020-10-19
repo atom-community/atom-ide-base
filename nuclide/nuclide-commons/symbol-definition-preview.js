@@ -12,6 +12,7 @@
 
 import type {NuclideUri} from './nuclideUri';
 import mimeTypes from 'mime-types';
+import cr from 'cr';
 import fsPromise from './fsPromise';
 import {countOccurrences} from './string';
 import nuclideUri from './nuclideUri';
@@ -52,7 +53,8 @@ export async function getDefinitionPreview(
     return {mime, contents: fileBuffer.toString('base64'), encoding: 'base64'};
   }
 
-  const contents = fileBuffer.toString('utf8');
+  let contents = fileBuffer.toString('utf8');
+  contents = cr(contents);
   const lines = contents.split('\n');
 
   const start = definition.position.row;

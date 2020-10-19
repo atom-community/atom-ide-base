@@ -18,7 +18,7 @@ import watchman from 'fb-watchman';
 import {nextTick} from '@atom-ide-community/nuclide-commons/promise';
 import WatchmanClient from '../lib/WatchmanClient';
 import {generateFixture} from '@atom-ide-community/nuclide-commons/test-helpers';
-import waitsFor from '../../../jest/waits_for';
+import waitsFor  from '../../atom-test-runners/jest-atom-runner/configs/waits_for';
 import * as Path from '../lib/path';
 import {DEFAULT_WATCHMAN_RECONNECT_DELAY_MS} from '../lib/WatchmanClient';
 
