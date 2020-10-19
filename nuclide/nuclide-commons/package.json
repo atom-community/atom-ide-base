@@ -22,7 +22,7 @@
     "idx": "1.2.0",
     "log4js": "1.1.1",
     "lru-cache": "4.0.2",
-    "mime-types": "2.1.16",
+    "mime-types": "2.1.27",
     "mkdirp": "^1.0.4",
     "mv": "2.1.1",
     "nullthrows": "1.1.1",

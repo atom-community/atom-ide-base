@@ -128,7 +128,7 @@ importers:
       idx: 1.2.0
       log4js: 1.1.1
       lru-cache: 4.0.2
-      mime-types: 2.1.16
+      mime-types: 2.1.27
       mkdirp: 1.0.4
       mv: 2.1.1
       nullthrows: 1.1.1
@@ -142,7 +142,7 @@ importers:
       vscode-uri: 1.0.1
     devDependencies:
       dedent: 0.7.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       jest-retries: 1.0.1
       simple-text-buffer: 9.2.11
     specifiers:
@@ -156,11 +156,11 @@ importers:
       fs-plus: 3.1.1
       glob: 7.1.6
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       jest-retries: 1.0.1
       log4js: 1.1.1
       lru-cache: 4.0.2
-      mime-types: 2.1.16
+      mime-types: 2.1.27
       mkdirp: ^1.0.4
       mv: 2.1.1
       nullthrows: 1.1.1
@@ -221,7 +221,7 @@ importers:
       escape-html: 1.0.3
       escape-string-regexp: 1.0.5
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.29.1
@@ -233,7 +233,7 @@ importers:
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
-      tiny-date-picker: 3.2.6
+      tiny-date-picker: 3.2.8
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
@@ -245,7 +245,7 @@ importers:
       escape-html: 1.0.3
       escape-string-regexp: 1.0.5
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.29.1
@@ -257,7 +257,7 @@ importers:
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
-      tiny-date-picker: 3.2.6
+      tiny-date-picker: 3.2.8
   dist-nuclide/nuclide-debugger-cli:
     dependencies:
       '@atom-ide-community/nuclide-analytics': 'link:../../nuclide/nuclide-analytics'
@@ -276,7 +276,7 @@ importers:
     devDependencies:
       '@atom-ide-community/nuclide-node-transpiler': 'link:../../nuclide/nuclide-node-transpiler'
       dedent: 0.7.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       simple-text-buffer: 9.2.11
     specifiers:
       '@atom-ide-community/nuclide-analytics': 'workspace:*'
@@ -287,7 +287,7 @@ importers:
       blessed: 0.1.81
       dedent: 0.7.0
       idx: 1.2.0
-      invariant: 2.2.2
+      invariant: 2.2.4
       line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
@@ -303,8 +303,8 @@ importers:
       '@atom-ide-community/nuclide-commons-atom': 'link:../../nuclide/nuclide-commons-atom'
       '@atom-ide-community/nuclide-commons-ui': 'link:../../nuclide/nuclide-commons-ui'
       idx: 1.2.0
-      immutable: 4.0.0-rc.9
-      invariant: 2.2.2
+      immutable: 4.0.0-rc.12
+      invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
       rxjs: /rxjs-compat/6.3.3
@@ -316,8 +316,8 @@ importers:
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       '@atom-ide-community/nuclide-commons-ui': 'workspace:*'
       idx: 1.2.0
-      immutable: 4.0.0-rc.9
-      invariant: 2.2.2
+      immutable: 4.0.0-rc.12
+      invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
       rxjs: 'npm:rxjs-compat@6.3.3'
@@ -358,7 +358,7 @@ importers:
       dedent: 0.7.0
       is-builtin-module: 1.0.0
       jasmine-node: 1.14.5
-      progress: 2.0.0
+      progress: 2.0.3
       yargs: 3.32.0
     specifiers:
       '@babel/core': 7.0.0-beta.48
@@ -381,7 +381,7 @@ importers:
       is-builtin-module: 1.0.0
       jasmine-node: 1.14.5
       mkdirp: ^1.0.4
-      progress: 2.0.0
+      progress: 2.0.3
       uuid: 3.0.1
       yargs: 3.32.0
   dist-nuclide/nuclide-watchman-helpers:
@@ -434,7 +434,7 @@ importers:
       idx: 1.2.0
       log4js: 1.1.1
       lru-cache: 4.0.2
-      mime-types: 2.1.16
+      mime-types: 2.1.27
       mkdirp: 1.0.4
       mv: 2.1.1
       nullthrows: 1.1.1
@@ -466,7 +466,7 @@ importers:
       jest-retries: 1.0.1
       log4js: 1.1.1
       lru-cache: 4.0.2
-      mime-types: 2.1.16
+      mime-types: 2.1.27
       mkdirp: ^1.0.4
       mv: 2.1.1
       nullthrows: 1.1.1
@@ -6400,10 +6400,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==
-  /immutable/4.0.0-rc.9:
-    dev: false
-    resolution:
-      integrity: sha512-uw4u9Jy3G2Y1qkIFtEGy9NgJxFJT1l3HKgeSFHfrvy91T8W54cJoQ+qK3fTwhil8XkEHuc2S+MI+fbD0vKObDA==
   /import-fresh/3.2.1:
     dependencies:
       parent-module: 1.0.1
@@ -6474,11 +6470,6 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
-  /invariant/2.2.2:
-    dependencies:
-      loose-envify: 1.4.0
-    resolution:
-      integrity: sha1-nh9WrArNtr8wMwbzOL47IErmA2A=
   /invariant/2.2.4:
     dependencies:
       loose-envify: 1.4.0
@@ -8386,30 +8377,14 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-y7FpHSbMUMoyPbYUSzO6PaZ6FyRnQOpHuKwbo1G+Knck95XVU4QAiKdGEnj5wwoS7PlOgthX/09u5iFJ+aYf5Q==
-  /mime-db/1.29.0:
-    dev: false
-    engines:
-      node: '>= 0.6'
-    resolution:
-      integrity: sha1-SNJtI1WJZRcErFkWygYAGRQmaHg=
   /mime-db/1.44.0:
-    dev: true
     engines:
       node: '>= 0.6'
     resolution:
       integrity: sha512-/NOTfLrsPBVeH7YtFPgsVWveuL+4SjjYxaQ1xtM1KMFj7HdxlBlxeyNLzhyJVx7r4rZGJAZ/6lkKCitSc/Nmpg==
-  /mime-types/2.1.16:
-    dependencies:
-      mime-db: 1.29.0
-    dev: false
-    engines:
-      node: '>= 0.6'
-    resolution:
-      integrity: sha1-K4WKUuXs1RbbiXrCvodIeDBpjiM=
   /mime-types/2.1.27:
     dependencies:
       mime-db: 1.44.0
-    dev: true
     engines:
       node: '>= 0.6'
     resolution:
@@ -9476,12 +9451,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
-  /progress/2.0.0:
-    dev: true
-    engines:
-      node: '>=0.4.0'
-    resolution:
-      integrity: sha1-ihvjZr+Pwj2yvSPxDG/pILQ4nR8=
   /progress/2.0.3:
     dev: true
     engines:
@@ -11061,10 +11030,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-fcwX4mndzpLQKBS1DVYhGAcYaYt7vsHNIvQV+WXMvnow5cgjPphq5CaayLaGsjRdSCKZFNGt7/GYAuXaNOiYCA==
-  /tiny-date-picker/3.2.6:
-    dev: false
-    resolution:
-      integrity: sha512-SX72rn7Hjr8tqy6OGFjQe8Fs0wnPdT6tqpzBbTWRNHM2p3n1DVsC8YHmYbwoyu7vzTXnCGCw4ShWbmM7nE7ByQ==
   /tiny-date-picker/3.2.8:
     dev: false
     resolution:
