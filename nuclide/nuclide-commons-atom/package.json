@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-commons-atom",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Common Nuclide node modules (for use with Atom only).",
   "author": "NEEDS OWNER",
   "license": "BSD-3-Clause",
