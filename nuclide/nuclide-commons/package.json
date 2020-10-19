@@ -27,7 +27,7 @@
     "mv": "2.1.1",
     "nullthrows": "1.1.1",
     "rimraf": "3.0.2",
-    "rxjs": "npm:rxjs-compat@6.3.3",
+    "rxjs-compat": "^6.3.3",
     "semver": "5.5.0",
     "shell-quote": "1.6.1",
     "temp": "0.9.1",
