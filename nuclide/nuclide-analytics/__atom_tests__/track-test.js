@@ -25,7 +25,7 @@ import {
 } from '@atom-ide-community/nuclide-commons/analytics';
 import service from '../lib/track';
 import invariant from 'assert';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 const sleep = n => new Promise(r => setTimeout(r, n));
 

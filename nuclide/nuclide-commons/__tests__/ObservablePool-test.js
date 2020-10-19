@@ -11,7 +11,7 @@
  * @emails oncall+nuclide
  */
 import invariant from 'assert';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import ObservablePool from '../ObservablePool';
 import waitsFor from '../../atom-test-runners/jest-atom-runner/configs/waits_for';
 

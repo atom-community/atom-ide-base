@@ -11,7 +11,7 @@
  */
 
 import type {ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
-import type {ConnectableObservable} from 'rxjs';
+import type {ConnectableObservable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import type {
   InitializeMessage,
   PackageParams,
@@ -21,7 +21,7 @@ import type {
 
 import {fork, getOutputStream} from '@atom-ide-community/nuclide-commons/process';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
-import {ReplaySubject} from 'rxjs';
+import {ReplaySubject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import MessageRouter from './MessageRouter';
 import activatePackage from './activatePackage';
 

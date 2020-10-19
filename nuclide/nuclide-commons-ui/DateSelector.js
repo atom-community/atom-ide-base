@@ -13,7 +13,7 @@
 /* global Node */
 
 import classnames from 'classnames';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
 import {DateRangePicker} from 'tiny-date-picker/dist/date-range-picker';

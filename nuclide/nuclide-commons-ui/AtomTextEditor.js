@@ -19,7 +19,7 @@ import {
   enforceSoftWrap,
 } from '@atom-ide-community/nuclide-commons-atom/text-editor';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import atomTabIndexForwarder from './atomTabIndexForwarder';
 
 const doNothing = () => {};

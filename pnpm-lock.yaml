@@ -97,14 +97,14 @@ importers:
       '@atom-ide-community/nuclide-commons-atom': 'link:../../nuclide/nuclide-commons-atom'
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       shallowequal: 1.1.0
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       shallowequal: 1.1.0
   dist-nuclide/nuclide-analytics:
     dependencies:
@@ -133,7 +133,7 @@ importers:
       mv: 2.1.1
       nullthrows: 1.1.1
       rimraf: 3.0.2
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       semver: 5.5.0
       shell-quote: 1.6.1
       temp: 0.9.1
@@ -165,7 +165,7 @@ importers:
       mv: 2.1.1
       nullthrows: 1.1.1
       rimraf: 3.0.2
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       semver: 5.5.0
       shell-quote: 1.6.1
       simple-text-buffer: 9.2.11
@@ -184,7 +184,7 @@ importers:
       lru-cache: 4.0.2
       nullthrows: 1.1.1
       redux-logger: 3.0.6
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       season: 6.0.2
       semver: 5.5.0
       shallowequal: 1.1.0
@@ -202,7 +202,7 @@ importers:
       lru-cache: 4.0.2
       nullthrows: 1.1.1
       redux-logger: 3.0.6
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       season: 6.0.2
       semver: 5.5.0
       shallowequal: 1.1.0
@@ -229,7 +229,7 @@ importers:
       react: 16.6.3
       react-dom: 16.6.3_react@16.6.3
       react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
@@ -253,7 +253,7 @@ importers:
       react: 16.6.3
       react-dom: 16.6.3
       react-virtualized: 9.20.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
@@ -269,7 +269,7 @@ importers:
       line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       v8-compile-cache: 1.1.0
       vscode-debugprotocol: 1.24.0
       yargs: 3.32.0
@@ -291,7 +291,7 @@ importers:
       line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       simple-text-buffer: 9.2.11
       v8-compile-cache: 1.1.0
       vscode-debugprotocol: 1.24.0
@@ -307,7 +307,7 @@ importers:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
     specifiers:
@@ -320,7 +320,7 @@ importers:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
   dist-nuclide/nuclide-fuzzy-native:
@@ -390,27 +390,27 @@ importers:
       event-kit: 2.2.0
       fb-watchman: 2.0.1
       log4js: 1.1.1
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       event-kit: 2.2.0
       fb-watchman: 2.0.1
       log4js: 1.1.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
   nuclide/nuclide-adb:
     dependencies:
       '@atom-ide-community/nuclide-commons': 'link:../nuclide-commons'
       '@atom-ide-community/nuclide-commons-atom': 'link:../nuclide-commons-atom'
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       shallowequal: 1.1.0
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       shallowequal: 1.1.0
   nuclide/nuclide-analytics:
     dependencies:
@@ -439,7 +439,7 @@ importers:
       mv: 2.1.1
       nullthrows: 1.1.1
       rimraf: 3.0.2
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       semver: 5.5.0
       shell-quote: 1.6.1
       temp: 0.9.1
@@ -471,7 +471,7 @@ importers:
       mv: 2.1.1
       nullthrows: 1.1.1
       rimraf: 3.0.2
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       semver: 5.5.0
       shell-quote: 1.6.1
       simple-text-buffer: 9.2.11
@@ -490,7 +490,7 @@ importers:
       lru-cache: 4.0.2
       nullthrows: 1.1.1
       redux-logger: 3.0.6
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       season: 6.0.2
       semver: 5.5.0
       shallowequal: 1.1.0
@@ -508,7 +508,7 @@ importers:
       lru-cache: 4.0.2
       nullthrows: 1.1.1
       redux-logger: 3.0.6
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       season: 6.0.2
       semver: 5.5.0
       shallowequal: 1.1.0
@@ -535,7 +535,7 @@ importers:
       react: 16.6.3
       react-dom: 16.6.3_react@16.6.3
       react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
@@ -559,7 +559,7 @@ importers:
       react: 16.6.3
       react-dom: 16.6.3
       react-virtualized: 9.20.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
@@ -575,7 +575,7 @@ importers:
       line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       v8-compile-cache: 1.1.0
       vscode-debugprotocol: 1.24.0
       yargs: 3.32.0
@@ -597,7 +597,7 @@ importers:
       line-by-line: 0.1.6
       log4js: 1.1.1
       nullthrows: 1.1.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       simple-text-buffer: 9.2.11
       v8-compile-cache: 1.1.0
       vscode-debugprotocol: 1.24.0
@@ -613,7 +613,7 @@ importers:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
     specifiers:
@@ -626,7 +626,7 @@ importers:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 16.6.3
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
   nuclide/nuclide-fuzzy-native:
@@ -696,13 +696,13 @@ importers:
       event-kit: 2.2.0
       fb-watchman: 2.0.1
       log4js: 1.1.1
-      rxjs: /rxjs-compat/6.3.3
+      rxjs-compat: 6.3.3
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       event-kit: 2.2.0
       fb-watchman: 2.0.1
       log4js: 1.1.1
-      rxjs: 'npm:rxjs-compat@6.3.3'
+      rxjs-compat: ^6.3.3
 lockfileVersion: 5.1
 packages:
   /@babel/cli/7.11.6_@babel+core@7.11.6:

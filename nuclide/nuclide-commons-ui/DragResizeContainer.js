@@ -11,7 +11,7 @@
  */
 
 import * as React from 'react';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import nullthrows from 'nullthrows';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 

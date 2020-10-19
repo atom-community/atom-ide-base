@@ -10,7 +10,7 @@
  * @format
  */
 
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 type Executor<T> = Observable<T> | (() => rxjs$ObservableInput<T>);
 

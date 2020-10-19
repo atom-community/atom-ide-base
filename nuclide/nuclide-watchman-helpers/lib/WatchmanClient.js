@@ -15,7 +15,7 @@ import watchman from 'fb-watchman';
 import {fastDebounce} from '@atom-ide-community/nuclide-commons/observable';
 import {serializeAsyncCall, sleep} from '@atom-ide-community/nuclide-commons/promise';
 import {maybeToString} from '@atom-ide-community/nuclide-commons/string';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {getWatchmanBinaryPath} from './path';
 import WatchmanSubscription from './WatchmanSubscription';
 import {getLogger} from 'log4js';

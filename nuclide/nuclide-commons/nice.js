@@ -14,7 +14,7 @@ import type {LRUCache} from 'lru-cache';
 import type {ObserveProcessOptions, ProcessMessage} from './process';
 
 import LRU from 'lru-cache';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import which from './which';
 import {spawn, observeProcess} from './process';

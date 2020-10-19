@@ -13,7 +13,7 @@
 import type {Provider} from './ProviderRegistry';
 import type {TextEdit} from './text-edit';
 
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {track} from '@atom-ide-community/nuclide-commons/analytics';
 import ProviderRegistry from './ProviderRegistry';
 import {applyTextEditsToBuffer} from './text-edit';

@@ -14,7 +14,7 @@ import type {PipedMessage, ServiceConnection} from './types';
 
 import {getLogger} from 'log4js';
 import {DefaultMap} from '@atom-ide-community/nuclide-commons/collection';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import * as jsonrpc from 'vscode-jsonrpc';
 import {AbstractMessageReader} from 'vscode-jsonrpc/lib/messageReader';
 import {AbstractMessageWriter} from 'vscode-jsonrpc/lib/messageWriter';

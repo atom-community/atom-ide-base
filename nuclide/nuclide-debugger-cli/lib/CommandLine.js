@@ -17,7 +17,7 @@ import {analytics} from './analytics';
 import CommandDispatcher from './CommandDispatcher';
 import ConfigFile from './ConfigFile';
 import LineEditor from './console/LineEditor';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 const PROMPT = 'fbdbg> ';
 

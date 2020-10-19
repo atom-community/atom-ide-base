@@ -16,10 +16,10 @@ import type {
   Result,
 } from '../ActiveEditorRegistry';
 
-import type {Observable} from 'rxjs';
+import type {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import {expectObservableToStartWith} from '@atom-ide-community/nuclide-commons/test-helpers';
-import {Subject} from 'rxjs';
+import {Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import ActiveEditorRegistry from '../ActiveEditorRegistry';
 

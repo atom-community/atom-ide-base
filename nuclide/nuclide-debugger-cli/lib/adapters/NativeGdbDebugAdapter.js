@@ -24,7 +24,7 @@ import {getAdapterPackageRoot} from '@atom-ide-community/nuclide-debugger-common
 import {runCommand} from '@atom-ide-community/nuclide-commons/process';
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {VsAdapterTypes} from '@atom-ide-community/nuclide-debugger-common/constants';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import VSPOptionsParser from '../VSPOptionsParser';
 
 export default class NativeGdbDebugAdapter implements DebugAdapter {

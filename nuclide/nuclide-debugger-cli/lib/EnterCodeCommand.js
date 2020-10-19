@@ -14,7 +14,7 @@ import type {Command} from './Command';
 import type {ConsoleIO} from './ConsoleIO';
 
 import {DebuggerInterface} from './DebuggerInterface';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 type InterruptEvent = {
   type: 'interrupt',

@@ -11,7 +11,7 @@
  */
 import type {Completions} from './console/LineEditor';
 
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 export interface ConsoleIO {
   enterFullScreen(): void;

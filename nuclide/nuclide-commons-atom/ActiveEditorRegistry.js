@@ -15,7 +15,7 @@
  * on text editor contents.
  */
 
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {observeActiveEditorsDebounced} from './debounced';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';

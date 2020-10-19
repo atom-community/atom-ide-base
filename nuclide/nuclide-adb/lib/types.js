@@ -11,7 +11,7 @@
  */
 
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
-import type {Observable} from 'rxjs';
+import type {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import type Immutable from 'immutable';
 
 export type SimpleProcess = {

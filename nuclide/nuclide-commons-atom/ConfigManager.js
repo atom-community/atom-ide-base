@@ -11,7 +11,7 @@
  */
 
 import invariant from 'assert';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 /**
  * A wrapper over the specified Atom's config functions.

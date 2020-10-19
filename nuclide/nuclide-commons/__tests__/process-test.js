@@ -17,7 +17,7 @@ import {getLogger} from 'log4js';
 import {sleep} from '../promise';
 import child_process from 'child_process';
 import invariant from 'assert';
-import {Observable, Scheduler, Subject} from 'rxjs';
+import {Observable, Scheduler, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import {
   spawn,

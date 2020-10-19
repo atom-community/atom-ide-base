@@ -11,7 +11,7 @@
  * @emails oncall+nuclide
  */
 import {throttle} from '../observable.js';
-import {Subject, Observable} from 'rxjs';
+import {Subject, Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {sleep} from '../promise';
 import retry from 'jest-retries';
 

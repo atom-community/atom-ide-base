@@ -11,7 +11,7 @@
  */
 import type {ElementOptions, Keypress} from 'blessed';
 import * as DebugProtocol from 'vscode-debugprotocol';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 // $FlowFixMe - make UniversalDisposable flow strict
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 

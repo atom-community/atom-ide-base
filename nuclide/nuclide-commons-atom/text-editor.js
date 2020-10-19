@@ -14,7 +14,7 @@ import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import invariant from 'assert';
 import {TextEditor} from 'atom';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 

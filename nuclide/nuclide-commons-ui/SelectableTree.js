@@ -17,7 +17,7 @@ import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDi
 import * as React from 'react';
 import classnames from 'classnames';
 import invariant from 'assert';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import shallowEqual from 'shallowequal';
 import nullthrows from 'nullthrows';
 import {scrollIntoView} from './scrollIntoView';

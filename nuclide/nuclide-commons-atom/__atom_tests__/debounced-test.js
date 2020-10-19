@@ -11,7 +11,7 @@
  * @emails oncall+nuclide
  */
 import {Point} from 'atom';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {
   editorScrollTopDebounced,
   observeActivePaneItemDebounced,

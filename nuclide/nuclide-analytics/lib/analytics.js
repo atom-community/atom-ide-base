@@ -11,7 +11,7 @@
  */
 
 import type {SessionInfo} from '@atom-ide-community/nuclide-commons/analytics';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 // This is a stubbed implementation that other packages use to record analytics data & performance.
 export function track(

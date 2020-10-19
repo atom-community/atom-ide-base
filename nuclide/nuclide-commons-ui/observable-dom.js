@@ -15,7 +15,7 @@
 
 import invariant from 'assert';
 import os from 'os';
-import {Observable, Subscription} from 'rxjs';
+import {Observable, Subscription} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import shallowEqual from 'shallowequal';
 import {isIterable} from '@atom-ide-community/nuclide-commons/collection';
 
