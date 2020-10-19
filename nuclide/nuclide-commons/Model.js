@@ -10,9 +10,9 @@
  * @format
  */
 
-import type {Observable} from 'rxjs';
+import type {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
-import {BehaviorSubject} from 'rxjs';
+import {BehaviorSubject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import UniversalDisposable from './UniversalDisposable';
 
 /**

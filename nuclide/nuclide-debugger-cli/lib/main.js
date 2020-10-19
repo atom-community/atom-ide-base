@@ -27,7 +27,7 @@ import QuitCommand from './QuitCommand';
 import yargs from 'yargs';
 import {setRawAnalyticsService} from '@atom-ide-community/nuclide-commons/analytics';
 import * as rawAnalyticsService from '@atom-ide-community/nuclide-analytics/lib/track';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 function buildLogger(): log4js$Logger {
   // there are things in nuclide while will still try to log to

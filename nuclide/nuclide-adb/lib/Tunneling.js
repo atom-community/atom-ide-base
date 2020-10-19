@@ -12,14 +12,14 @@
 
 import type {SshTunnelService} from '@atom-ide-community/nuclide-adb/lib/types';
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
-import type {Subscription} from 'rxjs';
+import type {Subscription} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import invariant from 'assert';
 import {shell} from 'electron';
 import {getLogger} from 'log4js';
 import {SimpleCache} from '@atom-ide-community/nuclide-commons/SimpleCache';
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import consumeFirstProvider from '@atom-ide-community/nuclide-commons-atom/consumeFirstProvider';
 import {getAdbServiceByNuclideUri} from './utils';
 import {track} from '@atom-ide-community/nuclide-commons/analytics';

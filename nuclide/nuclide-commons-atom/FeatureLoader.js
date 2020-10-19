@@ -22,7 +22,7 @@ import nuclideConfig from './nuclide-config';
 import featureConfig from './feature-config';
 import path from 'path'; // eslint-disable-line nuclide-internal/prefer-nuclide-uri
 import {MultiMap, setIntersect, setUnion} from '@atom-ide-community/nuclide-commons/collection';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 type FeaturePkg = {
   name: string,

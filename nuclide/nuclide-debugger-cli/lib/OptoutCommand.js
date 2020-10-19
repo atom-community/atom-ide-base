@@ -14,7 +14,7 @@ import type {Command} from './Command';
 import type {ConsoleIO} from './ConsoleIO';
 
 import os from 'os';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {trackImmediate} from '@atom-ide-community/nuclide-commons/analytics';
 
 type InterruptEvent = {

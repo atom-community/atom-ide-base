@@ -11,7 +11,7 @@
  */
 
 import UniversalDisposable from './UniversalDisposable';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 /**
  * Add an event listener an return a disposable for removing it. Note that this function assumes

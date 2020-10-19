@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {ConnectableObservable} from 'rxjs';
+import type {ConnectableObservable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import type {VSAdapterExecutableInfo, VsAdapterType} from './types';
 import type {ProcessInfo, ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
 

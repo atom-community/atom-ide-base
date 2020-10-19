@@ -35,7 +35,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 // This should be { type: readonly string } when we get readonly props. Because this is used with
 // disjoint unions we can't use `string` here due to mutation concerns. Flow doesn't know that we

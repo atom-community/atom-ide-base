@@ -15,7 +15,7 @@
 import invariant from 'assert';
 import getDisplayName from '@atom-ide-community/nuclide-commons/getDisplayName';
 import {remote} from 'electron';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {PerformanceObservable} from './observable-dom';
 
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';

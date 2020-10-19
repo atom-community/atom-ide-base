@@ -20,7 +20,7 @@
  */
 
 import {fastDebounce} from '@atom-ide-community/nuclide-commons/observable';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 import {getCursorPositions, isValidTextEditor} from './text-editor';

@@ -16,7 +16,7 @@ import {File, Directory} from 'atom';
 import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {diffSets} from '@atom-ide-community/nuclide-commons/observable';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 export function getValidProjectPaths(): Array<string> {
   return atom.project

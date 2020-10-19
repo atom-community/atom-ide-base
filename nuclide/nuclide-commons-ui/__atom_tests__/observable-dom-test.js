@@ -11,7 +11,7 @@
  * @emails oncall+nuclide
  */
 import invariant from 'assert';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import {_DOMObserverObservable as DOMObserverObservable} from '../observable-dom';
 

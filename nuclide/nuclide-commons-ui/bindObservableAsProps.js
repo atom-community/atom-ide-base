@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {Observable} from 'rxjs';
+import type {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import * as React from 'react';
 import getDisplayName from '@atom-ide-community/nuclide-commons/getDisplayName';

@@ -14,7 +14,7 @@ import type {Adb} from '../Adb';
 import type {Process} from '../types';
 
 import {arrayCompact} from '@atom-ide-community/nuclide-commons/collection';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import os from 'os';
 
 type CPU_MEM = [number, number];

@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {ConnectableObservable} from 'rxjs';
+import type {ConnectableObservable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import type {ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
 import type {VSAdapterExecutableInfo, IVsAdapterSpawner} from './types';
 
@@ -18,7 +18,7 @@ import {
   observeProcessRaw,
   getOriginalEnvironment,
 } from '@atom-ide-community/nuclide-commons/process';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 export default class VsAdapterSpawner implements IVsAdapterSpawner {
   _stdin: Subject<string>;

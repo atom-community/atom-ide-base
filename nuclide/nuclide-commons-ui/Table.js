@@ -14,7 +14,7 @@ import invariant from 'assert';
 import nullthrows from 'nullthrows';
 import classnames from 'classnames';
 import * as React from 'react';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import shallowEqual from 'shallowequal';
 import {Icon} from './Icon';
 import {

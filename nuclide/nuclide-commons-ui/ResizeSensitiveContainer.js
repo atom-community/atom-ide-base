@@ -14,7 +14,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import nullthrows from 'nullthrows';
 import {nextAnimationFrame} from '@atom-ide-community/nuclide-commons/observable';
-import {Subject} from 'rxjs';
+import {Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 type SensorProps = {
   targetHeight: number,

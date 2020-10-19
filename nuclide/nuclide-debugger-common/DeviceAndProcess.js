@@ -14,7 +14,7 @@ import type {AdbDevice, AndroidJavaProcess} from '@atom-ide-community/nuclide-ad
 import type {Column, Row} from '@atom-ide-community/nuclide-commons-ui/Table';
 import type {Expected} from '@atom-ide-community/nuclide-commons/expected';
 import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
-import type {Subscription} from 'rxjs';
+import type {Subscription} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import idx from 'idx';
 import {getAdbServiceByNuclideUri} from '@atom-ide-community/nuclide-adb';
@@ -25,7 +25,7 @@ import {arrayEqual} from '@atom-ide-community/nuclide-commons/collection';
 import {Expect} from '@atom-ide-community/nuclide-commons/expected';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';
 import * as React from 'react';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {AdbDeviceSelector} from './AdbDeviceSelector';
 
 type ColumnName = 'pid' | 'user' | 'name';

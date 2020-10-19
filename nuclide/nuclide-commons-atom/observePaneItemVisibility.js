@@ -13,7 +13,7 @@
 import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 import memoizeUntilChanged from '@atom-ide-community/nuclide-commons/memoizeUntilChanged';
 import {setFilter} from '@atom-ide-community/nuclide-commons/collection';
-import {Observable, Scheduler, Subject} from 'rxjs';
+import {Observable, Scheduler, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import shallowEqual from 'shallowequal';
 
 // TODO(T17495608): Currently, docks don't have a way of observing their visibility so this will

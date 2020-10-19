@@ -20,7 +20,7 @@ import type {ProcessMessage} from '@atom-ide-community/nuclide-commons/process';
 
 import VsAdapterSpawner from './VsAdapterSpawner';
 import V8Protocol from './V8Protocol';
-import {Observable, Subject, TimeoutError} from 'rxjs';
+import {Observable, Subject, TimeoutError} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import idx from 'idx';
 import invariant from 'assert';
 import {track, trackTiming} from '@atom-ide-community/nuclide-commons/analytics';

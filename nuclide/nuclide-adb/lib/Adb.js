@@ -19,7 +19,7 @@ import type {NuclideUri} from '@atom-ide-community/nuclide-commons/nuclideUri';
 
 import invariant from 'assert';
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {parsePsTableOutput} from './common/ps';
 import {runCommand, observeProcess} from '@atom-ide-community/nuclide-commons/process';
 

@@ -10,7 +10,7 @@
  * @format
  */
 
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 // A Cache mapping keys to values which creates entries as they are requested.
 export class Cache<KeyType, ValueType> {

@@ -10,7 +10,7 @@
  * @format
  */
 
-import type {Observable} from 'rxjs';
+import type {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import invariant from 'assert';
 import fs from 'fs';

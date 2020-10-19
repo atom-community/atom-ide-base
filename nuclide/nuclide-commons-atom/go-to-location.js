@@ -10,10 +10,10 @@
  * @format
  */
 
-import type {Observable} from 'rxjs';
+import type {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import {getLogger} from 'log4js';
-import {Subject} from 'rxjs';
+import {Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import invariant from 'assert';
 
 export type GoToLocationOptions = {|

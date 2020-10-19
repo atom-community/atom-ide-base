@@ -30,7 +30,7 @@ import UniversalDisposable from './UniversalDisposable';
 import invariant from 'assert';
 // Note: DOMException is usable in Chrome but not in Node.
 import DOMException from 'domexception';
-import {Observable, ReplaySubject, Subject, Subscription} from 'rxjs';
+import {Observable, ReplaySubject, Subject, Subscription} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import AbortController from './AbortController';
 import {setDifference} from './collection';
 import debounce from './debounce';

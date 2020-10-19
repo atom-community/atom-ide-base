@@ -52,7 +52,7 @@ import child_process from 'child_process';
 import idx from 'idx';
 import {getLogger} from 'log4js';
 import invariant from 'assert';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import util from 'util';
 
 import UniversalDisposable from './UniversalDisposable';

@@ -11,7 +11,7 @@
  */
 
 import invariant from 'assert';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import debounce from '@atom-ide-community/nuclide-commons/debounce';
 import {observableFromSubscribeFunction} from '@atom-ide-community/nuclide-commons/event';
 import UniversalDisposable from '@atom-ide-community/nuclide-commons/UniversalDisposable';

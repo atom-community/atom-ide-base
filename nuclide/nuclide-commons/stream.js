@@ -11,7 +11,7 @@
  */
 
 import Stream from 'stream';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 import UniversalDisposable from './UniversalDisposable';
 import {attachEvent} from './event';

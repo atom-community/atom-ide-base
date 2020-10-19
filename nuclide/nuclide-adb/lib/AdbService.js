@@ -19,7 +19,7 @@ import type {AdbDevice, AndroidJavaProcess, Process} from './types';
 
 import fsPromise from '@atom-ide-community/nuclide-commons/fsPromise';
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
-import {ConnectableObservable} from 'rxjs';
+import {ConnectableObservable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {Adb} from './Adb';
 import {Processes} from './common/Processes';
 import {runCommand} from '@atom-ide-community/nuclide-commons/process';

@@ -13,7 +13,7 @@
 import typeof {niceSafeSpawn as niceSafeSpawnType} from '../nice';
 
 import {uncachedRequire} from '../test-helpers';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 describe('nice', () => {
   let niceSafeSpawn: niceSafeSpawnType = (null: any);

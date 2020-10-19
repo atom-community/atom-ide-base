@@ -18,7 +18,7 @@ import {getLogger} from 'log4js';
 import {arrayEqual} from '@atom-ide-community/nuclide-commons/collection';
 import {SimpleCache} from '@atom-ide-community/nuclide-commons/SimpleCache';
 import shallowEqual from 'shallowequal';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 import {Expect, expectedEqual} from '@atom-ide-community/nuclide-commons/expected';
 import nuclideUri from '@atom-ide-community/nuclide-commons/nuclideUri';
 import {track} from '@atom-ide-community/nuclide-commons/analytics';

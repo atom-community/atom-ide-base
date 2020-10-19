@@ -12,7 +12,7 @@
  * @emails oncall+nuclide
  */
 import which from '../which';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 describe('which', () => {
   let runCommand;

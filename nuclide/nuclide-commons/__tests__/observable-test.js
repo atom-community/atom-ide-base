@@ -36,7 +36,7 @@ import {
 import nullthrows from 'nullthrows';
 import AbortController from '../AbortController';
 import UniversalDisposable from '../UniversalDisposable';
-import {Observable, Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs-compat/bundles/rxjs-compat.umd.min.js';
 
 const setsAreEqual = (a, b) =>
   a.size === b.size && Array.from(a).every(b.has.bind(b));
