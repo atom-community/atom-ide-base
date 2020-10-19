@@ -96,14 +96,14 @@ importers:
       '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
       '@atom-ide-community/nuclide-commons-atom': 'link:../../nuclide/nuclide-commons-atom'
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: /rxjs-compat/6.3.3
       shallowequal: 1.1.0
     specifiers:
       '@atom-ide-community/nuclide-commons': 'workspace:*'
       '@atom-ide-community/nuclide-commons-atom': 'workspace:*'
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
       shallowequal: 1.1.0
   dist-nuclide/nuclide-analytics:
@@ -123,15 +123,15 @@ importers:
       dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
-      fs-plus: 2.9.3
-      glob: 7.1.1
+      fs-plus: 3.1.1
+      glob: 7.1.6
       idx: 1.2.0
       log4js: 1.1.1
       lru-cache: 4.0.2
       mime-types: 2.1.16
       mkdirp: 1.0.4
       mv: 2.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rimraf: 2.6.2
       rxjs: /rxjs-compat/6.3.3
       semver: 5.5.0
@@ -153,8 +153,8 @@ importers:
       dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
-      fs-plus: 2.9.3
-      glob: 7.1.1
+      fs-plus: 3.1.1
+      glob: 7.1.6
       idx: 1.2.0
       invariant: 2.2.2
       jest-retries: 1.0.1
@@ -163,7 +163,7 @@ importers:
       mime-types: 2.1.16
       mkdirp: ^1.0.4
       mv: 2.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rimraf: 2.6.2
       rxjs: 'npm:rxjs-compat@6.3.3'
       semver: 5.5.0
@@ -182,7 +182,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       lru-cache: 4.0.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       redux-logger: 3.0.6
       rxjs: /rxjs-compat/6.3.3
       season: 6.0.2
@@ -200,7 +200,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       lru-cache: 4.0.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       redux-logger: 3.0.6
       rxjs: 'npm:rxjs-compat@6.3.3'
       season: 6.0.2
@@ -225,7 +225,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.21.0
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       react-dom: 16.6.3_react@16.6.3
       react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
@@ -249,7 +249,7 @@ importers:
       lodash: 4.17.20
       log4js: 1.1.1
       moment: 2.21.0
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       react-dom: 16.6.3
       react-virtualized: 9.20.1
@@ -268,7 +268,7 @@ importers:
       idx: 1.2.0
       line-by-line: 0.1.5
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: /rxjs-compat/6.3.3
       v8-compile-cache: 1.1.0
       vscode-debugprotocol: 1.24.0
@@ -290,7 +290,7 @@ importers:
       invariant: 2.2.2
       line-by-line: 0.1.5
       log4js: 1.1.1
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       rxjs: 'npm:rxjs-compat@6.3.3'
       simple-text-buffer: 9.2.11
       v8-compile-cache: 1.1.0
@@ -305,7 +305,7 @@ importers:
       idx: 1.2.0
       immutable: 4.0.0-rc.9
       invariant: 2.2.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       rxjs: /rxjs-compat/6.3.3
       uuid: 3.0.1
@@ -318,7 +318,7 @@ importers:
       idx: 1.2.0
       immutable: 4.0.0-rc.9
       invariant: 2.2.2
-      nullthrows: 1.0.0
+      nullthrows: 1.1.1
       react: 16.6.3
       rxjs: 'npm:rxjs-compat@6.3.3'
       uuid: 3.0.1
@@ -336,7 +336,7 @@ importers:
       nuclide-prebuilt-libs: 0.6.3
   dist-nuclide/nuclide-node-transpiler:
     dependencies:
-      glob: 7.1.1
+      glob: 7.1.6
       mkdirp: 1.0.4
       uuid: 3.0.1
     devDependencies:
@@ -377,7 +377,7 @@ importers:
       babel-plugin-relay: 1.4.1
       babel-plugin-transform-class-properties: 6.24.1
       dedent: 0.7.0
-      glob: 7.1.1
+      glob: 7.1.6
       is-builtin-module: 1.0.0
       jasmine-node: 1.14.5
       mkdirp: ^1.0.4
@@ -429,7 +429,7 @@ importers:
       dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
-      fs-plus: 2.9.3
+      fs-plus: 3.1.1
       glob: 7.1.1
       idx: 1.2.0
       log4js: 1.1.1
@@ -459,7 +459,7 @@ importers:
       dompurify: 2.1.1
       event-kit: 2.2.0
       event-target-shim: 3.0.1
-      fs-plus: 2.9.3
+      fs-plus: 3.1.1
       glob: 7.1.1
       idx: 1.2.0
       invariant: 2.2.2
@@ -3487,10 +3487,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-HiDtMd8A7r3tk6FGlRbwNiExNMY=
-  /async/0.2.10:
-    dev: false
-    resolution:
-      integrity: sha1-trvgsGdLnXGXCMo43owjfLUmw9E=
   /async/1.5.2:
     resolution:
       integrity: sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
@@ -5919,15 +5915,6 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==
-  /fs-plus/2.9.3:
-    dependencies:
-      async: 0.2.10
-      mkdirp: 0.3.5
-      rimraf: 2.2.8
-      underscore-plus: 1.7.0
-    dev: false
-    resolution:
-      integrity: sha1-debXxX5FNklVoc+/xWP8WCDgz/I=
   /fs-plus/3.1.1:
     dependencies:
       async: 1.5.2
@@ -8560,6 +8547,7 @@ packages:
       integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==
   /mkdirp/0.3.5:
     deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+    dev: true
     resolution:
       integrity: sha1-3j5fiWHIjHh+4TaN+EmsRBPsqNc=
   /mkdirp/0.5.5:
@@ -8860,6 +8848,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-NHFeU7nevgdQp3Iz/UlKWDWi2Zk=
+  /nullthrows/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw==
   /number-is-nan/1.0.1:
     engines:
       node: '>=0.10.0'
@@ -10109,11 +10101,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-52OI0heZLCUnUCQdPTlW/tmNj/Q=
-  /rimraf/2.2.8:
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha1-5Dm+Kq7jJzIZUnMPmaiSnk/FBYI=
   /rimraf/2.4.5:
     dependencies:
       glob: 6.0.4
