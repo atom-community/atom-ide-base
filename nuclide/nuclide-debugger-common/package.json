@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-debugger-common",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Provides common Node functionality for the Nuclide debugger",
   "author": "Nuclide : Debugging",
   "license": "BSD-3-Clause",
