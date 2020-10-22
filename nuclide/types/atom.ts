@@ -2191,19 +2191,19 @@ declare class atom$NotificationManager {
 // The items in this declaration are available off of `require('atom')`.
 // This list is not complete.
 declare module 'atom' {
-  declare var BufferedNodeProcess: typeof atom$BufferedNodeProcess;
-  declare var BufferedProcess: typeof atom$BufferedProcess;
-  declare var CompositeDisposable: typeof atom$CompositeDisposable;
-  declare var Directory: typeof atom$Directory;
-  declare var Disposable: typeof atom$Disposable;
-  declare var Emitter: typeof atom$Emitter;
-  declare var File: typeof atom$File;
-  declare var GitRepository: typeof atom$GitRepository;
-  declare var Notification: typeof atom$Notification;
-  declare var Point: typeof atom$Point;
-  declare var Range: typeof atom$Range;
-  declare var TextBuffer: typeof atom$TextBuffer;
-  declare var TextEditor: typeof atom$TextEditor;
+  var BufferedNodeProcess: typeof atom$BufferedNodeProcess;
+  var BufferedProcess: typeof atom$BufferedProcess;
+  var CompositeDisposable: typeof atom$CompositeDisposable;
+  var Directory: typeof atom$Directory;
+  var Disposable: typeof atom$Disposable;
+  var Emitter: typeof atom$Emitter;
+  var File: typeof atom$File;
+  var GitRepository: typeof atom$GitRepository;
+  var Notification: typeof atom$Notification;
+  var Point: typeof atom$Point;
+  var Range: typeof atom$Range;
+  var TextBuffer: typeof atom$TextBuffer;
+  var TextEditor: typeof atom$TextEditor;
 }
 
 // Make sure that common types can be referenced without the `atom$` prefix
