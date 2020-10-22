@@ -21,6 +21,10 @@ type HighlightingChangeEvent = (range: Range) => void
 
 declare module "atom" {
 
+  interface CustomEvent {
+    originalEvent?: Event;
+  }
+
   interface Package {
     activateTime: number;
     mainModule: any;

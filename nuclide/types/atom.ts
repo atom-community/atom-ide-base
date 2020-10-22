@@ -66,9 +66,8 @@ export type atom$Package = Package;
 /**
  * Essential Classes
  */
-declare type atom$CustomEvent = CustomEvent & {
-  originalEvent?: Event;
-};
+import { CustomEvent } from "atom"
+export type atom$CustomEvent = CustomEvent;
 
 type atom$CommandCallback = (event: atom$CustomEvent) => unknown;
 
