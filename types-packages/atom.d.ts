@@ -20,6 +20,12 @@ interface BufferChangeEvent {
 type HighlightingChangeEvent = (range: Range) => void
 
 declare module "atom" {
+  
+  class Model {
+    destroy(): void;
+    isDestroyed(): boolean;
+  }
+
   interface TextEditor {
     // Get the Element for the editor.
     getElement(): TextEditorElement

@@ -57,10 +57,8 @@ type atom$PaneLocation = 'left' | 'right' | 'bottom' | 'center';
 import { Color } from "atom"
 export type atom$Color = Color;
 
-declare class atom$Model {
-  destroy(): void;
-  isDestroyed(): boolean;
-}
+import { Model } from "atom"
+export type atom$Model = Model;
 
 declare class atom$Package {
   path: string;
