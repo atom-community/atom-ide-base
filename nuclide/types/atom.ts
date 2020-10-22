@@ -72,14 +72,8 @@ export type atom$CustomEvent = CustomEvent;
 import { CommandRegistry } from "atom"
 export type atom$CommandRegistry = CommandRegistry;
 
-declare class atom$CompositeDisposable {
-  constructor(...disposables: Array<IDisposable>);
-  dispose(): void;
-
-  add(...disposables: Array<IDisposable>): void;
-  remove(disposable: IDisposable): void;
-  clear(): void;
-}
+import { CompositeDisposable } from "atom"
+export type atom$CompositeDisposable = CompositeDisposable;
 
 type atom$ConfigParams = {
   saveCallback?: (arg0: Object) => void;
