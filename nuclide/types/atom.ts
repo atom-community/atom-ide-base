@@ -54,12 +54,8 @@ type atom$Octicon = 'alert' | 'alignment-align' | 'alignment-aligned-to' | 'alig
 
 type atom$PaneLocation = 'left' | 'right' | 'bottom' | 'center';
 
-declare type atom$Color = {
-  // Returns a String in the form '#abcdef'.
-  toHexString(): string;
-  // Returns a String in the form 'rgba(25, 50, 75, .9)'.
-  toRGBAString(): string;
-};
+import { Color } from "atom"
+export type atom$Color = Color;
 
 declare class atom$Model {
   destroy(): void;
