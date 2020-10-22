@@ -20,7 +20,56 @@ interface BufferChangeEvent {
 type HighlightingChangeEvent = (range: Range) => void
 
 declare module "atom" {
-  
+
+  interface ConfigParams {
+    saveCallback?: (arg0: Object) => void;
+    mainSource?: string;
+    projectHomeSchema?: ConfigSchema;
+  }
+
+  type ConfigType =
+    | 'boolean'
+    | 'string'
+    | 'integer'
+    | 'number'
+    | 'array'
+    | 'object'
+    | 'color'
+    | 'any';
+
+  interface ConfigSchema {
+    default?: unknown;
+    description?: string;
+    enum?: Array<string | {value: string; description: string}>;
+    maximum?: number;
+    minimum?: number;
+    properties?: Object;
+    title?: string;
+    type: Array<ConfigType> | ConfigType;
+  }
+
+  interface Config {
+    defaultSettings: Object;
+    settings: Object;
+
+    constructor(params?: ConfigParams): Config;
+    getRawValue(
+      keyPath: string | null | undefined,
+      options: {excludeSources?: string; sources?: string},
+    ): unknown;
+    getSchema(keyPath: string): ConfigSchema | null;
+    save(): void;
+    setRawValue(keyPath: string, value: unknown): void;
+    setSchema(keyPath: string, schema: ConfigSchema): void;
+    removeAtKeyPath(
+      keyPath: string | null | undefined,
+      value: unknown | null | undefined,
+    ): unknown;
+
+    // Used to set the initial settings from disk
+    resetUserSettings(newSettings: Object, options?: {source?: string}): void;
+  }
+
   type CommandRegistryListener_Extra = {
     name: string;
     tags?: Array<string>;
