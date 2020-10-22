@@ -69,41 +69,8 @@ export type atom$Package = Package;
 import { CustomEvent } from "atom"
 export type atom$CustomEvent = CustomEvent;
 
-type atom$CommandCallback = (event: atom$CustomEvent) => unknown;
-
-type atom$CommandDescriptor = {
-  name: string;
-  displayName: string;
-  description?: string;
-  hiddenInCommandPalette?: boolean;
-  tags?: Array<string>;
-};
-
-type atom$CommandListener =
-  | atom$CommandCallback
-  | {
-      displayName?: string;
-      description?: string;
-      didDispatch: atom$CommandCallback;
-    };
-
-declare class atom$CommandRegistry {
-  // Methods
-  add(
-    target: string | HTMLElement,
-    commandNameOrCommands:
-      | string
-      | {
-          [commandName: string]: atom$CommandListener;
-        },
-    listener?: atom$CommandListener,
-    throwOnInvalidSelector?: boolean,
-  ): IDisposable;
-  dispatch(target: HTMLElement, commandName: string, detail?: Object): void;
-  onDidDispatch(callback: (event: atom$CustomEvent) => unknown): IDisposable;
-  onWillDispatch(callback: (event: atom$CustomEvent) => unknown): IDisposable;
-  findCommands(opts: {target: Node}): Array<atom$CommandDescriptor>;
-}
+import { CommandRegistry } from "atom"
+export type atom$CommandRegistry = CommandRegistry;
 
 declare class atom$CompositeDisposable {
   constructor(...disposables: Array<IDisposable>);

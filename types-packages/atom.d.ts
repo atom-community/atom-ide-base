@@ -20,6 +20,11 @@ interface BufferChangeEvent {
 type HighlightingChangeEvent = (range: Range) => void
 
 declare module "atom" {
+  
+  type CommandRegistryListener_Extra = {
+    name: string;
+    tags?: Array<string>;
+  }
 
   interface CustomEvent {
     originalEvent?: Event;
