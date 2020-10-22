@@ -2576,3 +2576,9 @@ declare interface net$ListenOptions {
   path?: string;
   exclusive?: boolean;
 }
+
+declare module 'event-kit' {
+  var Emitter: typeof atom$Emitter;
+  var Disposable: typeof atom$Disposable;
+  var CompositeDisposable: typeof atom$CompositeDisposable;
+}
