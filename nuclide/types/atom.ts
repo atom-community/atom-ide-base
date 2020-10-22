@@ -2464,3 +2464,115 @@ declare class atom$PanelContainer {
 
   getPanels(): Array<atom$Panel>;
 }
+
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the license found in the LICENSE file in
+ * the root directory of this source tree.
+ *
+ * @flow
+ */
+
+/*
+ * APIs listed in this file are ones that should be built into Flow and need to be upstreamed.
+ */
+type IDisposable = {
+  dispose(): unknown;
+};
+
+/*
+ * These Notification & NotificationOptions definitions are not exhaustive while standardization,
+ * browser, and Electron support remain incomplete.
+ */
+type NotificationOptions = {
+  body?: string;
+  icon?: string;
+};
+
+declare class Notification {
+  constructor(message: string, options?: NotificationOptions);
+  onclick: () => void;
+}
+
+// T9254051 - Fix flow http/https definitions.
+declare class http$fixed$Server extends events$EventEmitter {
+  listen(
+    port: number,
+    hostname?: string,
+    backlog?: number,
+    callback?: Function,
+  ): http$fixed$Server;
+  listen(path: string, callback?: Function): http$fixed$Server;
+  listen(handle: Object, callback?: Function): http$fixed$Server;
+  close(callback?: Function): http$fixed$Server;
+  address(): {port: number; fmaily: string; address: string};
+  maxHeadersCount: number;
+}
+
+declare class http$fixed$IncomingMessage extends stream$Readable {
+  headers: Object;
+  httpVersion: string;
+  method: string;
+  trailers: Object;
+  setTimeout(msecs: number, callback: Function): void;
+  socket: any; // TODO net.Socket
+  statusCode: number;
+  url: string;
+  connection: {destroy: () => void};
+}
+
+declare class http$fixed$ClientRequest extends stream$Writable {}
+
+declare class http$fixed$ServerResponse {
+  setHeader(name: string, value: string): void;
+  statusCode: number;
+  write(value: string): void;
+  end(): void;
+}
+
+declare class https$fixed {
+  Server: typeof http$fixed$Server;
+  createServer(
+    options: Object,
+    requestListener?: (
+      request: http$fixed$IncomingMessage,
+      response: http$fixed$ServerResponse,
+    ) => void,
+  ): http$fixed$Server;
+  request(
+    options: Object | string,
+    callback: (response: http$fixed$IncomingMessage) => void,
+  ): http$fixed$ClientRequest;
+  get(
+    options: Object | string,
+    callback: (response: http$fixed$IncomingMessage) => void,
+  ): http$fixed$ClientRequest;
+}
+
+declare class http$fixed {
+  Server: typeof http$fixed$Server;
+  createServer(
+    requestListener?: (
+      request: http$fixed$IncomingMessage,
+      response: http$fixed$ServerResponse,
+    ) => void,
+  ): http$fixed$Server;
+  request(
+    options: Object | string,
+    callback: (response: http$fixed$IncomingMessage) => void,
+  ): http$fixed$ClientRequest;
+  get(
+    options: Object | string,
+    callback: (response: http$fixed$IncomingMessage) => void,
+  ): http$fixed$ClientRequest;
+}
+
+declare interface net$ListenOptions {
+  port?: number;
+  host?: string;
+  backlog?: number;
+  path?: string;
+  exclusive?: boolean;
+}
