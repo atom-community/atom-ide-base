@@ -20,7 +20,26 @@ interface BufferChangeEvent {
 type HighlightingChangeEvent = (range: Range) => void
 
 declare module "atom" {
-  
+
+  interface Package {
+    activateTime: number;
+    mainModule: any;
+    mainModulePath: string;
+    metadata: Object;
+    loadTime: number;
+    getType(): 'atom' | 'textmate' | 'theme';
+    hasActivationCommands(): boolean;
+    hasActivationHooks(): boolean;
+    initializeTime: number;
+    getActivationHooks(): Array<string>;
+    onDidDeactivate(cb: () => unknown): Disposable;
+    activateNow(): void;
+    // Undocumented
+    bundledPackage: boolean;
+    getCanDeferMainModuleRequireStorageKey(): string;
+    initializeIfNeeded(): void;
+  }
+
   class Model {
     destroy(): void;
     isDestroyed(): boolean;

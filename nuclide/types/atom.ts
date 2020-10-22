@@ -60,26 +60,8 @@ export type atom$Color = Color;
 import { Model } from "atom"
 export type atom$Model = Model;
 
-declare class atom$Package {
-  path: string;
-  activateTime: number;
-  mainModule: any;
-  mainModulePath: string;
-  metadata: Object;
-  name: string;
-  loadTime: number;
-  getType(): 'atom' | 'textmate' | 'theme';
-  hasActivationCommands(): boolean;
-  hasActivationHooks(): boolean;
-  initializeTime: number;
-  getActivationHooks(): Array<string>;
-  onDidDeactivate(cb: () => unknown): IDisposable;
-  activateNow(): void;
-  // Undocumented
-  bundledPackage: boolean;
-  getCanDeferMainModuleRequireStorageKey(): string;
-  initializeIfNeeded(): void;
-}
+import { Package } from "atom"
+export type atom$Package = Package;
 
 /**
  * Essential Classes
