@@ -78,43 +78,8 @@ export type atom$CompositeDisposable = CompositeDisposable;
 import { Config } from "atom"
 export type atom$Config = Config;
 
-
-declare class atom$Cursor {
-  // Cursor Marker
-  marker: atom$Marker;
-  editor: atom$TextEditor;
-
-  // Event Subscription
-  onDidChangePosition(
-    callback: (event: {
-      oldBufferPosition: atom$Point;
-      oldScreenPosition: atom$Point;
-      newBufferPosition: atom$Point;
-      newScreenPosition: atom$Point;
-      textChanged: boolean;
-      Cursor: atom$Cursor;
-    }) => unknown,
-  ): IDisposable;
-
-  // Managing Cursor Position
-  getBufferRow(): number;
-  getBufferColumn(): number;
-  getBufferPosition(): atom$Point;
-
-  // Cursor Position Details
-  // Moving the Cursor
-  moveUp(rowCount: number, arg1: {moveToEndOfSelection?: boolean}): void;
-  moveDown(rowCount: number, arg1: {moveToEndOfSelection?: boolean}): void;
-
-  // Local Positions and Ranges
-  getCurrentWordBufferRange(options?: {wordRegex: RegExp}): atom$Range;
-  getCurrentWordPrefix(): string;
-
-  // Visibility
-  // Comparing to another cursor
-  // Utilities
-  wordRegExp(options?: {includeNonWordCharacters: boolean}): RegExp;
-}
+import { Cursor } from "atom"
+export type atom$Cursor = Cursor;
 
 declare class atom$Decoration {
   destroy(): void;

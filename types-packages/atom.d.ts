@@ -70,6 +70,12 @@ declare module "atom" {
     resetUserSettings(newSettings: Object, options?: {source?: string}): void;
   }
 
+  interface Cursor {
+    // Cursor Marker
+    marker: Marker;
+    editor: TextEditor;
+  }
+
   type CommandRegistryListener_Extra = {
     name: string;
     tags?: Array<string>;
