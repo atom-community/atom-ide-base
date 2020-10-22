@@ -2188,24 +2188,6 @@ declare class atom$NotificationManager {
   getNotifications(): Array<atom$Notification>;
 }
 
-// The items in this declaration are available off of `require('atom')`.
-// This list is not complete.
-declare module 'atom' {
-  var BufferedNodeProcess: typeof atom$BufferedNodeProcess;
-  var BufferedProcess: typeof atom$BufferedProcess;
-  var CompositeDisposable: typeof atom$CompositeDisposable;
-  var Directory: typeof atom$Directory;
-  var Disposable: typeof atom$Disposable;
-  var Emitter: typeof atom$Emitter;
-  var File: typeof atom$File;
-  var GitRepository: typeof atom$GitRepository;
-  var Notification: typeof atom$Notification;
-  var Point: typeof atom$Point;
-  var Range: typeof atom$Range;
-  var TextBuffer: typeof atom$TextBuffer;
-  var TextEditor: typeof atom$TextEditor;
-}
-
 // Make sure that common types can be referenced without the `atom$` prefix
 // in type declarations.
 declare var Cursor: typeof atom$Cursor;
