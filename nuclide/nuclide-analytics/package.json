@@ -1,7 +1,7 @@
 {
   "name": "@atom-ide-community/nuclide-analytics",
   "main": "./lib/main.js",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Provides a standard API for packages to send analytics to arbitrary providers.",
   "author": "NEEDS OWNER",
   "license": "BSD-3-Clause",

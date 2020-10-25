@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-node-transpiler",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Transpiles JavaScript files",
   "author": "NEEDS OWNER",
   "main": "./lib/main.js",

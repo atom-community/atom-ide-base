@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-adb",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "main": "./lib/main.js",
   "description": "Adb Service for Nuclide & Atom IDE.",
   "author": "NEEDS OWNER",
