@@ -46,6 +46,7 @@ importers:
       shx: 0.3.2
       tslib: 2.0.2
       typescript: 4.0.3
+      veza: 1.1.0
     specifiers:
       '@babel/cli': 7.11.6
       '@babel/core': 7.11.6
@@ -91,6 +92,7 @@ importers:
       shx: 0.3.2
       tslib: ^2.0.2
       typescript: ^4.0.3
+      veza: ^1.1.0
   dist-nuclide/nuclide-adb:
     dependencies:
       '@atom-ide-community/nuclide-commons': 'link:../../nuclide/nuclide-commons'
@@ -703,7 +705,7 @@ importers:
       fb-watchman: 2.0.1
       log4js: 1.1.1
       rxjs-compat: ^6.3.3
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@babel/cli/7.11.6_@babel+core@7.11.6:
     dependencies:
@@ -2408,7 +2410,7 @@ packages:
       jest-haste-map: 26.5.2
       jest-message-util: 26.5.2
       jest-regex-util: 26.0.0
-      jest-resolve: 26.5.2_jest-resolve@26.5.2
+      jest-resolve: 26.5.2
       jest-resolve-dependencies: 26.5.3
       jest-runner: 26.5.3
       jest-runtime: 26.5.3
@@ -2499,7 +2501,7 @@ packages:
       istanbul-lib-source-maps: 4.0.0
       istanbul-reports: 3.0.2
       jest-haste-map: 26.5.2
-      jest-resolve: 26.5.2_jest-resolve@26.5.2
+      jest-resolve: 26.5.2
       jest-util: 26.5.2
       jest-worker: 26.5.0
       slash: 3.0.0
@@ -3896,6 +3898,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-1Yj8h9Q+QDF5FzhMs/c9+6UntbD5MkRfRwac8DoEm9ZfUBZ7tZ55YcGVAzEe4bXsdQHEk+s9S5wsOKVdZrw0tQ==
+  /binarytf/2.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-CS0MvijAFAHBBw4LgIHBP7wzdW3KWEB0KeMjblK0rHOyyhnkoMu3puW7uhJXlnS5WDn5M2XQFaQBtw00FwRfcA==
   /bindings/1.5.0:
     dependencies:
       file-uri-to-path: 1.0.0
@@ -7113,7 +7119,7 @@ packages:
       jest-get-type: 26.3.0
       jest-jasmine2: 26.5.3
       jest-regex-util: 26.0.0
-      jest-resolve: 26.5.2_jest-resolve@26.5.2
+      jest-resolve: 26.5.2
       jest-util: 26.5.2
       jest-validate: 26.5.3
       micromatch: 4.0.2
@@ -7363,7 +7369,7 @@ packages:
       integrity: sha512-9SiU4b5PtO51v0MtJwVRqeGEroH66Bnwtq4ARdNP7jNXbpT7+ByeWNAk4NeT/uHfNSVDXEXgQo1XRuwEqS6Rdw==
   /jest-pnp-resolver/1.2.2_jest-resolve@24.9.0:
     dependencies:
-      jest-resolve: 24.9.0_jest-resolve@24.9.0
+      jest-resolve: 24.9.0
     dev: true
     engines:
       node: '>=6'
@@ -7376,7 +7382,7 @@ packages:
       integrity: sha512-olV41bKSMm8BdnuMsewT4jqlZ8+3TCARAXjZGT9jcoSnrfUnRCqnMoF9XEeoWjbzObpqF9dRhHQj0Xb9QdF6/w==
   /jest-pnp-resolver/1.2.2_jest-resolve@26.5.2:
     dependencies:
-      jest-resolve: 26.5.2_jest-resolve@26.5.2
+      jest-resolve: 26.5.2
     dev: true
     engines:
       node: '>=6'
@@ -7409,7 +7415,7 @@ packages:
       node: '>= 10.14.2'
     resolution:
       integrity: sha512-+KMDeke/BFK+mIQ2IYSyBz010h7zQaVt4Xie6cLqUGChorx66vVeQVv4ErNoMwInnyYHi1Ud73tDS01UbXbfLQ==
-  /jest-resolve/24.9.0_jest-resolve@24.9.0:
+  /jest-resolve/24.9.0:
     dependencies:
       '@jest/types': 24.9.0
       browser-resolve: 1.11.3
@@ -7419,11 +7425,9 @@ packages:
     dev: true
     engines:
       node: '>= 6'
-    peerDependencies:
-      jest-resolve: '*'
     resolution:
       integrity: sha512-TaLeLVL1l08YFZAt3zaPtjiVvyy4oSA6CRe+0AFPPVX3Q/VI0giIWWoAvoS5L96vj9Dqxj4fB5p2qrHCmTU/MQ==
-  /jest-resolve/26.5.2_jest-resolve@26.5.2:
+  /jest-resolve/26.5.2:
     dependencies:
       '@jest/types': 26.5.2
       chalk: 4.1.0
@@ -7436,8 +7440,6 @@ packages:
     dev: true
     engines:
       node: '>= 10.14.2'
-    peerDependencies:
-      jest-resolve: '*'
     resolution:
       integrity: sha512-XsPxojXGRA0CoDD7Vis59ucz2p3cQFU5C+19tz3tLEAlhYKkK77IL0cjYjikY9wXnOaBeEdm1rOgSJjbZWpcZg==
   /jest-retries/1.0.1:
@@ -7460,7 +7462,7 @@ packages:
       jest-haste-map: 26.5.2
       jest-leak-detector: 26.5.2
       jest-message-util: 26.5.2
-      jest-resolve: 26.5.2_jest-resolve@26.5.2
+      jest-resolve: 26.5.2
       jest-runtime: 26.5.3
       jest-util: 26.5.2
       jest-worker: 26.5.0
@@ -7492,7 +7494,7 @@ packages:
       jest-message-util: 26.5.2
       jest-mock: 26.5.2
       jest-regex-util: 26.0.0
-      jest-resolve: 26.5.2_jest-resolve@26.5.2
+      jest-resolve: 26.5.2
       jest-snapshot: 26.5.3
       jest-util: 26.5.2
       jest-validate: 26.5.3
@@ -7530,7 +7532,7 @@ packages:
       jest-get-type: 24.9.0
       jest-matcher-utils: 24.9.0
       jest-message-util: 24.9.0
-      jest-resolve: 24.9.0_jest-resolve@24.9.0
+      jest-resolve: 24.9.0
       mkdirp: 0.5.5
       natural-compare: 1.4.0
       pretty-format: 24.9.0
@@ -7554,7 +7556,7 @@ packages:
       jest-haste-map: 26.5.2
       jest-matcher-utils: 26.5.2
       jest-message-util: 26.5.2
-      jest-resolve: 26.5.2_jest-resolve@26.5.2
+      jest-resolve: 26.5.2
       natural-compare: 1.4.0
       pretty-format: 26.5.2
       semver: 7.3.2
@@ -11369,6 +11371,12 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=
+  /veza/1.1.0:
+    dependencies:
+      binarytf: 2.0.0
+    dev: true
+    resolution:
+      integrity: sha512-JxDVZZXwFJ+FxsX+kPdsjRK9XZdwayEYzPsPLxpZjzzgncWphjvMlzn8ioVAgeonZ/Aa7vEZOb4Hp13ergwybA==
   /vscode-debugprotocol/1.24.0:
     dev: false
     resolution:

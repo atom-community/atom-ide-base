@@ -13,9 +13,9 @@
 /* eslint-disable nuclide-internal/prefer-nuclide-uri */
 
 import type {TestResult, ProjectConfig, GlobalConfig} from './types';
-export opaque type IPCID = string; // server id and worker id merged into one string
-export opaque type WorkerID = string;
-export opaque type ServerID = string;
+export type IPCID = string; // server id and worker id merged into one string
+export type WorkerID = string;
+export type ServerID = string;
 
 import path from 'path';
 import {formatExecError} from 'jest-message-util';
