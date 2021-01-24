@@ -114,7 +114,7 @@
     "@jest-runner/nuclide-e2e": "^2.0",
     "babel-jest": "^26.5.2",
     "mkdirp": "1.0.4",
-    "node-ipc": "9.1.1"
+    "node-ipc": "9.1.3"
   },
   "providedServices": {},
   "consumedServices": {},
