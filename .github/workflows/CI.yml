@@ -90,7 +90,7 @@ jobs:
 
       - name: Run macos tests 👩🏾‍💻
         if: startsWith(matrix.os,'macos')
-        uses: nick-invision/retry@v2  # macOS flaky tests sometimes need retries
+        uses: nick-invision/retry@v2 # macOS flaky tests sometimes need retries
         with:
           timeout_minutes: 10
           max_attempts: 3
@@ -101,7 +101,7 @@ jobs:
 
       - name: Run Windows tests 👩🏾‍💻
         if: startsWith(matrix.os,'windows')
-        continue-on-error: true  # 11 of the windows tests fail
+        continue-on-error: true # 11 of the windows tests fail
         run: |
           pnpm test.nuclide.node
           # pnpm test.nuclide.atom
@@ -139,7 +139,6 @@ jobs:
   #       run: npm install
   #     - name: Build and Commit
   #       run: npm run build-commit
-
 
   Skip:
     if: contains(github.event.head_commit.message, '[skip ci]')

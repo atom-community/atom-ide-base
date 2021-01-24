@@ -8,5 +8,5 @@ export default createRunner({
   timeReporter: true,
   silentInstallation: true,
   // Extra Packages
-  specHelper: true
+  specHelper: true,
 })

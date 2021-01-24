@@ -6,6 +6,7 @@ coverage
 build
 
 nuclide
+dist-nuclide
 
 commons-atom
 commons
