@@ -2,8 +2,8 @@ import * as Atom from "atom"
 
 export interface DatatipService {
   addProvider(provider: DatatipProvider): Atom.DisposableLike
-  addModifierProvider(provider: ModifierDatatipProvider): Atom.DisposableLike
-  createPinnedDataTip(datatip: Datatip, editor: Atom.TextEditor, options?: PinnedDatatipOptions): Atom.DisposableLike
+  addModifierProvider?(provider: ModifierDatatipProvider): Atom.DisposableLike
+  createPinnedDataTip?(datatip: Datatip, editor: Atom.TextEditor, options?: PinnedDatatipOptions): Atom.DisposableLike
 }
 
 export interface PinnedDatatipOptions {
