@@ -24,7 +24,6 @@ importers:
       babel-jest: 26.5.2_@babel+core@7.12.10
       babel-preset-atomic: 3.0.1_94179255a7638ecc93ab56a09da1cb14
       build-commit: 0.1.4
-      coffeescript: 1.12.7
       cross-env: 7.0.3
       csstype: 3.0.3
       eslint: 7.18.0
@@ -62,7 +61,6 @@ importers:
       babel-preset-atomic: ^3.0.1
       build-commit: 0.1.4
       classnames: ^2.2.6
-      coffeescript: ^1.12.7
       cross-env: 7.0.3
       csstype: ^3.0.3
       dompurify: ^2.1.1
