@@ -1,5 +1,7 @@
-// atom-ide
-// https://github.com/atom-ide-community/atom-ide-base
+/**
+ * @file atom-ide
+ * @see https://github.com/atom-ide-community/atom-ide-base
+ */
 
 export * from "./busy-signal"
 export * from "./code-actions"
@@ -23,9 +25,13 @@ import { OutlineProvider } from "./outline"
 import { SignatureHelpProvider } from "./sig-help"
 
 export interface ProviderCommon {
-  // Providers with higher priorities will be preferred over lower ones.
+  /**
+   * Providers with higher priorities will be preferred over lower ones.
+   */
   priority: number
-  // Omitting grammarScopes implies that the provider applies to all grammars.
+  /**
+   * Omitting grammarScopes implies that the provider applies to all grammars.
+   */
   grammarScopes?: Array<string>
 }
 
