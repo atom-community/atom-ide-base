@@ -7,9 +7,13 @@ export interface DatatipService {
 }
 
 export interface PinnedDatatipOptions {
-  // Defaults to 'end-of-line'.
+  /**
+   * Defaults to 'end-of-line'.
+   */
   position?: PinnedDatatipPosition
-  // Defaults to true.
+  /**
+   * Defaults to true.
+   */
   showRangeHighlight?: boolean
 }
 
@@ -18,8 +22,10 @@ export type PinnedDatatipPosition = "end-of-line" | "above-range"
 export interface DatatipProvider {
   priority: number
   grammarScopes?: ReadonlyArray<string>
-  // A unique name for the provider to be used for analytics.
-  // It is recommended that it be the name of the provider's package.
+  /**
+   * A unique name for the provider to be used for analytics.
+   * It is recommended that it be the name of the provider's package.
+   */
   providerName: string
   datatip(editor: Atom.TextEditor, bufferPosition: Atom.Point): Promise<Datatip | undefined | null>
 }
@@ -37,7 +43,9 @@ export interface ModifierDatatipProvider {
 
 export type AnyDatatipProvider = DatatipProvider | ModifierDatatipProvider
 
-// Borrowed from the LSP API.
+/**
+ * Borrowed from the LSP API.
+ */
 export interface MarkdownMarkedString {
   type: "markdown"
   value: string
@@ -58,7 +66,10 @@ export interface MarkedStringDatatip {
 }
 
 export interface ReactComponentDatatip {
-  component: () => JSX.Element // React component
+  /**
+   * React component
+   */
+  component: () => JSX.Element
   range: Atom.Range
   pinnable?: boolean
 }
