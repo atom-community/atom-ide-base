@@ -2,10 +2,10 @@
 
 Atom IDE packages for Atom
 
-![Build Status (Github Actions)](https://github.com/atom-ide-community/atom-ide-base/workflows/CI/badge.svg)
-[![Dependency Status](https://david-dm.org/atom-ide-community/atom-ide-base.svg)](https://david-dm.org/atom-ide-community/atom-ide-base)
-[![apm](https://img.shields.io/apm/dm/atom-ide-base.svg)](https://github.com/atom-ide-community/atom-ide-base)
-[![apm](https://img.shields.io/apm/v/atom-ide-base.svg)](https://github.com/atom-ide-community/atom-ide-base)
+![Build Status (Github Actions)](https://github.com/atom-community/atom-ide-base/workflows/CI/badge.svg)
+[![Dependency Status](https://david-dm.org/atom-community/atom-ide-base.svg)](https://david-dm.org/atom-community/atom-ide-base)
+[![apm](https://img.shields.io/apm/dm/atom-ide-base.svg)](https://github.com/atom-community/atom-ide-base)
+[![apm](https://img.shields.io/apm/v/atom-ide-base.svg)](https://github.com/atom-community/atom-ide-base)
 
 ## Features
 

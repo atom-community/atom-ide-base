@@ -14,14 +14,14 @@
     "types-packages",
     "tsconfig.json"
   ],
-  "author": "atom-ide-community",
+  "author": "atom-community",
   "description": "Atom IDE packages for Atom",
   "keywords": [
     "atom",
     "ide",
-    "atom-ide-community"
+    "atom-community"
   ],
-  "repository": "https://github.com/atom-ide-community/atom-ide-base",
+  "repository": "https://github.com/atom-community/atom-ide-base",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write .",
