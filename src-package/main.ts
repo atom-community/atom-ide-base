@@ -4,9 +4,8 @@ let subscriptions: CompositeDisposable | null
 
 /**
  * called by Atom when activating an extension
- * @param  {any} state the current state of atom
  */
-export function activate(state: any) {
+export function activate() {
   // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
   subscriptions = new CompositeDisposable()
 
