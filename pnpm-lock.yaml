@@ -85,6 +85,312 @@ importers:
       rxjs: ^6.6.3
       shx: 0.3.3
       typescript: ^4.1.3
+  dist-nuclide/nuclide-adb:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': link:../../nuclide/nuclide-commons-atom
+      log4js: 1.1.1
+      nullthrows: 1.1.1
+      rxjs-compat: 6.3.3
+      shallowequal: 1.1.0
+    specifiers:
+      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons-atom': workspace:*
+      log4js: 1.1.1
+      nullthrows: 1.1.1
+      rxjs-compat: ^6.3.3
+      shallowequal: 1.1.0
+  dist-nuclide/nuclide-analytics:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      log4js: 1.1.1
+      rxjs: /rxjs-compat/6.3.3
+    specifiers:
+      '@atom-ide-community/nuclide-commons': workspace:*
+      log4js: 1.1.1
+      rxjs: npm:rxjs-compat@6.3.3
+  dist-nuclide/nuclide-commons:
+    dependencies:
+      '@atom-ide-community/nuclide-node-transpiler': link:../../nuclide/nuclide-node-transpiler
+      cr: 0.1.0
+      domexception: 1.0.1
+      dompurify: 2.1.1
+      event-kit: 2.2.0
+      event-target-shim: 3.0.1
+      fs-plus: 3.1.1
+      glob: 7.1.6
+      idx: 1.2.0
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      mime-types: 2.1.27
+      mkdirp: 1.0.4
+      mv: 2.1.1
+      nullthrows: 1.1.1
+      rimraf: 3.0.2
+      rxjs-compat: 6.3.3
+      semver: 5.5.0
+      shell-quote: 1.6.1
+      temp: 0.9.1
+      uuid: 3.0.1
+      vscode-jsonrpc: 3.3.0
+      vscode-uri: 1.0.1
+    devDependencies:
+      dedent: 0.7.0
+      invariant: /@react-dnd/invariant/2.0.0
+      jest-retries: 1.0.1
+      simple-text-buffer: 9.2.11
+    specifiers:
+      '@atom-ide-community/nuclide-node-transpiler': workspace:*
+      cr: 0.1.0
+      dedent: 0.7.0
+      domexception: 1.0.1
+      dompurify: 2.1.1
+      event-kit: 2.2.0
+      event-target-shim: 3.0.1
+      fs-plus: 3.1.1
+      glob: 7.1.6
+      idx: 1.2.0
+      invariant: npm:@react-dnd/invariant@^2.0.0
+      jest-retries: 1.0.1
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      mime-types: 2.1.27
+      mkdirp: ^1.0.4
+      mv: 2.1.1
+      nullthrows: 1.1.1
+      rimraf: 3.0.2
+      rxjs-compat: ^6.3.3
+      semver: 5.5.0
+      shell-quote: 1.6.1
+      simple-text-buffer: 9.2.11
+      temp: 0.9.1
+      uuid: 3.0.1
+      vscode-jsonrpc: 3.3.0
+      vscode-uri: 1.0.1
+  dist-nuclide/nuclide-commons-atom:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      escape-string-regexp: 1.0.5
+      idb-keyval: 2.3.0
+      idx: 1.2.0
+      lodash: 4.17.20
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      nullthrows: 1.1.1
+      redux-logger: 3.0.6
+      rxjs-compat: 6.3.3
+      season: 6.0.2
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      toml: 2.3.3
+      vscode-jsonrpc: 3.3.0
+    devDependencies:
+      temp: 0.9.1
+    specifiers:
+      '@atom-ide-community/nuclide-commons': workspace:*
+      escape-string-regexp: 1.0.5
+      idb-keyval: 2.3.0
+      idx: 1.2.0
+      lodash: 4.17.20
+      log4js: 1.1.1
+      lru-cache: 4.0.2
+      nullthrows: 1.1.1
+      redux-logger: 3.0.6
+      rxjs-compat: ^6.3.3
+      season: 6.0.2
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      temp: 0.9.1
+      toml: 2.3.3
+      vscode-jsonrpc: 3.3.0
+  dist-nuclide/nuclide-commons-ui:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': link:../../nuclide/nuclide-commons-atom
+      anser: 1.4.6
+      classnames: 2.2.6
+      dedent: 0.7.0
+      diffparser: 1.1.0
+      escape-carriage: 1.3.0
+      escape-html: 1.0.3
+      escape-string-regexp: 1.0.5
+      idx: 1.2.0
+      invariant: /@react-dnd/invariant/2.0.0
+      lodash: 4.17.20
+      log4js: 1.1.1
+      moment: 2.29.1
+      nullthrows: 1.1.1
+      react: 16.6.3
+      react-dom: 16.6.3_react@16.6.3
+      react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
+      rxjs-compat: 6.3.3
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      tabbable: 1.1.0
+      tiny-date-picker: 3.2.8
+    specifiers:
+      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons-atom': workspace:*
+      anser: 1.4.6
+      classnames: 2.2.6
+      dedent: 0.7.0
+      diffparser: 1.1.0
+      escape-carriage: 1.3.0
+      escape-html: 1.0.3
+      escape-string-regexp: 1.0.5
+      idx: 1.2.0
+      invariant: npm:@react-dnd/invariant@^2.0.0
+      lodash: 4.17.20
+      log4js: 1.1.1
+      moment: 2.29.1
+      nullthrows: 1.1.1
+      react: 16.6.3
+      react-dom: 16.6.3
+      react-virtualized: 9.20.1
+      rxjs-compat: ^6.3.3
+      semver: 5.5.0
+      shallowequal: 1.1.0
+      tabbable: 1.1.0
+      tiny-date-picker: 3.2.8
+  dist-nuclide/nuclide-debugger-cli:
+    dependencies:
+      '@atom-ide-community/nuclide-analytics': link:../../nuclide/nuclide-analytics
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-debugger-common': link:../../nuclide/nuclide-debugger-common
+      async-to-generator: 1.1.0
+      blessed: 0.1.81
+      idx: 1.2.0
+      line-by-line: 0.1.6
+      log4js: 1.1.1
+      nullthrows: 1.1.1
+      rxjs-compat: 6.3.3
+      v8-compile-cache: 1.1.0
+      vscode-debugprotocol: 1.24.0
+      yargs: 3.32.0
+    devDependencies:
+      '@atom-ide-community/nuclide-node-transpiler': link:../../nuclide/nuclide-node-transpiler
+      dedent: 0.7.0
+      invariant: /@react-dnd/invariant/2.0.0
+      simple-text-buffer: 9.2.11
+    specifiers:
+      '@atom-ide-community/nuclide-analytics': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-debugger-common': workspace:*
+      '@atom-ide-community/nuclide-node-transpiler': workspace:*
+      async-to-generator: 1.1.0
+      blessed: 0.1.81
+      dedent: 0.7.0
+      idx: 1.2.0
+      invariant: npm:@react-dnd/invariant@^2.0.0
+      line-by-line: 0.1.6
+      log4js: 1.1.1
+      nullthrows: 1.1.1
+      rxjs-compat: ^6.3.3
+      simple-text-buffer: 9.2.11
+      v8-compile-cache: 1.1.0
+      vscode-debugprotocol: 1.24.0
+      yargs: 3.32.0
+  dist-nuclide/nuclide-debugger-common:
+    dependencies:
+      '@atom-ide-community/nuclide-adb': link:../../nuclide/nuclide-adb
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': link:../../nuclide/nuclide-commons-atom
+      '@atom-ide-community/nuclide-commons-ui': link:../../nuclide/nuclide-commons-ui
+      idx: 1.2.0
+      immutable: 4.0.0-rc.12
+      invariant: /@react-dnd/invariant/2.0.0
+      nullthrows: 1.1.1
+      react: 16.6.3
+      rxjs-compat: 6.3.3
+      uuid: 3.0.1
+      vscode-debugprotocol: 1.24.0
+    specifiers:
+      '@atom-ide-community/nuclide-adb': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons-atom': workspace:*
+      '@atom-ide-community/nuclide-commons-ui': workspace:*
+      idx: 1.2.0
+      immutable: 4.0.0-rc.12
+      invariant: npm:@react-dnd/invariant@^2.0.0
+      nullthrows: 1.1.1
+      react: 16.6.3
+      rxjs-compat: ^6.3.3
+      uuid: 3.0.1
+      vscode-debugprotocol: 1.24.0
+  dist-nuclide/nuclide-fuzzy-native:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      heap: 0.2.6
+      log4js: 1.1.1
+      nuclide-prebuilt-libs: 0.6.3
+    specifiers:
+      '@atom-ide-community/nuclide-commons': workspace:*
+      heap: 0.2.6
+      log4js: 1.1.1
+      nuclide-prebuilt-libs: 0.6.3
+  dist-nuclide/nuclide-node-transpiler:
+    dependencies:
+      glob: 7.1.6
+      mkdirp: 1.0.4
+      uuid: 3.0.1
+    devDependencies:
+      '@babel/core': 7.12.3
+      '@babel/plugin-proposal-nullish-coalescing-operator': 7.12.1_@babel+core@7.12.3
+      '@babel/plugin-proposal-object-rest-spread': 7.12.1_@babel+core@7.12.3
+      '@babel/plugin-proposal-optional-chaining': 7.12.1_@babel+core@7.12.3
+      '@babel/plugin-transform-flow-strip-types': 7.12.1_@babel+core@7.12.3
+      '@babel/plugin-transform-modules-commonjs': 7.12.1_@babel+core@7.12.3
+      '@babel/plugin-transform-react-display-name': 7.12.1_@babel+core@7.12.3
+      '@babel/plugin-transform-react-jsx': 7.12.1_@babel+core@7.12.3
+      '@babel/plugin-transform-strict-mode': 7.12.1_@babel+core@7.12.3
+      babel-plugin-idx: 2.0.0
+      babel-plugin-istanbul: 4.1.6
+      babel-plugin-lodash: 3.3.4
+      babel-plugin-module-resolver: 3.1.1
+      babel-plugin-relay: 1.4.1
+      babel-plugin-transform-class-properties: 6.24.1
+      dedent: 0.7.0
+      is-builtin-module: 1.0.0
+      jasmine-node: 1.14.5
+      progress: 2.0.3
+      yargs: 3.32.0
+    specifiers:
+      '@babel/core': 7.12.3
+      '@babel/plugin-proposal-nullish-coalescing-operator': 7.12.1
+      '@babel/plugin-proposal-object-rest-spread': 7.12.1
+      '@babel/plugin-proposal-optional-chaining': 7.12.1
+      '@babel/plugin-transform-flow-strip-types': 7.12.1
+      '@babel/plugin-transform-modules-commonjs': 7.12.1
+      '@babel/plugin-transform-react-display-name': 7.12.1
+      '@babel/plugin-transform-react-jsx': 7.12.1
+      '@babel/plugin-transform-strict-mode': 7.12.1
+      babel-plugin-idx: 2.0.0
+      babel-plugin-istanbul: 4.1.6
+      babel-plugin-lodash: 3.3.4
+      babel-plugin-module-resolver: 3.1.1
+      babel-plugin-relay: 1.4.1
+      babel-plugin-transform-class-properties: 6.24.1
+      dedent: 0.7.0
+      glob: 7.1.6
+      is-builtin-module: 1.0.0
+      jasmine-node: 1.14.5
+      mkdirp: ^1.0.4
+      progress: 2.0.3
+      uuid: 3.0.1
+      yargs: 3.32.0
+  dist-nuclide/nuclide-watchman-helpers:
+    dependencies:
+      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      event-kit: 2.2.0
+      fb-watchman: 2.0.1
+      log4js: 1.1.1
+      rxjs-compat: 6.3.3
+    specifiers:
+      '@atom-ide-community/nuclide-commons': workspace:*
+      event-kit: 2.2.0
+      fb-watchman: 2.0.1
+      log4js: 1.1.1
+      rxjs-compat: ^6.3.3
   nuclide/nuclide-adb:
     dependencies:
       '@atom-ide-community/nuclide-commons': link:../nuclide-commons
@@ -484,20 +790,20 @@ packages:
       integrity: sha512-eTAlQKq65zHfkHZV0sIVODCPGVgoo1HdBlbSLi9CqOzuZanMv2ihzY+4paiKr1mH+XmYESMAmJ/dpZ68eN6d8w==
   /@babel/core/7.12.3:
     dependencies:
-      '@babel/code-frame': 7.10.4
-      '@babel/generator': 7.12.1
+      '@babel/code-frame': 7.12.11
+      '@babel/generator': 7.12.11
       '@babel/helper-module-transforms': 7.12.1
-      '@babel/helpers': 7.12.1
-      '@babel/parser': 7.12.3
-      '@babel/template': 7.10.4
-      '@babel/traverse': 7.12.1
-      '@babel/types': 7.12.1
+      '@babel/helpers': 7.12.5
+      '@babel/parser': 7.12.11
+      '@babel/template': 7.12.7
+      '@babel/traverse': 7.12.12
+      '@babel/types': 7.12.12
       convert-source-map: 1.7.0
       debug: 4.1.1
       gensync: 1.0.0-beta.1
       json5: 2.1.3
       lodash: 4.17.20
-      resolve: 1.17.0
+      resolve: 1.19.0
       semver: 5.7.1
       source-map: 0.5.7
     dev: true
@@ -513,14 +819,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-DWtQ1PV3r+cLbySoHrwn9RWEgKMBLLma4OBQloPRyDYvc5msJM9kvTLo1YnlJd1P/ZuKbdli3ijr5q3FvAF3uA==
-  /@babel/generator/7.12.1:
-    dependencies:
-      '@babel/types': 7.12.1
-      jsesc: 2.5.2
-      source-map: 0.5.7
-    dev: true
-    resolution:
-      integrity: sha512-DB+6rafIdc9o72Yc3/Ph5h+6hUjeOp66pF0naQBgUFFuPqzQwIlPTm3xZR7YNvduIMtkDIj2t21LSQwnbCrXvg==
   /@babel/generator/7.12.11:
     dependencies:
       '@babel/types': 7.12.12
@@ -550,16 +848,16 @@ packages:
       integrity: sha512-L0zGlFrGWZK4PbT8AszSfLTM5sDU1+Az/En9VrdT8/LmEiJt4zXt+Jve9DCAnQcbqDhCI+29y/L93mrDzddCcg==
   /@babel/helper-builder-react-jsx-experimental/7.12.1:
     dependencies:
-      '@babel/helper-annotate-as-pure': 7.10.4
-      '@babel/helper-module-imports': 7.12.1
-      '@babel/types': 7.12.1
+      '@babel/helper-annotate-as-pure': 7.12.10
+      '@babel/helper-module-imports': 7.12.5
+      '@babel/types': 7.12.12
     dev: true
     resolution:
       integrity: sha512-82to8lR7TofZWbTd3IEZT1xNHfeU/Ef4rDm/GLXddzqDh+yQ19QuGSzqww51aNxVH8rwfRIzL0EUQsvODVhtyw==
   /@babel/helper-builder-react-jsx/7.10.4:
     dependencies:
-      '@babel/helper-annotate-as-pure': 7.10.4
-      '@babel/types': 7.12.1
+      '@babel/helper-annotate-as-pure': 7.12.10
+      '@babel/types': 7.12.12
     dev: true
     resolution:
       integrity: sha512-5nPcIZ7+KKDxT1427oBivl9V9YTal7qk0diccnh7RrcgrT/pGFOjgGw1dgryyx1GvHEpXVfoDF6Ak3rTiWh8Rg==
@@ -725,12 +1023,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nEQJHqYavI217oD9+s5MUBzk6x1IlvoS9WTPfgG43CbMEeStE0v+r+TucWdx8KFGowPGvyOkDT9+7DHedIDnVw==
-  /@babel/helper-module-imports/7.12.1:
-    dependencies:
-      '@babel/types': 7.12.12
-    dev: true
-    resolution:
-      integrity: sha512-ZeC1TlMSvikvJNy1v/wPIazCu3NdOwgYZLIkmIyAsGhqkNpiDoQQRmaCK8YP4Pq3GPTLPV9WXaPCJKvx06JxKA==
   /@babel/helper-module-imports/7.12.5:
     dependencies:
       '@babel/types': 7.12.12
@@ -751,11 +1043,11 @@ packages:
       integrity: sha512-02EVu8COMuTRO1TAzdMtpBPbe6aQ1w/8fePD2YgQmxZU4gpNWaL9gK3Jp7dxlkUlUCJOTaSeA+Hrm1BRQwqIhg==
   /@babel/helper-module-transforms/7.12.1:
     dependencies:
-      '@babel/helper-module-imports': 7.12.1
+      '@babel/helper-module-imports': 7.12.5
       '@babel/helper-replace-supers': 7.12.1
       '@babel/helper-simple-access': 7.12.1
-      '@babel/helper-split-export-declaration': 7.11.0
-      '@babel/helper-validator-identifier': 7.10.4
+      '@babel/helper-split-export-declaration': 7.12.11
+      '@babel/helper-validator-identifier': 7.12.11
       '@babel/template': 7.12.7
       '@babel/traverse': 7.12.12
       '@babel/types': 7.12.12
@@ -835,7 +1127,7 @@ packages:
       integrity: sha512-0XIdiQln4Elglgjbwo9wuJpL/K7AGCY26kmEt0+pRP0TAj4jjyNq1MjoRvikrTVqKcx4Gysxt4cXvVFXP/JO2Q==
   /@babel/helper-skip-transparent-expression-wrappers/7.12.1:
     dependencies:
-      '@babel/types': 7.12.1
+      '@babel/types': 7.12.12
     dev: true
     resolution:
       integrity: sha512-Mf5AUuhG1/OCChOJ/HcADmvcHM42WJockombn8ATJG3OnyiSxBK/Mm5x78BQWvmtXZKHgbjdGL2kin/HOLlZGA==
@@ -880,14 +1172,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-L2gX/XeUONeEbI78dXSrJzGdz4GQ+ZTA/aazfUsFaWjSe95kiCuOZ5HsXvkiw3iwF+mFHSRUfJU8t6YavocdXA==
-  /@babel/helpers/7.12.1:
-    dependencies:
-      '@babel/template': 7.10.4
-      '@babel/traverse': 7.12.1
-      '@babel/types': 7.12.1
-    dev: true
-    resolution:
-      integrity: sha512-9JoDSBGoWtmbay98efmT2+mySkwjzeFeAL9BuWNoVQpkPFQF8SIIFUfY5os9u8wVzglzoiPRSW7cuJmBDUt43g==
   /@babel/helpers/7.12.5:
     dependencies:
       '@babel/template': 7.12.7
@@ -2734,20 +3018,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-EjiPXt+r7LiCZXEfRpSJd+jUMnBd4/9OUv7Nx3+0u9+eimMwJmG0Q98lw4/289JCoxSE8OolDMNZaaF/JZ69WQ==
-  /@babel/traverse/7.12.1:
-    dependencies:
-      '@babel/code-frame': 7.10.4
-      '@babel/generator': 7.12.1
-      '@babel/helper-function-name': 7.10.4
-      '@babel/helper-split-export-declaration': 7.11.0
-      '@babel/parser': 7.12.3
-      '@babel/types': 7.12.1
-      debug: 4.1.1
-      globals: 11.12.0
-      lodash: 4.17.20
-    dev: true
-    resolution:
-      integrity: sha512-MA3WPoRt1ZHo2ZmoGKNqi20YnPt0B1S0GTZEPhhd+hw2KGUzBlHuVunj6K4sNuK+reEvyiPwtp0cpaqLzJDmAw==
   /@babel/traverse/7.12.12:
     dependencies:
       '@babel/code-frame': 7.12.11
@@ -4249,8 +4519,8 @@ packages:
       integrity: sha512-PO9t0697lNTmcEHH69mdtYiOIkkOlj9fySqfO3K1eCcdISevLAE0xY59VLLUj0SoiPiTX/JU2CYFpILydUa5Lw==
   /babel-plugin-lodash/3.3.4:
     dependencies:
-      '@babel/helper-module-imports': 7.12.1
-      '@babel/types': 7.12.1
+      '@babel/helper-module-imports': 7.12.5
+      '@babel/types': 7.12.12
       glob: 7.1.6
       lodash: 4.17.20
       require-package-name: 2.0.1
@@ -4271,7 +4541,7 @@ packages:
       glob: 7.1.6
       pkg-up: 2.0.0
       reselect: 3.0.1
-      resolve: 1.17.0
+      resolve: 1.19.0
     dev: true
     engines:
       node: '>= 4.0.0'
