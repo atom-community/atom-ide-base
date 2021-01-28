@@ -42,7 +42,7 @@
     "build-commit": "build-commit -o package",
     "prepare": "npm run prepare.base && npm run prepare.nuclide",
     "bump": "ncu -u -x coffeescript",
-    "apm.prepublishOnly": "git checkout apm.publish && git reset --hard master && shx rm -rf nuclide && git commit -a -m 'clean'",
+    "apm.prepublishOnly": "npm run build-commit && git checkout apm.publish && git reset --hard master && git push -f && shx rm -rf nuclide spec src-commons-ui src-commons-atom src-package types-packages pnpm-lock.yaml && git commit -a -m 'clean'",
     "prepublishOnly": "shx rm -rf **/tsconfig.tsbuildinfo",
     "build.nuclide-adb": "cross-env BABEL_KEEP_MODULES=false babel nuclide/nuclide-adb --out-dir dist-nuclide/nuclide-adb --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
     "build.nuclide-analytics": "cross-env BABEL_KEEP_MODULES=false babel nuclide/nuclide-analytics --out-dir dist-nuclide/nuclide-analytics --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
