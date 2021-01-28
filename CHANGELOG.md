@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/atom-ide-community/atom-ide-base/compare/v2.1.3...v2.1.4)
+
+### Bug fixes:
+- Updated atom-package-deps #47
+- Updated devDependencies #44
+- Improved documentation #46 #45 #43
+
 ## [1.4.1](https://github.com/atom-ide-community/atom-ide-base/compare/v1.4.0...v1.4.1) (2020-10-01)
 
 ### Bug Fixes
