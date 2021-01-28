@@ -16,6 +16,5 @@ package-lock.json
 dist
 nuclide/dist-nuclide-*
 dist-nuclide
-package
 commons-atom
 commons-ui
