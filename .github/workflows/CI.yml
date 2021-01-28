@@ -31,13 +31,16 @@ jobs:
       - uses: UziTech/action-setup-atom@v1
         with:
           channel: ${{ matrix.atom_channel }}
-      - name: Versions
-        run: apm -v
 
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v1.2.1
+        with:
+          version: latest
+          
       - name: Install base dependencies
         run: |
           apm install
-          ./node_modules/.bin/atom-package-deps . 
+          ./node_modules/.bin/atom-package-deps .
           npm run prepare.base
 
       - name: Run tests 👩🏾‍💻
