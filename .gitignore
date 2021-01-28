@@ -9,6 +9,9 @@ package-lock.json
 # TypeScript
 *.tsbuildinfo
 
+# build cache
+.rollup.cache
+
 # Build directories
 dist
 nuclide/dist-nuclide-*

@@ -37,7 +37,7 @@ jobs:
       - name: Install base dependencies
         run: |
           apm install
-          node ./script/install-package-deps.js
+          ./node_modules/.bin/atom-package-deps . 
           npm run prepare.base
 
       - name: Run tests 👩🏾‍💻
