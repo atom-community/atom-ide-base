@@ -36,17 +36,15 @@ async function package_deps() {
     "linter-ui-default",
   ]
   if (deps.some((p) => !atom.packages.isPackageLoaded(p))) {
-    await import("atom-package-deps").then(({ install }) => {
-      // install if not installed
-      install("atom-ide-base", false)
-      // enable if disabled
-      deps
-        .filter((p) => !atom.packages.isPackageLoaded(p))
-        .forEach((p) => {
-          atom.notifications.addInfo(`Enabling package ${p} that is needed for "atom-ide-base"`)
-          atom.packages.enablePackage(p)
-        })
-    })
+    // install if not installed
+    require("atom-package-deps").install("atom-ide-base", true)
+    // enable if disabled
+    deps
+      .filter((p) => !atom.packages.isPackageLoaded(p))
+      .forEach((p) => {
+        atom.notifications.addInfo(`Enabling package ${p} that is needed for "atom-ide-base"`)
+        atom.packages.enablePackage(p)
+      })
   }
 }
 
