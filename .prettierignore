@@ -4,6 +4,7 @@ package-lock.json
 pnpm-lock.yaml
 coverage
 build
+package
 
 nuclide
 dist-nuclide
