@@ -1,3 +1,6 @@
+### 2.2.0
+- feat: add selectable-overlay utils (#49)
+
 ## [2.1.4](https://github.com/atom-ide-community/atom-ide-base/compare/v2.1.3...v2.1.4)
 
 ### Bug fixes:
