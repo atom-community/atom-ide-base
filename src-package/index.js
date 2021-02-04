@@ -868,7 +868,7 @@ function getView$1({
 
       if (failed) {
         // Fail the invocation
-        process.exit(1);
+        process.exitCode = 1;
       }
     }
 
