@@ -22,10 +22,7 @@ async function main() {
   console.log('All Done!');
 }
 
-main().then(() => {
-  console.log(JSON.stringify(process.exitCode));
-  process.exit(1);
-}).catch(error => {
+main().catch(error => {
   if (process.env.STEELBRAIN_DEBUG) {
     var _error$stack;
 
