@@ -4,4 +4,5 @@ const deps = Array.from(pkg["package-deps"]).map(d => d.name);
 for (const dep of deps) {
 	console.log(`apm install ${dep}`);
 	spawnSync(`apm install ${dep}`, {shell: true, stdio: "inherit"})
+	process.exitCode = 1
 }
