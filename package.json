@@ -63,7 +63,8 @@
     "prepublish.nuclide": "pnpm clean.nuclide && pnpm pub -r && pnpm prepare.nuclide && git commit -m 'publish' -- .",
     "publish.nuclide": "pnpm publish --filter ./dist-nuclide",
     "test.nuclide.atom": "jest dist-nuclide --config=dist-nuclide/atom-test-runners/jest-atom-runner/configs/jest.config.atom.js --detectOpenHandles",
-    "test.nuclide.node": "jest dist-nuclide --config=dist-nuclide/atom-test-runners/jest-atom-runner/configs/jest.config.node.js --detectOpenHandles"
+    "test.nuclide.node": "jest dist-nuclide --config=dist-nuclide/atom-test-runners/jest-atom-runner/configs/jest.config.node.js --detectOpenHandles",
+    "install.deps": "node install-deps.js"
   },
   "atomTestRunner": "./spec/runner",
   "activationHooks": [

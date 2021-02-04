@@ -12,20 +12,20 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macos-latest
+          # - macos-latest
           - windows-latest
-        atom_channel: [stable, beta]
+        atom_channel: [stable] #, beta]
     steps:
       - uses: actions/checkout@v2
 
       - name: Cache node_modules
         uses: actions/cache@v2
         env:
-          cache-name: |
+          cache-name: atom-ide
+        with:
+          path: |
             node_modules
             ~/.atom/packages
-        with:
-          path: node_modules
           key: apm-${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
 
       - uses: UziTech/action-setup-atom@v1
@@ -40,74 +40,74 @@ jobs:
       - name: Install base dependencies
         run: |
           apm install
-          ./node_modules/.bin/atom-package-deps .
+          npm run install.deps
           npm run prepare.base
 
       - name: Run tests 👩🏾‍💻
         run: npm run test
 
-  Nuclide-Test:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-        atom_channel: [stable, beta]
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Cache node_modules
-        id: github-cache-conan
-        uses: actions/cache@v2
-        env:
-          cache-name: |
-            ~/.atom/packages
-            ~/.pnpm-store
-        with:
-          path: node_modules
-          key: pnpm-${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
-
-      - uses: UziTech/action-setup-atom@v1
-        with:
-          channel: ${{ matrix.atom_channel }}
-      - name: Versions
-        run: apm -v
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v1.2.1
-        with:
-          version: latest
-      - run: |
-          pnpm install
-          pnpm prepare.nuclide
-
-      - name: Run Linux tests 👩🏾‍💻
-        if: startsWith(matrix.os,'ubuntu')
-        run: |
-          pnpm test.nuclide.node
-          # pnpm test.nuclide.atom
-
-      - name: Run macos tests 👩🏾‍💻
-        if: startsWith(matrix.os,'macos')
-        uses: nick-invision/retry@v2 # macOS flaky tests sometimes need retries
-        with:
-          timeout_minutes: 10
-          max_attempts: 3
-          retry_on: error
-          command: |
-            pnpm test.nuclide.node
-            # pnpm test.nuclide.atom
-
-      - name: Run Windows tests 👩🏾‍💻
-        if: startsWith(matrix.os,'windows')
-        continue-on-error: true # 11 of the windows tests fail
-        run: |
-          pnpm test.nuclide.node
-          # pnpm test.nuclide.atom
+  # Nuclide-Test:
+  #   if: "!contains(github.event.head_commit.message, '[skip ci]')"
+  #   runs-on: ${{ matrix.os }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       os:
+  #         - ubuntu-latest
+  #         - macos-latest
+  #         - windows-latest
+  #       atom_channel: [stable, beta]
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #
+  #     - name: Cache node_modules
+  #       id: github-cache-conan
+  #       uses: actions/cache@v2
+  #       env:
+  #         cache-name: |
+  #           ~/.atom/packages
+  #           ~/.pnpm-store
+  #       with:
+  #         path: node_modules
+  #         key: pnpm-${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
+  #
+  #     - uses: UziTech/action-setup-atom@v1
+  #       with:
+  #         channel: ${{ matrix.atom_channel }}
+  #     - name: Versions
+  #       run: apm -v
+  #
+  #     - name: Setup PNPM
+  #       uses: pnpm/action-setup@v1.2.1
+  #       with:
+  #         version: latest
+  #     - run: |
+  #         pnpm install
+  #         pnpm prepare.nuclide
+  #
+  #     - name: Run Linux tests 👩🏾‍💻
+  #       if: startsWith(matrix.os,'ubuntu')
+  #       run: |
+  #         pnpm test.nuclide.node
+  #         # pnpm test.nuclide.atom
+  #
+  #     - name: Run macos tests 👩🏾‍💻
+  #       if: startsWith(matrix.os,'macos')
+  #       uses: nick-invision/retry@v2 # macOS flaky tests sometimes need retries
+  #       with:
+  #         timeout_minutes: 10
+  #         max_attempts: 3
+  #         retry_on: error
+  #         command: |
+  #           pnpm test.nuclide.node
+  #           # pnpm test.nuclide.atom
+  #
+  #     - name: Run Windows tests 👩🏾‍💻
+  #       if: startsWith(matrix.os,'windows')
+  #       continue-on-error: true # 11 of the windows tests fail
+  #       run: |
+  #         pnpm test.nuclide.node
+  #         # pnpm test.nuclide.atom
 
   Lint:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
@@ -120,7 +120,7 @@ jobs:
           fetch-depth: 0
       - name: Commit lint ✨
         uses: wagoid/commitlint-github-action@v1
-        
+
       - uses: UziTech/action-setup-atom@v1
       - name: Setup PNPM
         uses: pnpm/action-setup@v1.2.1
@@ -129,9 +129,9 @@ jobs:
 
       - name: Install NPM dependencies
         run: |
-          npm install
+          pnpm install
       - name: Lint ✨
-        run: npm run lint
+        run: pnpm run lint
 
   # Release:
   #   needs: [Package-Test, Nuclide-Test, Lint]
