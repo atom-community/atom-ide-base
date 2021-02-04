@@ -109,29 +109,29 @@ jobs:
   #         pnpm test.nuclide.node
   #         # pnpm test.nuclide.atom
 
-  Lint:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Commit lint ✨
-        uses: wagoid/commitlint-github-action@v1
-
-      - uses: UziTech/action-setup-atom@v1
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v1.2.1
-        with:
-          version: latest
-
-      - name: Install NPM dependencies
-        run: |
-          pnpm install
-      - name: Lint ✨
-        run: pnpm run lint
+  # Lint:
+  #   if: "!contains(github.event.head_commit.message, '[skip ci]')"
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Commit lint ✨
+  #       uses: wagoid/commitlint-github-action@v1
+  #
+  #     - uses: UziTech/action-setup-atom@v1
+  #     - name: Setup PNPM
+  #       uses: pnpm/action-setup@v1.2.1
+  #       with:
+  #         version: latest
+  #
+  #     - name: Install NPM dependencies
+  #       run: |
+  #         pnpm install
+  #     - name: Lint ✨
+  #       run: pnpm run lint
 
   # Release:
   #   needs: [Package-Test, Nuclide-Test, Lint]

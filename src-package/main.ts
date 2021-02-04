@@ -36,7 +36,7 @@ async function package_deps() {
   ]
   if (deps.some((p) => !atom.packages.isPackageLoaded(p))) {
     // install if not installed
-    require("atom-package-deps").install("atom-ide-base", true)
+    require("./bin.js").install("atom-ide-base", true)
     // enable if disabled
     deps
       .filter((p) => !atom.packages.isPackageLoaded(p))
