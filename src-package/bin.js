@@ -23,9 +23,8 @@ async function main() {
 }
 
 main().then(() => {
-  if (process.exitCode === 1) {
-    process.exit(1)
-  }
+  console.log(JSON.stringify(process.exitCode));
+  process.exit(1);
 }).catch(error => {
   if (process.env.STEELBRAIN_DEBUG) {
     var _error$stack;
