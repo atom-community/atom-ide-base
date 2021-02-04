@@ -24,7 +24,7 @@ async function main() {
 
 main().then(() => {
   if (process.exitCode) {
-    process.exit(1);
+    throw new Error("Failed")
   }
 }).catch(error => {
   if (process.env.STEELBRAIN_DEBUG) {
