@@ -632,7 +632,7 @@ async function installPackage(dependency) {
   const {
     stdout,
     stderr
-  } = await spawn(apmPath, ['install', dependency.name, '--production', '--color', 'false']);
+  } = await spawn(apmPath, ['install', dependency.name, '--production', '--color', 'false'], {shell: true});
   const match = INSTALL_VALIDATION_REGEXP.exec(stdout.trim());
 
   if (match != null && INSTALL_VALID_TICKS.has(match[2])) {
