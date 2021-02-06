@@ -18,7 +18,7 @@
     "line-by-line": "0.1.6",
     "log4js": "1.1.1",
     "@atom-ide-community/nuclide-analytics": "workspace:../nuclide-analytics",
-    "@atom-ide-community/nuclide-commons": "workspace:../nuclide-analytics",
+    "@atom-ide-community/nuclide-commons": "workspace:../nuclide-commons",
     "@atom-ide-community/nuclide-debugger-common": "workspace:../nuclide-debugger-common",
     "nullthrows": "1.1.1",
     "rxjs-compat": "^6.3.3",
