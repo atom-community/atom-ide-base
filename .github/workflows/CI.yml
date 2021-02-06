@@ -128,7 +128,7 @@ jobs:
           version: latest
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --only=dev --ignore-scripts
       - name: Lint ✨
         run: pnpm lint
 
