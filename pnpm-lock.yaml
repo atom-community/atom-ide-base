@@ -1,13 +1,13 @@
 importers:
   .:
     dependencies:
-      atom-ide-markdown-service: 1.6.0
-      atom-package-deps: 7.1.0
+      atom-ide-markdown-service: 2.0.0
+      atom-package-deps: 7.2.0
       classnames: 2.2.6
-      dompurify: 2.1.1
+      dompurify: 2.2.6
       etch: 0.14.1
-      react: 16.13.1
-      react-dom: 16.13.1_react@16.13.1
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
       rxjs: 6.6.3
     devDependencies:
       '@babel/cli': 7.12.13_@babel+core@7.12.13
@@ -54,16 +54,16 @@ importers:
       '@types/node': ^14.14.25
       '@types/react': ^17.0.1
       '@types/react-dom': ^17.0.0
-      atom-ide-markdown-service: ^1.6.0
+      atom-ide-markdown-service: ^2.0.0
       atom-jasmine3-test-runner: ^5.1.8
-      atom-package-deps: ^7.1.0
+      atom-package-deps: ^7.2.0
       babel-jest: ^26.6.3
       babel-preset-atomic: ^3.0.2
       build-commit: 0.1.4
       classnames: ^2.2.6
       cross-env: 7.0.3
       csstype: ^3.0.6
-      dompurify: ^2.1.1
+      dompurify: ^2.2.6
       eslint: 7.19.0
       eslint-config-atomic: ^1.9.0
       etch: ^0.14.1
@@ -78,8 +78,8 @@ importers:
       node-ipc: 9.1.3
       npm-check-updates: 11.1.1
       prettier: ^2.2.1
-      react: ^16.13.1
-      react-dom: ^16.13.1
+      react: ^17.0.1
+      react-dom: ^17.0.1
       rollup: 2.38.5
       rollup-plugin-atomic: ^2.0.1
       rxjs: ^6.6.3
@@ -87,34 +87,34 @@ importers:
       typescript: ^4.1.3
   dist-nuclide/nuclide-adb:
     dependencies:
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
-      '@atom-ide-community/nuclide-commons-atom': link:../../nuclide/nuclide-commons-atom
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': link:../nuclide-commons-atom
       log4js: 1.1.1
       nullthrows: 1.1.1
       rxjs-compat: 6.3.3
       shallowequal: 1.1.0
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-commons-atom': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': workspace:../nuclide-commons-atom
       log4js: 1.1.1
       nullthrows: 1.1.1
       rxjs-compat: ^6.3.3
       shallowequal: 1.1.0
   dist-nuclide/nuclide-analytics:
     dependencies:
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
       log4js: 1.1.1
       rxjs: /rxjs-compat/6.3.3
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       log4js: 1.1.1
       rxjs: npm:rxjs-compat@6.3.3
   dist-nuclide/nuclide-commons:
     dependencies:
-      '@atom-ide-community/nuclide-node-transpiler': link:../../nuclide/nuclide-node-transpiler
+      '@atom-ide-community/nuclide-node-transpiler': link:../nuclide-node-transpiler
       cr: 0.1.0
       domexception: 1.0.1
-      dompurify: 2.1.1
+      dompurify: 2.2.6
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 3.1.1
@@ -140,11 +140,11 @@ importers:
       jest-retries: 1.0.1
       simple-text-buffer: 9.2.11
     specifiers:
-      '@atom-ide-community/nuclide-node-transpiler': workspace:*
+      '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
-      dompurify: 2.1.1
+      dompurify: 2.2.6
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 3.1.1
@@ -169,7 +169,7 @@ importers:
       vscode-uri: 1.0.1
   dist-nuclide/nuclide-commons-atom:
     dependencies:
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
       escape-string-regexp: 1.0.5
       idb-keyval: 2.3.0
       idx: 1.2.0
@@ -187,7 +187,7 @@ importers:
     devDependencies:
       temp: 0.9.1
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       escape-string-regexp: 1.0.5
       idb-keyval: 2.3.0
       idx: 1.2.0
@@ -205,8 +205,8 @@ importers:
       vscode-jsonrpc: 3.3.0
   dist-nuclide/nuclide-commons-ui:
     dependencies:
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
-      '@atom-ide-community/nuclide-commons-atom': link:../../nuclide/nuclide-commons-atom
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': link:../nuclide-commons-atom
       anser: 1.4.6
       classnames: 2.2.6
       dedent: 0.7.0
@@ -220,17 +220,17 @@ importers:
       log4js: 1.1.1
       moment: 2.29.1
       nullthrows: 1.1.1
-      react: 16.6.3
-      react-dom: 16.6.3_react@16.6.3
-      react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+      react-virtualized: 9.20.1_react-dom@17.0.1+react@17.0.1
       rxjs-compat: 6.3.3
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
       tiny-date-picker: 3.2.8
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-commons-atom': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': workspace:../nuclide-commons-atom
       anser: 1.4.6
       classnames: 2.2.6
       dedent: 0.7.0
@@ -244,8 +244,8 @@ importers:
       log4js: 1.1.1
       moment: 2.29.1
       nullthrows: 1.1.1
-      react: 16.6.3
-      react-dom: 16.6.3
+      react: 17.0.1
+      react-dom: 17.0.1
       react-virtualized: 9.20.1
       rxjs-compat: ^6.3.3
       semver: 5.5.0
@@ -254,9 +254,9 @@ importers:
       tiny-date-picker: 3.2.8
   dist-nuclide/nuclide-debugger-cli:
     dependencies:
-      '@atom-ide-community/nuclide-analytics': link:../../nuclide/nuclide-analytics
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
-      '@atom-ide-community/nuclide-debugger-common': link:../../nuclide/nuclide-debugger-common
+      '@atom-ide-community/nuclide-analytics': link:../nuclide-analytics
+      '@atom-ide-community/nuclide-commons': link:../nuclide-analytics
+      '@atom-ide-community/nuclide-debugger-common': link:../nuclide-debugger-common
       async-to-generator: 1.1.0
       blessed: 0.1.81
       idx: 1.2.0
@@ -268,15 +268,15 @@ importers:
       vscode-debugprotocol: 1.24.0
       yargs: 3.32.0
     devDependencies:
-      '@atom-ide-community/nuclide-node-transpiler': link:../../nuclide/nuclide-node-transpiler
+      '@atom-ide-community/nuclide-node-transpiler': link:../nuclide-node-transpiler
       dedent: 0.7.0
       invariant: /@react-dnd/invariant/2.0.0
       simple-text-buffer: 9.2.11
     specifiers:
-      '@atom-ide-community/nuclide-analytics': workspace:*
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-debugger-common': workspace:*
-      '@atom-ide-community/nuclide-node-transpiler': workspace:*
+      '@atom-ide-community/nuclide-analytics': workspace:../nuclide-analytics
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-analytics
+      '@atom-ide-community/nuclide-debugger-common': workspace:../nuclide-debugger-common
+      '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
       async-to-generator: 1.1.0
       blessed: 0.1.81
       dedent: 0.7.0
@@ -292,39 +292,39 @@ importers:
       yargs: 3.32.0
   dist-nuclide/nuclide-debugger-common:
     dependencies:
-      '@atom-ide-community/nuclide-adb': link:../../nuclide/nuclide-adb
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
-      '@atom-ide-community/nuclide-commons-atom': link:../../nuclide/nuclide-commons-atom
-      '@atom-ide-community/nuclide-commons-ui': link:../../nuclide/nuclide-commons-ui
+      '@atom-ide-community/nuclide-adb': link:../nuclide-adb
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': link:../nuclide-commons-atom
+      '@atom-ide-community/nuclide-commons-ui': link:../nuclide-commons-ui
       idx: 1.2.0
       immutable: 4.0.0-rc.12
       invariant: /@react-dnd/invariant/2.0.0
       nullthrows: 1.1.1
-      react: 16.6.3
+      react: 17.0.1
       rxjs-compat: 6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
     specifiers:
-      '@atom-ide-community/nuclide-adb': workspace:*
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-commons-atom': workspace:*
-      '@atom-ide-community/nuclide-commons-ui': workspace:*
+      '@atom-ide-community/nuclide-adb': workspace:../nuclide-adb
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': workspace:../nuclide-commons-atom
+      '@atom-ide-community/nuclide-commons-ui': workspace:../nuclide-commons-ui
       idx: 1.2.0
       immutable: 4.0.0-rc.12
       invariant: npm:@react-dnd/invariant@^2.0.0
       nullthrows: 1.1.1
-      react: 16.6.3
+      react: 17.0.1
       rxjs-compat: ^6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
   dist-nuclide/nuclide-fuzzy-native:
     dependencies:
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
       heap: 0.2.6
       log4js: 1.1.1
       nuclide-prebuilt-libs: 0.6.3
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       heap: 0.2.6
       log4js: 1.1.1
       nuclide-prebuilt-libs: 0.6.3
@@ -380,13 +380,13 @@ importers:
       yargs: 3.32.0
   dist-nuclide/nuclide-watchman-helpers:
     dependencies:
-      '@atom-ide-community/nuclide-commons': link:../../nuclide/nuclide-commons
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
       event-kit: 2.2.0
       fb-watchman: 2.0.1
       log4js: 1.1.1
       rxjs-compat: 6.3.3
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       event-kit: 2.2.0
       fb-watchman: 2.0.1
       log4js: 1.1.1
@@ -400,8 +400,8 @@ importers:
       rxjs-compat: 6.3.3
       shallowequal: 1.1.0
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-commons-atom': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': workspace:../nuclide-commons-atom
       log4js: 1.1.1
       nullthrows: 1.1.1
       rxjs-compat: ^6.3.3
@@ -412,7 +412,7 @@ importers:
       log4js: 1.1.1
       rxjs: /rxjs-compat/6.3.3
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       log4js: 1.1.1
       rxjs: npm:rxjs-compat@6.3.3
   nuclide/nuclide-commons:
@@ -420,7 +420,7 @@ importers:
       '@atom-ide-community/nuclide-node-transpiler': link:../nuclide-node-transpiler
       cr: 0.1.0
       domexception: 1.0.1
-      dompurify: 2.1.1
+      dompurify: 2.2.6
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 3.1.1
@@ -446,11 +446,11 @@ importers:
       jest-retries: 1.0.1
       simple-text-buffer: 9.2.11
     specifiers:
-      '@atom-ide-community/nuclide-node-transpiler': workspace:*
+      '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
-      dompurify: 2.1.1
+      dompurify: 2.2.6
       event-kit: 2.2.0
       event-target-shim: 3.0.1
       fs-plus: 3.1.1
@@ -493,7 +493,7 @@ importers:
     devDependencies:
       temp: 0.9.1
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       escape-string-regexp: 1.0.5
       idb-keyval: 2.3.0
       idx: 1.2.0
@@ -526,17 +526,17 @@ importers:
       log4js: 1.1.1
       moment: 2.29.1
       nullthrows: 1.1.1
-      react: 16.6.3
-      react-dom: 16.6.3_react@16.6.3
-      react-virtualized: 9.20.1_react-dom@16.6.3+react@16.6.3
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+      react-virtualized: 9.20.1_react-dom@17.0.1+react@17.0.1
       rxjs-compat: 6.3.3
       semver: 5.5.0
       shallowequal: 1.1.0
       tabbable: 1.1.0
       tiny-date-picker: 3.2.8
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-commons-atom': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': workspace:../nuclide-commons-atom
       anser: 1.4.6
       classnames: 2.2.6
       dedent: 0.7.0
@@ -550,8 +550,8 @@ importers:
       log4js: 1.1.1
       moment: 2.29.1
       nullthrows: 1.1.1
-      react: 16.6.3
-      react-dom: 16.6.3
+      react: 17.0.1
+      react-dom: 17.0.1
       react-virtualized: 9.20.1
       rxjs-compat: ^6.3.3
       semver: 5.5.0
@@ -561,7 +561,7 @@ importers:
   nuclide/nuclide-debugger-cli:
     dependencies:
       '@atom-ide-community/nuclide-analytics': link:../nuclide-analytics
-      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
+      '@atom-ide-community/nuclide-commons': link:../nuclide-analytics
       '@atom-ide-community/nuclide-debugger-common': link:../nuclide-debugger-common
       async-to-generator: 1.1.0
       blessed: 0.1.81
@@ -579,10 +579,10 @@ importers:
       invariant: /@react-dnd/invariant/2.0.0
       simple-text-buffer: 9.2.11
     specifiers:
-      '@atom-ide-community/nuclide-analytics': workspace:*
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-debugger-common': workspace:*
-      '@atom-ide-community/nuclide-node-transpiler': workspace:*
+      '@atom-ide-community/nuclide-analytics': workspace:../nuclide-analytics
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-analytics
+      '@atom-ide-community/nuclide-debugger-common': workspace:../nuclide-debugger-common
+      '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
       async-to-generator: 1.1.0
       blessed: 0.1.81
       dedent: 0.7.0
@@ -606,20 +606,20 @@ importers:
       immutable: 4.0.0-rc.12
       invariant: /@react-dnd/invariant/2.0.0
       nullthrows: 1.1.1
-      react: 16.6.3
+      react: 17.0.1
       rxjs-compat: 6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
     specifiers:
-      '@atom-ide-community/nuclide-adb': workspace:*
-      '@atom-ide-community/nuclide-commons': workspace:*
-      '@atom-ide-community/nuclide-commons-atom': workspace:*
-      '@atom-ide-community/nuclide-commons-ui': workspace:*
+      '@atom-ide-community/nuclide-adb': workspace:../nuclide-adb
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
+      '@atom-ide-community/nuclide-commons-atom': workspace:../nuclide-commons-atom
+      '@atom-ide-community/nuclide-commons-ui': workspace:../nuclide-commons-ui
       idx: 1.2.0
       immutable: 4.0.0-rc.12
       invariant: npm:@react-dnd/invariant@^2.0.0
       nullthrows: 1.1.1
-      react: 16.6.3
+      react: 17.0.1
       rxjs-compat: ^6.3.3
       uuid: 3.0.1
       vscode-debugprotocol: 1.24.0
@@ -630,7 +630,7 @@ importers:
       log4js: 1.1.1
       nuclide-prebuilt-libs: 0.6.3
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       heap: 0.2.6
       log4js: 1.1.1
       nuclide-prebuilt-libs: 0.6.3
@@ -692,7 +692,7 @@ importers:
       log4js: 1.1.1
       rxjs-compat: 6.3.3
     specifiers:
-      '@atom-ide-community/nuclide-commons': workspace:*
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       event-kit: 2.2.0
       fb-watchman: 2.0.1
       log4js: 1.1.1
@@ -4573,15 +4573,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-  /atom-ide-markdown-service/1.6.0:
+  /atom-ide-markdown-service/2.0.0:
     dependencies:
-      dompurify: 2.1.1
-      marked: 1.2.0
+      dompurify: 2.2.6
+      marked: 1.2.9
     dev: false
     engines:
       atom: '>=1.0.0 <2.0.0'
     resolution:
-      integrity: sha512-cqMEyMeiiAqH4cQhPEyh6HQ9IvtOTHMwZoVxTHK2zKNWyugWVlCzqjZEjQ2WJqxQDd9v4KBeARDpwLLiKaVR/w==
+      integrity: sha512-j7S7QS/G1Fgnl+wDU/ssfp5MxFE9YAcwpZCCmMUbLpOANEJ0+46aTOdHY2HJt5+F76/zGQCv7JwO3Ef1QEQUDA==
   /atom-jasmine3-test-runner/5.1.8:
     dependencies:
       etch: 0.14.1
@@ -4604,11 +4604,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-TOc/JgA0EmyQ6lc1RjK1Tsv1/tNvUJiH0GqK/zbKUTRER38rhsEv6WGMsF6pq9AOgX4KVjrUeuAgMFlz+FbLBQ==
-  /atom-package-deps/7.1.0:
+  /atom-package-deps/7.2.0:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-qSCRGyL8CE7Pwm/D5e0BeD1MJQF+a05Ky3RdQ4m9buIKdkHOq3cSlU+G9j+2S2GD+clp9Z3Hl4dkrFemv0UxVg==
+      integrity: sha512-P7XnvYv+qYjFrdWWOuRCJ2oOe6Ps0DinwUhJ+h4Zwk/VGStO/x23A/tBDCWyvsZFwEfgGnnhTY+jZ7/pCxxYng==
   /atom-patch/0.3.0:
     dependencies:
       random-seed: 0.2.0
@@ -6104,10 +6104,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-LeWaCCLVAn+r/28DLCsloqir5zg=
-  /dompurify/2.1.1:
+  /dompurify/2.2.6:
     dev: false
     resolution:
-      integrity: sha512-NijiNVkS/OL8mdQL1hUbCD6uty/cgFpmNiuFxrmJ5YPH2cXrPKIewoixoji56rbZ6XBPmtM8GA8/sf9unlSuwg==
+      integrity: sha512-7b7ZArhhH0SP6W2R9cqK6RjaU82FZ2UPM7RO8qN1b1wyvC/NY1FNWcX1Pu00fFOAnzEORtwXe4bPaClg6pUybQ==
   /domutils/1.5.1:
     dependencies:
       dom-serializer: 0.2.2
@@ -9525,13 +9525,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
-  /marked/1.2.0:
+  /marked/1.2.9:
     dev: false
     engines:
       node: '>= 8.16.2'
     hasBin: true
     resolution:
-      integrity: sha512-tiRxakgbNPBr301ihe/785NntvYyhxlqcL3YaC8CaxJQh7kiaEtrN9B/eK2I2943Yjkh5gw25chYFDQhOMCwMA==
+      integrity: sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==
   /math-random/1.0.4:
     dev: true
     resolution:
@@ -10844,30 +10844,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
-  /react-dom/16.13.1_react@16.13.1:
+  /react-dom/17.0.1_react@17.0.1:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      prop-types: 15.7.2
-      react: 16.13.1
-      scheduler: 0.19.1
+      react: 17.0.1
+      scheduler: 0.20.1
     dev: false
     peerDependencies:
-      react: ^16.13.1
+      react: 17.0.1
     resolution:
-      integrity: sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
-  /react-dom/16.6.3_react@16.6.3:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.7.2
-      react: 16.6.3
-      scheduler: 0.11.3
-    dev: false
-    peerDependencies:
-      react: ^16.6.3
-    resolution:
-      integrity: sha512-8ugJWRCWLGXy+7PmNh8WJz3g1TaTUt1XyoIcFN+x0Zbkoz+KKdUyx1AQLYJdbFXjuF41Nmjn5+j//rxvhFjgSQ==
+      integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -10879,15 +10866,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-  /react-virtualized/9.20.1_react-dom@16.6.3+react@16.6.3:
+  /react-virtualized/9.20.1_react-dom@17.0.1+react@17.0.1:
     dependencies:
       babel-runtime: 6.26.0
       classnames: 2.2.6
       dom-helpers: 3.4.0
       loose-envify: 1.4.0
       prop-types: 15.7.2
-      react: 16.6.3
-      react-dom: 16.6.3_react@16.6.3
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
       react-lifecycles-compat: 3.0.4
     dev: false
     peerDependencies:
@@ -10895,27 +10882,15 @@ packages:
       react-dom: ^15.3.0 || ^16.0.0-alpha
     resolution:
       integrity: sha512-xIWxBsyNAjceqD3hsE0nw5TcDVxKbIepsHhvS2XneHmNz0KlKxdLdGBmGZBM9ZesEmbZ5EO0Sw70TB1MeCmpbQ==
-  /react/16.13.1:
+  /react/17.0.1:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      prop-types: 15.7.2
     dev: false
     engines:
       node: '>=0.10.0'
     resolution:
-      integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
-  /react/16.6.3:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.7.2
-      scheduler: 0.11.3
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha512-zCvmH2vbEolgKxtqXL2wmGCUxUyNheYn/C+PD1YAjfxHC54+MhdruyhO7QieQrYsYeTxrn93PM2y0jRH1zEExw==
+      integrity: sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
   /read-package-json-fast/1.1.3:
     dependencies:
       json-parse-even-better-errors: 2.3.1
@@ -11608,20 +11583,13 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
-  /scheduler/0.11.3:
+  /scheduler/0.20.1:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
     dev: false
     resolution:
-      integrity: sha512-i9X9VRRVZDd3xZw10NY5Z2cVMbdYg6gqFecfj79USv1CFN+YrJ3gIPRKf1qlY+Sxly4djoKdfx1T+m9dnRB8kQ==
-  /scheduler/0.19.1:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-    dev: false
-    resolution:
-      integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
+      integrity: sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==
   /season/6.0.2:
     dependencies:
       cson-parser: 1.3.5

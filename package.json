@@ -25,7 +25,8 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write .",
-    "lint": "eslint . --fix",
+    "lint.fix": "npm run lint -- --fix",
+    "lint": "eslint .",
     "test": "atom --test spec",
     "clean": "shx rm -rf package commons-atom commons-ui commons",
     "tsc.commons-ui": "tsc -p src-commons-ui/tsconfig.json || echo done",
@@ -42,6 +43,7 @@
     "build-commit": "build-commit -o package",
     "prepare": "npm run prepare.base && npm run prepare.nuclide",
     "bump": "ncu -u -x coffeescript",
+    "bump.recursive": " pnpm --parallel -r exec -- ncu -u react-dom && pnpm prepare",
     "apm.prepublishOnly": "git checkout apm.publish && git reset --hard master && npm run build-commit && npm run clean.nuclide && shx rm -rf nuclide spec src-commons-ui src-commons-atom src-package types-packages pnpm-lock.yaml **/tsconfig.tsbuildinfo && git commit -a -m 'clean'",
     "prepublishOnly": "shx rm -rf **/tsconfig.tsbuildinfo",
     "build.nuclide-adb": "cross-env BABEL_KEEP_MODULES=false babel nuclide/nuclide-adb --out-dir dist-nuclide/nuclide-adb --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
@@ -70,16 +72,17 @@
     "core:loaded-shell-environment"
   ],
   "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+    "atom": ">=0.174.0 <2.0.0",
+    "pnpm": ">=5.12"
   },
   "dependencies": {
-    "atom-ide-markdown-service": "^1.6.0",
-    "atom-package-deps": "^7.1.0",
+    "atom-ide-markdown-service": "^2.0.0",
+    "atom-package-deps": "^7.2.0",
     "classnames": "^2.2.6",
-    "dompurify": "^2.1.1",
+    "dompurify": "^2.2.6",
     "etch": "^0.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rxjs": "^6.6.3"
   },
   "devDependencies": {
