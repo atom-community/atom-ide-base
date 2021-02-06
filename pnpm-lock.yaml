@@ -1,7 +1,7 @@
 importers:
   .:
     dependencies:
-      atom-ide-markdown-service: 1.6.0
+      atom-ide-markdown-service: 2.0.0
       atom-package-deps: 7.2.0
       classnames: 2.2.6
       dompurify: 2.1.1
@@ -54,7 +54,7 @@ importers:
       '@types/node': ^14.14.25
       '@types/react': ^17.0.1
       '@types/react-dom': ^17.0.0
-      atom-ide-markdown-service: ^1.6.0
+      atom-ide-markdown-service: ^2.0.0
       atom-jasmine3-test-runner: ^5.1.8
       atom-package-deps: ^7.2.0
       babel-jest: ^26.6.3
@@ -4573,15 +4573,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-  /atom-ide-markdown-service/1.6.0:
+  /atom-ide-markdown-service/2.0.0:
     dependencies:
-      dompurify: 2.1.1
-      marked: 1.2.0
+      dompurify: 2.2.6
+      marked: 1.2.9
     dev: false
     engines:
       atom: '>=1.0.0 <2.0.0'
     resolution:
-      integrity: sha512-cqMEyMeiiAqH4cQhPEyh6HQ9IvtOTHMwZoVxTHK2zKNWyugWVlCzqjZEjQ2WJqxQDd9v4KBeARDpwLLiKaVR/w==
+      integrity: sha512-j7S7QS/G1Fgnl+wDU/ssfp5MxFE9YAcwpZCCmMUbLpOANEJ0+46aTOdHY2HJt5+F76/zGQCv7JwO3Ef1QEQUDA==
   /atom-jasmine3-test-runner/5.1.8:
     dependencies:
       etch: 0.14.1
@@ -6108,6 +6108,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NijiNVkS/OL8mdQL1hUbCD6uty/cgFpmNiuFxrmJ5YPH2cXrPKIewoixoji56rbZ6XBPmtM8GA8/sf9unlSuwg==
+  /dompurify/2.2.6:
+    dev: false
+    resolution:
+      integrity: sha512-7b7ZArhhH0SP6W2R9cqK6RjaU82FZ2UPM7RO8qN1b1wyvC/NY1FNWcX1Pu00fFOAnzEORtwXe4bPaClg6pUybQ==
   /domutils/1.5.1:
     dependencies:
       dom-serializer: 0.2.2
@@ -9525,13 +9529,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
-  /marked/1.2.0:
+  /marked/1.2.9:
     dev: false
     engines:
       node: '>= 8.16.2'
     hasBin: true
     resolution:
-      integrity: sha512-tiRxakgbNPBr301ihe/785NntvYyhxlqcL3YaC8CaxJQh7kiaEtrN9B/eK2I2943Yjkh5gw25chYFDQhOMCwMA==
+      integrity: sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==
   /math-random/1.0.4:
     dev: true
     resolution:
