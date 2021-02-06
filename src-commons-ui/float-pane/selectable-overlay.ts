@@ -4,7 +4,7 @@ import type { TextEditor, TextEditorComponent } from "atom"
  *
  * Note: you can directly add `user-select: text` (and `pointer-events: all`) in CSS for better performance
  */
-export function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLElement) {
+export function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLElement, focusFix = true) {
   // allow the browser to handle selecting
   overlayElement.setAttribute("tabindex", "-1")
 
@@ -13,8 +13,10 @@ export function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLEl
     overlayElement.style.userSelect = "text"
   }
 
-  // fix overlay focus issue
-  overlayFocusFix(editor, overlayElement)
+  if (focusFix) {
+    // fix overlay focus issue
+    overlayFocusFix(editor, overlayElement)
+  }
 
   // add copy keybindings
   overlayElement.classList.add("selectable-overlay")
