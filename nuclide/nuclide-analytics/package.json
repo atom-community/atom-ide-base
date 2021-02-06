@@ -14,7 +14,7 @@
     "test": "node ../nuclide-jasmine/bin/jasmine-node-transpiled spec"
   },
   "dependencies": {
-    "@atom-ide-community/nuclide-commons": "workspace:*",
+    "@atom-ide-community/nuclide-commons": "workspace:../nuclide-commons",
     "log4js": "1.1.1",
     "rxjs": "npm:rxjs-compat@6.3.3"
   }

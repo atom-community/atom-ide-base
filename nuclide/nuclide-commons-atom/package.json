@@ -17,7 +17,7 @@
     "lodash": "4.17.20",
     "log4js": "1.1.1",
     "lru-cache": "4.0.2",
-    "@atom-ide-community/nuclide-commons": "workspace:*",
+    "@atom-ide-community/nuclide-commons": "workspace:../nuclide-commons",
     "nullthrows": "1.1.1",
     "redux-logger": "3.0.6",
     "rxjs-compat": "^6.3.3",

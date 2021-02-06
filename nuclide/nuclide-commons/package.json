@@ -11,7 +11,7 @@
     "test": "true"
   },
   "dependencies": {
-    "@atom-ide-community/nuclide-node-transpiler": "workspace:*",
+    "@atom-ide-community/nuclide-node-transpiler": "workspace:../nuclide-node-transpiler",
     "cr": "0.1.0",
     "domexception": "1.0.1",
     "dompurify": "2.2.6",
