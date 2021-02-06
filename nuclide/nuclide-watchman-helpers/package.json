@@ -7,7 +7,6 @@
   "author": "NEEDS OWNER",
   "license": "BSD-3-Clause",
   "nuclide": {
-    "pub": "npm version patch && pnpm install",
     "packageType": "NodeLibrary",
     "testsCannotBeRunInParallel": true
   },

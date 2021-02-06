@@ -8,7 +8,6 @@
   "homepage": "https://nuclide.io/",
   "repository": "https://github.com/atom-ide-community/atom-ide-base/tree/master/nuclide/nuclide-node-transpiler",
   "scripts": {
-    "pub": "npm version patch && pnpm install",
     "test": "../../node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {

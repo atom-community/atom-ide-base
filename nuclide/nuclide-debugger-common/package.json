@@ -8,7 +8,6 @@
   "repository": "https://github.com/atom-ide-community/atom-ide-base/tree/master/nuclide/nuclide-debugger-common",
   "main": "./main.js",
   "scripts": {
-    "pub": "npm version patch && pnpm install",
     "test": "node ../nuclide-jasmine/bin/jasmine-node-transpiled spec"
   },
   "dependencies": {

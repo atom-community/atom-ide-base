@@ -62,7 +62,8 @@
     "install.nuclide": "pnpm install -r --filter ./nuclide",
     "install.dist-nuclide": "pnpm install -r --filter ./dist-nuclide",
     "prepare.nuclide": "pnpm clean.nuclide && pnpm build.nuclide && pnpm install.dist-nuclide && pnpm install.nuclide",
-    "prepublish.nuclide": "pnpm clean.nuclide && pnpm pub -r && pnpm prepare.nuclide && git commit -m 'publish' -- .",
+    "version.nuclide": "pnpm -r -parallel --filter ./nuclide exec -- pnpm version patch",
+    "prepublish.nuclide": "pnpm clean.nuclide && pnpm version.nuclide && pnpm prepare.nuclide && git commit -m 'publish' -- .",
     "publish.nuclide": "pnpm publish --filter ./dist-nuclide",
     "test.nuclide.atom": "jest dist-nuclide --config=dist-nuclide/atom-test-runners/jest-atom-runner/configs/jest.config.atom.js --detectOpenHandles",
     "test.nuclide.node": "jest dist-nuclide --config=dist-nuclide/atom-test-runners/jest-atom-runner/configs/jest.config.node.js --detectOpenHandles"

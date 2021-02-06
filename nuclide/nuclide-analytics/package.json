@@ -10,7 +10,6 @@
     "packageType": "NodeLibrary"
   },
   "scripts": {
-    "pub": "npm version patch && pnpm install",
     "test": "node ../nuclide-jasmine/bin/jasmine-node-transpiled spec"
   },
   "dependencies": {

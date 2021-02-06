@@ -7,7 +7,6 @@
   "license": "BSD-3-Clause",
   "repository": "https://github.com/atom-ide-community/atom-ide-base/tree/master/nuclide/nuclide-fuzzy-native",
   "scripts": {
-    "pub": "npm version patch && pnpm install",
     "test": "true",
     "jest": "../../jest/fb-jest @atom-ide-community/nuclide-fuzzy-native"
   },

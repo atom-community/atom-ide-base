@@ -7,7 +7,6 @@
   "homepage": "https://nuclide.io/",
   "repository": "https://github.com/atom-ide-community/atom-ide-base/tree/master/nuclide/nuclide-commons-ui",
   "scripts": {
-    "pub": "npm version patch && pnpm install",
     "test": "true"
   },
   "dependencies": {
