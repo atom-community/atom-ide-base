@@ -9,7 +9,7 @@ export function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLEl
   overlayElement.setAttribute("tabindex", "-1")
 
   // make it selectable
-  if (overlayElement.style.userSelect === "none") {
+  if (!overlayElement.style.userSelect || overlayElement.style.userSelect === "none") {
     overlayElement.style.userSelect = "text"
   }
 
