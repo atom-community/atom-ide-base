@@ -25,7 +25,31 @@ export function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
   })
 }
 
-/** Makes the overlay component copyable
+export function focusEditor(editorComponent: TextEditorComponent) {
+  // @ts-ignore
+  editorComponent?.didFocus()
+}
+
+export function blurEditor(editorComponent: TextEditorComponent) {
+  // @ts-ignore
+  editorComponent?.didBlurHiddenInput({
+    relatedTarget: null,
+  })
+}
+
+
+/*
+██████  ███████ ██████  ██████  ███████  ██████  █████  ████████ ███████ ██████
+██   ██ ██      ██   ██ ██   ██ ██      ██      ██   ██    ██    ██      ██   ██
+██   ██ █████   ██████  ██████  █████   ██      ███████    ██    █████   ██   ██
+██   ██ ██      ██      ██   ██ ██      ██      ██   ██    ██    ██      ██   ██
+██████  ███████ ██      ██   ██ ███████  ██████ ██   ██    ██    ███████ ██████
+*/
+
+
+/** @deprecated use `makeOverlaySelectable` instead.
+  *
+  * Makes the overlay component copyable
   * - you should call `makeOverlaySelectable` before this
   * - If your element already has mouseenter and mouseleav listeners, directly use `copyListener`
   */
@@ -39,7 +63,8 @@ export function makeOverLayCopyable(element: HTMLElement) {
   })
 }
 
-/**
+/** @deprecated use `makeOverlaySelectable` instead.
+ *
  * A manual copy listener
  * Usage. Add the listener to your mouse enter and mouseleave listeners
    ```ts
@@ -54,15 +79,3 @@ export async function copyListener(event: KeyboardEvent) {
     await navigator.clipboard.writeText(text)
   }
 } // TODO we should not need to manually listen for copy paste
-
-export function focusEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
-  editorComponent?.didFocus()
-}
-
-export function blurEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
-  editorComponent?.didBlurHiddenInput({
-    relatedTarget: null,
-  })
-}
