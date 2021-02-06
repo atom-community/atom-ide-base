@@ -1,3 +1,9 @@
+### 2.3.0
+- feat: add getCwd: Add function that gets the current working directory given a file or uses the active text editor path. (#51)
+- fix: use native copy handling in selectable overlay (#53)
+- Deprecate `makeOverLayCopyable` and `copyListener`. Use `makeOverlaySelectable` instead
+
+
 ### 2.2.0
 
 - feat: add selectable-overlay utils (#49)
