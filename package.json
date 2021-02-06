@@ -77,7 +77,7 @@
     "atom-ide-markdown-service": "^2.0.0",
     "atom-package-deps": "^7.2.0",
     "classnames": "^2.2.6",
-    "dompurify": "^2.1.1",
+    "dompurify": "^2.2.6",
     "etch": "^0.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
