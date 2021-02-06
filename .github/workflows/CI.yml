@@ -26,6 +26,7 @@ jobs:
           path: |
             node_modules
             ~/.atom/packages
+            ~/.pnpm-store
           key: apm-${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
 
       - uses: UziTech/action-setup-atom@v1
@@ -64,11 +65,12 @@ jobs:
         id: github-cache-conan
         uses: actions/cache@v2
         env:
-          cache-name: |
+          cache-name: atom-ide-cache
+        with:
+          path: |
+            node_modules
             ~/.atom/packages
             ~/.pnpm-store
-        with:
-          path: node_modules
           key: pnpm-${{ runner.os }}-${{ matrix.atom_channel }}-${{ hashFiles('package.json') }}
 
       - uses: UziTech/action-setup-atom@v1
