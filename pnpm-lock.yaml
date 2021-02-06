@@ -939,11 +939,11 @@ packages:
   /@babel/helper-create-class-features-plugin/7.12.1_@babel+core@7.11.6:
     dependencies:
       '@babel/core': 7.11.6
-      '@babel/helper-function-name': 7.12.11
+      '@babel/helper-function-name': 7.12.13
       '@babel/helper-member-expression-to-functions': 7.12.1
       '@babel/helper-optimise-call-expression': 7.10.4
-      '@babel/helper-replace-supers': 7.12.1
-      '@babel/helper-split-export-declaration': 7.12.11
+      '@babel/helper-replace-supers': 7.12.13
+      '@babel/helper-split-export-declaration': 7.12.13
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -3154,7 +3154,7 @@ packages:
       '@babel/helper-plugin-utils': 7.10.4
       '@babel/plugin-proposal-unicode-property-regex': 7.12.1_@babel+core@7.11.6
       '@babel/plugin-transform-dotall-regex': 7.12.1_@babel+core@7.11.6
-      '@babel/types': 7.12.12
+      '@babel/types': 7.12.13
       esutils: 2.0.3
     dev: true
     peerDependencies:
