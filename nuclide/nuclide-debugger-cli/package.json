@@ -1,6 +1,6 @@
 {
   "name": "@atom-ide-community/nuclide-debugger-cli",
-  "version": "0.16.2",
+  "version": "0.16.3",
   "description": "Nuclide command line debugger.",
   "author": "Nuclide : Debugging",
   "license": "BSD-3-Clause",

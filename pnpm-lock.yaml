@@ -255,7 +255,7 @@ importers:
   dist-nuclide/nuclide-debugger-cli:
     dependencies:
       '@atom-ide-community/nuclide-analytics': link:../nuclide-analytics
-      '@atom-ide-community/nuclide-commons': link:../nuclide-analytics
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
       '@atom-ide-community/nuclide-debugger-common': link:../nuclide-debugger-common
       async-to-generator: 1.1.0
       blessed: 0.1.81
@@ -274,7 +274,7 @@ importers:
       simple-text-buffer: 9.2.11
     specifiers:
       '@atom-ide-community/nuclide-analytics': workspace:../nuclide-analytics
-      '@atom-ide-community/nuclide-commons': workspace:../nuclide-analytics
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       '@atom-ide-community/nuclide-debugger-common': workspace:../nuclide-debugger-common
       '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
       async-to-generator: 1.1.0
@@ -561,7 +561,7 @@ importers:
   nuclide/nuclide-debugger-cli:
     dependencies:
       '@atom-ide-community/nuclide-analytics': link:../nuclide-analytics
-      '@atom-ide-community/nuclide-commons': link:../nuclide-analytics
+      '@atom-ide-community/nuclide-commons': link:../nuclide-commons
       '@atom-ide-community/nuclide-debugger-common': link:../nuclide-debugger-common
       async-to-generator: 1.1.0
       blessed: 0.1.81
@@ -580,7 +580,7 @@ importers:
       simple-text-buffer: 9.2.11
     specifiers:
       '@atom-ide-community/nuclide-analytics': workspace:../nuclide-analytics
-      '@atom-ide-community/nuclide-commons': workspace:../nuclide-analytics
+      '@atom-ide-community/nuclide-commons': workspace:../nuclide-commons
       '@atom-ide-community/nuclide-debugger-common': workspace:../nuclide-debugger-common
       '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
       async-to-generator: 1.1.0

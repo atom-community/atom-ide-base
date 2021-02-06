@@ -2,7 +2,7 @@
   "name": "@atom-ide-community/nuclide-watchman-helpers",
   "publisher": "Facebook",
   "main": "./lib/main.js",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Helper methods for interacting with fb-watchman",
   "author": "NEEDS OWNER",
   "license": "BSD-3-Clause",
