@@ -42,7 +42,7 @@
     "build-commit": "build-commit -o package",
     "prepare": "npm run prepare.base && npm run prepare.nuclide",
     "bump": "ncu -u -x coffeescript",
-    "bump.recursive": " pnpm --parallel -r exec -- ncu -u dompurify && pnpm prepare",
+    "bump.recursive": " pnpm --parallel -r exec -- ncu -u react && pnpm prepare",
     "apm.prepublishOnly": "git checkout apm.publish && git reset --hard master && npm run build-commit && npm run clean.nuclide && shx rm -rf nuclide spec src-commons-ui src-commons-atom src-package types-packages pnpm-lock.yaml **/tsconfig.tsbuildinfo && git commit -a -m 'clean'",
     "prepublishOnly": "shx rm -rf **/tsconfig.tsbuildinfo",
     "build.nuclide-adb": "cross-env BABEL_KEEP_MODULES=false babel nuclide/nuclide-adb --out-dir dist-nuclide/nuclide-adb --copy-files --no-copy-ignored --include-dotfiles --delete-dir-on-start",
@@ -79,7 +79,7 @@
     "classnames": "^2.2.6",
     "dompurify": "^2.2.6",
     "etch": "^0.14.1",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-dom": "^16.13.1",
     "rxjs": "^6.6.3"
   },
