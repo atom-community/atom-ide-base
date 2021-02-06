@@ -71,7 +71,8 @@
     "core:loaded-shell-environment"
   ],
   "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+    "atom": ">=0.174.0 <2.0.0",
+    "pnpm": ">=5.12"
   },
   "dependencies": {
     "atom-ide-markdown-service": "^2.0.0",
