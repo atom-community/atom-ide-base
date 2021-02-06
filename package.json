@@ -25,7 +25,8 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write .",
-    "lint": "eslint . --fix",
+    "lint.fix": "npm run lint -- --fix",
+    "lint": "eslint .",
     "test": "atom --test spec",
     "clean": "shx rm -rf package commons-atom commons-ui commons",
     "tsc.commons-ui": "tsc -p src-commons-ui/tsconfig.json || echo done",
