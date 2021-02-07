@@ -1,3 +1,6 @@
+### 2.3.3
+- fix: add ts-ignore to JSX declaration (#55)
+
 ### 2.3.1
 
 - Add copy keymap only once for selectable-overlay
