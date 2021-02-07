@@ -48,6 +48,7 @@ export interface DefinitionQueryResult {
  * Provides definitions for a set of language grammars.
  */
 export interface DefinitionProvider {
+  name: string
   /**
    * If there are multiple providers for a given grammar,
    * the one with the highest priority will be used.
