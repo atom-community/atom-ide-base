@@ -1,10 +1,12 @@
 import * as Atom from "atom"
 
+export type IdeUri = string
+
 export interface Definition {
   /**
    * Path of the file in which the definition is located.
    */
-  path: string
+  path: IdeUri
   /**
    * First character of the definition's identifier.
    * e.g. "F" in `class Foo {}`
@@ -23,7 +25,7 @@ export interface Definition {
   /**
    * If provided, `projectRoot` will be used to display a relativized version of `path`.
    */
-  projectRoot?: string
+  projectRoot?: IdeUri
   /**
    * `language` may be used by consumers to identify the source of definitions.
    */
