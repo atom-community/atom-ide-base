@@ -69,6 +69,8 @@ export interface ReactComponentDatatip {
   /**
    * React component
    */
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore: JSX will be defined if React or Etch is used.
   component: () => JSX.Element
   range: Atom.Range
   pinnable?: boolean
