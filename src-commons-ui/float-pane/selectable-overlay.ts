@@ -1,7 +1,5 @@
 import type { TextEditor, TextEditorComponent } from "atom"
 
-let copyKeyMapAdded = false
-
 /** makes the text selectable and copyable
  *
  * Note: you can directly add `user-select: text` (and `pointer-events: all`) in CSS for better performance
@@ -21,23 +19,7 @@ export function makeOverlaySelectable(editor: TextEditor, overlayElement: HTMLEl
   }
 
   // add copy keybindings
-  overlayElement.classList.add("selectable-overlay")
-
-  if (!copyKeyMapAdded) {
-    addCopyKeyMap()
-    copyKeyMapAdded = true
-  }
-}
-
-function addCopyKeyMap() {
-  atom.keymaps.add("selectable-overlay", {
-    ".platform-win32 .selectable-overlay, .platform-linux .selectable-overlay": {
-      "ctrl-c": "native!",
-    },
-    ".platform-darwin .selectable-overlay": {
-      "cmd-c": "native!",
-    },
-  })
+  overlayElement.classList.add("native-key-bindings")
 }
 
 /**
