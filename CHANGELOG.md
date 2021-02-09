@@ -1,3 +1,6 @@
+### 2.3.4
+- Fix copying from overlays on MacOS (#58)
+
 ### 2.3.3
 
 - fix: add ts-ignore to JSX declaration (#55)
