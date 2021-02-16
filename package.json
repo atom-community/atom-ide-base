@@ -102,7 +102,7 @@
     "build-commit": "0.1.4",
     "cross-env": "7.0.3",
     "eslint": "7.19.0",
-    "eslint-config-atomic": "^1.9.0",
+    "eslint-config-atomic": "^1.10.1",
     "npm-check-updates": "11.1.1",
     "prettier": "^2.2.1",
     "rollup": "2.38.5",
