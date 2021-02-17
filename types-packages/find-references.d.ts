@@ -5,7 +5,7 @@ export interface FindReferencesProvider {
   /**
    * Return true if your provider supports finding references for the provided Atom.TextEditor.
    */
-  isEditorSupported(editor: Atom.TextEditor): boolean | Promise<boolean>;
+  isEditorSupported(editor: Atom.TextEditor): boolean | Promise<boolean>
 
   /**
    * `findReferences` will only be called if `isEditorSupported` previously returned true

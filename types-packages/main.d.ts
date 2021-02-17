@@ -13,6 +13,8 @@ export * from "./hyperclick"
 export * from "./outline"
 export * from "./sig-help"
 export * from "./markdown-service"
+export * from "./code-format"
+export * from "./text-edit"
 
 import { BusySignalProvider } from "./busy-signal.d"
 import { CodeActionProvider } from "./code-actions"
