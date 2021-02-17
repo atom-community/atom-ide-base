@@ -1,24 +1,27 @@
+import type { IdeUri } from "./uri"
+
 export interface BusySignalOptions {
   /**
    * Can say that a busy signal will only appear when a given file is open.
    * Default = `null`, meaning the busy signal applies to all files.
    */
-  onlyForFile?: string
+  onlyForFile?: IdeUri
 
   /**
    * Is user waiting for computer to finish a task? (traditional busy spinner)
    * or is the computer waiting for user to finish a task? (action required)
-   * Default = `"computer"`.
+   * @defaultValue `'computer'`
    */
   waitingFor?: "computer" | "user"
 
   /**
-   * Debounce it? default = `true` for busy-signal, and false for action-required.
+   * Debounce it? default = `true` for busy-signal, and `false` for action-required.
    */
   debounce?: boolean
 
   /**
-   * If `onClick` is set, then the tooltip will be clickable. Default = `null`.
+   * If `onClick` is set, then the tooltip will be clickable.
+   * @defaultValue `null`
    */
   onDidClick?: () => void
 
