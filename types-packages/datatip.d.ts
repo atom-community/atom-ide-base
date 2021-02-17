@@ -27,7 +27,17 @@ export interface DatatipProvider {
    * It is recommended that it be the name of the provider's package.
    */
   providerName: string
-  datatip(editor: Atom.TextEditor, bufferPosition: Atom.Point): Promise<Datatip | undefined | null>
+  datatip(
+    editor: Atom.TextEditor,
+    bufferPosition: Atom.Point
+    /**
+     * The mouse event that triggered the datatip.
+     * This is null for manually toggled datatips.
+     */,
+    mouseEvent?: MouseEvent | null
+  ): Promise<Datatip | undefined | null>
+
+  validForScope(scopeName: string): boolean // should be optional?
 }
 
 export interface ModifierDatatipProvider {
