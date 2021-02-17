@@ -1,6 +1,5 @@
 import * as Atom from "atom"
-
-export type IdeUri = string
+import { IdeUri } from "./uri"
 
 export interface Definition {
   /**
