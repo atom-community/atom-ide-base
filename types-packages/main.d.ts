@@ -16,6 +16,7 @@ export * from "./markdown-service"
 export * from "./code-format"
 export * from "./text-edit"
 export * from "./refactor"
+export * from "./console"
 
 import { BusySignalProvider } from "./busy-signal.d"
 import { CodeActionProvider } from "./code-actions"
