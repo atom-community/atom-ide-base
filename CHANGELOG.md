@@ -2,6 +2,7 @@
 
 - Fix atom-package-deps issues (#60)
 -
+
 ### 2.3.4
 
 - Fix copying from overlays on MacOS (#58)

@@ -29,11 +29,11 @@ export interface DatatipProvider {
   providerName: string
   datatip(
     editor: Atom.TextEditor,
-    bufferPosition: Atom.Point
+    bufferPosition: Atom.Point,
     /**
      * The mouse event that triggered the datatip.
      * This is null for manually toggled datatips.
-     */,
+     */
     mouseEvent?: MouseEvent | null
   ): Promise<Datatip | undefined | null>
 
