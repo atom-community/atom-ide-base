@@ -3,6 +3,7 @@
  * @see https://github.com/atom-ide-community/atom-ide-base
  */
 
+export * from "./uri"
 export * from "./busy-signal"
 export * from "./code-actions"
 export * from "./code-highlight"
