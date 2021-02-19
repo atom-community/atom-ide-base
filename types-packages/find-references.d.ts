@@ -1,10 +1,11 @@
 import * as Atom from "atom"
+import { IdeUri } from "./uri"
 
 export interface FindReferencesProvider {
   /**
    * Return true if your provider supports finding references for the provided Atom.TextEditor.
    */
-  isEditorSupported(editor: Atom.TextEditor): Promise<boolean>
+  isEditorSupported(editor: Atom.TextEditor): boolean | Promise<boolean>
 
   /**
    * `findReferences` will only be called if `isEditorSupported` previously returned true
@@ -15,9 +16,9 @@ export interface FindReferencesProvider {
 
 export interface Reference {
   /**
-   * Nuclide URI of the file path
+   * URI of the file path
    */
-  uri: string
+  uri: IdeUri
   /**
    * name of calling method/function/symbol
    */
@@ -27,7 +28,7 @@ export interface Reference {
 
 export interface FindReferencesData {
   type: "data"
-  baseUri: string
+  baseUri: IdeUri
   referencedSymbolName: string
   references: Reference[]
   /**

@@ -14,7 +14,7 @@ export interface OutlineProvider {
 
 export interface OutlineTree {
   /**
-   * from Atom.Octicon (that type's not allowed over rpc so we use string)
+   * from Atom.Octicon or Atom.OcticonsPrivate (types not allowed over rpc so we use string)
    */
   icon?: string
   /**
@@ -23,9 +23,12 @@ export interface OutlineTree {
   kind?: OutlineTreeKind
 
   /**
-   * Must be one or the other. If both are present, tokenizedText is preferred.
+   * Must have `plainText` or the `tokenizedText` property. If both are present, `tokenizedText` is preferred.
    */
   plainText?: string
+  /**
+   * Must have `plainText` or the `tokenizedText` property. If both are present, `tokenizedText` is preferred.
+   */
   tokenizedText?: TokenizedText
 
   /**

@@ -21,13 +21,27 @@ export type PinnedDatatipPosition = "end-of-line" | "above-range"
 
 export interface DatatipProvider {
   priority: number
-  grammarScopes?: ReadonlyArray<string>
+
   /**
    * A unique name for the provider to be used for analytics.
    * It is recommended that it be the name of the provider's package.
    */
   providerName: string
-  datatip(editor: Atom.TextEditor, bufferPosition: Atom.Point): Promise<Datatip | undefined | null>
+  datatip(
+    editor: Atom.TextEditor,
+    bufferPosition: Atom.Point,
+    /**
+     * The mouse event that triggered the datatip.
+     * This is null for manually toggled datatips.
+     */
+    mouseEvent?: MouseEvent | null
+  ): Promise<Datatip | undefined | null>
+
+  /** Either pass this or `validForScope` */
+  grammarScopes?: ReadonlyArray<string>
+
+  /** Either pass `grammarScopes` or this function. */
+  validForScope?(scopeName: string): boolean
 }
 
 export interface ModifierDatatipProvider {

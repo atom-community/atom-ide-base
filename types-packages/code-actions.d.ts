@@ -1,5 +1,16 @@
 import * as Atom from "atom"
 import { Message } from "atom/linter"
+// TODO add code action support to Atom linter?
+
+export type DiagnosticType = "Error" | "Warning" | "Info"
+
+export interface Diagnostic {
+  providerName: string
+  type: DiagnosticType
+  filePath: string
+  text?: string
+  range: Atom.Range
+}
 
 export interface CodeAction {
   apply(): Promise<void>
@@ -13,7 +24,7 @@ export interface CodeActionProvider {
   getCodeActions(
     editor: Atom.TextEditor,
     range: Atom.Range,
-    diagnostics: Message[]
+    diagnostics: Diagnostic[] // | Message[]
   ): Promise<CodeAction[] | null | undefined>
 }
 
@@ -24,5 +35,5 @@ export interface CodeActionProvider {
  * extended to provide a stream of CodeActions based on the cursor position.
  */
 export interface CodeActionFetcher {
-  getCodeActionForDiagnostic: (diagnostic: Message, editor: Atom.TextEditor) => Promise<CodeAction[]>
+  getCodeActionForDiagnostic: (diagnostic: Diagnostic /* | Message */, editor: Atom.TextEditor) => Promise<CodeAction[]>
 }

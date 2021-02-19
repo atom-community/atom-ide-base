@@ -3,6 +3,7 @@
  * @see https://github.com/atom-ide-community/atom-ide-base
  */
 
+export * from "./uri"
 export * from "./busy-signal"
 export * from "./code-actions"
 export * from "./code-highlight"
@@ -13,6 +14,10 @@ export * from "./hyperclick"
 export * from "./outline"
 export * from "./sig-help"
 export * from "./markdown-service"
+export * from "./code-format"
+export * from "./text-edit"
+export * from "./refactor"
+export * from "./console"
 
 import { BusySignalProvider } from "./busy-signal.d"
 import { CodeActionProvider } from "./code-actions"
