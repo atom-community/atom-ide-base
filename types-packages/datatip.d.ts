@@ -21,7 +21,7 @@ export type PinnedDatatipPosition = "end-of-line" | "above-range"
 
 export interface DatatipProvider {
   priority: number
-  grammarScopes?: ReadonlyArray<string>
+
   /**
    * A unique name for the provider to be used for analytics.
    * It is recommended that it be the name of the provider's package.
@@ -37,7 +37,11 @@ export interface DatatipProvider {
     mouseEvent?: MouseEvent | null
   ): Promise<Datatip | undefined | null>
 
-  validForScope(scopeName: string): boolean // should be optional?
+  /** Either pass this or `validForScope` */
+  grammarScopes?: ReadonlyArray<string>
+
+  /** Either pass `grammarScopes` or this function. */
+  validForScope?(scopeName: string): boolean
 }
 
 export interface ModifierDatatipProvider {
