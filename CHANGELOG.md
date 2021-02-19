@@ -1,7 +1,11 @@
+### 2.4.0
+
+- Add missing types from atom-languageclient (#57)
+
 ### 2.3.5
 
 - Fix atom-package-deps issues (#60)
--
+
 
 ### 2.3.4
 
