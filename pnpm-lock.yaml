@@ -2637,9 +2637,9 @@ packages:
   /@babel/plugin-transform-modules-commonjs/7.12.1_@babel+core@7.13.8:
     dependencies:
       '@babel/core': 7.13.8
-      '@babel/helper-module-transforms': 7.12.1
+      '@babel/helper-module-transforms': 7.13.0
       '@babel/helper-plugin-utils': 7.10.4
-      '@babel/helper-simple-access': 7.12.1
+      '@babel/helper-simple-access': 7.12.13
       babel-plugin-dynamic-import-node: 2.3.3
     dev: true
     peerDependencies:
