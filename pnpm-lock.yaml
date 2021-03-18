@@ -47,7 +47,7 @@ importers:
       '@babel/cli': 7.13.10
       '@babel/core': 7.13.10
       '@jest-runner/nuclide-e2e': ^2.0
-      '@types/atom': 1.40.10
+      '@types/atom': ^1.40.10
       '@types/classnames': ^2.2.11
       '@types/dompurify': ^2.2.1
       '@types/jasmine': ^3.6.7
