@@ -1,3 +1,7 @@
+### 2.5.0
+- feat: add domPurifyConfig parameter to MarkdownSevice.render
+- fix: add the required @types packages to the dependencies
+
 ### 2.4.0
 
 - Add missing types from atom-languageclient (#57)
