@@ -1,7 +1,7 @@
 importers:
   .:
     dependencies:
-      atom-ide-markdown-service: 2.0.0
+      atom-ide-markdown-service: 2.1.0
       atom-package-deps: 7.2.2
       classnames: 2.2.6
       dompurify: 2.2.6
@@ -54,7 +54,7 @@ importers:
       '@types/node': ^14.14.35
       '@types/react': ^17.0.3
       '@types/react-dom': ^17.0.2
-      atom-ide-markdown-service: ^2.0.0
+      atom-ide-markdown-service: ^2.1.0
       atom-jasmine3-test-runner: ^5.2.2
       atom-package-deps: ^7.2.2
       babel-jest: ^26.6.3
@@ -4706,7 +4706,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-  /atom-ide-markdown-service/2.0.0:
+  /atom-ide-markdown-service/2.1.0:
     dependencies:
       dompurify: 2.2.6
       marked: 1.2.9
@@ -4714,7 +4714,7 @@ packages:
     engines:
       atom: '>=1.0.0 <2.0.0'
     resolution:
-      integrity: sha512-j7S7QS/G1Fgnl+wDU/ssfp5MxFE9YAcwpZCCmMUbLpOANEJ0+46aTOdHY2HJt5+F76/zGQCv7JwO3Ef1QEQUDA==
+      integrity: sha512-tbOMGVwOHgAwY8scx2maimConxQLKaFYEsaUs8sqOd9FVMGiulxg3XG0IGrhpdxd8nM3QqZLmFFX4fUExqe3UA==
   /atom-jasmine3-test-runner/5.2.2:
     dependencies:
       etch: 0.14.1
