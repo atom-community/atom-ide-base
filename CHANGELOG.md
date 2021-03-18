@@ -1,4 +1,5 @@
 ### 2.5.0
+
 - feat: add domPurifyConfig parameter to MarkdownSevice.render
 - fix: add the required @types packages to the dependencies
 
