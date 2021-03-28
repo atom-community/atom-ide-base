@@ -3,17 +3,17 @@ importers:
     dependencies:
       '@types/atom': 1.40.10
       '@types/dompurify': 2.2.1
-      '@types/node': 14.14.35
+      '@types/node': 14.14.37
       '@types/react': 17.0.3
-      '@types/react-dom': 17.0.2
+      '@types/react-dom': 17.0.3
       atom-ide-markdown-service: 2.1.0
-      atom-package-deps: 7.2.2
+      atom-package-deps: 7.2.3
       classnames: 2.2.6
-      dompurify: 2.2.6
+      dompurify: 2.2.7
       etch: 0.14.1
-      react: 17.0.1
-      react-dom: 17.0.1_react@17.0.1
-      rxjs: 6.6.3
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      rxjs: 6.6.6
     devDependencies:
       '@babel/cli': 7.13.10_@babel+core@7.13.10
       '@babel/core': 7.13.10
@@ -40,7 +40,7 @@ importers:
       npm-check-updates: 11.3.0
       prettier: 2.2.1
       rollup: 2.42.1
-      rollup-plugin-atomic: 2.1.1_f4a80af19ddc57664354e77df819be93
+      rollup-plugin-atomic: 2.1.1_4303b20242838637462a26db253b9a00
       shx: 0.3.3
       typescript: 4.2.3
     specifiers:
@@ -51,19 +51,19 @@ importers:
       '@types/classnames': ^2.2.11
       '@types/dompurify': ^2.2.1
       '@types/jasmine': ^3.6.7
-      '@types/node': ^14.14.35
+      '@types/node': ^14.14.37
       '@types/react': ^17.0.3
-      '@types/react-dom': ^17.0.2
+      '@types/react-dom': ^17.0.3
       atom-ide-markdown-service: ^2.1.0
       atom-jasmine3-test-runner: ^5.2.2
-      atom-package-deps: ^7.2.2
+      atom-package-deps: ^7.2.3
       babel-jest: ^26.6.3
       babel-preset-atomic: ^3.0.3
       build-commit: 0.1.4
       classnames: ^2.2.6
       cross-env: 7.0.3
       csstype: ^3.0.7
-      dompurify: ^2.2.6
+      dompurify: ^2.2.7
       eslint: 7.22.0
       eslint-config-atomic: ^1.12.4
       etch: ^0.14.1
@@ -78,11 +78,11 @@ importers:
       node-ipc: 9.1.4
       npm-check-updates: 11.3.0
       prettier: ^2.2.1
-      react: ^17.0.1
-      react-dom: ^17.0.1
+      react: ^17.0.2
+      react-dom: ^17.0.2
       rollup: 2.42.1
       rollup-plugin-atomic: ^2.1.1
-      rxjs: ^6.6.3
+      rxjs: ^6.6.6
       shx: 0.3.3
       typescript: ^4.2.3
   dist-nuclide/nuclide-adb:
@@ -2085,7 +2085,7 @@ packages:
   /@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.11.6:
     dependencies:
       '@babel/core': 7.11.6
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2094,7 +2094,7 @@ packages:
   /@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.12.10:
     dependencies:
       '@babel/core': 7.12.10
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2112,7 +2112,7 @@ packages:
   /@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.13.10:
     dependencies:
       '@babel/core': 7.13.10
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2148,7 +2148,7 @@ packages:
   /@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.11.6:
     dependencies:
       '@babel/core': 7.11.6
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2157,7 +2157,7 @@ packages:
   /@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.12.10:
     dependencies:
       '@babel/core': 7.12.10
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2175,7 +2175,7 @@ packages:
   /@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.13.10:
     dependencies:
       '@babel/core': 7.13.10
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2211,7 +2211,7 @@ packages:
   /@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.11.6:
     dependencies:
       '@babel/core': 7.11.6
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2220,7 +2220,7 @@ packages:
   /@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.12.10:
     dependencies:
       '@babel/core': 7.12.10
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2238,7 +2238,7 @@ packages:
   /@babel/plugin-syntax-optional-chaining/7.8.3_@babel+core@7.13.10:
     dependencies:
       '@babel/core': 7.13.10
-      '@babel/helper-plugin-utils': 7.10.4
+      '@babel/helper-plugin-utils': 7.13.0
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -4149,6 +4149,10 @@ packages:
   /@types/node/14.14.35:
     resolution:
       integrity: sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
+  /@types/node/14.14.37:
+    dev: false
+    resolution:
+      integrity: sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -4165,12 +4169,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
-  /@types/react-dom/17.0.2:
+  /@types/react-dom/17.0.3:
     dependencies:
       '@types/react': 17.0.3
     dev: false
     resolution:
-      integrity: sha512-Icd9KEgdnFfJs39KyRyr0jQ7EKhq8U6CcHRMGAS45fp5qgUvxL3ujUCfWFttUK2UErqZNj97t9gsVPNAqcwoCg==
+      integrity: sha512-4NnJbCeWE+8YBzupn/YrJxZ8VnjcJq5iR1laqQ1vkpQgBiA7bwk0Rp24fxsdNinzJY2U+HHS4dJJDPdoMjdJ7w==
   /@types/react/17.0.3:
     dependencies:
       '@types/prop-types': 15.7.3
@@ -4713,11 +4717,11 @@ packages:
       '@types/jasmine': 3.6.7
     resolution:
       integrity: sha512-wcWeasDDlqtUzQpaWJ6R9SaCNSUXd8Q9N30Aze0PcX/yXVjhcGJSRhXdilHOvEF0XhOajJ8apl3Eur5tsTGGPA==
-  /atom-package-deps/7.2.2:
+  /atom-package-deps/7.2.3:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-xV4l1Ll987zluBjMiYGtDbZbdM5PF/hOECgaI2mv2+dNzbuugd2M+A2liw1JUenuGrngGw/wcpPqXpAVMGFeDw==
+      integrity: sha512-Z1FHJS2c2xBN3wQVniG7jXDyE4mUjZlHA0tfIkCND9U/fHaZyBJPno4/jD8PtYUnhlymaHRbCsgxCU3QuKjqfQ==
   /atom-patch/0.3.0:
     dependencies:
       random-seed: 0.2.0
@@ -6252,6 +6256,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-7b7ZArhhH0SP6W2R9cqK6RjaU82FZ2UPM7RO8qN1b1wyvC/NY1FNWcX1Pu00fFOAnzEORtwXe4bPaClg6pUybQ==
+  /dompurify/2.2.7:
+    dev: false
+    resolution:
+      integrity: sha512-jdtDffdGNY+C76jvodNTu9jt5yYj59vuTUyx+wXdzcSwAGTYZDAQkQ7Iwx9zcGrA4ixC1syU4H3RZROqRxokxg==
   /domutils/1.5.1:
     dependencies:
       dom-serializer: 0.2.2
@@ -11007,12 +11015,23 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react: 17.0.1
-      scheduler: 0.20.1
+      scheduler: 0.20.2
     dev: false
     peerDependencies:
       react: 17.0.1
     resolution:
       integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+  /react-dom/17.0.2_react@17.0.2:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react: 17.0.2
+      scheduler: 0.20.2
+    dev: false
+    peerDependencies:
+      react: 17.0.2
+    resolution:
+      integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -11049,6 +11068,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
+  /react/17.0.2:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
   /read-package-json-fast/2.0.2:
     dependencies:
       json-parse-even-better-errors: 2.3.1
@@ -11532,7 +11560,7 @@ packages:
       assemblyscript: '*'
     resolution:
       integrity: sha512-DyhJQKJ6Y2RWqPCF+dRW8ectzV374zRQg+MQ+uplgyZKx8TUoLrtfRCCAfuL2P4ry3yNiQhN8VoBM+JpOi7H6A==
-  /rollup-plugin-atomic/2.1.1_f4a80af19ddc57664354e77df819be93:
+  /rollup-plugin-atomic/2.1.1_4303b20242838637462a26db253b9a00:
     dependencies:
       '@rollup/plugin-babel': 5.3.0_cefbb22bc632083d2a7fbd059459779c
       '@rollup/plugin-commonjs': 17.1.0_rollup@2.42.1
@@ -11549,7 +11577,7 @@ packages:
       rollup-plugin-coffee-script: 2.0.0_coffeescript@1.12.7
       rollup-plugin-css-only: 3.1.0_rollup@2.42.1
       rollup-plugin-execute: 1.1.1
-      rollup-plugin-sourcemaps: 0.6.3_f4a80af19ddc57664354e77df819be93
+      rollup-plugin-sourcemaps: 0.6.3_4303b20242838637462a26db253b9a00
       rollup-plugin-terser: 7.0.2_rollup@2.42.1
       rollup-plugin-visualizer: 4.2.1_rollup@2.42.1
       tslib: 2.1.0
@@ -11613,10 +11641,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-PJcd85dxfSBWih84ozRtBkB731OjXk0KnzN0oGp7WOWcarAFkVa71cV5hTJg2qpVsV2U8EUwrzHP3tvy9vS3qg==
-  /rollup-plugin-sourcemaps/0.6.3_f4a80af19ddc57664354e77df819be93:
+  /rollup-plugin-sourcemaps/0.6.3_4303b20242838637462a26db253b9a00:
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.42.1
-      '@types/node': 14.14.35
+      '@types/node': 14.14.37
       rollup: 2.42.1
       source-map-resolve: 0.6.0
     dev: true
@@ -11686,14 +11714,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-caGN7ixiabHpOofginKEquuHk7GgaCrC7UpUQ9ZqGp80tMc68msadOeP/2AKy2R4YJsT1+TX5GZCtxO82qWkyA==
-  /rxjs/6.6.3:
+  /rxjs/6.6.6:
     dependencies:
       tslib: 1.14.0
     dev: false
     engines:
       npm: '>=2.0.0'
     resolution:
-      integrity: sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
+      integrity: sha512-/oTwee4N4iWzAMAL9xdGKjkEHmIwupR3oXbQjCKywF1BeFohswF3vZdogbmEF6pZkOsXTzWkrZszrWpQTByYVg==
   /safe-buffer/5.1.2:
     dev: true
     resolution:
@@ -11741,13 +11769,13 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
-  /scheduler/0.20.1:
+  /scheduler/0.20.2:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
     dev: false
     resolution:
-      integrity: sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==
+      integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
   /season/6.0.2:
     dependencies:
       cson-parser: 1.3.5
