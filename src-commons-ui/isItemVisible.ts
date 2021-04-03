@@ -5,6 +5,9 @@ import type { Dock, ViewRegistry } from "atom"
  * @param item this is an item that is stored in {ViewRegistry}. It has the same type of the argument that you pass to `atom.view.getView(item)`.
  */
 export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0]) {
+  if (item === undefined || item === null) {
+    return false
+  }
   // check the HTMLElement itself (important for when the dock/container is visible but the tab is not selected)
   if ("element" in item) {
     const element = (item as { element: any }).element
