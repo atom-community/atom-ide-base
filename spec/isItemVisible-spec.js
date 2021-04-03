@@ -13,6 +13,7 @@ async function openTempTextEditor(options: WorkspaceOpenOptions) {
   })
   textEditor.setText(chance.sentence({ words: 20 }))
   await textEditor.save()
+  spyOnProperty(textEditor.getElement(), "offsetHeight", "get").and.returnValue(1000)
   return textEditor
 }
 
@@ -33,27 +34,48 @@ describe("isItemVisible", () => {
   })
 
   describe("detects if the text editor is visible", () => {
-    beforeEach(cleanAtom)
+    beforeEach(() => {
+      atom.workspace.getTextEditors().forEach((editor) => editor.destroy())
+    })
 
     it("if two text editors are opened in the center", async () => {
+      // open first editor
       const textEditor1 = await openTempTextEditor()
       expect(atom.workspace.getActiveTextEditor()).toBe(textEditor1)
+
+      expect(textEditor1.getElement().style.display).toBe("")
+      expect(textEditor1.getElement().offsetHeight).toBe(1000)
       expect(isItemVisible(textEditor1)).toBe(true)
 
+      // open second editor
       const textEditor2 = await openTempTextEditor()
       expect(atom.workspace.getActiveTextEditor()).toBe(textEditor2)
-      expect(isItemVisible(textEditor2)).toBe(true)
+
+      // expect(textEditor1.getElement().style.display).toBe("none") // doesn't work in the test env, but works in reality
+      expect(atom.workspace.paneContainerForItem(textEditor1)).toBe(undefined)
       expect(isItemVisible(textEditor1)).toBe(false)
+
+      expect(textEditor2.getElement().style.display).toBe("")
+      expect(textEditor2.getElement().offsetHeight).toBe(1000)
+      expect(isItemVisible(textEditor2)).toBe(true)
     })
+
     it("if text editors are split", async () => {
+      // open first editor
       const textEditor1 = await openTempTextEditor()
       expect(atom.workspace.getActiveTextEditor()).toBe(textEditor1)
+      expect(textEditor1.getElement().style.display).toBe("")
       expect(isItemVisible(textEditor1)).toBe(true)
 
+      // open second editor in the right
       const textEditor2 = await openTempTextEditor({ split: "right" })
       expect(atom.workspace.getActiveTextEditor()).toBe(textEditor2)
-      expect(isItemVisible(textEditor2)).toBe(true)
+
+      expect(textEditor1.getElement().style.display).toBe("")
       expect(isItemVisible(textEditor1)).toBe(true)
+
+      expect(textEditor2.getElement().style.display).toBe("")
+      expect(isItemVisible(textEditor2)).toBe(true)
     })
   })
 

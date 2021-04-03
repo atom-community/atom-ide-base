@@ -15,6 +15,10 @@ export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0]) {
     return false
     // if it we can't detect the invisiblity using HTML we need to consider Atom's context so we continue
   }
+  // etch component
+  // if (item?.component?.visible === false) {
+  //   return false
+  // }
   const paneContainer = atom.workspace.paneContainerForItem(item)
   // if no container it is not visible
   if (paneContainer === undefined) {
