@@ -44,6 +44,24 @@ describe("isItemVisible", () => {
     })
   })
 
+  describe("detects if the dock item is visible", () => {
+    it("finds the visible tab among all the tabs in a dock pane", async () => {
+      await atom.packages.activatePackage("github")
+      const rightDock = atom.workspace.getRightDock()
+      const rightDockItems = rightDock.getPaneItems()
+
+      console.log({ rightDockItems })
+
+      rightDock.hide()
+      expect(isItemVisible(rightDockItems[0])).toBe(false)
+      expect(isItemVisible(rightDockItems[1])).toBe(false)
+
+      rightDock.show()
+      const visibleItems = rightDockItems.filter((item) => isItemVisible(item))
+      expect(visibleItems.length).toBe(1)
+    })
+  })
+
   afterAll(async () => {
     await cleanup()
   })
