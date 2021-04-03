@@ -6,3 +6,19 @@ export declare function activate(): void;
  * called by Atom when deactivating an extension
  */
 export declare function deactivate(): void;
+export declare const config: {
+    longLineLength: {
+        title: string;
+        description: string;
+        type: string;
+        default: number;
+        order: number;
+    };
+    largeLineCount: {
+        title: string;
+        description: string;
+        type: string;
+        default: number;
+        order: number;
+    };
+};

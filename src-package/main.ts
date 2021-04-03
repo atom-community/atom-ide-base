@@ -56,3 +56,22 @@ export function deactivate() {
   }
   subscriptions = null
 }
+
+export const config = {
+  longLineLength: {
+    title: "Long Line Length",
+    description:
+      "If an editor has a line with a length more than this number, the editor will reduce the expensive operations to help the performance.",
+    type: "number",
+    default: 4000,
+    order: 10,
+  },
+  largeLineCount: {
+    title: "Large File Line Count",
+    description:
+      "If an editor more line numbers than this number, the editor will reduce the expensive operations to help the performance.",
+    type: "number",
+    default: 4000,
+    order: 11,
+  },
+}
