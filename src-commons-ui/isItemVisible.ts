@@ -35,7 +35,10 @@ export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0]) {
  * @param element
  */
 export function isElementVisible(element: HTMLElement) {
-  if (element instanceof HTMLElement && (element.style.display === "none" || element.hidden)) {
+  if (
+    element instanceof HTMLElement &&
+    (element.style.display === "none" || element.hidden || element.offsetHeight === 0)
+  ) {
     return false
   }
   return true
