@@ -18,12 +18,15 @@ importers:
       '@babel/cli': 7.13.10_@babel+core@7.13.10
       '@babel/core': 7.13.10
       '@jest-runner/nuclide-e2e': 2.0.0
+      '@types/chance': 1.1.1
       '@types/classnames': 2.2.11
       '@types/jasmine': 3.6.7
+      '@types/temp': 0.8.34
       atom-jasmine3-test-runner: 5.2.2
       babel-jest: 26.6.3_@babel+core@7.13.10
       babel-preset-atomic: 3.0.3_e3063fd0cb0bf7009584b373b62355d0
       build-commit: 0.1.4
+      chance: 1.1.7
       cross-env: 7.0.3
       csstype: 3.0.7
       eslint: 7.22.0
@@ -42,24 +45,28 @@ importers:
       rollup: 2.42.1
       rollup-plugin-atomic: 2.1.1_4303b20242838637462a26db253b9a00
       shx: 0.3.3
+      temp: 0.9.4
       typescript: 4.2.3
     specifiers:
       '@babel/cli': 7.13.10
       '@babel/core': 7.13.10
       '@jest-runner/nuclide-e2e': ^2.0
       '@types/atom': ^1.40.10
+      '@types/chance': ^1.1.1
       '@types/classnames': ^2.2.11
       '@types/dompurify': ^2.2.1
       '@types/jasmine': ^3.6.7
       '@types/node': ^14.14.37
       '@types/react': ^17.0.3
       '@types/react-dom': ^17.0.3
+      '@types/temp': ^0.8.34
       atom-ide-markdown-service: ^2.1.0
       atom-jasmine3-test-runner: ^5.2.2
       atom-package-deps: ^7.2.3
       babel-jest: ^26.6.3
       babel-preset-atomic: ^3.0.3
       build-commit: 0.1.4
+      chance: ^1.1.7
       classnames: ^2.2.6
       cross-env: 7.0.3
       csstype: ^3.0.7
@@ -84,6 +91,7 @@ importers:
       rollup-plugin-atomic: ^2.1.1
       rxjs: ^6.6.6
       shx: 0.3.3
+      temp: ^0.9.4
       typescript: ^4.2.3
   dist-nuclide/nuclide-adb:
     dependencies:
@@ -4079,6 +4087,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Pzh9O3sTK8V6I1olsXpCfj2k/ygO2q1X0vhhnDrEQyYLHZesWz+zMZMVcwXLCYf0U36EtmyYaFGPfXlTtDHe3A==
+  /@types/chance/1.1.1:
+    dev: true
+    resolution:
+      integrity: sha512-Ze94JMnM33+dj/tQCWxXWaQ80uYmV9HwydTyrbHAiBa91ETQuI+3iF5OFPicDpQx+md+/6rDpTp9I2VKOGOtpw==
   /@types/classnames/2.2.11:
     dev: true
     resolution:
@@ -4150,7 +4162,6 @@ packages:
     resolution:
       integrity: sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
   /@types/node/14.14.37:
-    dev: false
     resolution:
       integrity: sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
   /@types/normalize-package-data/2.4.0:
@@ -4201,6 +4212,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-RJJrrySY7A8havqpGObOB4W92QXKJo63/jFLLgpvOtsGUqbQZ9Sbgl35KMm1DjC6j7AvmmU2bIno+3IyEaemaw==
+  /@types/temp/0.8.34:
+    dependencies:
+      '@types/node': 14.14.37
+    dev: true
+    resolution:
+      integrity: sha512-oLa9c5LHXgS6UimpEVp08De7QvZ+Dfu5bMQuWyMhf92Z26Q10ubEMOWy9OEfUdzW7Y/sDWVHmUaLFtmnX/2j0w==
   /@types/trusted-types/1.0.6:
     dev: false
     resolution:
@@ -5542,6 +5559,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
+  /chance/1.1.7:
+    dev: true
+    resolution:
+      integrity: sha512-bua/2cZEfzS6qPm0vi3JEvGNbriDLcMj9lKxCQOjUcCJRcyjA7umP0zZm6bKWWlBN04vA0L99QGH/CZQawr0eg==
   /char-regex/1.0.2:
     dev: true
     engines:
