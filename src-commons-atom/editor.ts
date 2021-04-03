@@ -1,9 +1,5 @@
 import { TextEditor } from "atom"
 
-// TODO move these to atom-ide-base
-const longLineLengthDefault = atom.config.get("linter-ui-default.longLineLength") || 4000
-const largeLineCountDefault = atom.config.get("linter-ui-default.largeFileLineCount") / 6 || 3000 // minimum number of lines to trigger large file optimizations
-
 /**
  * Find if an editor's largeness based on the given threashold
  * @param editor
@@ -13,8 +9,8 @@ const largeLineCountDefault = atom.config.get("linter-ui-default.largeFileLineCo
  */
 export function largeness(
   editor: TextEditor,
-  largeLineCount: number = largeLineCountDefault,
-  longLineLength: number = longLineLengthDefault
+  largeLineCount: number = atom.config.get("atom-ide-base.longLineLength") || 4000,
+  longLineLength: number = atom.config.get("atom-ide-base.largeLineCount") / 6 || 3000
 ) {
   const lineCount = lineCountIfLarge(editor, largeLineCount)
   if (lineCount !== 0) {
