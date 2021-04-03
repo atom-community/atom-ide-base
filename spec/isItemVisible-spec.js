@@ -17,7 +17,6 @@ async function openTempTextEditor(options: WorkspaceOpenOptions) {
 }
 
 async function openGitTabs() {
-  await atom.workspace.getCenter().activate()
   await Promise.all([atom.packages.activatePackage("github"), openTempTextEditor({ location: "center" })])
   await atom.commands.dispatch(atom.views.getView(atom.workspace), "github:toggle-git-tab")
 }
@@ -26,7 +25,9 @@ describe("isItemVisible", () => {
   beforeAll(() => {
     track()
   })
-  afterEach(() => {
+  beforeEach(async () => {
+    await atom.workspace.getCenter().activate()
+    jasmine.attachToDOM(atom.views.getView(atom.workspace))
     atom.workspace.getTextEditors().forEach((editor) => editor.destroy())
     atom.workspace.getPanes().forEach((pane) => pane.destroy())
   })
