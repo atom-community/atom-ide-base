@@ -11,7 +11,7 @@ export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0]) {
   // check the HTMLElement itself (important for when the dock/container is visible but the tab is not selected)
   // try getting the element
   const element =
-    (item as { getElement: () => HTMLElement })?.getElement() ?? (item as { element: HTMLElement })?.element
+    (item as { getElement: () => HTMLElement }).getElement?.() ?? (item as { element: HTMLElement })?.element
   if (element !== undefined && !isElementVisible(element)) {
     return false
     // if it we can't detect the invisiblity using HTML we need to consider Atom's context so we continue
