@@ -1,7 +1,7 @@
 /** @babel */
 
 import type { TextEditor, WorkspaceOpenOptions, Dock } from "atom"
-import { isItemVisible } from "../commons-ui/isItemVisible.js"
+import { isItemVisible } from "../commons-ui/items.js"
 import { open, track, cleanup } from "temp"
 import { Chance } from "chance"
 const chance = new Chance()
