@@ -4,7 +4,7 @@ import type { Dock, ViewRegistry } from "atom"
  * This is useful to skip code excecution or updating when the item is not visible.
  * @param item this is an item that is stored in {ViewRegistry}. It has the same type of the argument that you pass to `atom.view.getView(item)`.
  */
-export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0]) {
+export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0] | undefined | null) {
   if (item === undefined || item === null) {
     return false
   }
@@ -50,8 +50,11 @@ export function isElementVisible(element: HTMLElement) {
 /**
  * Get the HTMLElement of an item using `.getElement()` or `.element`
  */
-export function getItemElement(item: object) {
+export function getItemElement(item: object | undefined | null) {
+  if (item === undefined || item === null) {
+    return undefined
+  }
   return typeof (item as any).getElement === "function"
     ? (item as { getElement: () => HTMLElement }).getElement()
-    : (item as { element: HTMLElement | undefined })?.element
+    : (item as { element: HTMLElement | undefined }).element
 }
