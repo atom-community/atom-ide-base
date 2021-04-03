@@ -1,3 +1,19 @@
+### 2.6.0
+
+Added new utility functions:
+
+- commons-ui:
+  - isItemVisible
+  - getItemElement
+  - isElementVisible
+- commons-atom:
+  - editor largeness
+  - editor lineCountIfLarge
+  - editor lineLengthIfLong
+  - notifyError
+
+Fixed bugs in ViewContainer, scrollIntoView.
+
 ### 2.5.0
 
 - feat: add domPurifyConfig parameter to MarkdownSevice.render
