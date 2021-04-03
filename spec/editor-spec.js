@@ -1,6 +1,6 @@
 /** @babel */
 
-import { lineCountIfLarge, lineLengthIfLongerThan, largeness } from "../commons-atom/editor-largeness"
+import { lineCountIfLarge, lineLengthIfLong, largeness } from "../commons-atom/editor-largeness"
 import type { TextEditor, WorkspaceOpenOptions } from "atom"
 import { open, track, cleanup } from "temp"
 import { Chance } from "chance"
@@ -55,14 +55,14 @@ describe("editor", () => {
     })
   })
 
-  describe("lineLengthIfLongerThan", () => {
+  describe("lineLengthIfLong", () => {
     it("return 0 for short files", async () => {
       const { textEditor } = await openTempTextEditor(1, 1)
-      expect(lineLengthIfLongerThan(textEditor, 1000)).toBe(0)
+      expect(lineLengthIfLong(textEditor, 1000)).toBe(0)
     })
     it("return largest line length for long files", async () => {
       const { textEditor, fileLegth } = await openTempTextEditor(1, 100)
-      expect(lineLengthIfLongerThan(textEditor, 100)).toBeGreaterThanOrEqual(fileLegth - 10)
+      expect(lineLengthIfLong(textEditor, 100)).toBeGreaterThanOrEqual(fileLegth - 10)
     })
   })
 
