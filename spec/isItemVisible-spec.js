@@ -16,9 +16,19 @@ async function openTempTextEditor(options: WorkspaceOpenOptions) {
   return textEditor
 }
 
+async function openGitTabs() {
+  await atom.workspace.getCenter().activate()
+  await Promise.all([atom.packages.activatePackage("github"), openTempTextEditor({ location: "center" })])
+  await atom.commands.dispatch(atom.views.getView(atom.workspace), "github:toggle-git-tab")
+}
+
 describe("isItemVisible", () => {
   beforeAll(() => {
     track()
+  })
+  afterEach(() => {
+    atom.workspace.getTextEditors().forEach((editor) => editor.destroy())
+    atom.workspace.getPanes().forEach((pane) => pane.destroy())
   })
 
   describe("detects if the text editor is visible", () => {
@@ -46,7 +56,7 @@ describe("isItemVisible", () => {
 
   describe("detects if the dock item is visible", () => {
     it("finds the visible tab among all the tabs in a dock pane", async () => {
-      await atom.packages.activatePackage("github")
+      await openGitTabs()
       const rightDock = atom.workspace.getRightDock()
       const rightDockItems = rightDock.getPaneItems()
 
