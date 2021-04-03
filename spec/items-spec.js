@@ -6,7 +6,7 @@ import { open, track, cleanup } from "temp"
 import { Chance } from "chance"
 const chance = new Chance()
 
-async function openTempTextEditor(options: WorkspaceOpenOptions) {
+async function openTempTextEditor(options: WorkspaceOpenOptions = {}) {
   const textEditor: TextEditor = await atom.workspace.open((await open()).path, {
     pending: true,
     ...options,
