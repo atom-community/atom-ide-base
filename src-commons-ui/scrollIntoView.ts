@@ -35,16 +35,19 @@ export function scrollIntoView(el: Element, alignToTop?: boolean): void {
   restoreOverflowHiddenScrollTops(scrollTops)
 }
 
-export function scrollIntoViewIfNeeded(el: Element, center?: boolean): void {
+export type ElementExtended = Element & { scrollIntoViewIfNeeded?: (shouldCenter: boolean) => void }
+
+export function scrollIntoViewIfNeeded(el: Element, center: boolean = true): void {
   const scrollTops = getScrollTops(el)
-  el?.scrollIntoViewIfNeeded(center) ?? el.scrollIntoView(center)
+  // eslint-disable-next-line no-unused-expressions
+  ;(el as ElementExtended).scrollIntoViewIfNeeded?.(center) ?? el.scrollIntoView(center)
   restoreOverflowHiddenScrollTops(scrollTops)
 }
 
 function getScrollTops(el_: Element): Map<Element, number> {
   let el: Element | null = el_
-  const scrollTops = new Map()
-  while (el != null) {
+  const scrollTops = new Map<Element, number>()
+  while (el !== null) {
     scrollTops.set(el, el.scrollTop)
     el = el.parentElement
   }
@@ -59,9 +62,8 @@ function restoreOverflowHiddenScrollTops(scrollTops: Map<Element, number>): void
   })
 }
 
-function isOverflowHidden(el: HTMLElement | SVGElement | Element): boolean {
-  //@ts-ignore
-  const overflowStyle = el?.style.overflow
+export function isOverflowHidden(el: HTMLElement | SVGElement | Element): boolean {
+  const overflowStyle = (el as HTMLElement)?.style.overflow
   const overflow = overflowStyle ?? getComputedStyle(el).overflow
   return overflow === "hidden"
 }
