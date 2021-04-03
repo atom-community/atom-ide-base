@@ -76,15 +76,15 @@ export class ViewContainer extends React.Component<Props, State> {
     }
   }
 
-  ActionClick(action: string, actionTitle: string) {
+  ActionClick(action: string | undefined, actionTitle: string | undefined) {
     let actionButton = undefined
-    if (action != null && IconsForAction[action] != null) {
+    if (action !== undefined && IconsForAction[action] != null) {
       const actionIcon = IconsForAction[action]
       actionButton = (
         <div
           className={`datatip-pin-button icon-${actionIcon}`}
-          onClick={(event) => {
-            this.props.onActionClick()
+          onClick={() => {
+            this.props.onActionClick?.(event)
           }}
           title={actionTitle}
         />
