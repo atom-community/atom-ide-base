@@ -1,6 +1,6 @@
 /** @babel */
 
-import type { TextEditor, WorkspaceOpenOptions } from "atom"
+import type { TextEditor, WorkspaceOpenOptions, Dock } from "atom"
 import { isItemVisible } from "../commons-ui/isItemVisible.js"
 import { open, track, cleanup } from "temp"
 import { Chance } from "chance"
@@ -17,7 +17,13 @@ async function openTempTextEditor(options: WorkspaceOpenOptions) {
 }
 
 async function openGitTabs() {
-  await Promise.all([atom.packages.activatePackage("github"), openTempTextEditor({ location: "center" })])
+  await atom.workspace.getCenter().activate()
+  jasmine.attachToDOM(atom.views.getView(atom.workspace))
+  if (!atom.packages.isPackageActive("github")) {
+    atom.packages.enablePackage("github")
+    await atom.packages.activatePackage("github")
+  }
+  await openTempTextEditor({ location: "center" })
   await atom.commands.dispatch(atom.views.getView(atom.workspace), "github:toggle-git-tab")
 }
 
@@ -25,14 +31,10 @@ describe("isItemVisible", () => {
   beforeAll(() => {
     track()
   })
-  beforeEach(async () => {
-    await atom.workspace.getCenter().activate()
-    jasmine.attachToDOM(atom.views.getView(atom.workspace))
-    atom.workspace.getTextEditors().forEach((editor) => editor.destroy())
-    atom.workspace.getPanes().forEach((pane) => pane.destroy())
-  })
 
   describe("detects if the text editor is visible", () => {
+    beforeEach(cleanAtom)
+
     it("if two text editors are opened in the center", async () => {
       const textEditor1 = await openTempTextEditor()
       expect(atom.workspace.getActiveTextEditor()).toBe(textEditor1)
@@ -58,18 +60,47 @@ describe("isItemVisible", () => {
   describe("detects if the dock item is visible", () => {
     it("finds the visible tab among all the tabs in a dock pane", async () => {
       await openGitTabs()
-      const rightDock = atom.workspace.getRightDock()
-      const rightDockItems = rightDock.getPaneItems()
+      const rightDock: Dock = atom.workspace.getRightDock()
+      jasmine.attachToDOM(rightDock.getElement())
 
-      console.log({ rightDockItems })
+      const rightDockItems: Array<object> = rightDock.getPaneItems()
+      const item1OffsetHeightSpy = spyOnProperty(rightDockItems[0].getElement(), "offsetHeight", "get")
+      const item2OffsetHeightSpy = spyOnProperty(rightDockItems[1].getElement(), "offsetHeight", "get")
 
+      // "detects hidden if the dock is closed"
+      // hide the dock
       rightDock.hide()
+      expect(atom.workspace.paneContainerForItem(rightDockItems[0]).isVisible()).toBe(false)
+      expect(atom.workspace.paneContainerForItem(rightDockItems[1]).isVisible()).toBe(false)
+
+      // despite having offsetHeight it is detected as hidden using `dock.isVisible`
+      item1OffsetHeightSpy.and.returnValue(682)
+      item2OffsetHeightSpy.and.returnValue(682)
       expect(isItemVisible(rightDockItems[0])).toBe(false)
       expect(isItemVisible(rightDockItems[1])).toBe(false)
 
+      // "can detect using offsetHeight"
+      // show the dock
       rightDock.show()
-      const visibleItems = rightDockItems.filter((item) => isItemVisible(item))
-      expect(visibleItems.length).toBe(1)
+      expect(atom.workspace.paneContainerForItem(rightDockItems[0]).isVisible()).toBe(true)
+      expect(atom.workspace.paneContainerForItem(rightDockItems[1]).isVisible()).toBe(true)
+
+      // can detect using offsetHeight
+      item1OffsetHeightSpy.and.returnValue(682)
+      item2OffsetHeightSpy.and.returnValue(0) // hidden pane
+      const visibleItems1 = rightDockItems.filter((item) => isItemVisible(item))
+      expect(visibleItems1.length).toBe(1)
+      expect(isItemVisible(rightDockItems[0])).toBe(true)
+      expect(isItemVisible(rightDockItems[1])).toBe(false)
+
+      // "can detect using display none"
+      item1OffsetHeightSpy.and.returnValue(682)
+      item2OffsetHeightSpy.and.returnValue(682)
+      rightDockItems[1].getElement().style.display = "none" // hidden pane
+      const visibleItems2 = rightDockItems.filter((item) => isItemVisible(item))
+      expect(visibleItems2.length).toBe(1)
+      expect(isItemVisible(rightDockItems[0])).toBe(true)
+      expect(isItemVisible(rightDockItems[1])).toBe(false)
     })
   })
 
