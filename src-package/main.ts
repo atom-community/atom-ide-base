@@ -71,7 +71,7 @@ export const config = {
     description:
       "If an editor more line numbers than this number, the editor will reduce the expensive operations to help the performance.",
     type: "number",
-    default: 20000,
+    default: 4000,
     order: 11,
   },
 }

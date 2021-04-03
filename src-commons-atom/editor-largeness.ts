@@ -5,12 +5,12 @@ import { TextEditor } from "atom"
  * @param editor
  * @param largeLineCount lineCountIfLarge threashold
  * @param longLineLength lineLengthIfLongerThan threashold
- * @returns the the largness score if editor is large. Otherwise it returns 0
+ * @returns the largness score if editor is large. Otherwise it returns 0 (a small file)
  */
 export function largeness(
   editor: TextEditor,
-  largeLineCount: number = atom.config.get("atom-ide-base.longLineLength") || 4000,
-  longLineLength: number = atom.config.get("atom-ide-base.largeLineCount") / 6 || 3000
+  largeLineCount: number = atom.config.get("atom-ide-base.largeLineCount") || 4000,
+  longLineLength: number = atom.config.get("atom-ide-base.longLineLength") || 4000
 ) {
   const lineCount = lineCountIfLarge(editor, largeLineCount)
   if (lineCount !== 0) {
@@ -20,14 +20,14 @@ export function largeness(
   if (longLine !== 0) {
     return longLine
   }
-  return 0
+  return 0 // small file
 }
 
 /**
  * Find if an editor has a line that is longer than the given threashold
  * @param editor
  * @param threashold largeLineCount threashold
- * @returns the line count if it is larger than threashold. Otherwise it returns 0
+ * @returns the line count if it is larger than threashold. Otherwise it returns 0 (a small file)
  */
 export function lineCountIfLarge(editor: TextEditor, threashold: number) {
   // @ts-ignore
