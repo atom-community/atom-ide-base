@@ -41,6 +41,27 @@ describe("items", () => {
     track()
   })
 
+  describe("getItemElement", () => {
+    it("gets the element of TextEditor", async () => {
+      const textEditor = await openTempTextEditor()
+      const textEditorElement = getItemElement(textEditor)
+      expect(textEditorElement instanceof HTMLElement).toBeTrue()
+      expect(textEditorElement.tagName).toBe("ATOM-TEXT-EDITOR")
+    })
+    it("gets the element of Git panes", async () => {
+      const rightDock: Dock = await getGitDock()
+      const rightDockItems: Array<object> = rightDock.getPaneItems()
+
+      const gitElement = getItemElement(rightDockItems[0])
+      expect(gitElement instanceof HTMLElement).toBeTrue()
+      expect(gitElement.className).toBe("github-Git-root")
+
+      const githubElement = getItemElement(rightDockItems[1])
+      expect(githubElement instanceof HTMLElement).toBeTrue()
+      expect(githubElement.className).toBe("github-GitHub-root")
+    })
+  })
+
   describe("isItemVisible", () => {
     describe("detects if the text editor is visible", () => {
       beforeEach(() => {
