@@ -34,7 +34,7 @@ jobs:
           channel: ${{ matrix.atom_channel }}
 
       - name: Setup PNPM
-        uses: pnpm/action-setup@v1.2.1
+        uses: pnpm/action-setup@master
         with:
           version: latest
 
@@ -80,7 +80,7 @@ jobs:
         run: apm -v
 
       - name: Setup PNPM
-        uses: pnpm/action-setup@v1.2.1
+        uses: pnpm/action-setup@master
         with:
           version: latest
       - run: |
