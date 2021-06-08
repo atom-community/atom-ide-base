@@ -33,6 +33,8 @@ jobs:
         with:
           channel: ${{ matrix.atom_channel }}
       - uses: actions/setup-node@v2
+        with:
+          version: 14
 
       - name: Setup PNPM
         uses: pnpm/action-setup@master
@@ -78,6 +80,8 @@ jobs:
         with:
           channel: ${{ matrix.atom_channel }}
       - uses: actions/setup-node@v2
+        with:
+          version: 14
 
       - name: Setup PNPM
         uses: pnpm/action-setup@master
@@ -121,6 +125,8 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v2
+        with:
+          version: 14
 
       - name: Commit lint ✨
         uses: wagoid/commitlint-github-action@v2
