@@ -49,7 +49,7 @@ export class SnippetView extends React.Component<Props, State> {
   }
 }
 
-const regexPremeable = /^\s*<(\?|!)([a-zA-Z]+)?\s*/i
+const regexPremeable = /^\s*<([!?])([a-z]+)?\s*/i
 const regexLSPPrefix = /^\((method|property|parameter|alias)\)\W/
 
 /**
@@ -60,13 +60,14 @@ const regexLSPPrefix = /^\((method|property|parameter|alias)\)\W/
  * @return a promise object to track the asynchronous operation
  */
 export async function getSnippetHtml(
-  snippets: Array<string> | string,
+  snipetsGiven: Array<string> | string,
   grammarName: string = atom.workspace.getActiveTextEditor()?.getGrammar().scopeName?.toLowerCase() || "",
   renderer?: MarkdownService
 ): Promise<string | null> {
-  if (snippets === undefined) {
+  if (snipetsGiven === undefined) {
     return null
   }
+  let snippets = snipetsGiven
 
   // if string
   if (typeof snippets === "string") {
@@ -80,10 +81,10 @@ export async function getSnippetHtml(
     }
     const markdown = snippets
       .map((snippet) => {
-        snippet = snippet
+        const snp = snippet
           .replace(regexPremeable, "") // remove any preamble from the line
           .replace(regexLSPPrefix, "") // remove LSP prefix
-        return `\`\`\`\n${snippet}\n\`\`\``
+        return `\`\`\`\n${snp}\n\`\`\``
       })
       .join("\n")
 
@@ -92,7 +93,7 @@ export async function getSnippetHtml(
     } else {
       // Use built-in markdown renderer (it already does sanitization)
       const render = await getMarkdownRenderer()
-      return await render(markdown, grammarName)
+      return render(markdown, grammarName)
     }
   } else {
     return null

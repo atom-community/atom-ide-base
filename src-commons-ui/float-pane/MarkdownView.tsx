@@ -80,7 +80,6 @@ export async function renderMarkdown(
   }
   // if string
   else {
-    //@ts-ignore
     markdownText = markdownTexts
   }
   if (renderer) {
@@ -88,6 +87,6 @@ export async function renderMarkdown(
   } else {
     // Use built-in markdown renderer (it already does sanitization)
     const render = await getMarkdownRenderer()
-    return await render(markdownText, grammarName)
+    return render(markdownText, grammarName)
   }
 }

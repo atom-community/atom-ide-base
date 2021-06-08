@@ -22,9 +22,9 @@ interface Props {
   action?: string
   actionTitle?: string
   className?: string
-  onActionClick?: Function
-  onMouseDown?: Function
-  onClickCapture?: Function
+  onActionClick?: (event: any) => void
+  onMouseDown?: (event: any) => void
+  onClickCapture?: (event: any) => void
 }
 
 interface State {}
@@ -78,7 +78,7 @@ export class ViewContainer extends React.Component<Props, State> {
 
   ActionClick(action: string | undefined, actionTitle: string | undefined) {
     let actionButton = undefined
-    if (action !== undefined && IconsForAction[action] != null) {
+    if (action !== undefined && IconsForAction[action] !== undefined) {
       const actionIcon = IconsForAction[action]
       actionButton = (
         <div
