@@ -36,7 +36,7 @@ export interface SignatureHelp {
 
 export interface Signature {
   label: string
-  documentation?: string | MarkupContent
+  documentation?: string | MarkupContent | null
   parameters?: SignatureParameter[]
 }
 export type SignatureInformation = Signature
@@ -50,6 +50,6 @@ export interface MarkupContent {
 
 export interface SignatureParameter {
   label: string | [number, number]
-  documentation?: string | MarkupContent
+  documentation?: string | MarkupContent | null
 }
 export type ParameterInformation = SignatureParameter

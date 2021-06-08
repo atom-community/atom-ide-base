@@ -65,9 +65,7 @@ export interface DefinitionProvider {
 }
 
 export interface DefinitionPreviewProvider {
-  getDefinitionPreview(
-    definition: Definition
-  ): Promise<
+  getDefinitionPreview(definition: Definition): Promise<
     | {
         mime: string
         contents: string
