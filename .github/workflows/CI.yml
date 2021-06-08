@@ -39,7 +39,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@master
         with:
-          version: latest
+          version: 5
 
       - name: Install base dependencies
         run: |
@@ -86,7 +86,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@master
         with:
-          version: latest
+          version: 5
       - run: |
           pnpm install
           pnpm prepare.nuclide
@@ -127,6 +127,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           version: 14
+      - name: Setup PNPM
+        uses: pnpm/action-setup@master
+        with:
+          version: 5
 
       - name: Commit lint ✨
         uses: wagoid/commitlint-github-action@v2
