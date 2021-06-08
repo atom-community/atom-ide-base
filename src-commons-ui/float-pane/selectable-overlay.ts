@@ -37,12 +37,12 @@ export function overlayFocusFix(editor: TextEditor, element: HTMLElement) {
 }
 
 export function focusEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
+  // @ts-ignore internal api
   editorComponent?.didFocus()
 }
 
 export function blurEditor(editorComponent: TextEditorComponent) {
-  // @ts-ignore
+  // @ts-ignore internal api
   editorComponent?.didBlurHiddenInput({
     relatedTarget: null,
   })
