@@ -1,0 +1,25 @@
+{
+  "extends": "eslint-config-atomic",
+  "ignorePatterns": ["**/node_modules/**/*"],
+  "env": {
+    "atomtest": true,
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jasmine": true,
+    "jest": true
+  },
+  "rules": {
+    "no-shadow": "off",
+    "no-undef": "off",
+    "no-eq-null": "off",
+    "eqeqeq": "off",
+    "require-await": "off"
+  },
+  "settings": {
+    "import/ignore": [
+      "\\.jsx?$"
+    ]
+  }
+
+}
