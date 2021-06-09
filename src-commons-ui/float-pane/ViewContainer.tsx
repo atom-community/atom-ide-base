@@ -12,7 +12,7 @@ const IconsForAction = {
   [DATATIP_ACTIONS.CLOSE]: "x",
 }
 
-interface Props {
+export interface Props {
   component?: ReactViewProps
   markdown?: MarkdownViewProps
   snippet?: SnippetViewProps
