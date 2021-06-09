@@ -30,9 +30,9 @@ describe("tests", () => {
   }, timeout + 1000)
 
   it("Installation", function () {
-    const allPackages = atom.packages.getAvailablePackageNames();
+    const allPackages = atom.packages.getAvailablePackageNames()
     deps.forEach(async (dep) => {
-    	expect(allPackages.includes(dep)).toBeTruthy();
+      expect(allPackages.includes(dep)).toBeTruthy()
       await atom.packages.activatePackage(dep)
       expect(atom.packages.isPackageLoaded(dep)).toBeTruthy()
     })

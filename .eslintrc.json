@@ -1,4 +1,12 @@
 {
   "extends": "eslint-config-atomic",
-  "ignorePatterns": ["dist/", "**/node_modules/**/*", "package/", "dist-nuclide/", "commons-atom/", "commons-ui/", ".rollup.cache/"]
+  "ignorePatterns": [
+    "dist/",
+    "**/node_modules/**/*",
+    "package/",
+    "dist-nuclide/",
+    "commons-atom/",
+    "commons-ui/",
+    ".rollup.cache/"
+  ]
 }

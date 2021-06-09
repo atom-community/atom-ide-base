@@ -1,3 +1,8 @@
+### 3.0.0
+
+- feat(breaking): convert ViewContainer components from React to Solid. See `atom-ide-datatips` for an example of their usage.
+- fix: update dependencies
+
 ### 2.6.0
 
 Added new utility functions:
