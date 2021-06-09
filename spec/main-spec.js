@@ -1,3 +1,5 @@
+const timeout = process.env.CI ? 40000 : 1000
+
 describe("tests", () => {
   const deps = [
     "atom-ide-markdown-service",
@@ -23,9 +25,9 @@ describe("tests", () => {
     await new Promise((resolve) => {
       setTimeout(() => {
         resolve()
-      }, 20000)
+      }, timeout)
     })
-  }, 25000)
+  }, timeout + 1000)
 
   it("Installation", function () {
     const allPackages = atom.packages.getAvailablePackageNames();
