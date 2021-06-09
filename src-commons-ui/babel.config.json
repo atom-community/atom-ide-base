@@ -1,11 +1,12 @@
 {
   "presets": [
     "solid",
-    "@babel/preset-typescript",
     [
       "babel-preset-atomic",
       {
-        "addModuleExports": false
+        "addModuleExports": false,
+        "react": false,
+        "typescript": true
       }
     ]
   ]
