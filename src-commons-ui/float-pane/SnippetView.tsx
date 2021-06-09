@@ -1,4 +1,4 @@
-import * as React from "react"
+import { createSignal, onMount } from "solid-js"
 import DOMPurify from "dompurify"
 import { MarkdownService } from "../../types-packages/main"
 import { getMarkdownRenderer } from "../MarkdownRenderer"
@@ -11,42 +11,29 @@ export interface Props {
   contentClassName: string
 }
 
-interface State {
-  snippet: string
-}
-
 /**
  * A React component that hosts a code snippet with syntax highlighting
  */
-export class SnippetView extends React.Component<Props, State> {
-  state = { snippet: "" }
+export function SnippetView(props: Props) {
+  const [getSnippet, setSnippet] = createSignal("")
 
-  render() {
-    return (
-      <div className={this.props.containerClassName} onWheel={(e) => this.onMouseWheel(e)}>
-        <div
-          className={this.props.contentClassName}
-          dangerouslySetInnerHTML={{
-            __html: this.state.snippet,
-          }}
-        />
-      </div>
-    )
-  }
+  onMount(async () => {
+    setSnippet((await getSnippetHtml(props.snippet, props.grammarName, props.renderer)) ?? "")
+  })
 
-  /**
-   * handles the mouse wheel event to enable scrolling over long text
-   * @param evt the mouse wheel event being triggered
-   */
-  onMouseWheel(evt: React.WheelEvent) {
-    evt.stopPropagation()
-  }
+  return (
+    <div className={props.containerClassName} onWheel={onWheel}>
+      <div className={props.contentClassName} innerHTML={getSnippet()} />
+    </div>
+  )
+}
 
-  async componentDidMount() {
-    this.setState({
-      snippet: (await getSnippetHtml(this.props.snippet, this.props.grammarName, this.props.renderer)) ?? "",
-    })
-  }
+/**
+ * handles the mouse wheel event to enable scrolling over long text
+ * @param evt the mouse wheel event being triggered
+ */
+function onWheel(evt: WheelEvent) {
+  return evt.stopPropagation()
 }
 
 const regexPremeable = /^\s*<([!?])([a-z]+)?\s*/i

@@ -1,4 +1,4 @@
-import * as React from "react"
+import { render } from "react-dom"
 
 export interface Props {
   component: () => React.ReactElement
@@ -6,18 +6,15 @@ export interface Props {
   contentClassName: string
 }
 
-interface State {}
-
 /**
  * A react component that can host an externally given React component
  */
-export class ReactView extends React.Component<Props, State> {
-  render() {
-    let children = null
-    if (this.props.component) {
-      children = <div className={this.props.contentClassName}>{this.props.component()}</div>
-    }
-
-    return <div className={this.props.containerClassName}>{children}</div>
-  }
+export function ReactView(props: Props) {
+  const content = document.createElement("div")
+  content.className = props.contentClassName
+  return (
+    <div className={props.containerClassName}>
+      {(render(props.component(), content) as HTMLElement | void) || undefined}
+    </div>
+  )
 }

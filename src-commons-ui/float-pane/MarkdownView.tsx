@@ -1,4 +1,4 @@
-import * as React from "react"
+import { createSignal, onMount } from "solid-js"
 import DOMPurify from "dompurify"
 import { MarkdownService } from "../../types-packages/main"
 import { getMarkdownRenderer } from "../MarkdownRenderer"
@@ -13,45 +13,32 @@ export interface Props {
   html?: Array<string> | string
 }
 
-interface State {
-  markdown: string
-}
-
 /**
  * A react component that can hosts markdown texts
  */
-export class MarkdownView extends React.Component<Props, State> {
-  state: State = { markdown: "" }
-
-  render() {
-    return (
-      <div className={this.props.containerClassName} onWheel={(e) => this.onMouseWheel(e)}>
-        <div
-          className={this.props.contentClassName}
-          dangerouslySetInnerHTML={{
-            __html: this.state.markdown,
-          }}
-        />
-      </div>
-    )
-  }
-
-  /**
-   * handles the mouse wheel event to enable scrolling over long text
-   * @param evt the mouse wheel event being triggered
-   */
-  onMouseWheel(evt: React.WheelEvent) {
-    evt.stopPropagation()
-  }
+export function MarkdownView(props: Props) {
+  const [getMarkdown, setMarkdown] = createSignal("")
 
   /**
     Calls `getDocumentationHtml` to convert Markdown to markdown
   */
-  async componentDidMount() {
-    this.setState({
-      markdown: (await renderMarkdown(this.props.markdown, this.props.grammarName, this.props.renderer)) ?? "",
-    })
-  }
+  onMount(async () => {
+    setMarkdown((await renderMarkdown(props.markdown, props.grammarName, props.renderer)) ?? "")
+  })
+
+  return (
+    <div className={props.containerClassName} onWheel={onWheel}>
+      <div className={props.contentClassName} innerHTML={getMarkdown()} />
+    </div>
+  )
+}
+
+/**
+ * handles the mouse wheel event to enable scrolling over long text
+ * @param evt the mouse wheel event being triggered
+ */
+function onWheel(evt: WheelEvent) {
+  return evt.stopPropagation()
 }
 
 /**
