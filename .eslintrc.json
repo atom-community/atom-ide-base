@@ -1,12 +1,4 @@
 {
   "extends": "eslint-config-atomic",
-  "ignorePatterns": ["dist/", "node_modules/", "./dist-nuclide", "./commons-atom", "./commons-ui", "./.rollup.cache/"],
-  "env": {
-    "atomtest": true,
-    "es6": true,
-    "node": true,
-    "browser": true,
-    "jasmine": true,
-    "jest": true
-  }
+  "ignorePatterns": ["dist/", "**/node_modules/**/*", "package/", "dist-nuclide/", "commons-atom/", "commons-ui/", ".rollup.cache/"]
 }
