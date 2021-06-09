@@ -1,7 +1,10 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "jsxFactory": "React.createElement",
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "outDir": "../commons-ui"
   }
 }

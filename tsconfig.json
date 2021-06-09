@@ -16,8 +16,6 @@
     "inlineSources": true,
     "preserveSymlinks": true,
     "removeComments": false,
-    "jsx": "react",
-    "jsxFactory": "etch.dom",
     "lib": ["ES2018", "dom"],
     "target": "ES2018",
     "allowJs": true,
