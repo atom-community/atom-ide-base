@@ -18,10 +18,6 @@ export function activate() {
  * install Atom package dependencies if not already loaded
  */
 async function package_deps() {
-  if (atom.packages.isPackageLoaded("intentions")) {
-    atom.packages.disablePackage("intentions")
-  }
-
   // Add entries from package-deps here manually
   // (to prevent loading atom-package-deps and package.json when the deps are already loaded)
   const deps = [
@@ -33,6 +29,7 @@ async function package_deps() {
     "atom-ide-outline",
     "linter",
     "linter-ui-default",
+    "intentions",
   ]
   if (deps.some((p) => !atom.packages.isPackageLoaded(p))) {
     // install if not installed

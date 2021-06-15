@@ -1,4 +1,4 @@
-const timeout = process.env.CI ? 40000 : 1000
+const timeout = process.env.CI ? 50000 : 1000
 
 describe("tests", () => {
   const deps = [
@@ -10,6 +10,7 @@ describe("tests", () => {
     "atom-ide-outline",
     "linter",
     "linter-ui-default",
+    "intentions",
   ]
 
   beforeAll(async () => {
