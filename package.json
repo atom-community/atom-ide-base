@@ -30,7 +30,7 @@
     "test.lint": "eslint .",
     "test": "atom --test spec",
     "clean": "shx rm -rf package commons-atom commons-ui commons",
-    "tsc.commons-ui": "tsc -p src-commons-ui/tsconfig.json",
+    "tsc.commons-ui": "tsc -p src-commons-ui/tsconfig.json --declaration",
     "build.commons-ui": "npm run tsc.commons-ui && babel ./src-commons-ui --out-dir ./commons-ui --config-file ./src-commons-ui/babel.config.json --extensions .tsx,.ts",
     "tsc.commons-atom": "tsc -p src-commons-atom/tsconfig.json",
     "dev.commons-atom": "tsc -w -p src-commons-atom/tsconfig.json",

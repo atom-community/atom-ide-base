@@ -9,5 +9,6 @@
         "typescript": true
       }
     ]
-  ]
+  ],
+  "sourceMaps": "inline"
 }
