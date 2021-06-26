@@ -1,3 +1,7 @@
+### 3.2.0
+
+- feat: add StyleReader to commons-ui
+
 ### 3.1.0
 
 - feat: add intentions package to the list of IDE packages.
