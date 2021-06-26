@@ -6,9 +6,7 @@ export interface Props {
 
 let render: typeof import("react-dom").render | undefined
 
-/**
- * A react component that can host an externally given React component
- */
+/** A react component that can host an externally given React component */
 export function ReactView(props: Props) {
   if (render === undefined) {
     render = require("react-dom").render

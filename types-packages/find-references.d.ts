@@ -2,26 +2,17 @@ import * as Atom from "atom"
 import { IdeUri } from "./uri"
 
 export interface FindReferencesProvider {
-  /**
-   * Return true if your provider supports finding references for the provided Atom.TextEditor.
-   */
+  /** Return true if your provider supports finding references for the provided Atom.TextEditor. */
   isEditorSupported(editor: Atom.TextEditor): boolean | Promise<boolean>
 
-  /**
-   * `findReferences` will only be called if `isEditorSupported` previously returned true
-   * for the given Atom.TextEditor.
-   */
+  /** `findReferences` will only be called if `isEditorSupported` previously returned true for the given Atom.TextEditor. */
   findReferences(editor: Atom.TextEditor, position: Atom.Point): Promise<FindReferencesReturn | undefined | null>
 }
 
 export interface Reference {
-  /**
-   * URI of the file path
-   */
+  /** URI of the file path */
   uri: IdeUri
-  /**
-   * name of calling method/function/symbol
-   */
+  /** Name of calling method/function/symbol */
   name: string | undefined | null
   range: Atom.Range
 }
@@ -31,9 +22,7 @@ export interface FindReferencesData {
   baseUri: IdeUri
   referencedSymbolName: string
   references: Reference[]
-  /**
-   * defaults to 'Symbol References'
-   */
+  /** Defaults to 'Symbol References' */
   title?: string
 }
 

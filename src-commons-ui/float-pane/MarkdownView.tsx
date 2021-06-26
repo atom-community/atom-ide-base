@@ -13,15 +13,11 @@ export interface Props {
   html?: Array<string> | string
 }
 
-/**
- * A react component that can hosts markdown texts
- */
+/** A react component that can hosts markdown texts */
 export function MarkdownView(props: Props) {
   const [getMarkdown, setMarkdown] = createSignal("")
 
-  /**
-    Calls `getDocumentationHtml` to convert Markdown to markdown
-  */
+  /** Calls `getDocumentationHtml` to convert Markdown to markdown */
   onMount(async () => {
     setMarkdown((await renderMarkdown(props.markdown, props.grammarName, props.renderer)) ?? "")
   })
@@ -34,19 +30,21 @@ export function MarkdownView(props: Props) {
 }
 
 /**
- * handles the mouse wheel event to enable scrolling over long text
- * @param evt the mouse wheel event being triggered
+ * Handles the mouse wheel event to enable scrolling over long text
+ *
+ * @param evt The mouse wheel event being triggered
  */
 function onWheel(evt: WheelEvent) {
   return evt.stopPropagation()
 }
 
 /**
- * convert the markdown documentation to markdown
- * @param markdownTexts the documentation text in markdown format to be converted
- * @param grammarName  the default grammar used for embedded code samples
- * @param renderer markdown service to be used for rendering
- * @return a promise object to track the asynchronous operation
+ * Convert the markdown documentation to markdown
+ *
+ * @param markdownTexts The documentation text in markdown format to be converted
+ * @param grammarName The default grammar used for embedded code samples
+ * @param renderer Markdown service to be used for rendering
+ * @returns A promise object to track the asynchronous operation
  */
 export async function renderMarkdown(
   markdownTexts: Array<string> | string,

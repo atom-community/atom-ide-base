@@ -2,10 +2,11 @@ import { TextEditor } from "atom"
 
 /**
  * Find if an editor's largeness based on the given threashold
+ *
  * @param editor
- * @param largeLineCount lineCountIfLarge threashold
- * @param longLineLength lineLengthIfLong threashold
- * @returns the largness score if editor is large. Otherwise it returns 0 (a small file)
+ * @param largeLineCount LineCountIfLarge threashold
+ * @param longLineLength LineLengthIfLong threashold
+ * @returns The largness score if editor is large. Otherwise it returns 0 (a small file)
  */
 export function largeness(
   editor: TextEditor,
@@ -25,9 +26,10 @@ export function largeness(
 
 /**
  * Find if an editor has a line that is longer than the given threashold
+ *
  * @param editor
- * @param threashold largeLineCount threashold
- * @returns the line count if it is larger than threashold. Otherwise it returns 0 (a small file)
+ * @param threashold LargeLineCount threashold
+ * @returns The line count if it is larger than threashold. Otherwise it returns 0 (a small file)
  */
 export function lineCountIfLarge(editor: TextEditor, threashold: number) {
   // @ts-ignore
@@ -43,10 +45,11 @@ export function lineCountIfLarge(editor: TextEditor, threashold: number) {
 
 /**
  * Find if an editor has a line that is longer than the given threashold
+ *
  * @param editor
- * @param threashold lineLengthForRow threashold
- * @param lineCount count up to this line. Default is {editor.getLineCount()}
- * @returns the first line length that has a length larger than threashold. If no line is found, it returns 0
+ * @param threashold LineLengthForRow threashold
+ * @param lineCount Count up to this line. Default is {editor.getLineCount()}
+ * @returns The first line length that has a length larger than threashold. If no line is found, it returns 0
  */
 export function lineLengthIfLong(editor: TextEditor, threashold: number, lineCount: number = editor.getLineCount()) {
   const buffer = editor.getBuffer()

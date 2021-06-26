@@ -2,10 +2,9 @@ import { TextEditor, TextEditorComponent, TextBuffer, Range, Point } from "atom"
 import invariant from "assert"
 
 /**
- * Finds the word at the position. You can either provide a word regex yourself,
- * or have Atom use the word regex in force at the scopes at that position,
- * in which case it uses the optional includeNonWordCharacters, default true.
- * (I know that's a weird default but it follows Atom's convention...)
+ * Finds the word at the position. You can either provide a word regex yourself, or have Atom use the word regex in
+ * force at the scopes at that position, in which case it uses the optional includeNonWordCharacters, default true. (I
+ * know that's a weird default but it follows Atom's convention...)
  */
 export function wordAtPosition(
   editor: TextEditor,
@@ -37,15 +36,13 @@ export function wordAtPosition(
 }
 
 /**
- * Gets the trimmed range from a given range, i.e. moves the start and end points
- * to the first and last non-whitespace characters (or specified regex)
- * within the range respectively.
+ * Gets the trimmed range from a given range, i.e. moves the start and end points to the first and last non-whitespace
+ * characters (or specified regex) within the range respectively.
  *
- * @param editor       the editor containing the range
- * @param rangeToTrim  the range to trim
- * @param stopRegex    stop trimming when the first match is found for this regex,
- *   defaults to first non-whitespace character
- * @return Range  the trimmed range
+ * @param editor The editor containing the range
+ * @param rangeToTrim The range to trim
+ * @param stopRegex Stop trimming when the first match is found for this regex, defaults to first non-whitespace character
+ * @returns Range the trimmed range
  */
 export function trimRange(editor: TextEditor, rangeToTrim: Range, stopRegex: RegExp = /\S/): Range {
   const buffer = editor.getBuffer()
@@ -72,12 +69,11 @@ function getSingleWordAtPosition(editor: TextEditor, position: Point): string | 
 }
 
 /**
- * Gets the word being right-clicked on in a MouseEvent. A good use case for
- * this is performing an action on a word from a context menu.
+ * Gets the word being right-clicked on in a MouseEvent. A good use case for this is performing an action on a word from
+ * a context menu.
  *
- * @param editor  the editor containing the word where the MouseEvent occurred
- *   from
- * @param event   the MouseEvent containing the screen position of the click
+ * @param editor The editor containing the word where the MouseEvent occurred from
+ * @param event The MouseEvent containing the screen position of the click
  */
 export function getWordFromMouseEvent(editor: TextEditor, event: MouseEvent): string | null {
   // We can't immediately get the identifier right-clicked on from
@@ -93,12 +89,10 @@ export function getWordFromMouseEvent(editor: TextEditor, event: MouseEvent): st
 }
 
 /**
- * Attempts to get a word from the last selection or cursor. A good use case for
- * this is performing an action on an 'active' word after a command is triggered
- * via a keybinding.
+ * Attempts to get a word from the last selection or cursor. A good use case for this is performing an action on an
+ * 'active' word after a command is triggered via a keybinding.
  *
- * @param editor  the editor containing the 'active' word when the keybinding is
- *   triggered
+ * @param editor The editor containing the 'active' word when the keybinding is triggered
  */
 export function getWordFromCursorOrSelection(editor: TextEditor): string | null {
   const selection = editor.getSelectedText()

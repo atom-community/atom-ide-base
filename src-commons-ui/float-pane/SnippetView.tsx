@@ -11,9 +11,7 @@ export interface Props {
   contentClassName: string
 }
 
-/**
- * A React component that hosts a code snippet with syntax highlighting
- */
+/** A React component that hosts a code snippet with syntax highlighting */
 export function SnippetView(props: Props) {
   const [getSnippet, setSnippet] = createSignal("")
 
@@ -29,8 +27,9 @@ export function SnippetView(props: Props) {
 }
 
 /**
- * handles the mouse wheel event to enable scrolling over long text
- * @param evt the mouse wheel event being triggered
+ * Handles the mouse wheel event to enable scrolling over long text
+ *
+ * @param evt The mouse wheel event being triggered
  */
 function onWheel(evt: WheelEvent) {
   return evt.stopPropagation()
@@ -40,11 +39,12 @@ const regexPremeable = /^\s*<([!?])([a-z]+)?\s*/i
 const regexLSPPrefix = /^\((method|property|parameter|alias)\)\W/
 
 /**
- * converts a given code snippet into syntax formatted HTML
- * @param snippets the code snippet to be converted
- * @param grammarName the name of the grammar to be used for syntax highlighting
- * @param renderer markdown service to be used for rendering
- * @return a promise object to track the asynchronous operation
+ * Converts a given code snippet into syntax formatted HTML
+ *
+ * @param snippets The code snippet to be converted
+ * @param grammarName The name of the grammar to be used for syntax highlighting
+ * @param renderer Markdown service to be used for rendering
+ * @returns A promise object to track the asynchronous operation
  */
 export async function getSnippetHtml(
   snipetsGiven: Array<string> | string,

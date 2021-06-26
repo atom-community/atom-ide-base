@@ -46,9 +46,7 @@ export class ProviderRegistry<Provider extends Exclude<ProviderTypes, BusySignal
     return null
   }
 
-  /**
-   * Iterates over all providers matching the grammar, in priority order.
-   */
+  /** Iterates over all providers matching the grammar, in priority order. */
   *findAllProviders(grammar: string): Iterable<Provider> {
     for (const provider of this.providers) {
       if (provider.grammarScopes == null || provider.grammarScopes.indexOf(grammar) !== -1) {

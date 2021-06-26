@@ -2,10 +2,7 @@ import * as Atom from "atom"
 
 export interface OutlineProvider {
   name: string
-  /**
-   * If there are multiple providers for a given grammar, the one with the highest priority will be
-   * used.
-   */
+  /** If there are multiple providers for a given grammar, the one with the highest priority will be used. */
   priority: number
   grammarScopes: ReadonlyArray<string>
   updateOnEdit?: boolean
@@ -13,27 +10,17 @@ export interface OutlineProvider {
 }
 
 export interface OutlineTree {
-  /**
-   * from Atom.Octicon or Atom.OcticonsPrivate (types not allowed over rpc so we use string)
-   */
+  /** From Atom.Octicon or Atom.OcticonsPrivate (types not allowed over rpc so we use string) */
   icon?: string
-  /**
-   * kind you can pass to the UI for theming
-   */
+  /** Kind you can pass to the UI for theming */
   kind?: OutlineTreeKind
 
-  /**
-   * Must have `plainText` or the `tokenizedText` property. If both are present, `tokenizedText` is preferred.
-   */
+  /** Must have `plainText` or the `tokenizedText` property. If both are present, `tokenizedText` is preferred. */
   plainText?: string
-  /**
-   * Must have `plainText` or the `tokenizedText` property. If both are present, `tokenizedText` is preferred.
-   */
+  /** Must have `plainText` or the `tokenizedText` property. If both are present, `tokenizedText` is preferred. */
   tokenizedText?: TokenizedText
 
-  /**
-   * If user has atom-ide-base-outline-view.nameOnly then representativeName is used instead.
-   */
+  /** If user has atom-ide-base-outline-view.nameOnly then representativeName is used instead. */
   representativeName?: string
 
   startPosition: Atom.Point
@@ -46,9 +33,7 @@ export interface Outline {
   outlineTrees: OutlineTree[]
 }
 
-/**
- * Kind of outline tree - matches the names from the Language Server Protocol v2.
- */
+/** Kind of outline tree - matches the names from the Language Server Protocol v2. */
 export type OutlineTreeKind =
   | "file"
   | "module"

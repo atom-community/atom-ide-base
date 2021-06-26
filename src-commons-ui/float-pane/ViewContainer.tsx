@@ -24,9 +24,7 @@ export interface Props {
   onClickCapture?: (event: any) => void
 }
 
-/**
- * a component for a decoration pane
- */
+/** A component for a decoration pane */
 export function ViewContainer(props: Props) {
   return (
     <div className={props.className ?? "datatip-element"} {...props.onMouseDown} {...props.onClickCapture}>

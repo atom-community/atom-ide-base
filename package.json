@@ -119,6 +119,7 @@
     "node-ipc": "9.1.4",
     "npm-check-updates": "11.6.0",
     "prettier": "^2.3.1",
+    "prettier-config-atomic": "^2.0.5",
     "rollup": "2.51.0",
     "rollup-plugin-atomic": "^2.3.2",
     "shx": "0.3.3",
@@ -126,6 +127,7 @@
     "temp": "^0.9.4",
     "typescript": "^4.3.2"
   },
+  "prettier": "prettier-config-atomic",
   "providedServices": {},
   "consumedServices": {},
   "package-deps": [

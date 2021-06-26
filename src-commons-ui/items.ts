@@ -1,8 +1,11 @@
 import type { Dock, ViewRegistry } from "atom"
 
-/** A function to detect if an item (view) is visible in Atom.
- * This is useful to skip code excecution or updating when the item is not visible.
- * @param item this is an item that is stored in {ViewRegistry}. It has the same type of the argument that you pass to `atom.view.getView(item)`.
+/**
+ * A function to detect if an item (view) is visible in Atom. This is useful to skip code excecution or updating when
+ * the item is not visible.
+ *
+ * @param item This is an item that is stored in {ViewRegistry}. It has the same type of the argument that you pass to
+ *   `atom.view.getView(item)`.
  */
 export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0] | undefined | null) {
   if (item === undefined || item === null) {
@@ -32,9 +35,11 @@ export function isItemVisible(item: Parameters<ViewRegistry["getView"]>[0] | und
   }
 }
 
-/** A function to detect if an HTMLElement is visible. It doesn't consider the Atom context.
- * To detect if an item is visible in Atom use {isItemVisible} instead
- * This is useful to skip code excecution or updating when the element is not visible.
+/**
+ * A function to detect if an HTMLElement is visible. It doesn't consider the Atom context. To detect if an item is
+ * visible in Atom use {isItemVisible} instead This is useful to skip code excecution or updating when the element is
+ * not visible.
+ *
  * @param element
  */
 export function isElementVisible(element: HTMLElement) {
@@ -47,9 +52,7 @@ export function isElementVisible(element: HTMLElement) {
   return true
 }
 
-/**
- * Get the HTMLElement of an item using `.getElement()` or `.element`
- */
+/** Get the HTMLElement of an item using `.getElement()` or `.element` */
 export function getItemElement(item: object | undefined | null) {
   if (item === undefined || item === null) {
     return undefined

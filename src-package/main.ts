@@ -2,9 +2,7 @@ import { CompositeDisposable } from "atom"
 
 let subscriptions: CompositeDisposable | null
 
-/**
- * called by Atom when activating an extension
- */
+/** Called by Atom when activating an extension */
 export function activate() {
   // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
   subscriptions = new CompositeDisposable()
@@ -14,9 +12,7 @@ export function activate() {
   })
 }
 
-/**
- * install Atom package dependencies if not already loaded
- */
+/** Install Atom package dependencies if not already loaded */
 async function package_deps() {
   // Add entries from package-deps here manually
   // (to prevent loading atom-package-deps and package.json when the deps are already loaded)
@@ -44,9 +40,7 @@ async function package_deps() {
   }
 }
 
-/**
- * called by Atom when deactivating an extension
- */
+/** Called by Atom when deactivating an extension */
 export function deactivate() {
   if (subscriptions) {
     subscriptions.dispose()

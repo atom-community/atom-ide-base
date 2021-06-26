@@ -2,65 +2,42 @@ import * as Atom from "atom"
 import { IdeUri } from "./uri"
 
 export interface Definition {
-  /**
-   * Path of the file in which the definition is located.
-   */
+  /** Path of the file in which the definition is located. */
   path: IdeUri
-  /**
-   * First character of the definition's identifier.
-   * e.g. "F" in `class Foo {}`
-   */
+  /** First character of the definition's identifier. e.g. "F" in `class Foo {}` */
   position: Atom.Point
-  /**
-   * Optional: the range of the entire definition.
-   * e.g. "c" to "}" in `class Foo {}`
-   */
+  /** Optional: the range of the entire definition. e.g. "c" to "}" in `class Foo {}` */
   range?: Atom.Range
   /**
-   * Optional: `name` and `projectRoot` can be provided to display a more human-readable title
-   * inside of Hyperclick when there are multiple definitions.
+   * Optional: `name` and `projectRoot` can be provided to display a more human-readable title inside of Hyperclick when
+   * there are multiple definitions.
    */
   name?: string
-  /**
-   * If provided, `projectRoot` will be used to display a relativized version of `path`.
-   */
+  /** If provided, `projectRoot` will be used to display a relativized version of `path`. */
   projectRoot?: IdeUri
-  /**
-   * `language` may be used by consumers to identify the source of definitions.
-   */
+  /** `language` may be used by consumers to identify the source of definitions. */
   language: string
 }
 
 /**
- * Definition queries supply a point.
- * The returned queryRange is the range within which the returned definition is valid.
- * Typically queryRange spans the containing identifier around the query point.
- * (If a null queryRange is returned, the range of the word containing the point is used.)
+ * Definition queries supply a point. The returned queryRange is the range within which the returned definition is
+ * valid. Typically queryRange spans the containing identifier around the query point. (If a null queryRange is
+ * returned, the range of the word containing the point is used.)
  */
 export interface DefinitionQueryResult {
   queryRange: ReadonlyArray<Atom.Range> | null | undefined
-  /**
-   * Must be non-empty.
-   */
+  /** Must be non-empty. */
   definitions: ReadonlyArray<Definition>
 }
 
-/**
- * Provides definitions for a set of language grammars.
- */
+/** Provides definitions for a set of language grammars. */
 export interface DefinitionProvider {
   name: string
-  /**
-   * If there are multiple providers for a given grammar,
-   * the one with the highest priority will be used.
-   */
+  /** If there are multiple providers for a given grammar, the one with the highest priority will be used. */
   priority: number
   grammarScopes: ReadonlyArray<string>
   wordRegExp: RegExp | null | undefined
-  /**
-   * Obtains the definition in an editor at the given point.
-   * This should return null if no definition is available.
-   */
+  /** Obtains the definition in an editor at the given point. This should return null if no definition is available. */
   getDefinition: (editor: Atom.TextEditor, position: Atom.Point) => Promise<DefinitionQueryResult | null | undefined>
 }
 

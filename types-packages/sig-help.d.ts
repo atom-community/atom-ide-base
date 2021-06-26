@@ -4,24 +4,23 @@ export type SignatureHelpRegistry = (provider: SignatureHelpProvider) => Disposa
 
 /**
  * Signature help is activated when:
- * - upon keystroke, any provider with a matching grammar scope contains
- *   the pressed key inside its triggerCharacters set
- * - the signature-help:show command is manually activated
  *
- * Once signature help has been triggered, the provider will be queried immediately
- * with the current cursor position, and then repeatedly upon cursor movements
- * until a null/empty signature is returned.
+ * - Upon keystroke, any provider with a matching grammar scope contains the pressed key inside its triggerCharacters set
+ * - The signature-help:show command is manually activated
  *
- * Returned signatures will be displayed in a small datatip at the current cursor.
- * The highest-priority provider with a non-null result will be used.
+ * Once signature help has been triggered, the provider will be queried immediately with the current cursor position,
+ * and then repeatedly upon cursor movements until a null/empty signature is returned.
+ *
+ * Returned signatures will be displayed in a small datatip at the current cursor. The highest-priority provider with a
+ * non-null result will be used.
  */
 export interface SignatureHelpProvider {
   priority: number
   grammarScopes: ReadonlyArray<string>
 
   /**
-   * A set of characters that will trigger signature help when typed.
-   * If a null/empty set is provided, only manual activation of the command works.
+   * A set of characters that will trigger signature help when typed. If a null/empty set is provided, only manual
+   * activation of the command works.
    */
   triggerCharacters?: Set<string>
 
