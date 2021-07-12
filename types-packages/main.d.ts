@@ -5,6 +5,7 @@
 
 export * from "./uri"
 export * from "./busy-signal"
+export * from "./call-hierarchy"
 export * from "./code-actions"
 export * from "./code-highlight"
 export * from "./datatip"
@@ -20,6 +21,7 @@ export * from "./refactor"
 export * from "./console"
 
 import { BusySignalProvider } from "./busy-signal.d"
+import { CallHierarchyProvider } from "./call-hierarchy"
 import { CodeActionProvider } from "./code-actions"
 import { CodeHighlightProvider } from "./code-highlight"
 import { AnyDatatipProvider } from "./datatip"
@@ -39,6 +41,7 @@ export interface ProviderCommon {
 export type Provider =
   | ProviderCommon
   | BusySignalProvider
+  | CallHierarchyProvider
   | CodeActionProvider
   | CodeHighlightProvider
   | AnyDatatipProvider
