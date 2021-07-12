@@ -1,3 +1,7 @@
+### 3.3.0
+
+- feat: add call-hierarchy API to the types
+
 ### 3.2.0
 
 - feat: add StyleReader to commons-ui
