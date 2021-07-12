@@ -22,7 +22,7 @@ interface CallHierarchyItem {
   path: IdeUri
   name: string
   /** Same as the icon of outline.d.ts */
-  icon: string | null
+  icon?: string
   tags: SymbolTagKind[]
   detail?: string
   range: Atom.Range
