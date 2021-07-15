@@ -1,3 +1,7 @@
+### 3.4.0
+
+- feat: add atom-ide-code-format
+
 ### 3.3.0
 
 - feat: add call-hierarchy API to the types

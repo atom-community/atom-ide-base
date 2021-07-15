@@ -8,6 +8,7 @@ describe("tests", () => {
     "atom-ide-hyperclick",
     "atom-ide-definitions",
     "atom-ide-outline",
+    "atom-ide-code-format",
     "linter",
     "linter-ui-default",
     "intentions",
