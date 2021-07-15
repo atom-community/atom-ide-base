@@ -150,6 +150,9 @@
       "name": "atom-ide-outline"
     },
     {
+      "name": "atom-ide-code-format"
+    },
+    {
       "name": "linter"
     },
     {
