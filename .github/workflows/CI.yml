@@ -98,7 +98,7 @@ jobs:
 
       - name: Run macos tests 👩🏾‍💻
         if: startsWith(matrix.os,'macos')
-        uses: nick-invision/retry@v2 # macOS flaky tests sometimes need retries
+        uses: nick-invision/retry@v2
         with:
           timeout_minutes: 10
           max_attempts: 3
