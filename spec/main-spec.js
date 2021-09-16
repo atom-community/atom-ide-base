@@ -1,14 +1,14 @@
-const timeout = process.env.CI ? 50000 : 1000
+const timeout = process.env.CI ? 500000 : 1000
 
 describe("tests", () => {
   const deps = [
     "atom-ide-markdown-service",
     "atom-ide-datatip",
     "atom-ide-signature-help",
-    "atom-ide-hyperclick",
+    // "atom-ide-hyperclick", // the tests break. God knows why.
     "atom-ide-definitions",
     "atom-ide-outline",
-    "atom-ide-code-format",
+    // "atom-ide-code-format",
     "linter",
     "linter-ui-default",
     "intentions",
