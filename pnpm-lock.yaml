@@ -446,6 +446,7 @@ importers:
   nuclide/nuclide-commons:
     specifiers:
       '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
+      '@electron/remote': 2.0.1
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
@@ -474,6 +475,7 @@ importers:
       vscode-uri: 1.0.1
     dependencies:
       '@atom-ide-community/nuclide-node-transpiler': link:../nuclide-node-transpiler
+      '@electron/remote': 2.0.1
       cr: 0.1.0
       domexception: 1.0.1
       dompurify: 2.2.6
@@ -3164,7 +3166,7 @@ packages:
       '@babel/helper-plugin-utils': 7.13.0
       '@babel/plugin-proposal-unicode-property-regex': 7.12.13_@babel+core@7.11.6
       '@babel/plugin-transform-dotall-regex': 7.12.13_@babel+core@7.11.6
-      '@babel/types': 7.13.14
+      '@babel/types': 7.14.4
       esutils: 2.0.3
     dev: true
 
@@ -3378,6 +3380,12 @@ packages:
       exec-sh: 0.3.4
       minimist: 1.2.5
     dev: true
+
+  /@electron/remote/2.0.1:
+    resolution: {integrity: sha512-bGX4/yB2bPZwXm1DsxgoABgH0Cz7oFtXJgkerB8VrStYdTyvhGAULzNLRn9rVmeAuC3VUDXaXpZIlZAZHpsLIA==}
+    peerDependencies:
+      electron: '>= 10.0.0-beta.1'
+    dev: false
 
   /@eslint/eslintrc/0.4.2:
     resolution: {integrity: sha512-8nmGq/4ycLpIwzvhI4tNDmQztZ8sp+hI7cyG8i1nQDhkAbRzHpXPidRAHlNvCZQpJTKw5ItIpMw9RSToGF00mg==}

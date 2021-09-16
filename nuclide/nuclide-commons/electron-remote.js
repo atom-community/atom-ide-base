@@ -16,5 +16,4 @@
 // instead of doing Weird Backflips every time we want to declare a variable of
 // type `BrowserWindow`
 
-import {remote} from 'electron';
-module.exports = remote; // eslint-disable-line nuclide-internal/no-commonjs
+module.exports = require('@electron/remote');
