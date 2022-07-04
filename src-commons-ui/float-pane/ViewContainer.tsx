@@ -16,12 +16,12 @@ export interface Props {
   component?: ReactViewProps
   markdown?: MarkdownViewProps
   snippet?: SnippetViewProps
-  action?: string
+  action?: keyof typeof DATATIP_ACTIONS
   actionTitle?: string
   className?: string
-  onActionClick?: (event: any) => void
-  onMouseDown?: (event: any) => void
-  onClickCapture?: (event: any) => void
+  onActionClick?: (event: MouseEvent) => void
+  onMouseDown?: (event: MouseEvent) => void
+  onClickCapture?: (event: MouseEvent) => void
 }
 
 /** A component for a decoration pane */
@@ -34,7 +34,7 @@ export function ViewContainer(props: Props) {
       {props.action !== undefined ? (
         <div
           className={`datatip-pin-button icon-${IconsForAction[props.action]}`}
-          onClick={() => {
+          onClick={(event) => {
             props.onActionClick?.(event)
           }}
           title={props.actionTitle}
