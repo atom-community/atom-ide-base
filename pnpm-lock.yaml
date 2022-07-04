@@ -448,6 +448,7 @@ importers:
   nuclide/nuclide-commons:
     specifiers:
       '@atom-ide-community/nuclide-node-transpiler': workspace:../nuclide-node-transpiler
+      '@electron/remote': 2.0.1
       cr: 0.1.0
       dedent: 0.7.0
       domexception: 1.0.1
@@ -476,6 +477,7 @@ importers:
       vscode-uri: 1.0.1
     dependencies:
       '@atom-ide-community/nuclide-node-transpiler': link:../nuclide-node-transpiler
+      '@electron/remote': 2.0.1
       cr: 0.1.0
       domexception: 1.0.1
       dompurify: 2.2.6
