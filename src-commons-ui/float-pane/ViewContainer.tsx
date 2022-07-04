@@ -16,7 +16,7 @@ export interface Props {
   component?: ReactViewProps
   markdown?: MarkdownViewProps
   snippet?: SnippetViewProps
-  action?: string
+  action?: keyof typeof DATATIP_ACTIONS
   actionTitle?: string
   className?: string
   onActionClick?: (event: any) => void
