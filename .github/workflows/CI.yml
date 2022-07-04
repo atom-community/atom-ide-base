@@ -32,7 +32,7 @@ jobs:
       - uses: atom-community/action-setup-atom@v1
         with:
           channel: ${{ matrix.atom_channel }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           version: 14
 
@@ -78,7 +78,7 @@ jobs:
       - uses: atom-community/action-setup-atom@v1
         with:
           channel: ${{ matrix.atom_channel }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           version: 14
 
@@ -123,7 +123,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           version: 14
       - name: Setup PNPM
