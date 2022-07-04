@@ -14,7 +14,7 @@
     "idb-keyval": "2.3.0",
     "idx": "1.2.0",
     "lodash": "4.17.20",
-    "log4js": "1.1.1",
+    "log4js": "6.4.0",
     "lru-cache": "4.0.2",
     "@atom-ide-community/nuclide-commons": "workspace:../nuclide-commons",
     "nullthrows": "1.1.1",
