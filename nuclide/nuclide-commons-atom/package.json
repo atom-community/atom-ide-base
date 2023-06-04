@@ -13,7 +13,7 @@
     "escape-string-regexp": "1.0.5",
     "idb-keyval": "2.3.0",
     "idx": "1.2.0",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "log4js": "1.1.1",
     "lru-cache": "4.0.2",
     "@atom-ide-community/nuclide-commons": "workspace:../nuclide-commons",
