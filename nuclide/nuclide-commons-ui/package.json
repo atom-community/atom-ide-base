@@ -20,7 +20,7 @@
     "idx": "1.2.0",
     "invariant": "npm:@react-dnd/invariant@^2.0.0",
     "lodash": "4.17.20",
-    "log4js": "1.1.1",
+    "log4js": "6.4.0",
     "moment": "2.29.1",
     "@atom-ide-community/nuclide-commons": "workspace:../nuclide-commons",
     "@atom-ide-community/nuclide-commons-atom": "workspace:../nuclide-commons-atom",
