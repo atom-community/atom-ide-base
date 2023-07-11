@@ -21,7 +21,7 @@
     "redux-logger": "3.0.6",
     "rxjs-compat": "^6.3.3",
     "season": "6.0.2",
-    "semver": "5.5.0",
+    "semver": "5.7.2",
     "shallowequal": "1.1.0",
     "toml": "2.3.3",
     "vscode-jsonrpc": "3.3.0"

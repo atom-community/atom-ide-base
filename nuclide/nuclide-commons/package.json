@@ -27,7 +27,7 @@
     "nullthrows": "1.1.1",
     "rimraf": "3.0.2",
     "rxjs-compat": "^6.3.3",
-    "semver": "5.5.0",
+    "semver": "5.7.2",
     "shell-quote": "1.6.1",
     "temp": "0.9.1",
     "uuid": "3.0.1",
