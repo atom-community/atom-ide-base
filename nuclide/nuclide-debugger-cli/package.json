@@ -13,7 +13,7 @@
   "dependencies": {
     "async-to-generator": "1.1.0",
     "blessed": "0.1.81",
-    "idx": "1.2.0",
+    "idx": "3.0.1",
     "line-by-line": "0.1.6",
     "log4js": "1.1.1",
     "@atom-ide-community/nuclide-analytics": "workspace:../nuclide-analytics",
@@ -21,9 +21,9 @@
     "@atom-ide-community/nuclide-debugger-common": "workspace:../nuclide-debugger-common",
     "nullthrows": "1.1.1",
     "rxjs-compat": "^6.3.3",
-    "v8-compile-cache": "1.1.0",
-    "vscode-debugprotocol": "1.24.0",
-    "yargs": "3.32.0"
+    "v8-compile-cache": "2.4.0",
+    "vscode-debugprotocol": "1.51.0",
+    "yargs": "17.7.2"
   },
   "devDependencies": {
     "dedent": "0.7.0",
