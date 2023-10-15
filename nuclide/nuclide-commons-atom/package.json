@@ -10,12 +10,12 @@
     "test": "true"
   },
   "dependencies": {
-    "escape-string-regexp": "1.0.5",
-    "idb-keyval": "2.3.0",
-    "idx": "1.2.0",
+    "escape-string-regexp": "5.0.0",
+    "idb-keyval": "6.2.1",
+    "idx": "3.0.1",
     "lodash": "4.17.20",
     "log4js": "1.1.1",
-    "lru-cache": "4.0.2",
+    "lru-cache": "10.0.1",
     "@atom-ide-community/nuclide-commons": "workspace:../nuclide-commons",
     "nullthrows": "1.1.1",
     "redux-logger": "3.0.6",
@@ -23,8 +23,8 @@
     "season": "6.0.2",
     "semver": "5.5.0",
     "shallowequal": "1.1.0",
-    "toml": "2.3.3",
-    "vscode-jsonrpc": "3.3.0"
+    "toml": "3.0.0",
+    "vscode-jsonrpc": "8.2.0"
   },
   "devDependencies": {
     "temp": "0.9.1"

@@ -11,9 +11,9 @@
     "test": "../../node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {
-    "glob": "7.1.6",
-    "mkdirp": "^1.0.4",
-    "uuid": "3.0.1"
+    "glob": "10.3.10",
+    "mkdirp": "^3.0.0",
+    "uuid": "9.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
