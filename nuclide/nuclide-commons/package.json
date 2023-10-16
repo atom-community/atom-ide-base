@@ -35,8 +35,8 @@
     "vscode-uri": "1.0.1"
   },
   "devDependencies": {
-    "dedent": "0.7.0",
-    "invariant": "npm:@react-dnd/invariant@^2.0.0",
+    "dedent": "1.5.1",
+    "invariant": "npm:@react-dnd/invariant@^4.0.0",
     "simple-text-buffer": "9.2.11",
     "jest-retries": "1.0.1"
   }

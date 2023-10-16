@@ -27,6 +27,6 @@
     "vscode-jsonrpc": "3.3.0"
   },
   "devDependencies": {
-    "temp": "0.9.1"
+    "temp": "0.9.4"
   }
 }
